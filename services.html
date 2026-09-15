@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All 12 Clinical Speech Programs | SpeakBloom Speech & Language Center</title>
+  <title>Our Clinical Services | SpeakBloom Speech & Language Therapy</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -12,8 +12,10 @@
       theme: {
         extend: {
           colors: {
-            ochre: { 50: '#FDF7F0', 100: '#FAEFE0', 500: '#C07534', 600: '#AD6325' },
-            charcoal: { 800: '#2C2825', 900: '#1E1C1A' }
+            linen: { 50: '#FAF8F4', 100: '#F4F1EA', 200: '#EBE7DC' },
+            moss: { 400: '#6E806B', 500: '#596956', 600: '#485646', 900: '#182417' },
+            sand: { 300: '#E8D5B7', 400: '#D8B88B', 500: '#C7A372' },
+            charcoal: { 800: '#2A2723', 900: '#1A1816' }
           },
           fontFamily: {
             serif: ['Fraunces', 'Georgia', 'serif'],
@@ -23,111 +25,96 @@
       }
     }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F7F4EE; color: #1E1C1A; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4F1EA; color: #1A1816; }
     h1, h2, h3, h4, .font-serif { font-family: 'Fraunces', Georgia, serif; }
-    .btn-ochre { background-color: #C07534; color: #FFFFFF; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
-    .btn-ochre:hover { background-color: #AD6325; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(192, 117, 52, 0.25); }
-    .btn-outline-pill { background-color: #FFFFFF; border: 1px solid #E3DFD5; color: #1E1C1A; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
-    .btn-outline-pill:hover { background-color: #FAF7F2; border-color: #C07534; transform: translateY(-1px); }
+
+    /* Sand/Gold Soft Pill Button from Screenshot */
+    .btn-sand-pill {
+      background-color: #D8B88B;
+      color: #1A1816 !important;
+      border-radius: 9999px;
+      font-weight: 600;
+      padding: 0.65rem 1.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(216, 184, 139, 0.25);
+    }
+    .btn-sand-pill:hover {
+      background-color: #C7A372;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(216, 184, 139, 0.38);
+    }
+
+    .btn-outline-sand {
+      border: 1px solid #D8B88B;
+      color: #1A1816;
+      border-radius: 9999px;
+      font-weight: 600;
+      padding: 0.65rem 1.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+    }
+    .btn-outline-sand:hover {
+      background-color: #D8B88B;
+      transform: translateY(-2px);
+    }
   </style>
 </head>
-<body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#C07534] selection:text-white">
+<body class="bg-[#F4F1EA] text-[#1A1816] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#D8B88B] selection:text-[#1A1816]">
 
-<!-- =========================================================================
-       STANDARDIZED MULTIPURPOSE TOP NAVIGATION BAR
+  <!-- =========================================================================
+       TOP NAVIGATION BAR (Matching Cassandra Counselling Screenshot)
        ========================================================================= -->
-  <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
+  <header class="sticky top-0 z-40 bg-[#F4F1EA]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#E6E0D2] dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
-          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 dark:border-slate-600 flex items-center justify-center text-[#1E1C1A] dark:text-white group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 4c-1.5 4-4 6-8 6 4 1.5 6 4 6 8 0-4 2-6.5 6-8-4 0-6.5-2-4-6Z"/>
-              <path d="M12 4c1.5 4 4 6 8 6-4 1.5-6 4-6 8 0-4-2-6.5-6-8 4 0 6.5-2 4-6Z" opacity="0.4"/>
-            </svg>
+        <a href="index.html" class="flex items-center gap-2 group shrink-0">
+          <div class="w-7 h-7 rounded-full bg-[#596956] text-white flex items-center justify-center text-xs">
+            <i class="fa-solid fa-leaf"></i>
           </div>
-          <span class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
+          <span class="text-xl sm:text-2xl font-serif font-medium text-[#1A1816] dark:text-white tracking-tight">SpeakBloom</span>
         </a>
 
-        <!-- Center Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-[#6B6560] dark:text-slate-300">
-          <!-- Home dropdown -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
-              <span>Home</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </button>
-            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 1 (General Services)</a>
-                <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 2 (Niche Specialty)</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="about.html" class="hover:text-[#C07534] transition ">About Us</a>
-          
-          <!-- Services Dropdown -->
-          <div class="relative group py-2">
-            <a href="services.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition text-[#C07534] font-bold">
-              <span>Services</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </a>
-            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs text-[#C07534] font-bold">All Services (Grid)</a>
-                <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Service Details (Single)</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog Dropdown -->
-          <div class="relative group py-2">
-            <a href="blog.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
-              <span>Blog</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </a>
-            <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Grid / List</a>
-                <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Single Article</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="pricing.html" class="hover:text-[#C07534] transition ">Pricing</a>
-          <a href="contact.html" class="hover:text-[#C07534] transition ">Contact Us</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8 text-xs font-medium text-[#5A5550] dark:text-slate-300">
+          <a href="index.html" class="hover:text-[#1A1816] dark:hover:text-white transition">Home</a>
+          <a href="about.html" class="hover:text-[#1A1816] dark:hover:text-white transition">About</a>
+          <a href="services.html" class="text-[#1A1816] dark:text-white font-bold border-b border-[#1A1816] pb-0.5">Services</a>
+          <a href="therapists.html" class="hover:text-[#1A1816] dark:hover:text-white transition">Therapists</a>
+          <a href="pricing.html" class="hover:text-[#1A1816] dark:hover:text-white transition">Rates</a>
+          <a href="blog.html" class="hover:text-[#1A1816] dark:hover:text-white transition">Articles</a>
         </nav>
 
-        <!-- Right Utilities & Action Button -->
-        <div class="flex items-center space-x-2.5 shrink-0">
-          
-          <!-- Theme Dark/Light Toggle -->
-          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+        <!-- Right Pill Button & Utilities -->
+        <div class="flex items-center space-x-3 shrink-0">
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D8D2C2] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-white transition" title="Toggle Theme">
             <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
             <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
           </button>
-
-          <!-- RTL Toggle -->
-          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+          
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D8D2C2] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-white transition" title="Toggle RTL/LTR">
             <span class="rtl-text-indicator">RTL</span>
           </button>
 
-          <!-- Get Started Pill -->
-          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
-            Get Started
-          </button>
+          <a href="contact.html" class="hidden sm:inline-flex btn-sand-pill text-xs py-2 px-6 shadow-sm">
+            Contact
+          </a>
 
-          <!-- Mobile Hamburger -->
-          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D8D2C2] dark:border-slate-700 flex items-center justify-center text-[#1A1816] dark:text-white">
             <i class="fa-solid fa-bars-staggered text-xs"></i>
           </button>
         </div>
@@ -138,535 +125,704 @@
 
   <!-- Mobile Navigation Drawer -->
   <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
-  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F4F1EA] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E6E0D2] dark:border-slate-800 overflow-y-auto">
     <div>
-      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
+      <div class="flex items-center justify-between pb-4 border-b border-[#E6E0D2] dark:border-slate-800">
         <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-full border border-[#C07534] flex items-center justify-center text-[#C07534]">
-            <i class="fa-solid fa-seedling text-xs"></i>
+          <div class="w-7 h-7 rounded-full bg-[#596956] text-white flex items-center justify-center text-xs">
+            <i class="fa-solid fa-leaf"></i>
           </div>
-          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
+          <span class="text-lg font-serif font-bold text-[#1A1816] dark:text-white">SpeakBloom</span>
         </div>
-        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E6E0D2] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
-      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
-        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1">Main Pages</div>
-        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 1 (General Services)</a>
-        <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 2 (Niche Specialty)</a>
-        <a href="about.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Us</a>
-        <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] text-[#C07534] font-bold bg-[#EFECE4] dark:bg-[#0D222E]">Services (Grid)</a>
-        <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Service Details (Single)</a>
-        <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Listing</a>
-        <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Details</a>
-        <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pricing Plans</a>
-        <a href="contact.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Contact Us</a>
-
-        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1 pt-2">Utilities</div>
-        <a href="404.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">404 Error Page</a>
-        <a href="coming-soon.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Coming Soon Page</a>
+      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1A1816] dark:text-slate-200">
+        <a href="index.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EBE7DC] dark:hover:bg-[#0D222E]">Home</a>
+        <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EBE7DC] dark:hover:bg-[#0D222E]">About</a>
+        <a href="services.html" class="block px-3 py-2.5 rounded-xl bg-[#EBE7DC] dark:bg-[#0D222E] font-bold">Services (All 12)</a>
+        <a href="therapists.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EBE7DC] dark:hover:bg-[#0D222E]">Our Therapists</a>
+        <a href="pricing.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EBE7DC] dark:hover:bg-[#0D222E]">Rates &amp; Pricing</a>
+        <a href="blog.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EBE7DC] dark:hover:bg-[#0D222E]">Articles</a>
+        <a href="contact.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EBE7DC] dark:hover:bg-[#0D222E]">Contact</a>
       </nav>
     </div>
 
-    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
-      <button data-open-modal="assessment-wizard-modal" class="w-full btn-ochre text-xs py-3 justify-center">
-        Get Started
+    <div class="pt-4 border-t border-[#E6E0D2] dark:border-slate-800 space-y-2">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-sand-pill text-xs py-3 justify-center">
+        Book Intake Call
       </button>
       <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
-        <a href="login.html" class="hover:text-[#C07534]">Login</a>
+        <a href="login.html" class="hover:text-[#1A1816]">Login</a>
         <span>&bull;</span>
-        <a href="register.html" class="hover:text-[#C07534]">Register</a>
+        <a href="register.html" class="hover:text-[#1A1816]">Register</a>
       </div>
     </div>
   </div>
-  </div>
-  </div>
 
-  <!-- Hero Section -->
-  <section class="py-16 lg:py-20 bg-[#F7F4EE] dark:bg-[#06151D] border-b border-[#EFECE4] dark:border-slate-800 text-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#EFECE4] text-[#C07534] dark:bg-slate-800 dark:text-[#E89C5D]">
-        <i class="fa-solid fa-shapes"></i> COMPREHENSIVE CLINICAL DIRECTORY
-      </span>
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#1E1C1A] dark:text-white tracking-tight leading-[1.12]">
-        Evidence-Based Clinical Programs
-      </h1>
-      <p class="text-xs sm:text-sm text-[#6B6560] dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-        Explore our 12 specialized therapies spanning early toddler intervention, childhood articulation, neurodiversity-affirming autism care, and adult neuro-rehabilitation.
-      </p>
+  <!-- =========================================================================
+       HERO PANEL: "Guiding you on your journey..." (From Cassandra Screenshot)
+       ========================================================================= -->
+  <section class="py-16 sm:py-24 bg-[#F4F1EA] dark:bg-[#06151D] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Headline & Learn More Pill -->
+        <div class="lg:col-span-6 space-y-6 sm:space-y-8 reveal-item">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#1A1816] dark:text-white leading-[1.15] font-normal">
+            Guiding you on your<br>journey to self-expression<br>and confidence.
+          </h1>
+          <p class="text-xs sm:text-sm text-[#5A5550] dark:text-slate-300 leading-relaxed max-w-md font-normal">
+            Evidence-based speech and language therapy designed to help children, teens, and adults communicate naturally without fear or anxiety.
+          </p>
+          <div>
+            <a href="#services-directory" class="btn-sand-pill text-xs py-3 px-8 shadow-sm">
+              Learn More
+            </a>
+          </div>
+        </div>
 
-      <!-- Category Filter Pills -->
-      <div class="flex flex-wrap justify-center gap-2 pt-4" id="service-filters">
-        <button class="filter-pill active px-4 py-2 rounded-full text-xs font-bold bg-[#C07534] text-white shadow-sm transition" data-filter="all">All 12 Services</button>
-        <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534] hover:border-[#C07534] transition" data-filter="toddler">Toddlers (0–3 Yrs)</button>
-        <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534] hover:border-[#C07534] transition" data-filter="speech">Speech &amp; Sounds</button>
-        <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534] hover:border-[#C07534] transition" data-filter="autism">Autism &amp; AAC</button>
-        <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534] hover:border-[#C07534] transition" data-filter="adult">Adult Care</button>
+        <!-- Right: Overlapping Clinician Portrait + Botanical Fern Foliage -->
+        <div class="lg:col-span-6 relative flex items-center justify-center reveal-item delay-100">
+          <!-- Botanical Fern Background -->
+          <div class="w-72 sm:w-80 h-80 sm:h-96 rounded-3xl overflow-hidden shadow-md absolute right-0 sm:right-6 top-0 opacity-85">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80" alt="Botanical fern foliage" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Foreground Therapist in Light Blouse -->
+          <div class="w-64 sm:w-72 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl relative z-10 border-4 border-white dark:border-slate-700 bg-white mr-12 sm:mr-20 mt-10">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Speech Language Pathologist" class="w-full h-full object-cover">
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- 12 Services Grid (Every single card redirects to its own dedicated HTML page) -->
-  <section class="py-16 bg-[#FAF7F2] dark:bg-[#06151D]">
+  <!-- =========================================================================
+       SECTION 2: "How I Can Help" / "How We Can Help" (Deep Moss Green #596956)
+       ========================================================================= -->
+  <section class="py-20 sm:py-28 bg-[#596956] text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-2 reveal-item">
+        <span class="text-[11px] uppercase tracking-[0.2em] text-[#E8D5B7] font-semibold">Our Specialized Care</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal">
+          How We Can Help
+        </h2>
+      </div>
+
+      <!-- 3 Featured Pillars (Matching Screenshot Exactly) -->
+      <div class="grid md:grid-cols-3 gap-10 sm:gap-12 pt-4">
+        
+        <!-- Pillar 1: Individual Therapy / Early Delay -->
+        <div class="space-y-4 reveal-item delay-100">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#E8D5B7] pb-2 border-b border-white/20">
+            1. Early Language &amp; Delay
+          </h3>
+          <p class="text-xs sm:text-sm text-[#E2EAE0] leading-relaxed font-normal">
+            Life is challenging and overwhelming when speech development feels stalled. Together, we will work on strategies addressing late talking, first words, and toddler vocabulary growth. Each session is tailored to your child's unique pace and joy.
+          </p>
+          <a href="service-toddler-delay.html" class="inline-block text-xs text-[#E8D5B7] hover:underline font-semibold pt-2">
+            Read Program Details &rarr;
+          </a>
+        </div>
+
+        <!-- Pillar 2: Articulation & Speech Clarity -->
+        <div class="space-y-4 reveal-item delay-200">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#E8D5B7] pb-2 border-b border-white/20">
+            2. Articulation &amp; Sounds
+          </h3>
+          <p class="text-xs sm:text-sm text-[#E2EAE0] leading-relaxed font-normal">
+            Unclear speech and sound substitutions can make communicating with peers and teachers frustrating. We employ tactile placement cues and gentle acoustic feedback to guide precise tongue and lip movement for crystal clear pronunciation.
+          </p>
+          <a href="service-articulation.html" class="inline-block text-xs text-[#E8D5B7] hover:underline font-semibold pt-2">
+            Read Program Details &rarr;
+          </a>
+        </div>
+
+        <!-- Pillar 3: Play Therapy / AAC & Fluency -->
+        <div class="space-y-4 reveal-item delay-300">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#E8D5B7] pb-2 border-b border-white/20">
+            3. Play &amp; Fluency Therapy
+          </h3>
+          <p class="text-xs sm:text-sm text-[#E2EAE0] leading-relaxed font-normal">
+            A natural therapy session allows children to process thoughts, reduce stuttering tension, and express feelings through responsive play and assistive AAC technology. When given a safe space, children feel comfortable expressing their full authentic voice.
+          </p>
+          <a href="service-stuttering-fluency.html" class="inline-block text-xs text-[#E8D5B7] hover:underline font-semibold pt-2">
+            Read Program Details &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Centered Sand Pill Button -->
+      <div class="text-center pt-6 reveal-item">
+        <a href="#services-directory" class="btn-sand-pill text-xs py-3 px-8 shadow-md font-semibold">
+          More About Services
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: "Together, we can start your journey towards healing."
+       ========================================================================= -->
+  <section class="py-20 sm:py-28 bg-[#ECEAE4] dark:bg-[#0A1D27] overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Clinician Notebook Photo with Botanical Branch -->
+        <div class="lg:col-span-6 relative flex items-center justify-center reveal-item">
+          <!-- Botanical Eucalyptus Background -->
+          <div class="w-64 sm:w-72 h-80 sm:h-96 rounded-3xl overflow-hidden shadow-sm absolute left-0 sm:left-4 top-0 opacity-80">
+            <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=800&q=80" alt="Botanical branch" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Foreground Clinician Writing on Notebook -->
+          <div class="w-64 sm:w-72 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl relative z-10 border-4 border-white dark:border-slate-700 bg-white ml-12 sm:ml-20 mt-8">
+            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80" alt="Therapist with intake notebook" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Right: Editorial Content -->
+        <div class="lg:col-span-6 space-y-6 reveal-item delay-100">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1A1816] dark:text-white leading-[1.2] font-normal">
+            Together, we can start your<br>journey towards communication.
+          </h2>
+          <div class="space-y-4 text-xs sm:text-sm text-[#5A5550] dark:text-slate-300 leading-relaxed font-normal">
+            <p>
+              The therapy process is unique to each person. Therefore, we utilize multiple evidence-based clinical strategies and a wide range of play-based techniques to accommodate your child's specific sensory and speech needs.
+            </p>
+            <p>
+              Whether you are experiencing the impact of delayed milestones, stuttering anxiety, low confidence, or difficulty expressing thoughts, we offer a warm, safe space where children and adults can communicate in an empathetic and neutral environment.
+            </p>
+            <p>
+              You will learn practical home tools and gain clinical resources to help your child thrive beyond our therapy rooms.
+            </p>
+          </div>
+          <div class="pt-2">
+            <button data-open-modal="assessment-wizard-modal" class="btn-sand-pill text-xs py-3 px-8 shadow-sm font-semibold">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: "About Dr. Elena & Our Clinic" (Deep Moss Green Split Layout)
+       ========================================================================= -->
+  <section class="py-20 sm:py-28 bg-[#596956] text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Bio & Philosophy -->
+        <div class="lg:col-span-6 space-y-6 reveal-item">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal">
+            About Dr. Elena
+          </h2>
+          <div class="space-y-4 text-xs sm:text-sm text-[#E2EAE0] leading-relaxed font-normal">
+            <p>
+              I am a Licensed Speech-Language Pathologist (CCC-SLP) and Clinical Director with over 14 years of specialized pediatric and neurogenic communication experience.
+            </p>
+            <p>
+              On my days off you can find me outside exploring nature trails, reading developmental linguistics, and spending time with family. I believe being heard, understood, and supported is one of the most vital rights in the world.
+            </p>
+          </div>
+          <div class="pt-2">
+            <a href="therapist-single.html?id=elena" class="btn-sand-pill text-xs py-3 px-8 shadow-sm font-semibold">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Framed Portrait with Monstera Foliage Background -->
+        <div class="lg:col-span-6 relative flex items-center justify-center reveal-item delay-100">
+          <div class="w-72 sm:w-80 h-80 sm:h-96 rounded-3xl overflow-hidden shadow-md absolute right-0 sm:right-4 top-0 opacity-75">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80" alt="Botanical leaf texture" class="w-full h-full object-cover">
+          </div>
+
+          <div class="w-64 sm:w-72 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl relative z-10 border-4 border-white/80 bg-white mr-8 sm:mr-16 mt-8">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80" alt="Dr. Elena Vance" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: "What to Expect" (Cream Linen with Thoughtful Flow)
+       ========================================================================= -->
+  <section class="py-20 sm:py-24 bg-[#F4F1EA] dark:bg-[#06151D] text-center overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 reveal-item">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1A1816] dark:text-white font-normal">
+        What to Expect
+      </h2>
+      <p class="text-xs sm:text-sm text-[#5A5550] dark:text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
+        Every therapy session looks a little different as the healing and communication process is unique to each individual. If you're new to speech therapy, here is a glimpse into the gentle process of what to expect when working with us:
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-6 pt-8 text-left">
+        <div class="bg-white dark:bg-[#0D222E] p-6 rounded-3xl border border-[#E6E0D2] dark:border-slate-800 space-y-2.5 shadow-sm interactive-card">
+          <div class="w-8 h-8 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#596956] dark:text-[#A7D7BC] font-bold text-xs flex items-center justify-center">1</div>
+          <h3 class="font-serif font-semibold text-base text-[#1A1816] dark:text-white">Intake &amp; Exploration</h3>
+          <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed">
+            A relaxed 15-minute phone call to understand your child's background, routines, and specific developmental goals.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-[#0D222E] p-6 rounded-3xl border border-[#E6E0D2] dark:border-slate-800 space-y-2.5 shadow-sm interactive-card">
+          <div class="w-8 h-8 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#596956] dark:text-[#A7D7BC] font-bold text-xs flex items-center justify-center">2</div>
+          <h3 class="font-serif font-semibold text-base text-[#1A1816] dark:text-white">Comprehensive Play Evaluation</h3>
+          <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed">
+            A 60-minute session assessing receptive language, speech phonetics, oral motor coordination, and social pragmatics.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-[#0D222E] p-6 rounded-3xl border border-[#E6E0D2] dark:border-slate-800 space-y-2.5 shadow-sm interactive-card">
+          <div class="w-8 h-8 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#596956] dark:text-[#A7D7BC] font-bold text-xs flex items-center justify-center">3</div>
+          <h3 class="font-serif font-semibold text-base text-[#1A1816] dark:text-white">Individualized Growth Plan</h3>
+          <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed">
+            Weekly 45-minute sessions accompanied by parent coaching videos, flashcards, and celebratory milestone updates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: COMPLETE 12 SERVICES DIRECTORY (Every Card Redirects to Dedicated HTML Page)
+       ========================================================================= -->
+  <section id="services-directory" class="py-20 bg-[#FAF8F4] dark:bg-[#06151D] border-t border-[#E6E0D2] dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-[#E6E0D2] dark:border-slate-800">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#596956] dark:text-[#A7D7BC]">Complete Directory</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1A1816] dark:text-white mt-1">
+            All 12 Clinical Programs
+          </h2>
+        </div>
+        
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap gap-2" id="service-filters">
+          <button class="filter-pill active px-4 py-2 rounded-full text-xs font-bold bg-[#596956] text-white shadow-sm transition" data-filter="all">All 12 Services</button>
+          <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E6E0D2] dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-[#596956] transition" data-filter="toddler">Toddler (0-3 Yrs)</button>
+          <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E6E0D2] dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-[#596956] transition" data-filter="speech">Speech &amp; Sounds</button>
+          <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E6E0D2] dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-[#596956] transition" data-filter="autism">Autism &amp; AAC</button>
+          <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E6E0D2] dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-[#596956] transition" data-filter="adult">Adult Neuro</button>
+        </div>
+      </div>
+
+      <!-- 12 Services Cards Grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="toddler">
+        <!-- 1. Toddler Delay -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="toddler">
           <div>
             <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="School Readiness & Literacy Support" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                EARLY INTERVENTION
-              </span>
+              <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80" alt="Late Talker Toddler Speech Therapy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">0–3 YEARS</span>
             </div>
             <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Maya Al-Mansoor</span>
-                <span class="font-bold text-[#C07534]">₹2,200</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
                 <a href="service-toddler-delay.html">Late Talker Toddler Speech Therapy</a>
               </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Gentle, play-based parent-child communication coaching designed to bridge early vocabulary gaps and reduce toddler frustration.
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Play-based parent coaching to bridge early vocabulary gaps and turn toddler frustration into words.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-toddler-delay.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
+          <div class="p-6 pt-0">
+            <a href="service-toddler-delay.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
             </a>
           </div>
         </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
+
+        <!-- 2. Articulation -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
           <div>
             <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Speech Sound Clarity & Articulation Therapy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                PHONETIC PRECISION
-              </span>
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Speech Sound Clarity & Articulation Therapy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">PHONETICS</span>
             </div>
             <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> David Chen</span>
-                <span class="font-bold text-[#C07534]">₹2,000</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-articulation.html">Speech Sound Clarity & Articulation Therapy</a>
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-articulation.html">Speech Sound Clarity &amp; Articulation</a>
               </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Evidence-based motor speech therapy correcting lisping, tongue thrust, and stubborn sound distortions (/r/, /s/, /l/, /th/).
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Systematic placement techniques for lisps, sound substitutions (/r/, /s/, /l/), and phonological clarity.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-articulation.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
+          <div class="p-6 pt-0">
+            <a href="service-articulation.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
             </a>
           </div>
         </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="fluency">
+
+        <!-- 3. Stuttering & Fluency -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
           <div>
             <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Stuttering & Fluency Coaching" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                EVIDENCE-BASED FLUENCY
-              </span>
+              <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=800&q=80" alt="Stuttering & Fluency Modification" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">FLUENCY</span>
             </div>
             <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Marcus Vance</span>
-                <span class="font-bold text-[#C07534]">₹2,400</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-stuttering-fluency.html">Stuttering & Fluency Coaching</a>
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-stuttering-fluency.html">Stuttering &amp; Fluency Modification</a>
               </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Transforming communication anxiety into effortless, confident speech using smooth airflow techniques and acoustic biofeedback.
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Gentle pacing, breath support, and cognitive desensitization to make speaking easy and confident.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-stuttering-fluency.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
+          <div class="p-6 pt-0">
+            <a href="service-stuttering-fluency.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
             </a>
           </div>
         </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="autism">
+
+        <!-- 4. Autism & AAC -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="autism">
           <div>
             <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80" alt="Autism & Gestalt Language (GLP / AAC)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                NEURODIVERSITY-AFFIRMING
-              </span>
+              <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80" alt="Autism & AAC Devices" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">NEURO-AFFIRMING</span>
             </div>
             <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Priya Sundaram</span>
-                <span class="font-bold text-[#C07534]">₹2,600</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-aac-autism.html">Autism & Gestalt Language (GLP / AAC)</a>
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-aac-autism.html">Autism &amp; AAC Communication</a>
               </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Empowering non-speaking and gestalt language processors with tablet communication devices (TouchChat, LAMP) and natural play.
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                High-tech speech tablet customization (TouchChat, Proloquo2Go) and gestalt language processing.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-aac-autism.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
+          <div class="p-6 pt-0">
+            <a href="service-aac-autism.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
             </a>
           </div>
         </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="adult">
+
+        <!-- 5. Apraxia -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
           <div>
             <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Adult Stroke, Aphasia & Neuro-Rehabilitation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                COGNITIVE-COMMUNICATION & DYSPHAGIA
-              </span>
+              <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80" alt="Childhood Apraxia of Speech" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">MOTOR SPEECH</span>
             </div>
             <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Dr. Elena Rostova</span>
-                <span class="font-bold text-[#C07534]">₹2,800</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-aphasia-stroke-rehab.html">Adult Stroke, Aphasia & Neuro-Rehabilitation</a>
-              </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Targeted neuro-plasticity exercises restoring word retrieval, conversational fluency, and safe swallowing following brain injury.
-              </p>
-            </div>
-          </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-aphasia-stroke-rehab.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
-            </a>
-          </div>
-        </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="adult">
-          <div>
-            <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Voice Disorders & Vocal Cord Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                ACOUSTIC & VOCAL REHABILITATION
-              </span>
-            </div>
-            <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Dr. Ananya Krishnan</span>
-                <span class="font-bold text-[#C07534]">₹2,500</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-voice-therapy.html">Voice Disorders & Vocal Cord Care</a>
-              </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Restoring vocal cord health, resonance, and projection for singers, teachers, executives, and vocal fold nodule recovery.
-              </p>
-            </div>
-          </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-voice-therapy.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
-            </a>
-          </div>
-        </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
-          <div>
-            <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1584467735815-f778f274e296?auto=format&fit=crop&w=800&q=80" alt="Auditory Processing & Listening Skills" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                CENTRAL AUDITORY TRAINING
-              </span>
-            </div>
-            <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> David Chen</span>
-                <span class="font-bold text-[#C07534]">₹2,300</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-auditory-processing.html">Auditory Processing & Listening Skills</a>
-              </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Strengthening the brain's ability to filter background noise, follow multi-step spoken instructions, and excel in noisy classrooms.
-              </p>
-            </div>
-          </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-auditory-processing.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
-            </a>
-          </div>
-        </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="toddler">
-          <div>
-            <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80" alt="Pediatric Feeding & Oral Motor Therapy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                SOS FEEDING PROTOCOL
-              </span>
-            </div>
-            <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Maya Al-Mansoor</span>
-                <span class="font-bold text-[#C07534]">₹2,600</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-pediatric-feeding.html">Pediatric Feeding & Oral Motor Therapy</a>
-              </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Gentle, sequential desensitization for picky eaters, oral motor chewing weakness, and mealtime sensory distress.
-              </p>
-            </div>
-          </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-pediatric-feeding.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
-            </a>
-          </div>
-        </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="autism">
-          <div>
-            <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" alt="Social Pragmatic Communication & Peer Play" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                PEER INTERACTION & SOCIAL DYNAMICS
-              </span>
-            </div>
-            <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Priya Sundaram</span>
-                <span class="font-bold text-[#C07534]">₹2,200</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-social-pragmatics.html">Social Pragmatic Communication & Peer Play</a>
-              </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Fostering genuine friendships, conversational perspective-taking, non-verbal cues, and joyful collaborative play.
-              </p>
-            </div>
-          </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-social-pragmatics.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
-            </a>
-          </div>
-        </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
-          <div>
-            <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Childhood Apraxia of Speech (CAS)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                MOTOR PLANNING
-              </span>
-            </div>
-            <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> David Chen</span>
-                <span class="font-bold text-[#C07534]">₹2,600</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
                 <a href="service-apraxia-speech.html">Childhood Apraxia of Speech (CAS)</a>
               </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                High-repetition dynamic tactile motor planning therapy helping children bridge the brain-to-mouth speech gap.
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Multi-sensory motor planning and Dynamic Temporal and Tactile Cueing (DTTC) for syllable coordination.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-apraxia-speech.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
+          <div class="p-6 pt-0">
+            <a href="service-apraxia-speech.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
             </a>
           </div>
         </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="adult">
+
+        <!-- 6. Social Pragmatics -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="autism">
           <div>
             <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Online Speech Teletherapy & Virtual Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                CONVENIENT
-              </span>
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Social Pragmatics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">PEER GROUPS</span>
             </div>
             <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Dr. Ananya Krishnan</span>
-                <span class="font-bold text-[#C07534]">₹1,900</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-telepractice-online.html">Online Speech Teletherapy & Virtual Care</a>
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-social-pragmatics.html">Social Pragmatics &amp; Peer Groups</a>
               </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                High-definition, gamified, and HIPAA-secure digital speech therapy delivered straight to the comfort of your living room.
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Turn-taking, conversation nuance, emotional regulation, and friendship-building in small supportive groups.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-telepractice-online.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
+          <div class="p-6 pt-0">
+            <a href="service-social-pragmatics.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
             </a>
           </div>
         </div>
-        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
+
+        <!-- 7. Aphasia & Stroke -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="adult">
           <div>
             <div class="h-52 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=800&q=80" alt="School-Age Literacy & Speech Readiness" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534] shadow-sm">
-                PHONICS & CLASSROOM COMPREHENSION
-              </span>
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Aphasia & Stroke Rehab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">ADULT REHAB</span>
             </div>
             <div class="p-6 space-y-2">
-              <div class="flex items-center justify-between text-[11px] text-[#A8A199] pb-1">
-                <span><i class="fa-solid fa-user-doctor text-[#C07534]"></i> Marcus Vance</span>
-                <span class="font-bold text-[#C07534]">₹2,100</span>
-              </div>
-              <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors leading-snug">
-                <a href="service-school-readiness.html">School-Age Literacy & Speech Readiness</a>
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-aphasia-stroke-rehab.html">Adult Aphasia &amp; Stroke Rehab</a>
               </h3>
-              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed font-normal">
-                Bridging spoken language and written literacy with phonological awareness, reading fluency, and classroom confidence.
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Neuro-rehabilitation restoring word retrieval, functional reading, auditory memory, and speech independence.
               </p>
             </div>
           </div>
-          <div class="p-6 pt-0 space-y-2">
-            <a href="service-school-readiness.html" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
-              Explore Program Details &rarr;
+          <div class="p-6 pt-0">
+            <a href="service-aphasia-stroke-rehab.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
             </a>
           </div>
         </div>
+
+        <!-- 8. Voice Therapy -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="adult">
+          <div>
+            <div class="h-52 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" alt="Voice Therapy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">VOCAL HEALTH</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-voice-therapy.html">Voice Therapy &amp; Vocal Rehab</a>
+              </h3>
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Vocal cord nodule recovery, pitch modification, vocal hygiene, and resonance therapy for professional speakers.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="service-voice-therapy.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- 9. Pediatric Feeding -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="toddler">
+          <div>
+            <div class="h-52 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80" alt="Pediatric Feeding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">ORAL MOTOR</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-pediatric-feeding.html">Pediatric Feeding &amp; Swallowing</a>
+              </h3>
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Sensory-based food exploration, chewing strength, and swallowing safety for selective eaters.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="service-pediatric-feeding.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- 10. Auditory Processing -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
+          <div>
+            <div class="h-52 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Auditory Processing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">AUDITORY</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-auditory-processing.html">Auditory Processing &amp; Listening</a>
+              </h3>
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Strengthening auditory discrimination, following multi-step directions, and noisy background listening.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="service-auditory-processing.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- 11. Telepractice Online -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
+          <div>
+            <div class="h-52 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Telepractice Online" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">TELEHEALTH</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-telepractice-online.html">Online Telepractice Speech Therapy</a>
+              </h3>
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Convenient virtual speech sessions from the comfort of home with gamified interactive activities.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="service-telepractice-online.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- 12. School Readiness -->
+        <div class="service-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E6E0D2] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between interactive-card" data-category="speech">
+          <div>
+            <div class="h-52 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="School Readiness" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-3 left-3 bg-[#596956] text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">READING &amp; PHONICS</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-lg font-bold font-serif text-[#1A1816] dark:text-white group-hover:text-[#596956] dark:group-hover:text-[#A7D7BC] transition">
+                <a href="service-school-readiness.html">School Readiness &amp; Literacy Support</a>
+              </h3>
+              <p class="text-xs text-[#5A5550] dark:text-slate-400 leading-relaxed font-normal">
+                Phonemic awareness, rhyming, narrative storytelling, and pre-reading skills for kindergarten confidence.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="service-school-readiness.html" class="block text-center py-2.5 rounded-full border border-[#D8D2C2] dark:border-slate-700 text-xs font-semibold hover:border-[#596956] dark:hover:border-white transition">
+              Explore Program &rarr;
+            </a>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- Assessment Banner -->
-  <section class="py-16 bg-[#F7F4EE] dark:bg-[#081D26] border-t border-[#EFECE4] dark:border-slate-800 text-center">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
-      <h2 class="text-3xl font-serif text-[#1E1C1A] dark:text-white">Unsure Which Therapy Is Right?</h2>
-      <p class="text-xs sm:text-sm text-[#6B6560] dark:text-slate-300">
-        Our clinical director will review your case and recommend the optimal clinical plan.
-      </p>
-      <button data-open-modal="assessment-wizard-modal" class="btn-ochre text-xs py-3 px-8 shadow-sm">
-        Start Free Assessment Wizard &rarr;
-      </button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-[#1E1C1A] text-[#EFECE4] pt-16 pb-12 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800">
-        <div class="col-span-2 md:col-span-1 space-y-3">
-          <span class="text-xl font-serif font-bold text-white tracking-tight">SpeakBloom</span>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Evidence-based, compassionate speech, language, and sensory therapy center.
-          </p>
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-[#182417] text-white py-16 border-t border-[#2A3B28]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-white text-[#182417] flex items-center justify-center text-xs">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <span class="text-xl font-serif font-bold tracking-tight">SpeakBloom</span>
         </div>
-        <div class="space-y-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-300 block">Quick Links</span>
-          <ul class="space-y-1.5 text-xs text-slate-400">
-            <li><a href="index.html" class="hover:text-[#C07534]">Home</a></li>
-            <li><a href="services.html" class="hover:text-[#C07534]">All Services</a></li>
-            <li><a href="therapists.html" class="hover:text-[#C07534]">Our Providers</a></li>
-            <li><a href="pricing.html" class="hover:text-[#C07534]">Pricing Plans</a></li>
-          </ul>
-        </div>
-        <div class="space-y-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-300 block">Milestones</span>
-          <ul class="space-y-1.5 text-xs text-slate-400">
-            <li><a href="milestone-early-communication.html" class="hover:text-[#C07534]">0–2 Years</a></li>
-            <li><a href="milestone-language-development.html" class="hover:text-[#C07534]">2–5 Years</a></li>
-            <li><a href="milestone-school-age-support.html" class="hover:text-[#C07534]">6–12 Years</a></li>
-            <li><a href="milestone-teens-and-adults.html" class="hover:text-[#C07534]">Teens &amp; Adults</a></li>
-          </ul>
-        </div>
-        <div class="space-y-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-300 block">Contact</span>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            42 Richmond Road, Bangalore, KA<br>
-            +91 98765 43210<br>
-            hello@speakbloomtherapy.com
-          </p>
-        </div>
+        <p class="text-xs text-slate-400 leading-relaxed font-normal">
+          Gentle, evidence-based speech and language therapy dedicated to nurturing authentic communication.
+        </p>
       </div>
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-        <p>&copy; 2026 SpeakBloom Speech &amp; Language Center. All rights reserved.</p>
-        <div class="flex gap-4">
-          <a href="about.html" class="hover:text-slate-300">Privacy Policy</a>
-          <span>&bull;</span>
-          <a href="about.html" class="hover:text-slate-300">Terms of Service</a>
-        </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#E8D5B7]">Navigation</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-normal">
+          <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-white transition">About</a></li>
+          <li><a href="services.html" class="hover:text-white transition">Services (All 12)</a></li>
+          <li><a href="therapists.html" class="hover:text-white transition">Therapists</a></li>
+          <li><a href="pricing.html" class="hover:text-white transition">Rates</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#E8D5B7]">Services</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-normal">
+          <li><a href="service-toddler-delay.html" class="hover:text-white transition">Toddler Speech Delay</a></li>
+          <li><a href="service-articulation.html" class="hover:text-white transition">Articulation Therapy</a></li>
+          <li><a href="service-stuttering-fluency.html" class="hover:text-white transition">Stuttering &amp; Fluency</a></li>
+          <li><a href="service-aac-autism.html" class="hover:text-white transition">Autism &amp; AAC Devices</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#E8D5B7]">Contact</h4>
+        <p class="text-xs text-slate-400">742 Evergreen Terrace, Suite 400<br>Boston, MA 02115</p>
+        <p class="text-xs text-slate-400"><a href="tel:+18005557732" class="hover:text-white">(800) 555-SPEAK</a></p>
+        <p class="text-xs text-slate-400"><a href="mailto:care@speakbloom.org" class="hover:text-white">care@speakbloom.org</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- Assessment Wizard Modal -->
-  <div id="assessment-wizard-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-[#0D222E] w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#E3DFD5] dark:border-slate-700 relative max-h-[90vh] overflow-y-auto interactive-card">
-      <button data-close-modal class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#FAF7F2] dark:bg-slate-800 flex items-center justify-center text-xs text-slate-500 hover:text-black dark:hover:text-white">
+  <!-- Assessment Booking Modal -->
+  <div id="assessment-wizard-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-white dark:bg-[#0D222E] rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-[#E6E0D2] dark:border-slate-700 relative animate-scaleUp">
+      <button data-close-modal class="absolute top-5 right-5 w-8 h-8 rounded-full border border-[#E6E0D2] dark:border-slate-700 flex items-center justify-center text-xs text-slate-500 hover:text-black dark:hover:text-white">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      
-      <div class="space-y-2 mb-6">
-        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534]">Assessment Consultation</span>
-        <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white">Clinical Intake Wizard</h3>
-        <p class="text-xs text-slate-500 dark:text-slate-400">Tell us about your communicative goals.</p>
+
+      <div class="text-center space-y-2 pb-6 border-b border-[#E6E0D2] dark:border-slate-800">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#596956] dark:text-[#A7D7BC]">Quick Intake Assessment</span>
+        <h3 class="text-xl sm:text-2xl font-serif font-bold text-[#1A1816] dark:text-white">Book Your Consultation</h3>
       </div>
 
-      <form id="global-booking-form" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-semibold text-slate-700 dark:text-slate-200 mb-1">Full Name</label>
-          <input type="text" required placeholder="Parent or Client Name" class="w-full px-4 py-2.5 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#081D26] outline-none focus:border-[#C07534]">
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block font-semibold text-slate-700 dark:text-slate-200 mb-1">Phone Number</label>
-            <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#081D26] outline-none focus:border-[#C07534]">
+      <form id="assessment-wizard-form" class="mt-6 space-y-4">
+        <div class="flex justify-center gap-4 pb-4">
+          <div class="wizard-step-indicator" data-step="1">
+            <span class="step-circle w-8 h-8 rounded-full bg-[#596956] text-white font-bold text-xs flex items-center justify-center">1</span>
           </div>
-          <div>
-            <label class="block font-semibold text-slate-700 dark:text-slate-200 mb-1">Program</label>
-            <select class="w-full px-3 py-2.5 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#081D26] outline-none focus:border-[#C07534]">
-              <option>Toddler Early Intervention</option>
-              <option>Speech Sound Articulation</option>
-              <option>Stuttering &amp; Fluency</option>
-              <option>Autism &amp; AAC</option>
-              <option>Adult Stroke &amp; Aphasia</option>
-              <option>Voice Therapy</option>
-              <option>Feeding &amp; Swallowing</option>
-            </select>
+          <div class="wizard-step-indicator" data-step="2">
+            <span class="step-circle w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xs flex items-center justify-center">2</span>
+          </div>
+          <div class="wizard-step-indicator" data-step="3">
+            <span class="step-circle w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xs flex items-center justify-center">3</span>
           </div>
         </div>
-        <button type="submit" class="w-full btn-ochre text-xs py-3 justify-center shadow-sm">
-          Submit Assessment Request &rarr;
-        </button>
+
+        <div class="wizard-step-pane space-y-3" data-step="1">
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Who is seeking therapy?</label>
+          <select class="w-full px-4 py-3 rounded-xl border border-[#D8D2C2] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
+            <option>Toddler (18 Months – 3 Years)</option>
+            <option>Preschooler (3 – 5 Years)</option>
+            <option>School-Age Child (6 – 12 Years)</option>
+            <option>Teen or Adult (13+ Years)</option>
+          </select>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 pt-2">Primary Area of Concern</label>
+          <select class="w-full px-4 py-3 rounded-xl border border-[#D8D2C2] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
+            <option>Late Talking / Vocabulary Delay</option>
+            <option>Unclear Pronunciation / Articulation</option>
+            <option>Stuttering / Speech Blocks</option>
+            <option>Autism &amp; Non-Verbal AAC Support</option>
+          </select>
+        </div>
+
+        <div class="wizard-step-pane hidden space-y-3" data-step="2">
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Parent / Guardian Name</label>
+          <input type="text" placeholder="Sarah Jenkins" class="w-full px-4 py-3 rounded-xl border border-[#D8D2C2] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 pt-2">Phone Number</label>
+          <input type="tel" placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-[#D8D2C2] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
+        </div>
+
+        <div class="wizard-step-pane hidden space-y-4 text-center py-4" data-step="3">
+          <div class="w-14 h-14 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center mx-auto text-2xl">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-[#1A1816] dark:text-white">Thank You! Intake Received.</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Our clinical team will call you within 2 hours to confirm your consultation.
+          </p>
+        </div>
+
+        <div class="flex justify-between items-center pt-4 border-t border-[#E6E0D2] dark:border-slate-800">
+          <button type="button" id="wizard-prev-btn" class="hidden text-xs font-bold text-slate-500 hover:text-black dark:hover:text-white">
+            &larr; Back
+          </button>
+          <button type="button" id="wizard-next-btn" class="ml-auto btn-sand-pill text-xs py-2.5 px-6 font-semibold">
+            Continue &rarr;
+          </button>
+        </div>
       </form>
     </div>
   </div>
 
   <script src="assets/js/main.js"></script>
-  <script>
-    // Category Filter Functionality
-    document.querySelectorAll('.filter-pill').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-pill').forEach(b => {
-          b.classList.remove('active', 'bg-[#C07534]', 'text-white');
-          b.classList.add('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
-        });
-        btn.classList.add('active', 'bg-[#C07534]', 'text-white');
-        btn.classList.remove('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
-
-        const filter = btn.getAttribute('data-filter');
-        document.querySelectorAll('.service-card').forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category') === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
