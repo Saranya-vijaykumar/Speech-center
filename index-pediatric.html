@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatric Play & Sensory Speech Therapy | SpeakBloom Center</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            terracotta: {
+              50: '#FFF0EB',
+              100: '#FFE3DA',
+              500: '#FF7A59',
+              600: '#E66847',
+            },
+            forest: {
+              800: '#0A4D68',
+              900: '#051923',
+            },
+            sage: {
+              50: '#F2F8F9',
+              100: '#EBF4F6',
+              200: '#CCE5EB',
+              500: '#088395',
+            },
+            cream: {
+              50: '#F8FAFB',
+              100: '#F0F5F8',
+              200: '#E2EBF0',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            handwriting: ['Caveat', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .arch-hero-mask {
+      border-radius: 180px 180px 24px 24px;
+    }
+    .badge-cloud-quote {
+      border-radius: 24px 24px 24px 6px;
+      background: #FFFFFF;
+      box-shadow: 0 10px 30px -5px rgba(45, 90, 67, 0.1);
+    }
+    .badge-heart-quote {
+      border-radius: 24px 24px 6px 24px;
+      background: #FFF0EB;
+    }
+    .nav-active-link {
+      position: relative;
+      color: #FF7A59;
+    }
+    .nav-active-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #FF7A59;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFB] text-[#2D3748] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#FF7A59] selection:text-white">
+  <!-- =========================================================================
+       STANDARDIZED MULTIPURPOSE TOP NAVIGATION BAR
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 dark:border-slate-600 flex items-center justify-center text-[#1E1C1A] dark:text-white group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4c-1.5 4-4 6-8 6 4 1.5 6 4 6 8 0-4 2-6.5 6-8-4 0-6.5-2-4-6Z"/>
+              <path d="M12 4c1.5 4 4 6 8 6-4 1.5-6 4-6 8 0-4-2-6.5-6-8 4 0 6.5-2 4-6Z" opacity="0.4"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
+        </a>
+
+        <!-- Center Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-[#6B6560] dark:text-slate-300">
+          <!-- Home dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 hover:text-[#C07534] transition text-[#C07534] font-bold">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 1 (General Services)</a>
+                <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs text-[#C07534] font-bold">Home 2 (Niche Specialty)</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="hover:text-[#C07534] transition ">About Us</a>
+          
+          <!-- Services Dropdown -->
+          <div class="relative group py-2">
+            <a href="services.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">All Services (Grid)</a>
+                <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Service Details (Single)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Dropdown -->
+          <div class="relative group py-2">
+            <a href="blog.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Blog</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Grid / List</a>
+                <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Single Article</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="pricing.html" class="hover:text-[#C07534] transition ">Pricing</a>
+          <a href="contact.html" class="hover:text-[#C07534] transition ">Contact Us</a>
+        </nav>
+
+        <!-- Right Utilities & Action Button -->
+        <div class="flex items-center space-x-2.5 shrink-0">
+          
+          <!-- Theme Dark/Light Toggle -->
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
+            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+
+          <!-- Get Started Pill -->
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
+            Get Started
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+            <i class="fa-solid fa-bars-staggered text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full border border-[#C07534] flex items-center justify-center text-[#C07534]">
+            <i class="fa-solid fa-seedling text-xs"></i>
+          </div>
+          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1">Main Pages</div>
+        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 1 (General Services)</a>
+        <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] text-[#C07534] font-bold bg-[#EFECE4] dark:bg-[#0D222E]">Home 2 (Niche Specialty)</a>
+        <a href="about.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Us</a>
+        <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Services (Grid)</a>
+        <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Service Details (Single)</a>
+        <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Listing</a>
+        <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Details</a>
+        <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pricing Plans</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Contact Us</a>
+
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1 pt-2">Utilities</div>
+        <a href="404.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">404 Error Page</a>
+        <a href="coming-soon.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Coming Soon Page</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-ochre text-xs py-3 justify-center">
+        Get Started
+      </button>
+      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
+        <a href="login.html" class="hover:text-[#C07534]">Login</a>
+        <span>&bull;</span>
+        <a href="register.html" class="hover:text-[#C07534]">Register</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <section class="relative pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden bg-gradient-to-b from-[#F8FAFB] via-[#F0F5F8] to-[#F8FAFB] dark:from-[#06151D] dark:via-[#081D26] dark:to-[#06151D]">
+    
+    <!-- Organic Background Blobs -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-[#FFF0EB] dark:bg-[#1A3326]/40 rounded-full blur-3xl -z-10 pointer-events-none opacity-70"></div>
+    <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#EBF4F6] dark:bg-[#0A4D68]/30 rounded-full blur-2xl -z-10 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-6 space-y-6 text-center lg:text-center">
+          
+          <!-- Handwritten Tag -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF0EB] dark:bg-[#0A4D68] text-[#FF7A59] dark:text-[#E8927C] text-sm font-semibold">
+            <i class="fa-solid fa-sparkles text-xs"></i>
+            <span class="font-handwriting text-xl text-[#FF7A59]">Gentle, playful care for little voices &hearts;</span>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white font-heading leading-[1.12]">
+            Where Speech Therapy <br class="hidden sm:inline">
+            Feels Like <span class="text-[#FF7A59] italic">Pure Joyful Play</span>
+          </h1>
+
+          <!-- Body Text -->
+          <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
+            Our specialized pediatric playrooms combine sensory integration, joyful motor games, and gentle speech coaching to help toddlers, preschoolers, and non-verbal children bloom into confident communicators.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <button onclick="openBookingModal()" class="bg-[#FF7A59] hover:bg-[#E66847] text-white text-xs sm:text-sm font-bold px-7 py-4 rounded-full shadow-lg shadow-[#FF7A59]/20 hover:scale-[1.02] transition flex items-center gap-2">
+              <i class="fa-solid fa-shapes"></i>
+              <span>Book Play Assessment &rarr;</span>
+            </button>
+            <a href="#sensory-rooms" class="bg-white dark:bg-slate-800 hover:bg-[#FFF0EB] dark:hover:bg-[#0A4D68] text-slate-800 dark:text-slate-200 border border-[#E2EBF0] dark:border-slate-700 text-xs sm:text-sm font-bold px-6 py-4 rounded-full shadow-sm hover:scale-[1.02] transition flex items-center gap-2">
+              <i class="fa-solid fa-eye text-[#088395]"></i>
+              <span>Tour Sensory Playrooms</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Under Hero -->
+          <div class="pt-6 border-t border-[#E2EBF0] dark:border-slate-800/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-center">
+            <div>
+              <p class="text-xl sm:text-2xl font-black text-[#FF7A59] font-heading counter-value" data-target="98" data-suffix="%">98%</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-tight">Parent Confidence Rate</p>
+            </div>
+            <div>
+              <p class="text-xl sm:text-2xl font-black text-[#088395] dark:text-[#70C5D8] font-heading counter-value" data-target="24" data-suffix="+">24+</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-tight">Pediatric SLP Clinicians</p>
+            </div>
+            <div>
+              <p class="text-xl sm:text-2xl font-black text-[#FF7A59] font-heading counter-value" data-target="1500" data-suffix="+">1,500+</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-tight">First Words Unlocked</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Showcase -->
+        <div class="lg:col-span-6 relative flex justify-center">
+          
+          <div class="relative w-full max-w-md sm:max-w-lg">
+            
+            <!-- Arch Photo Frame -->
+            <div class="relative z-10 arch-hero-mask overflow-hidden shadow-2xl border-4 border-white dark:border-[#0A4D68] aspect-[4/4.8] bg-[#F0F5F8]">
+              <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80" alt="Smiling toddler engaged in speech play therapy" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Top Floating Badge: Small Steps Big Words -->
+            <div class="absolute -top-4 sm:-top-6 right-2 sm:-right-4 z-20 badge-cloud-quote p-3.5 sm:p-4 border border-[#E2EBF0] dark:border-slate-700 dark:bg-[#0D222E] flex items-center space-x-3 shadow-xl">
+              <div class="w-10 h-10 rounded-2xl bg-[#FFF0EB] dark:bg-[#0A4D68] flex items-center justify-center text-[#FF7A59]">
+                <i class="fa-solid fa-wand-magic-sparkles text-base"></i>
+              </div>
+              <div>
+                <p class="font-handwriting text-lg text-[#FF7A59] leading-none">Joyful Words! &hearts;</p>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400 font-semibold mt-0.5">100% Play & Sensory Driven</p>
+              </div>
+            </div>
+
+            <!-- Bottom Left Floating Badge: 500+ Families -->
+            <div class="absolute -bottom-6 -left-2 sm:-left-6 z-20 badge-heart-quote p-4 border border-[#FFE3DA] dark:border-slate-700 dark:bg-[#081D26] flex items-center space-x-3.5 shadow-xl">
+              <div class="flex -space-x-2">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Avatar">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Avatar">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Avatar">
+              </div>
+              <div>
+                <div class="flex items-center text-amber-500 text-[10px]">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-xs font-bold text-slate-800 dark:text-white font-heading">500+ Happy Toddler Families</p>
+              </div>
+            </div>
+
+            <!-- Botanical Floating Leaf Icon -->
+            <div class="absolute top-1/2 -left-6 z-20 w-12 h-12 rounded-full bg-[#EBF4F6] dark:bg-[#0A4D68] border border-[#CCE5EB] dark:border-slate-700 flex items-center justify-center text-[#088395] text-xl shadow-md hidden sm:flex">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 2: INTERACTIVE TODDLER SOUND MILESTONE SCREENER
+       ========================================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-[#081D26]/80 border-y border-[#E2EBF0] dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="font-handwriting text-2xl text-[#FF7A59] block">Quick parent milestone check &hearts;</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+          Is Your Child On Track? <span class="text-[#FF7A59]">Interactive Screener</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Select your child's age group below and check the communication behaviors you notice at home. Our clinical screener provides instant personalized guidance.
+        </p>
+      </div>
+
+      <!-- Age Stage Selector Tabs -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <button onclick="switchPediatricAge('toddler')" id="tab-btn-toddler" class="pediatric-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-[#FF7A59] text-white shadow-md transition flex items-center gap-2">
+          <i class="fa-solid fa-baby"></i>
+          <span>Toddlers (12–24 Months)</span>
+        </button>
+        <button onclick="switchPediatricAge('preschool')" id="tab-btn-preschool" class="pediatric-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-[#F0F5F8] dark:bg-[#0D222E] text-slate-700 dark:text-slate-300 border border-[#DBE5EB] dark:border-slate-700 hover:bg-[#FFF0EB] transition flex items-center gap-2">
+          <i class="fa-solid fa-cubes-stacked"></i>
+          <span>Preschoolers (2–4 Years)</span>
+        </button>
+        <button onclick="switchPediatricAge('school')" id="tab-btn-school" class="pediatric-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-[#F0F5F8] dark:bg-[#0D222E] text-slate-700 dark:text-slate-300 border border-[#DBE5EB] dark:border-slate-700 hover:bg-[#FFF0EB] transition flex items-center gap-2">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Early Primary (5–7 Years)</span>
+        </button>
+      </div>
+
+      <!-- Interactive Screener Container -->
+      <div class="bg-[#F8FAFB] dark:bg-[#06151D] rounded-3xl p-6 sm:p-10 border border-[#E2EBF0] dark:border-slate-800 shadow-xl grid lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Dynamic Checklist -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex items-center justify-between">
+            <h3 id="screener-stage-title" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white font-heading">
+              Key Developmental Signs (12–24 Months)
+            </h3>
+            <span class="text-[11px] font-bold text-[#088395] dark:text-[#70C5D8] bg-[#EBF4F6] dark:bg-[#0A4D68] px-3 py-1 rounded-full">
+              Tick what applies
+            </span>
+          </div>
+
+          <div id="screener-checklist-items" class="space-y-3">
+            <!-- Populated by script -->
+          </div>
+
+          <p class="text-[11px] text-slate-400 italic">
+            * Note: This interactive screener provides developmental screening insights and is not a substitute for an in-person clinical diagnostic evaluation.
+          </p>
+        </div>
+
+        <!-- Right: Live Result & Recommended Next Steps -->
+        <div class="lg:col-span-5 bg-white dark:bg-[#0D222E] rounded-2xl p-6 sm:p-8 border border-[#E2EBF0] dark:border-slate-700 shadow-md space-y-5">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-2xl bg-[#FFF0EB] dark:bg-[#0A4D68] flex items-center justify-center text-[#FF7A59]">
+              <i class="fa-solid fa-clipboard-check text-lg"></i>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Personalized Screening Result</span>
+              <h4 id="screener-score-title" class="text-base font-bold text-slate-900 dark:text-white font-heading">
+                Early Exploration Phase
+              </h4>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#F0F5F8] dark:bg-[#081D26] border border-[#DBE5EB] dark:border-slate-800 space-y-2">
+            <div class="flex justify-between text-xs font-semibold">
+              <span class="text-slate-600 dark:text-slate-300">Milestone Alignment:</span>
+              <span id="screener-progress-percent" class="text-[#FF7A59] font-bold">100% On Track</span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+              <div id="screener-progress-bar" class="bg-emerald-500 h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+            </div>
+            <p id="screener-summary-text" class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pt-1">
+              Your toddler shows wonderful early communication signs! Continue enriching daily mealtime and playtime conversations.
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <button onclick="openBookingModal()" class="w-full bg-[#FF7A59] hover:bg-[#E66847] text-white text-xs font-bold py-3.5 rounded-full shadow transition flex items-center justify-center gap-2">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Book Comprehensive 60-Min Play Assessment</span>
+            </button>
+            <a href="resources.html" class="w-full block text-center bg-[#EBF4F6] dark:bg-[#0A4D68] hover:bg-[#CCE5EB] text-[#088395] dark:text-[#70C5D8] text-xs font-bold py-3 rounded-full transition">
+              <i class="fa-solid fa-file-arrow-down mr-1"></i> Download Toddler Play Guide (PDF)
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 3: VIRTUAL SENSORY PLAYROOM TOUR (4 ZONES)
+       ========================================== -->
+  <section id="sensory-rooms" class="py-16 sm:py-24 bg-[#F8FAFB] dark:bg-[#06151D]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="font-handwriting text-2xl text-[#088395] dark:text-[#70C5D8] block">Where clinical science meets playful joy &hearts;</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+          Explore Our <span class="text-[#088395] dark:text-[#70C5D8]">Sensory Playroom Zones</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Traditional clinics can make children anxious. Our four dedicated sensory therapy environments use swings, tactile walls, acoustic pods, and mirror biofeedback to ignite natural communication.
+        </p>
+      </div>
+
+      <!-- Zone Selector Tabs -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <button onclick="switchPlayroomZone(0)" id="zone-tab-0" class="playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border-2 border-[#FF7A59] shadow-lg text-center transition hover:scale-[1.02]">
+          <div class="w-9 h-9 rounded-xl bg-[#FFF0EB] dark:bg-[#0A4D68] flex items-center justify-center text-[#FF7A59] mb-2">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <p class="text-xs font-bold text-slate-900 dark:text-white">Acoustic Echo Pod</p>
+          <p class="text-[10px] text-slate-400">Rhythm & Phonology</p>
+        </button>
+
+        <button onclick="switchPlayroomZone(1)" id="zone-tab-1" class="playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02]">
+          <div class="w-9 h-9 rounded-xl bg-[#EBF4F6] dark:bg-[#0A4D68] flex items-center justify-center text-[#088395] mb-2">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <p class="text-xs font-bold text-slate-900 dark:text-white">Oral-Motor Play Gym</p>
+          <p class="text-[10px] text-slate-400">Chew & Muscle Strength</p>
+        </button>
+
+        <button onclick="switchPlayroomZone(2)" id="zone-tab-2" class="playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02]">
+          <div class="w-9 h-9 rounded-xl bg-[#FFF0EB] dark:bg-[#0A4D68] flex items-center justify-center text-[#FF7A59] mb-2">
+            <i class="fa-solid fa-icons"></i>
+          </div>
+          <p class="text-xs font-bold text-slate-900 dark:text-white">Mirror Biofeedback</p>
+          <p class="text-[10px] text-slate-400">Visual Articulation</p>
+        </button>
+
+        <button onclick="switchPlayroomZone(3)" id="zone-tab-3" class="playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02]">
+          <div class="w-9 h-9 rounded-xl bg-[#EBF4F6] dark:bg-[#0A4D68] flex items-center justify-center text-[#088395] mb-2">
+            <i class="fa-solid fa-tablet-screen-button"></i>
+          </div>
+          <p class="text-xs font-bold text-slate-900 dark:text-white">Sensory AAC & GLP Zone</p>
+          <p class="text-[10px] text-slate-400">Gestalt & Tablet Play</p>
+        </button>
+      </div>
+
+      <!-- Active Zone Spotlight Card -->
+      <div id="playroom-spotlight" class="bg-[#F0F5F8] dark:bg-[#081D26] rounded-3xl p-6 sm:p-10 border border-[#DBE5EB] dark:border-slate-800 shadow-xl grid lg:grid-cols-12 gap-8 items-center transition-all duration-300">
+        
+        <!-- Image with Arch & Badge -->
+        <div class="lg:col-span-6 relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#0A4D68] aspect-[4/3] bg-slate-100">
+            <img id="zone-img" src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=800&q=80" alt="Sensory Speech Playroom" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-2 rounded-2xl text-xs font-bold text-slate-800 dark:text-white shadow-lg flex items-center gap-2">
+            <i class="fa-solid fa-shield-heart text-[#088395]"></i>
+            <span id="zone-age-badge">Ages: 18 Months &ndash; 6 Years</span>
+          </div>
+        </div>
+
+        <!-- Zone Description & Equipment Highlights -->
+        <div class="lg:col-span-6 space-y-5">
+          <div class="space-y-1">
+            <span id="zone-tag" class="text-xs font-bold text-[#FF7A59] uppercase tracking-wider">Zone 1 &bull; Phonology & Music Therapy</span>
+            <h3 id="zone-title" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-heading">
+              The Acoustic Echo Pod
+            </h3>
+          </div>
+
+          <p id="zone-desc" class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Equipped with sound-absorbing felt clouds, gentle echo amplifiers, and rhythmic percussion toys. Children learn to differentiate consonant pitch, imitate phonemes, and build speech rhythm through musical turn-taking.
+          </p>
+
+          <div class="space-y-2.5">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Equipped With:</h4>
+            <div id="zone-equipment" class="grid sm:grid-cols-2 gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+              <div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800">
+                <i class="fa-solid fa-microphone-lines text-[#FF7A59]"></i>
+                <span>Echo Microphones & Rhyme Cards</span>
+              </div>
+              <div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800">
+                <i class="fa-solid fa-drum text-[#088395]"></i>
+                <span>Sensory Beat Drums & Shakers</span>
+              </div>
+              <div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800">
+                <i class="fa-solid fa-cloud text-[#FF7A59]"></i>
+                <span>Sound-Dampened Acoustic Cocoon</span>
+              </div>
+              <div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800">
+                <i class="fa-solid fa-lightbulb text-[#088395]"></i>
+                <span>Voice-Activated Color Light Pods</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openBookingModal()" class="bg-[#088395] hover:bg-[#0A4D68] text-white text-xs font-bold px-6 py-3 rounded-full shadow transition flex items-center gap-2">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Book Session in This Room</span>
+            </button>
+            <a href="service-toddler-delay.html" class="text-xs font-bold text-[#FF7A59] hover:underline">
+              View Clinical Details &rarr;
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 4: 4 SPECIALIZED PEDIATRIC PROGRAMS
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white dark:bg-[#081D26]/60 border-t border-[#E2EBF0] dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="font-handwriting text-2xl text-[#FF7A59] block">Individualized clinical programs &hearts;</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+          Specialized Pediatric <span class="text-[#FF7A59]">Speech & Sensory Care</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Every child's neurological and developmental wiring is unique. Our evidence-based protocols match your child's specific developmental pace.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Program 1: Late Talkers -->
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-3xl p-6 border border-[#E2EBF0] dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=600&q=80" alt="Late talker play therapy" class="w-full h-full object-cover">
+            </div>
+            <span class="inline-block text-[10px] font-bold text-[#FF7A59] bg-[#FFF0EB] dark:bg-[#0A4D68] px-2.5 py-1 rounded-full">
+              Age: 12 &ndash; 36 Months
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">
+              Late Talkers & First Words Boot-Camp
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Transforming tantrums, gestures, and crying into clear verbal expressions through interactive parent-child floor play routines.
+            </p>
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> 50+ Functional Words Milestone</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Joint Attention & Eye Contact</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Daily Home Play Routine Plan</li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-[#E2EBF0] dark:border-slate-800 mt-6">
+            <a href="service-toddler-delay.html" class="text-xs font-bold text-[#FF7A59] hover:underline flex items-center justify-between">
+              <span>Program Curriculum</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Program 2: Sensory Articulation -->
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-3xl p-6 border border-[#E2EBF0] dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Articulation clarity therapy" class="w-full h-full object-cover">
+            </div>
+            <span class="inline-block text-[10px] font-bold text-[#088395] dark:text-[#70C5D8] bg-[#EBF4F6] dark:bg-[#0A4D68] px-2.5 py-1 rounded-full">
+              Age: 3 &ndash; 8 Years
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">
+              Sensory Articulation & Sound Clarity
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Targeting tricky speech sound errors (/r/, /s/, /th/, /k/, /l/, and lisps) using tactile motor feedback and fun mirror games.
+            </p>
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Eliminating Lisps & Sound Blends</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> PROMPT Motor-Tactile Cues</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Clear School Conversation</li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-[#E2EBF0] dark:border-slate-800 mt-6">
+            <a href="service-articulation.html" class="text-xs font-bold text-[#088395] dark:text-[#70C5D8] hover:underline flex items-center justify-between">
+              <span>Program Curriculum</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Program 3: Autism & GLP Play -->
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-3xl p-6 border border-[#E2EBF0] dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=600&q=80" alt="Autism and GLP language therapy" class="w-full h-full object-cover">
+            </div>
+            <span class="inline-block text-[10px] font-bold text-[#FF7A59] bg-[#FFF0EB] dark:bg-[#0A4D68] px-2.5 py-1 rounded-full">
+              Age: All Ages (NLA / AAC)
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">
+              Autism & Gestalt Language (GLP)
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Supporting neurodivergent children and script-talkers with Natural Language Acquisition (NLA) and high-tech AAC devices.
+            </p>
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Echolalia Script Mitigation</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> TouchChat / Proloquo AAC Setup</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Sensory Regulation in Sessions</li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-[#E2EBF0] dark:border-slate-800 mt-6">
+            <a href="service-aac-autism.html" class="text-xs font-bold text-[#FF7A59] hover:underline flex items-center justify-between">
+              <span>Program Curriculum</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Program 4: Pediatric Feeding -->
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-3xl p-6 border border-[#E2EBF0] dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=600&q=80" alt="Pediatric feeding and oral therapy" class="w-full h-full object-cover">
+            </div>
+            <span class="inline-block text-[10px] font-bold text-[#088395] dark:text-[#70C5D8] bg-[#EBF4F6] dark:bg-[#0A4D68] px-2.5 py-1 rounded-full">
+              Age: 6 Mos &ndash; 7 Years
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">
+              Pediatric Feeding & Oral-Sensory
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Gentle SOS Feeding Therapy for extreme food refusal, texture aversions, tongue-tie aftermath, and chewing coordination.
+            </p>
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> SOS Feeding Protocol Certified</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Texture & Chewing Conditioning</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Peaceful Family Mealtimes</li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-[#E2EBF0] dark:border-slate-800 mt-6">
+            <a href="service-toddler-delay.html" class="text-xs font-bold text-[#088395] dark:text-[#70C5D8] hover:underline flex items-center justify-between">
+              <span>Program Curriculum</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 5: THE 4-STAGE PLAY THERAPY JOURNEY
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-[#F0F5F8] dark:bg-[#081D26] border-y border-[#DBE5EB] dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+        <div class="space-y-3">
+          <span class="font-handwriting text-2xl text-[#FF7A59] block">How your child experiences SpeakBloom &hearts;</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+            Our 4-Stage <span class="text-[#FF7A59]">Sensory Play Process</span>
+          </h2>
+        </div>
+        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm max-w-md mt-4 md:mt-0 leading-relaxed">
+          No white coats, no rigid testing tables. Here is what happens from your child's first step into our center.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-white dark:bg-[#0D222E] p-7 rounded-3xl border border-[#E2EBF0] dark:border-slate-800 shadow-sm relative">
+          <div class="w-12 h-12 rounded-2xl bg-[#FFF0EB] dark:bg-[#0A4D68] text-[#FF7A59] font-black text-lg flex items-center justify-center font-heading mb-5">
+            01
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading mb-2">
+            Gentle Play Evaluation
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            Our clinician observes your child interacting naturally with bubbles, puzzles, and sensory bins while conversing with parents.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-[#0D222E] p-7 rounded-3xl border border-[#E2EBF0] dark:border-slate-800 shadow-sm relative">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF4F6] dark:bg-[#0A4D68] text-[#088395] dark:text-[#70C5D8] font-black text-lg flex items-center justify-center font-heading mb-5">
+            02
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading mb-2">
+            Tailored Sensory Roadmap
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            We map specific phonetic targets, oral motor goals, and emotional regulation strategies into playful weekly milestones.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-[#0D222E] p-7 rounded-3xl border border-[#E2EBF0] dark:border-slate-800 shadow-sm relative">
+          <div class="w-12 h-12 rounded-2xl bg-[#FFF0EB] dark:bg-[#0A4D68] text-[#FF7A59] font-black text-lg flex items-center justify-center font-heading mb-5">
+            03
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading mb-2">
+            Joyful Playroom Sessions
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            45-minute interactive sessions where speech targets are seamlessly embedded into swings, puppet dialogues, and tactile art.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-[#0D222E] p-7 rounded-3xl border border-[#E2EBF0] dark:border-slate-800 shadow-sm relative">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF4F6] dark:bg-[#0A4D68] text-[#088395] dark:text-[#70C5D8] font-black text-lg flex items-center justify-center font-heading mb-5">
+            04
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading mb-2">
+            Parent Play Home Toolkit
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            Parents receive video clips, printable flash games, and daily routine prompts to reinforce new sounds during bath, bedtime, and meals.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Cursive Banner Below -->
+      <div class="mt-12 text-center">
+        <span class="font-handwriting text-2xl sm:text-3xl text-[#088395] dark:text-[#70C5D8]">
+          "Every child blooms at their own pace &mdash; we just give them the right sunshine &hearts;"
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 6: INTERACTIVE SPEECH SOUND EXPLORER
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-[#F8FAFB] dark:bg-[#06151D]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="font-handwriting text-2xl text-[#FF7A59] block">Fun pronunciation practice at home &hearts;</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+          Explore Speech Sounds <span class="text-[#FF7A59]">By Developmental Age</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Tap on each phoneme sound below to discover when children typically master it and try our clinician-approved mirror cues!
+        </p>
+      </div>
+
+      <!-- Sound Pill Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button onclick="selectSoundCard('pbm')" id="sound-btn-pbm" class="sound-pill-btn px-5 py-2.5 rounded-full text-xs font-bold bg-[#FF7A59] text-white shadow-md transition">
+          /p, b, m/ (1–2 Yrs)
+        </button>
+        <button onclick="selectSoundCard('tdn')" id="sound-btn-tdn" class="sound-pill-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-slate-700 dark:text-slate-300 border border-[#E2EBF0] dark:border-slate-700 hover:bg-[#FFF0EB] transition">
+          /t, d, n/ (2–3 Yrs)
+        </button>
+        <button onclick="selectSoundCard('kg')" id="sound-btn-kg" class="sound-pill-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-slate-700 dark:text-slate-300 border border-[#E2EBF0] dark:border-slate-700 hover:bg-[#FFF0EB] transition">
+          /k, g, f/ (3–4 Yrs)
+        </button>
+        <button onclick="selectSoundCard('sz')" id="sound-btn-sz" class="sound-pill-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-slate-700 dark:text-slate-300 border border-[#E2EBF0] dark:border-slate-700 hover:bg-[#FFF0EB] transition">
+          /s, z, sh/ (4–5 Yrs)
+        </button>
+        <button onclick="selectSoundCard('rlth')" id="sound-btn-rlth" class="sound-pill-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-slate-700 dark:text-slate-300 border border-[#E2EBF0] dark:border-slate-700 hover:bg-[#FFF0EB] transition">
+          /r, l, th/ (5–7 Yrs)
+        </button>
+      </div>
+
+      <!-- Dynamic Sound Card Box -->
+      <div id="sound-content-display" class="bg-white dark:bg-[#0D222E] rounded-3xl p-6 sm:p-10 border border-[#E2EBF0] dark:border-slate-800 shadow-xl max-w-4xl mx-auto grid sm:grid-cols-12 gap-8 items-center">
+        
+        <div class="sm:col-span-4 flex flex-col items-center justify-center p-6 rounded-2xl bg-[#FFF0EB] dark:bg-[#0A4D68] border border-[#FFE3DA] text-center">
+          <span id="sound-big-display" class="text-5xl sm:text-6xl font-black text-[#FF7A59] font-heading mb-2">/b/</span>
+          <span id="sound-age-display" class="text-xs font-bold text-slate-700 dark:text-slate-200">Mastered by: 24 Months</span>
+          <span id="sound-nickname" class="text-[11px] font-handwriting text-xl text-[#FF7A59] mt-1">"The Popping Bubble Sound"</span>
+        </div>
+
+        <div class="sm:col-span-8 space-y-4">
+          <h3 id="sound-cue-title" class="text-xl font-bold text-slate-900 dark:text-white font-heading">
+            How to Practice the /b/ Sound with Your Child:
+          </h3>
+          <p id="sound-cue-desc" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Have your child press both lips gently together like holding a secret, then pop them open with a puff of air while feeling their voicebox vibrate ("b-b-bubble!").
+          </p>
+          <div class="p-3.5 rounded-xl bg-[#F0F5F8] dark:bg-[#081D26] border border-[#DBE5EB] dark:border-slate-800 space-y-1.5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#FF7A59]">Try These Fun Practice Words:</span>
+            <p id="sound-practice-words" class="text-xs font-bold text-slate-800 dark:text-white">
+              Ball, Bear, Boat, Big, Bye-bye, Banana
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-2">
+            <button onclick="playSampleSoundAudio()" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#088395] text-white text-xs font-bold hover:bg-[#0A4D68] transition">
+              <i class="fa-solid fa-volume-high"></i>
+              <span id="sound-audio-btn-text">Listen Sound Cue (Voice)</span>
+            </button>
+            <button onclick="openBookingModal()" class="text-xs font-bold text-[#FF7A59] hover:underline">
+              Need Help with Clarity? Book Assessment &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 7: PEDIATRIC CLINICIAN TEAM
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white dark:bg-[#081D26]/80 border-t border-[#E2EBF0] dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="font-handwriting text-2xl text-[#088395] dark:text-[#70C5D8] block">Loving clinicians who adore children &hearts;</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+          Meet Our Pediatric <span class="text-[#088395] dark:text-[#70C5D8]">Speech Specialists</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Every member of our team holds postgraduate clinical degrees in Speech-Language Pathology with specialized certifications in pediatric play therapy and sensory integration.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Clinician 1 -->
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-3xl p-6 border border-[#E2EBF0] dark:border-slate-800 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[4/4] bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80" alt="Dr. Priya Mohan" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-[#FF7A59] uppercase tracking-wider">Lead Pediatric SLP & Feeding Expert</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-0.5">Dr. Priya Mohan, Ph.D.</h3>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">12+ Years Experience &bull; SOS Feeding & Hanen Certified</p>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Specializes in toddler first words, feeding aversions, and parent-mediated language stimulation.
+            </p>
+          </div>
+          <div class="pt-5 border-t border-[#E2EBF0] dark:border-slate-800 mt-5">
+            <button onclick="openBookingModal()" class="w-full bg-white dark:bg-slate-800 hover:bg-[#FF7A59] hover:text-white text-[#FF7A59] border border-[#FF7A59] text-xs font-bold py-2.5 rounded-full transition">
+              Book with Dr. Priya
+            </button>
+          </div>
+        </div>
+
+        <!-- Clinician 2 -->
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-3xl p-6 border border-[#E2EBF0] dark:border-slate-800 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[4/4] bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Rahul Verma SLP" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-[#088395] dark:text-[#70C5D8] uppercase tracking-wider">Sensory-Motor & GLP Specialist</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-0.5">Rahul Verma, M.Sc., CCC-SLP</h3>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">9+ Years Experience &bull; Natural Language Acquisition (NLA)</p>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Pioneers sensory gym articulation games and high-tech AAC device integration for neurodivergent children.
+            </p>
+          </div>
+          <div class="pt-5 border-t border-[#E2EBF0] dark:border-slate-800 mt-5">
+            <button onclick="openBookingModal()" class="w-full bg-white dark:bg-slate-800 hover:bg-[#088395] hover:text-white text-[#088395] dark:text-[#70C5D8] border border-[#088395] text-xs font-bold py-2.5 rounded-full transition">
+              Book with Rahul
+            </button>
+          </div>
+        </div>
+
+        <!-- Clinician 3 -->
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-3xl p-6 border border-[#E2EBF0] dark:border-slate-800 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[4/4] bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Dr. Ananya Sundaram" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-[#FF7A59] uppercase tracking-wider">Preschool Speech & Stuttering SLP</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-0.5">Dr. Ananya Sundaram, Ph.D.</h3>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">11+ Years Experience &bull; Lidcombe Program Certified</p>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Specialized in preschool fluency, gentle stuttering coaching, and playful storytelling articulation therapy.
+            </p>
+          </div>
+          <div class="pt-5 border-t border-[#E2EBF0] dark:border-slate-800 mt-5">
+            <button onclick="openBookingModal()" class="w-full bg-white dark:bg-slate-800 hover:bg-[#FF7A59] hover:text-white text-[#FF7A59] border border-[#FF7A59] text-xs font-bold py-2.5 rounded-full transition">
+              Book with Dr. Ananya
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 8: PARENT STORIES & MILESTONES
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-[#F0F5F8] dark:bg-[#081D26] border-y border-[#DBE5EB] dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="font-handwriting text-2xl text-[#FF7A59] block">From tears of frustration to bursts of laughter &hearts;</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+          Pediatric Parent <span class="text-[#FF7A59]">Success Stories</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Read real journeys from mothers and fathers who witnessed their children blossom through play-based therapy at SpeakBloom.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Story 1 -->
+        <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E2EBF0] dark:border-slate-800 shadow-sm relative space-y-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3.5">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt="Kavitha R." class="w-12 h-12 rounded-full object-cover border-2 border-[#FF7A59]">
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white font-heading">Kavitha R.</h4>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Mother of Aarav (Age 3.5)</p>
+              </div>
+            </div>
+            <div class="flex text-amber-500 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed italic">
+            "At 2.5 years, Aarav had only 4 words and cried whenever we couldn't understand him. Within 3 months of sensory play therapy with Dr. Priya, he was stringing 4-word sentences together! He literally runs to the center every Tuesday shouting 'Playroom time!'"
+          </p>
+
+          <div class="p-3.5 rounded-2xl bg-[#FFF0EB] dark:bg-[#0A4D68] border border-[#FFE3DA] flex items-center justify-between text-xs font-semibold">
+            <span class="text-[#FF7A59]"><i class="fa-solid fa-award mr-1"></i> Milestone: 120+ Spoken Words</span>
+            <span class="text-slate-500 dark:text-slate-300 text-[11px]">Therapy Duration: 4 Mos</span>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E2EBF0] dark:border-slate-800 shadow-sm relative space-y-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3.5">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Suresh Kumar" class="w-12 h-12 rounded-full object-cover border-2 border-[#088395]">
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white font-heading">Suresh Kumar</h4>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Father of Diya (Age 4)</p>
+              </div>
+            </div>
+            <div class="flex text-amber-500 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed italic">
+            "Diya had severe articulation difficulty with /k/, /g/, and /s/ sounds; stranger adults couldn't understand her. Rahul's mirror biofeedback games turned her articulation drills into a game of detective voices. Now she speaks clearly and confidently in preschool!"
+          </p>
+
+          <div class="p-3.5 rounded-2xl bg-[#EBF4F6] dark:bg-[#0A4D68] border border-[#CCE5EB] flex items-center justify-between text-xs font-semibold">
+            <span class="text-[#088395] dark:text-[#70C5D8]"><i class="fa-solid fa-award mr-1"></i> Milestone: 95% Speech Clarity</span>
+            <span class="text-slate-500 dark:text-slate-300 text-[11px]">Therapy Duration: 5 Mos</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 9: PEDIATRIC FAQ ACCORDION
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white dark:bg-[#081D26]/80 border-b border-[#E2EBF0] dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12 space-y-3">
+        <span class="font-handwriting text-2xl text-[#FF7A59] block">Clear answers for loving parents &hearts;</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+          Frequently Asked <span class="text-[#FF7A59]">Pediatric Questions</span>
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
+          Everything you need to know before bringing your little one for their first playroom visit.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-2xl border border-[#E2EBF0] dark:border-slate-800 overflow-hidden">
+          <button class="accordion-header w-full px-6 py-4 text-center flex justify-between items-center text-slate-900 dark:text-white font-bold text-xs sm:text-sm hover:text-[#FF7A59] transition">
+            <span>How do I know if my 2-year-old is a 'late talker' or just learning at their own speed?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-xs text-slate-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 pb-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-[#E2EBF0] dark:border-slate-800 pt-3">
+            By 24 months, toddlers should consistently use at least 50 spontaneous words and combine two words together ("more milk", "bye daddy"). If your child uses fewer than 20 words or primarily communicates through crying and gestures, an early play assessment provides clarity without stress.
+          </div>
+        </div>
+
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-2xl border border-[#E2EBF0] dark:border-slate-800 overflow-hidden">
+          <button class="accordion-header w-full px-6 py-4 text-center flex justify-between items-center text-slate-900 dark:text-white font-bold text-xs sm:text-sm hover:text-[#FF7A59] transition">
+            <span>Can parents stay inside the sensory therapy room during sessions?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-xs text-slate-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content hidden px-6 pb-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-[#E2EBF0] dark:border-slate-800 pt-3">
+            Yes, absolutely! In fact, family-centered involvement is central to SpeakBloom. Parents are warmly invited to join the sensory play floor so you learn real-time strategies to carry over during everyday routines at home.
+          </div>
+        </div>
+
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-2xl border border-[#E2EBF0] dark:border-slate-800 overflow-hidden">
+          <button class="accordion-header w-full px-6 py-4 text-center flex justify-between items-center text-slate-900 dark:text-white font-bold text-xs sm:text-sm hover:text-[#FF7A59] transition">
+            <span>What happens during a child's first 60-minute play evaluation?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-xs text-slate-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content hidden px-6 pb-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-[#E2EBF0] dark:border-slate-800 pt-3">
+            The session feels like a fun playdate. Your child explores toys, swings, and books while our SLP clinician assesses oral motor coordination, speech sound imitation, receptive understanding, and sensory regulation. You will receive a written roadmap and clear milestones the very same day.
+          </div>
+        </div>
+
+        <div class="bg-[#F8FAFB] dark:bg-[#0D222E] rounded-2xl border border-[#E2EBF0] dark:border-slate-800 overflow-hidden">
+          <button class="accordion-header w-full px-6 py-4 text-center flex justify-between items-center text-slate-900 dark:text-white font-bold text-xs sm:text-sm hover:text-[#FF7A59] transition">
+            <span>Do you support Gestalt Language Processors (GLP) and AAC device communication?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-xs text-slate-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content hidden px-6 pb-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-[#E2EBF0] dark:border-slate-800 pt-3">
+            Yes! Our clinicians are trained in Natural Language Acquisition (NLA) for script-talkers and provide AAC device trials (TouchChat, LAMP, Proloquo2Go) with sensory accommodation.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 10: DEEP FOREST PINE CTA BANNER
+       ========================================== -->
+  <section class="bg-[#0A4D68] text-white py-16 px-4 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
+      
+      <div class="space-y-3 text-center lg:text-center max-w-xl">
+        <span class="font-handwriting text-2xl text-[#E8927C] block">Let's build their tomorrow &mdash; together &hearts;</span>
+        <h2 class="text-2xl sm:text-4xl font-bold font-heading">Book a Child Assessment Today</h2>
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Take the first step towards better communication, joyful words, and a confident future in our loving sensory playroom.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <button onclick="openBookingModal()" class="bg-[#FF7A59] hover:bg-[#E66847] text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full shadow-lg transition flex items-center gap-2">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>Schedule Intake Now &rarr;</span>
+        </button>
+        <a href="tel:+919876543210" class="border border-white/30 hover:bg-white/10 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full transition flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i>
+          <span>Call Pediatric Desk</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-3 gap-6 text-center text-xs text-slate-300 pt-6 lg:pt-0 border-t lg:border-t-0 border-slate-700/60">
+        <div class="space-y-1">
+          <i class="fa-solid fa-shield-heart text-[#70C5D8] text-lg"></i>
+          <p class="text-[11px] font-medium">Safe Sensory Environment</p>
+        </div>
+        <div class="space-y-1">
+          <i class="fa-solid fa-user-doctor text-[#70C5D8] text-lg"></i>
+          <p class="text-[11px] font-medium">Certified Pediatric SLPs</p>
+        </div>
+        <div class="space-y-1">
+          <i class="fa-solid fa-heart-pulse text-[#70C5D8] text-lg"></i>
+          <p class="text-[11px] font-medium">Individualized Play Plans</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECTION 11: FOOTER (SPEAKBLOOM EXACT FOOTER)
+       ========================================== -->
+  <footer class="bg-[#F0F5F8] dark:bg-[#0A1610] text-slate-600 dark:text-slate-400 pt-16 pb-10 border-t border-[#DBE5EB] dark:border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-2.5">
+          <div class="w-8 h-8 rounded-xl bg-[#FF7A59] flex items-center justify-center text-white text-sm font-bold">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+          <span class="text-xl font-bold text-slate-900 dark:text-white font-heading">Speak<span class="text-[#FF7A59]">Bloom</span></span>
+        </a>
+        <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">
+          Compassionate, family-centered speech and language therapy dedicated to helping every child and adult discover the joy of confident expression.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-3.5 font-heading">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-[#FF7A59] transition">Home (SpeakBloom Main)</a></li>
+          <li><a href="index-pediatric.html" class="hover:text-[#FF7A59] text-[#FF7A59] font-semibold transition">Home (Pediatric Play Care)</a></li>
+          <li><a href="services.html" class="hover:text-[#FF7A59] transition">Our Services</a></li>
+          <li><a href="therapists.html" class="hover:text-[#FF7A59] transition">Therapists</a></li>
+          <li><a href="resources.html" class="hover:text-[#FF7A59] transition">Parent Resources</a></li>
+          <li><a href="about.html" class="hover:text-[#FF7A59] transition">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-[#FF7A59] transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-3.5 font-heading">Contact Us</h4>
+        <ul class="space-y-2 text-slate-500 dark:text-slate-400">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF7A59]"></i> +91 98765 43210</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[#FF7A59]"></i> hello@speakbloom.com</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-[#FF7A59] mt-0.5"></i> 123 Wellness Lane, Coimbatore, Tamil Nadu 641001</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-3.5 font-heading">Follow Us</h4>
+        <div class="flex items-center space-x-3 text-slate-600 dark:text-slate-400">
+          <a href="contact.html" class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-[#DBE5EB] dark:border-slate-700 flex items-center justify-center hover:text-[#FF7A59] transition"><i class="fa-brands fa-instagram"></i></a>
+          <a href="contact.html" class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-[#DBE5EB] dark:border-slate-700 flex items-center justify-center hover:text-[#FF7A59] transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="contact.html" class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-[#DBE5EB] dark:border-slate-700 flex items-center justify-center hover:text-[#FF7A59] transition"><i class="fa-brands fa-youtube"></i></a>
+          <a href="contact.html" class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-[#DBE5EB] dark:border-slate-700 flex items-center justify-center hover:text-[#FF7A59] transition"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-[#DBE5EB] dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-400">
+      <div>&copy; 2026 SpeakBloom Speech & Language Therapy Center. All rights reserved.</div>
+      <div class="tracking-wide">Communication &bull; Confidence &bull; A Brighter Future</div>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       MODAL: MULTI-STEP ASSESSMENT BOOKING WIZARD
+       ========================================== -->
+  <div id="booking-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-[#0D222E] rounded-3xl max-w-xl w-full max-h-[92vh] overflow-y-auto border border-[#E2EBF0] dark:border-slate-700 shadow-2xl p-6 sm:p-8 relative">
+      
+      <!-- Close Button -->
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#F0F5F8] dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Wizard Header -->
+      <div class="mb-6 space-y-1.5">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#FF7A59]">Quick 4-Step Intake</span>
+        <h3 class="text-2xl font-bold text-slate-900 dark:text-white font-heading">Book Pediatric Play Assessment</h3>
+      </div>
+
+      <!-- Step Indicator Dots -->
+      <div class="flex items-center justify-between mb-8 relative">
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 h-0.5 w-full bg-[#E2EBF0] dark:bg-slate-700 -z-0"></div>
+        <div class="modal-step-dot w-8 h-8 rounded-full bg-[#FF7A59] text-white text-xs font-bold flex items-center justify-center relative z-10">1</div>
+        <div class="modal-step-dot w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center justify-center relative z-10">2</div>
+        <div class="modal-step-dot w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center justify-center relative z-10">3</div>
+        <div class="modal-step-dot w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center justify-center relative z-10">4</div>
+      </div>
+
+      <!-- Step 1: Patient Details -->
+      <div id="modal-step-1" class="modal-pane space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">Child's Full Name</label>
+          <input type="text" id="modal-child-name" placeholder="e.g. Aarav Sharma" class="w-full px-4 py-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] text-xs">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">Child's Age</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] text-xs">
+              <option>12–24 Months</option>
+              <option selected>2–4 Years</option>
+              <option>5–7 Years</option>
+              <option>8+ Years</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">Parent Phone</label>
+            <input type="tel" placeholder="+91 98765 43210" class="w-full px-4 py-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] text-xs">
+          </div>
+        </div>
+        <div class="flex justify-end pt-4">
+          <button onclick="goToModalStep(2)" class="bg-[#FF7A59] text-white text-xs font-bold px-6 py-2.5 rounded-full shadow hover:bg-[#E66847]">
+            Continue &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Primary Concerns -->
+      <div id="modal-step-2" class="modal-pane hidden space-y-4">
+        <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-2">Select Primary Communication Goals:</label>
+        <div class="space-y-2 text-xs">
+          <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] cursor-pointer">
+            <input type="checkbox" checked class="text-[#FF7A59] rounded">
+            <span>Late talking / few words (< 50 words)</span>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] cursor-pointer">
+            <input type="checkbox" class="text-[#FF7A59] rounded">
+            <span>Speech clarity / tricky sounds (/r/, /s/, lisp)</span>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] cursor-pointer">
+            <input type="checkbox" class="text-[#FF7A59] rounded">
+            <span>Sensory aversion / picky eating / feeding</span>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] cursor-pointer">
+            <input type="checkbox" class="text-[#FF7A59] rounded">
+            <span>Autism / Gestalt script talking (GLP / AAC)</span>
+          </label>
+        </div>
+        <div class="flex justify-between pt-4">
+          <button onclick="goToModalStep(1)" class="text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white">
+            &larr; Back
+          </button>
+          <button onclick="goToModalStep(3)" class="bg-[#FF7A59] text-white text-xs font-bold px-6 py-2.5 rounded-full shadow hover:bg-[#E66847]">
+            Continue &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Date & Preferred Clinician -->
+      <div id="modal-step-3" class="modal-pane hidden space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">Preferred Clinician</label>
+          <select class="w-full px-4 py-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] text-xs">
+            <option>Any Available Pediatric Specialist</option>
+            <option>Dr. Priya Mohan (Feeding & First Words)</option>
+            <option>Rahul Verma (Sensory-Motor & GLP)</option>
+            <option>Dr. Ananya Sundaram (Preschool Stuttering)</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">Preferred Date</label>
+            <input type="date" value="2026-09-20" class="w-full px-4 py-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">Time Slot</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] text-xs">
+              <option>10:00 AM – 11:00 AM</option>
+              <option>02:00 PM – 03:00 PM</option>
+              <option>04:30 PM – 05:30 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-between pt-4">
+          <button onclick="goToModalStep(2)" class="text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white">
+            &larr; Back
+          </button>
+          <button onclick="goToModalStep(4)" class="bg-[#088395] text-white text-xs font-bold px-7 py-2.5 rounded-full shadow hover:bg-[#0A4D68]">
+            Confirm & Schedule &hearts;
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 4: Success Screen -->
+      <div id="modal-step-4" class="modal-pane hidden space-y-5 text-center py-6">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center mx-auto text-2xl animate-bounce">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading">Play Assessment Confirmed!</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300 max-w-sm mx-auto leading-relaxed">
+            Thank you! We have reserved your child's sensory playroom slot. Our pediatric coordinator will call your phone within 2 hours to share preparation tips.
+          </p>
+        </div>
+        <div class="pt-2">
+          <button onclick="closeBookingModal()" class="bg-[#FF7A59] text-white text-xs font-bold px-8 py-3 rounded-full shadow hover:bg-[#E66847]">
+            Return to Homepage
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       PEDIATRIC PAGE SCRIPTS (Interactive Features)
+       ========================================== -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* 1. Modal Controller */
+    function openBookingModal() {
+      document.getElementById('booking-modal').classList.remove('hidden');
+      goToModalStep(1);
+    }
+    function closeBookingModal() {
+      document.getElementById('booking-modal').classList.add('hidden');
+    }
+    function goToModalStep(step) {
+      document.querySelectorAll('.modal-pane').forEach((p, idx) => {
+        p.classList.toggle('hidden', idx !== (step - 1));
+      });
+      document.querySelectorAll('.modal-step-dot').forEach((dot, idx) => {
+        if (idx === step - 1) {
+          dot.className = 'modal-step-dot w-8 h-8 rounded-full bg-[#FF7A59] text-white text-xs font-bold flex items-center justify-center relative z-10 ring-4 ring-[#FFF0EB]';
+        } else if (idx < step - 1) {
+          dot.className = 'modal-step-dot w-8 h-8 rounded-full bg-emerald-500 text-white text-xs font-bold flex items-center justify-center relative z-10';
+        } else {
+          dot.className = 'modal-step-dot w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center justify-center relative z-10';
+        }
+      });
+    }
+
+    /* 2. Interactive Screener Data */
+    const screenerStages = {
+      toddler: {
+        title: 'Key Developmental Signs (12–24 Months)',
+        items: [
+          { text: 'Points with index finger to show wants or interesting objects', defaultChecked: true },
+          { text: 'Imitates playful sound effects (beep, moo, vroom)', defaultChecked: true },
+          { text: 'Uses at least 15–20 distinct spoken words consistently', defaultChecked: true },
+          { text: 'Responds happily to name when called across the room', defaultChecked: true },
+          { text: 'Brings toys to parent to show or share enjoyment', defaultChecked: true }
+        ],
+        onTrackTitle: 'Wonderful Early Milestone Exploration',
+        onTrackSummary: 'Your toddler shows healthy foundational pre-linguistic behaviors. Continue engaging in sensory sound play and joint book reading at home!',
+        monitorTitle: 'Mild Early Communication Delay Detected',
+        monitorSummary: 'Your toddler may benefit from gentle, play-based parent-child language stimulation to boost first words.'
+      },
+      preschool: {
+        title: 'Key Developmental Signs (2–4 Years)',
+        items: [
+          { text: 'Spontaneously joins 2 to 3 words together ("want big ball")', defaultChecked: true },
+          { text: 'Follows 2-step requests without physical demonstrations', defaultChecked: true },
+          { text: 'Understood by familiar caregivers at least 75% of the time', defaultChecked: true },
+          { text: 'Asks inquisitive questions like "What is that?" or "Where doggy?"', defaultChecked: true },
+          { text: 'Engages in imaginative pretend play (feeding dolls, pushing cars)', defaultChecked: true }
+        ],
+        onTrackTitle: 'Strong Preschool Expressive Communication',
+        onTrackSummary: 'Your preschooler is expanding their vocabulary and sentence structure on schedule. Keep practicing daily storytelling!',
+        monitorTitle: 'Preschool Language & Articulation Recommendation',
+        monitorSummary: 'We recommend a gentle 45-minute articulation screening to ensure tricky speech sounds and fluency blossom cleanly.'
+      },
+      school: {
+        title: 'Key Developmental Signs (5–7 Years)',
+        items: [
+          { text: 'Tells coherent multi-sentence stories with sequence', defaultChecked: true },
+          { text: 'Understood by unfamiliar listeners 95–100% of the time', defaultChecked: true },
+          { text: 'Pronounces consonant blends (/sp/, /tr/, /bl/) without lisp', defaultChecked: true },
+          { text: 'Understands comparative words (heavier, longest, before/after)', defaultChecked: true },
+          { text: 'Converses easily with peer groups in school/sports', defaultChecked: true }
+        ],
+        onTrackTitle: 'Age-Appropriate School Articulation & Clarity',
+        onTrackSummary: 'Your child displays strong narrative and phonological mastery suitable for reading and academic confidence.',
+        monitorTitle: 'School Readiness Phonological Support',
+        monitorSummary: 'Targeted articulation coaching can help eliminate lingering lisps or /r/ sound distortions before grade school.'
+      }
+    };
+
+    let currentScreenerStage = 'toddler';
+
+    function switchPediatricAge(stageKey) {
+      currentScreenerStage = stageKey;
+      
+      ['toddler', 'preschool', 'school'].forEach(key => {
+        const btn = document.getElementById('tab-btn-' + key);
+        if (btn) {
+          if (key === stageKey) {
+            btn.className = 'pediatric-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-[#FF7A59] text-white shadow-md transition flex items-center gap-2';
+          } else {
+            btn.className = 'pediatric-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-[#F0F5F8] dark:bg-[#0D222E] text-slate-700 dark:text-slate-300 border border-[#DBE5EB] dark:border-slate-700 hover:bg-[#FFF0EB] transition flex items-center gap-2';
+          }
+        }
+      });
+
+      renderScreenerItems();
+    }
+
+    function renderScreenerItems() {
+      const stage = screenerStages[currentScreenerStage];
+      document.getElementById('screener-stage-title').textContent = stage.title;
+
+      const container = document.getElementById('screener-checklist-items');
+      container.innerHTML = stage.items.map((item, idx) => {
+        const checkedAttr = item.defaultChecked ? 'checked' : '';
+        return '<label class="flex items-start space-x-3 p-3.5 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 hover:border-[#FF7A59] cursor-pointer transition">' +
+          '<input type="checkbox" onchange="calculateScreenerScore()" ' + checkedAttr + ' class="screener-check-input mt-1 w-4 h-4 text-[#FF7A59] rounded focus:ring-[#FF7A59]">' +
+          '<span class="text-xs font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">' + item.text + '</span>' +
+        '</label>';
+      }).join('');
+
+      calculateScreenerScore();
+    }
+
+    function calculateScreenerScore() {
+      const stage = screenerStages[currentScreenerStage];
+      const inputs = document.querySelectorAll('.screener-check-input');
+      let checkedCount = 0;
+      inputs.forEach(inp => { if (inp.checked) checkedCount++; });
+
+      const total = inputs.length || 1;
+      const pct = Math.round((checkedCount / total) * 100);
+
+      const titleEl = document.getElementById('screener-score-title');
+      const textEl = document.getElementById('screener-summary-text');
+      const barEl = document.getElementById('screener-progress-bar');
+      const pctEl = document.getElementById('screener-progress-percent');
+
+      pctEl.textContent = pct + '% Milestones Met';
+      barEl.style.width = pct + '%';
+
+      if (pct >= 80) {
+        barEl.className = 'bg-emerald-500 h-full rounded-full transition-all duration-500';
+        titleEl.textContent = stage.onTrackTitle;
+        textEl.textContent = stage.onTrackSummary;
+      } else {
+        barEl.className = 'bg-[#FF7A59] h-full rounded-full transition-all duration-500';
+        titleEl.textContent = stage.monitorTitle;
+        textEl.textContent = stage.monitorSummary;
+      }
+    }
+
+    /* 3. Sensory Playroom Zone Switcher */
+    const zoneData = [
+      {
+        tag: 'Zone 1 • Phonology & Music Therapy',
+        title: 'The Acoustic Echo Pod',
+        desc: 'Equipped with sound-absorbing felt clouds, gentle echo amplifiers, and rhythmic percussion toys. Children learn to differentiate consonant pitch, imitate phonemes, and build speech rhythm through musical turn-taking.',
+        img: 'https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=800&q=80',
+        age: 'Ages: 18 Months – 6 Years',
+        equipment: [
+          { icon: 'fa-microphone-lines', text: 'Echo Microphones & Rhyme Cards' },
+          { icon: 'fa-drum', text: 'Sensory Beat Drums & Shakers' },
+          { icon: 'fa-cloud', text: 'Sound-Dampened Acoustic Cocoon' },
+          { icon: 'fa-lightbulb', text: 'Voice-Activated Color Light Pods' }
+        ]
+      },
+      {
+        tag: 'Zone 2 • Oral Motor & Tactile Strength',
+        title: 'The Oral-Motor Play Gym',
+        desc: 'Designed for gentle jaw stability, tongue-tip elevation, and lip closure exercises. Features sensory chew tools, therapeutic straw cups, textured whistles, and bubble-blowing obstacle tracks that make muscle strengthening joyous.',
+        img: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80',
+        age: 'Ages: 12 Months – 7 Years',
+        equipment: [
+          { icon: 'fa-soap', text: 'Targeted Bubble Breathing Rigs' },
+          { icon: 'fa-shapes', text: 'Graded Ark Chew Grabbers' },
+          { icon: 'fa-bullseye', text: 'Lip-Closure Whistle Targets' },
+          { icon: 'fa-volcano', text: 'Tactile Oral Vibration Tools' }
+        ]
+      },
+      {
+        tag: 'Zone 3 • Visual Biofeedback & Articulation',
+        title: 'Mirror Biofeedback & Expression Pod',
+        desc: 'Custom dual-level mirrors with playful animal framing let children observe lip rounding, tongue placement, and facial expressions in real-time alongside their therapist without feeling self-conscious.',
+        img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
+        age: 'Ages: 3 – 10 Years',
+        equipment: [
+          { icon: 'fa-icons', text: 'Illuminated Articulation Mirrors' },
+          { icon: 'fa-masks-theater', text: 'Animal Expression Puppet Cards' },
+          { icon: 'fa-camera', text: 'Slow-Motion Lip Movement iPad' },
+          { icon: 'fa-sparkles', text: 'Glow-in-the-Dark Tongue Cues' }
+        ]
+      },
+      {
+        tag: 'Zone 4 • Neurodiversity & Multi-Modal Communication',
+        title: 'Sensory AAC & GLP Zone',
+        desc: 'A low-arousal, sensory-friendly cocoon with weighted blankets, fiber-optic sensory lights, high-tech speech tablets (TouchChat/LAMP), and tactile Gestalt script storyboards designed specifically for autistic children and Natural Language Acquisition.',
+        img: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=800&q=80',
+        age: 'All Ages (NLA / AAC Stages 1–6)',
+        equipment: [
+          { icon: 'fa-tablet-screen-button', text: 'Dedicated AAC iPads (LAMP/TouchChat)' },
+          { icon: 'fa-cubes', text: 'Gestalt Script Play Boards' },
+          { icon: 'fa-feather', text: 'Sensory Swing & Crash Cushion' },
+          { icon: 'fa-wand-magic', text: 'Calming Fiber-Optic Light Wall' }
+        ]
+      }
+    ];
+
+    function switchPlayroomZone(zoneIdx) {
+      const data = zoneData[zoneIdx];
+      
+      document.querySelectorAll('.playroom-zone-btn').forEach((btn, idx) => {
+        if (idx === zoneIdx) {
+          btn.className = 'playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border-2 border-[#FF7A59] shadow-lg text-center transition hover:scale-[1.02]';
+        } else {
+          btn.className = 'playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02]';
+        }
+      });
+
+      document.getElementById('zone-img').src = data.img;
+      document.getElementById('zone-tag').textContent = data.tag;
+      document.getElementById('zone-title').textContent = data.title;
+      document.getElementById('zone-desc').textContent = data.desc;
+      document.getElementById('zone-age-badge').textContent = data.age;
+
+      const eqContainer = document.getElementById('zone-equipment');
+      eqContainer.innerHTML = data.equipment.map(item => {
+        return '<div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800">' +
+          '<i class="fa-solid ' + item.icon + ' text-[#FF7A59]"></i>' +
+          '<span>' + item.text + '</span>' +
+        '</div>';
+      }).join('');
+    }
+
+    /* 4. Speech Sound Explorer */
+    const soundData = {
+      pbm: {
+        symbol: '/b/',
+        age: 'Mastered by: 24 Months',
+        nickname: '"The Popping Bubble Sound"',
+        title: 'How to Practice the /b/ Sound with Your Child:',
+        desc: 'Have your child press both lips gently together like holding a secret, then pop them open with a puff of air while feeling their voicebox vibrate ("b-b-bubble!").',
+        words: 'Ball, Bear, Boat, Big, Bye-bye, Banana'
+      },
+      tdn: {
+        symbol: '/t/',
+        age: 'Mastered by: 30 Months',
+        nickname: '"The Ticking Clock Sound"',
+        title: 'How to Practice the /t/ Sound with Your Child:',
+        desc: 'Show your child how the tongue-tip taps the roof of the mouth behind the front teeth like a little woodpecker ("t-t-train!").',
+        words: 'Teddy, Tiger, Table, Top, Two, Tree'
+      },
+      kg: {
+        symbol: '/k/',
+        age: 'Mastered by: 3–4 Years',
+        nickname: '"The Coughing Cat Sound"',
+        title: 'How to Practice the /k/ Sound with Your Child:',
+        desc: 'Lie on your backs and look at the ceiling. The back of the tongue naturally drops back to touch the soft palate to make the crunchy "k" sound.',
+        words: 'Cat, Car, Cookie, Cup, King, Duck'
+      },
+      sz: {
+        symbol: '/s/',
+        age: 'Mastered by: 4–5 Years',
+        nickname: '"The Slithering Snake Sound"',
+        title: 'How to Practice the /s/ Sound (Eliminating Lisps):',
+        desc: 'Keep the teeth gently closed like a fence and blow air down the center of the tongue without letting the tongue poke between the teeth.',
+        words: 'Sun, Star, Sock, Spoon, Sand, Bus'
+      },
+      rlth: {
+        symbol: '/r/',
+        age: 'Mastered by: 5–6 Years',
+        nickname: '"The Roaring Lion Sound"',
+        title: 'How to Practice the /r/ Sound with Precision:',
+        desc: 'Curl the tongue sides against the top back molars while keeping the tongue-tip elevated in the center without touching the teeth.',
+        words: 'Red, Rabbit, Run, Rainbow, Star, Car'
+      }
+    };
+
+    function selectSoundCard(soundKey) {
+      const data = soundData[soundKey];
+      
+      ['pbm', 'tdn', 'kg', 'sz', 'rlth'].forEach(key => {
+        const btn = document.getElementById('sound-btn-' + key);
+        if (btn) {
+          if (key === soundKey) {
+            btn.className = 'sound-pill-btn px-5 py-2.5 rounded-full text-xs font-bold bg-[#FF7A59] text-white shadow-md transition';
+          } else {
+            btn.className = 'sound-pill-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-slate-700 dark:text-slate-300 border border-[#E2EBF0] dark:border-slate-700 hover:bg-[#FFF0EB] transition';
+          }
+        }
+      });
+
+      document.getElementById('sound-big-display').textContent = data.symbol;
+      document.getElementById('sound-age-display').textContent = data.age;
+      document.getElementById('sound-nickname').textContent = data.nickname;
+      document.getElementById('sound-cue-title').textContent = data.title;
+      document.getElementById('sound-cue-desc').textContent = data.desc;
+      document.getElementById('sound-practice-words').textContent = data.words;
+    }
+
+    function playSampleSoundAudio() {
+      const btnText = document.getElementById('sound-audio-btn-text');
+      const original = btnText.textContent;
+      btnText.textContent = 'Playing Sound Modeling...';
+      
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = 440;
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.3, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.8);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.8);
+      } catch (e) {
+        console.log('Audio playback preview');
+      }
+
+      setTimeout(() => {
+        btnText.textContent = original;
+      }, 1000);
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      switchPediatricAge('toddler');
+    });
+  </script>
+
+</body>
+</html>

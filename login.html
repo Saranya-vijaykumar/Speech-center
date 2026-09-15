@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Parent & Clinician Portal | SpeakBloom Speech & Language Center</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            terracotta: { 50: '#FDF0E6', 100: '#FBE8D8', 500: '#C85A32', 600: '#B04B26' },
+            forest: { 800: '#1E3D2F', 900: '#152C22' },
+            sage: { 50: '#F4F9F5', 100: '#EBF4EE', 200: '#D8EADF', 500: '#2D5A43' },
+            cream: { 50: '#FAF7F2', 100: '#FAF4ED', 200: '#EFE7DE' }
+          },
+          fontFamily: {
+            heading: ['Fraunces', 'Georgia', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            handwriting: ['Caveat', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#FAF7F2] text-[#2D3748] dark:bg-[#0F1D16] dark:text-slate-200 antialiased selection:bg-[#C85A32] selection:text-white">
+  <!-- =========================================================================
+       STANDARDIZED MULTIPURPOSE TOP NAVIGATION BAR
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 dark:border-slate-600 flex items-center justify-center text-[#1E1C1A] dark:text-white group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4c-1.5 4-4 6-8 6 4 1.5 6 4 6 8 0-4 2-6.5 6-8-4 0-6.5-2-4-6Z"/>
+              <path d="M12 4c1.5 4 4 6 8 6-4 1.5-6 4-6 8 0-4-2-6.5-6-8 4 0 6.5-2 4-6Z" opacity="0.4"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
+        </a>
+
+        <!-- Center Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-[#6B6560] dark:text-slate-300">
+          <!-- Home dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 1 (General Services)</a>
+                <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 2 (Niche Specialty)</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="hover:text-[#C07534] transition ">About Us</a>
+          
+          <!-- Services Dropdown -->
+          <div class="relative group py-2">
+            <a href="services.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">All Services (Grid)</a>
+                <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Service Details (Single)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Dropdown -->
+          <div class="relative group py-2">
+            <a href="blog.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Blog</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Grid / List</a>
+                <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Single Article</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="pricing.html" class="hover:text-[#C07534] transition ">Pricing</a>
+          <a href="contact.html" class="hover:text-[#C07534] transition ">Contact Us</a>
+        </nav>
+
+        <!-- Right Utilities & Action Button -->
+        <div class="flex items-center space-x-2.5 shrink-0">
+          
+          <!-- Theme Dark/Light Toggle -->
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
+            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+
+          <!-- Get Started Pill -->
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
+            Get Started
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+            <i class="fa-solid fa-bars-staggered text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full border border-[#C07534] flex items-center justify-center text-[#C07534]">
+            <i class="fa-solid fa-seedling text-xs"></i>
+          </div>
+          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1">Main Pages</div>
+        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 1 (General Services)</a>
+        <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 2 (Niche Specialty)</a>
+        <a href="about.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Us</a>
+        <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Services (Grid)</a>
+        <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Service Details (Single)</a>
+        <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Listing</a>
+        <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Details</a>
+        <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pricing Plans</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Contact Us</a>
+
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1 pt-2">Utilities</div>
+        <a href="404.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">404 Error Page</a>
+        <a href="coming-soon.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Coming Soon Page</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-ochre text-xs py-3 justify-center">
+        Get Started
+      </button>
+      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
+        <a href="login.html" class="hover:text-[#C07534]">Login</a>
+        <span>&bull;</span>
+        <a href="register.html" class="hover:text-[#C07534]">Register</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <section class="py-16 bg-[#F8FAFB] dark:bg-[#06151D] flex items-center justify-center">
+    <div class="max-w-4xl w-full mx-auto px-4">
+      <div class="bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 shadow-2xl overflow-hidden grid lg:grid-cols-12">
+        
+        <div class="lg:col-span-5 relative hidden lg:block">
+          <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Child learning happily" class="w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4D68]/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white p-4">
+            <p class="font-heading font-bold text-lg">Every Voice Blossoms</p>
+            <p class="text-xs text-white/80">Track home speech homework and celebration streaks.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 p-8 sm:p-10 space-y-6">
+          <div class="space-y-1">
+            <h1 class="text-2xl font-bold font-heading text-[#0A4D68] dark:text-white">Sign In to SpeakBloom Portal</h1>
+            <p class="text-xs text-slate-500">Access your practice streak, appointments, and therapist notes</p>
+          </div>
+
+          <form id="portal-login-form" onsubmit="window.location.href = 'index.html'; return false;" class="space-y-4 text-xs">
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Email Address</label>
+              <input type="email" required placeholder="parent@example.com" class="w-full px-4 py-3 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] outline-none focus:ring-2 focus:ring-[#FF7A59]">
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <label class="font-bold text-slate-700 dark:text-slate-200">Password</label>
+                <a href="login.html" onclick="alert('Password reset link sent to your email!'); return false; link sent to your email!'); return false;" class="text-[11px] text-[#FF7A59] hover:underline">Forgot password?</a>
+              </div>
+              <input type="password" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] outline-none focus:ring-2 focus:ring-[#FF7A59]">
+            </div>
+
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="remember-me" class="w-4 h-4 rounded text-[#FF7A59]">
+              <label for="remember-me" class="text-slate-600 dark:text-slate-300">Remember this device for 30 days</label>
+            </div>
+
+            <button type="submit" class="w-full btn-terracotta text-xs font-bold py-3.5 justify-center shadow-lg">
+              Sign In to Portal &rarr;
+            </button>
+          </form>
+
+          <div class="text-center text-xs text-slate-500 pt-2 border-t border-[#E2EBF0] dark:border-slate-700">
+            <span>New family? </span>
+            <a href="register.html" class="font-bold text-[#FF7A59] hover:underline">Create an Intake Account</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-[#152C22] text-slate-300 pt-16 pb-12 border-t border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-emerald-900/60">
+        
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-[#C85A32] flex items-center justify-center text-white shadow-md">
+              <i class="fa-solid fa-seedling text-lg"></i>
+            </div>
+            <span class="text-2xl font-bold font-heading text-white">SpeakBloom</span>
+          </a>
+          <p class="text-xs leading-relaxed text-slate-300 max-w-sm">
+            A sanctuary for transformative communication therapy. Certified speech-language pathologists providing evidence-based pediatric play therapy, stuttering fluency, and adult neuro-rehabilitation.
+          </p>
+          <div class="flex items-center space-x-3 pt-2">
+            <a href="contact.html" class="w-8 h-8 rounded-full bg-emerald-900/80 hover:bg-[#C85A32] text-white flex items-center justify-center text-xs transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="contact.html" class="w-8 h-8 rounded-full bg-emerald-900/80 hover:bg-[#C85A32] text-white flex items-center justify-center text-xs transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="contact.html" class="w-8 h-8 rounded-full bg-emerald-900/80 hover:bg-[#C85A32] text-white flex items-center justify-center text-xs transition"><i class="fa-brands fa-youtube"></i></a>
+            <a href="contact.html" class="w-8 h-8 rounded-full bg-emerald-900/80 hover:bg-[#C85A32] text-white flex items-center justify-center text-xs transition"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Clinical Services -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white tracking-wider uppercase font-heading">Clinical Care</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="milestone-language-development.html">Pediatric Articulation</a></li>
+            <li><a href="service-toddler-delay.html" class="hover:text-[#FBE8D8] transition">Early Toddler Talking</a></li>
+            <li><a href="service-aac-autism.html">AAC Communication Tech</a></li>
+            <li><a href="milestone-school-age-support.html">Stuttering & Fluency</a></li>
+            <li><a href="service-toddler-delay.html" class="hover:text-[#FBE8D8] transition">Voice & Acoustic Biofeedback</a></li>
+            <li><a href="milestone-teens-and-adults.html">Adult Neuro Rehab</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white tracking-wider uppercase font-heading">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="about.html" class="hover:text-[#FBE8D8] transition">About Our Philosophy</a></li>
+            <li><a href="therapists.html" class="hover:text-[#FBE8D8] transition">Our Clinical Team</a></li>
+            <li><a href="resources.html" class="hover:text-[#FBE8D8] transition">Parent Resource Library</a></li>
+            <li><a href="pricing.html" class="hover:text-[#FBE8D8] transition">Fee Packages & Plans</a></li>
+            
+            <li><a href="contact.html" class="hover:text-[#FBE8D8] transition">Book an Intake Session</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Hours -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white tracking-wider uppercase font-heading">Visit Clinic</h4>
+          <div class="space-y-2.5 text-xs text-slate-300">
+            <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-[#C85A32] mt-0.5"></i> <span>14 Peaceful Garden Avenue, Suite 300, Medical District</span></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-[#C85A32]"></i> <span>+91 98765 43210</span></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[#C85A32]"></i> <span>care@speakbloom.com</span></p>
+            <p class="text-[11px] text-emerald-300/80 pt-1"><i class="fa-solid fa-clock"></i> Mon–Sat: 8:30 AM – 7:00 PM</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; 2026 SpeakBloom Speech & Language Center. All clinical rights reserved.</p>
+        <div class="flex space-x-6 text-xs">
+          <a href="404.html" class="hover:text-white transition">Privacy Policy</a>
+          <a href="404.html" class="hover:text-white transition">Terms of Service</a>
+          <a href="coming-soon.html" class="hover:text-white transition">Telepractice Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Multi-Step Assessment Wizard Modal -->
+  <div id="assessment-wizard-modal" class="fixed inset-0 bg-slate-900/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white dark:bg-[#182C23] rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-[#EFE7DE] dark:border-slate-700 relative animate-scaleUp max-h-[90vh] overflow-y-auto">
+      <button data-close-modal class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C85A32] bg-[#FDF0E6] px-2.5 py-1 rounded-full">4-Step Clinical Intake</span>
+        <h3 class="text-2xl font-bold font-heading text-[#1E3D2F] dark:text-white mt-2">Schedule Your Initial Assessment</h3>
+      </div>
+
+      <!-- Step Indicator -->
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EFE7DE] dark:border-slate-700 text-xs font-bold">
+        <div class="flex items-center gap-1.5 text-[#C85A32]" id="step-badge-1"><span class="w-5 h-5 rounded-full bg-[#C85A32] text-white flex items-center justify-center text-[10px]">1</span> Patient Info</div>
+        <div class="h-0.5 w-6 bg-slate-200 dark:bg-slate-700"></div>
+        <div class="flex items-center gap-1.5 text-slate-400" id="step-badge-2"><span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center text-[10px]">2</span> Needs</div>
+        <div class="h-0.5 w-6 bg-slate-200 dark:bg-slate-700"></div>
+        <div class="flex items-center gap-1.5 text-slate-400" id="step-badge-3"><span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center text-[10px]">3</span> Date & Clinician</div>
+      </div>
+
+      <form id="assessment-multi-step-form" class="space-y-4 text-xs">
+        <!-- Step 1 -->
+        <div class="wizard-step space-y-4" data-step="1">
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Parent / Guardian Name *</label>
+            <input type="text" required placeholder="e.g. Priya Sharma" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Phone Number *</label>
+              <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Child Age / Grade</label>
+              <input type="text" placeholder="e.g. 3.5 Years / Preschool" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="wizard-step space-y-4 hidden" data-step="2">
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Primary Area of Concern</label>
+            <select class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+              <option>Late Talker / Language Delay</option>
+              <option>Articulation / Unclear Pronunciation</option>
+              <option>Stuttering & Fluency Tension</option>
+              <option>Autism / Gestalt Language Play</option>
+              <option>Feeding & Texture Aversions</option>
+              <option>Voice Resonance & Cord Therapy</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Brief Observations</label>
+            <textarea rows="3" placeholder="Describe the speech sounds, frustration levels, or challenges..." class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]"></textarea>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="wizard-step space-y-4 hidden" data-step="3">
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Preferred Date</label>
+              <input type="date" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Preferred Time</label>
+              <select class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+                <option>Morning (9:00 AM – 12:00 PM)</option>
+                <option>Afternoon (1:00 PM – 4:00 PM)</option>
+                <option>Evening (4:00 PM – 7:00 PM)</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Format</label>
+            <div class="flex gap-4 pt-1">
+              <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="visit_format" checked class="text-[#C85A32]"> In-Clinic Assessment</label>
+              <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="visit_format" class="text-[#C85A32]"> Online Telepractice</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 flex items-center justify-between border-t border-[#EFE7DE] dark:border-slate-700">
+          <button type="button" id="wizard-prev-btn" class="btn-outline-warm text-xs py-2.5 px-4 hidden">Previous</button>
+          <button type="button" id="wizard-next-btn" class="btn-terracotta text-xs py-2.5 px-6 ml-auto">Next Step &rarr;</button>
+          <button type="submit" id="wizard-submit-btn" class="btn-terracotta text-xs py-2.5 px-6 ml-auto hidden">Confirm Assessment &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

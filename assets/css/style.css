@@ -1,0 +1,162 @@
+/* ==========================================================================
+   SpeakBloom - Nordic Calming Teal & Warm Peach Design System
+   Award-Winning Modern Healthcare & Pediatric Speech Therapy Palette
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&display=swap');
+
+:root {
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+
+  /* Nordic Ocean Teal & Warm Peach Palette */
+  --color-primary: #0A4D68;
+  --color-primary-dark: #051923;
+  --color-primary-light: #088395;
+  --color-teal-tint: #EBF4F6;
+  
+  --color-peach: #FF7A59;
+  --color-peach-hover: #E66847;
+  --color-peach-light: #FFF0EB;
+  --color-peach-soft: #FFE3DA;
+
+  --color-canvas: #F8FAFB;
+  --color-card: #FFFFFF;
+  --color-border: #E2EBF0;
+  
+  /* Dark Canvas */
+  --dark-canvas: #06151D;
+  --dark-card: #0D222E;
+  --dark-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-canvas);
+  color: #243E48;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: var(--dark-canvas);
+  color: #E0EBF0;
+}
+
+h1, h2, h3, h4, h5, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+/* Warm Peach CTA Button */
+.btn-terracotta, .btn-peach {
+  background-color: var(--color-peach);
+  color: #ffffff !important;
+  border-radius: 9999px;
+  font-weight: 700;
+  padding: 0.65rem 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 16px rgba(255, 122, 89, 0.28);
+  transition: all 0.25s ease;
+}
+.btn-terracotta:hover, .btn-peach:hover {
+  background-color: var(--color-peach-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(255, 122, 89, 0.38);
+}
+
+/* Nordic Teal Primary Button */
+.btn-teal {
+  background-color: var(--color-primary);
+  color: #ffffff !important;
+  border-radius: 9999px;
+  font-weight: 700;
+  padding: 0.65rem 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(10, 77, 104, 0.25);
+  transition: all 0.25s ease;
+}
+.btn-teal:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(10, 77, 104, 0.35);
+}
+
+.btn-outline-warm, .btn-outline-teal {
+  border: 1.5px solid #0A4D68;
+  color: #0A4D68;
+  border-radius: 9999px;
+  font-weight: 700;
+  padding: 0.65rem 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+.dark .btn-outline-warm, .dark .btn-outline-teal {
+  border-color: #4EA8DE;
+  color: #EBF4F6;
+}
+.btn-outline-warm:hover, .btn-outline-teal:hover {
+  background-color: rgba(10, 77, 104, 0.06);
+  transform: translateY(-1px);
+}
+.dark .btn-outline-warm:hover, .dark .btn-outline-teal:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Nordic Arch Mask */
+.arch-mask {
+  border-radius: 180px 180px 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F5F8;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #06151D;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4D5DF;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #183847;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF7A59;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

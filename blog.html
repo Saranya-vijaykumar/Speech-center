@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights & Articles | SpeakBloom Multipurpose Service Template</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ochre: { 50: '#FDF7F0', 100: '#FAEFE0', 500: '#C07534', 600: '#AD6325' },
+            charcoal: { 800: '#2C2825', 900: '#1E1C1A' }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F7F4EE; color: #1E1C1A; }
+    h1, h2, h3, h4, .font-serif { font-family: 'Fraunces', Georgia, serif; }
+    .btn-ochre { background-color: #C07534; color: #FFFFFF; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
+    .btn-ochre:hover { background-color: #AD6325; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(192, 117, 52, 0.25); }
+    .btn-outline-pill { background-color: #FFFFFF; border: 1px solid #E3DFD5; color: #1E1C1A; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
+    .btn-outline-pill:hover { background-color: #FAF7F2; border-color: #C07534; transform: translateY(-1px); }
+  </style>
+</head>
+<body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#C07534] selection:text-white">
+
+<!-- =========================================================================
+       STANDARDIZED MULTIPURPOSE TOP NAVIGATION BAR
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 dark:border-slate-600 flex items-center justify-center text-[#1E1C1A] dark:text-white group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4c-1.5 4-4 6-8 6 4 1.5 6 4 6 8 0-4 2-6.5 6-8-4 0-6.5-2-4-6Z"/>
+              <path d="M12 4c1.5 4 4 6 8 6-4 1.5-6 4-6 8 0-4-2-6.5-6-8 4 0 6.5-2 4-6Z" opacity="0.4"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
+        </a>
+
+        <!-- Center Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-[#6B6560] dark:text-slate-300">
+          <!-- Home dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 1 (General Services)</a>
+                <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 2 (Niche Specialty)</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="hover:text-[#C07534] transition ">About Us</a>
+          
+          <!-- Services Dropdown -->
+          <div class="relative group py-2">
+            <a href="services.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">All Services (Grid)</a>
+                <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Service Details (Single)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Dropdown -->
+          <div class="relative group py-2">
+            <a href="blog.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition text-[#C07534] font-bold">
+              <span>Blog</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs text-[#C07534] font-bold">Blog Grid / List</a>
+                <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Single Article</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="pricing.html" class="hover:text-[#C07534] transition ">Pricing</a>
+          <a href="contact.html" class="hover:text-[#C07534] transition ">Contact Us</a>
+        </nav>
+
+        <!-- Right Utilities & Action Button -->
+        <div class="flex items-center space-x-2.5 shrink-0">
+          
+          <!-- Theme Dark/Light Toggle -->
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
+            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+
+          <!-- Get Started Pill -->
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
+            Get Started
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+            <i class="fa-solid fa-bars-staggered text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full border border-[#C07534] flex items-center justify-center text-[#C07534]">
+            <i class="fa-solid fa-seedling text-xs"></i>
+          </div>
+          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1">Main Pages</div>
+        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 1 (General Services)</a>
+        <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 2 (Niche Specialty)</a>
+        <a href="about.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Us</a>
+        <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Services (Grid)</a>
+        <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Service Details (Single)</a>
+        <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] text-[#C07534] font-bold bg-[#EFECE4] dark:bg-[#0D222E]">Blog Listing</a>
+        <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Details</a>
+        <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pricing Plans</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Contact Us</a>
+
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1 pt-2">Utilities</div>
+        <a href="404.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">404 Error Page</a>
+        <a href="coming-soon.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Coming Soon Page</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-ochre text-xs py-3 justify-center">
+        Get Started
+      </button>
+      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
+        <a href="login.html" class="hover:text-[#C07534]">Login</a>
+        <span>&bull;</span>
+        <a href="register.html" class="hover:text-[#C07534]">Register</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Hero Header -->
+  <section class="py-16 lg:py-20 bg-[#F7F4EE] dark:bg-[#06151D] border-b border-[#EFECE4] dark:border-slate-800 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#EFECE4] text-[#C07534] dark:bg-slate-800 dark:text-[#E89C5D]">
+        <i class="fa-solid fa-newspaper text-[11px]"></i> CLINICAL KNOWLEDGE &amp; GUIDES
+      </span>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#1E1C1A] dark:text-white tracking-tight leading-[1.12]">
+        Insights, Research &amp; Articles
+      </h1>
+      <p class="text-xs sm:text-sm text-[#6B6560] dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Explore clinical guides, parent communication strategies, neuro-rehab protocols, and speech development milestones written by our licensed clinicians.
+      </p>
+
+      <!-- Category Filter Pills & Search Input -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 max-w-2xl mx-auto">
+        <div class="relative w-full sm:w-72">
+          <input type="text" id="search-filter-input" placeholder="Search articles, topics..." class="w-full px-4 py-2.5 pl-10 rounded-full border border-[#E3DFD5] dark:border-slate-700 bg-white dark:bg-[#0D222E] text-xs outline-none focus:border-[#C07534]">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+        </div>
+        <div class="flex flex-wrap justify-center gap-2" id="blog-filters">
+          <button class="filter-pill active px-4 py-2 rounded-full text-xs font-bold bg-[#C07534] text-white shadow-sm transition" data-filter="all">All</button>
+          <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534]" data-filter="pediatric">Pediatric</button>
+          <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534]" data-filter="autism">Autism / AAC</button>
+          <button class="filter-pill px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534]" data-filter="neuro">Neuro Rehab</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Post Hero -->
+  <section class="py-12 bg-white dark:bg-[#081D26] border-b border-[#EFECE4] dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#FAF7F2] dark:bg-[#0D222E] rounded-3xl p-6 sm:p-10 border border-[#E3DFD5] dark:border-slate-700 grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 rounded-2xl overflow-hidden aspect-[16/9] shadow-md relative group">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Featured Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <span class="absolute top-4 left-4 bg-white/95 dark:bg-[#0D222E]/95 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534]">
+            FEATURED CLINICAL STUDY
+          </span>
+        </div>
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3 text-xs text-[#A8A199]">
+            <span>March 12, 2026</span>
+            <span>&bull;</span>
+            <span>8 Min Read</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold font-serif text-[#1E1C1A] dark:text-white leading-tight hover:text-[#C07534] transition">
+            <a href="blog-details.html">Understanding Gestalt Language Processing: How Intonation Scripts Lead to Natural Speech</a>
+          </h2>
+          <p class="text-xs sm:text-sm text-[#6B6560] dark:text-slate-300 leading-relaxed font-normal">
+            A deep-dive clinical guide into Natural Language Acquisition (NLA) stages, debunking outdated myths about echolalia, and empowering autistic communicators.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-[#E3DFD5]">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Dr. Ananya" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="text-xs font-bold text-[#1E1C1A] dark:text-white block">Dr. Ananya Krishnan</span>
+              <span class="text-[10px] text-slate-400">Clinical Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid (Searchable & Filterable) -->
+  <section class="py-16 bg-[#F7F4EE] dark:bg-[#06151D]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Post 1 -->
+        <article class="resource-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="pediatric">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Toddler speech milestones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534]">
+                Toddler Care
+              </span>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] text-[#A8A199]">Feb 28, 2026 &bull; 5 Min Read</span>
+              <h3 class="text-base font-bold font-serif text-[#1E1C1A] dark:text-white hover:text-[#C07534] transition">
+                <a href="blog-details.html">5 Red Flags for Toddler Speech Delay (And What to Do Before Age 2)</a>
+              </h3>
+              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed">
+                Learn how to distinguish between typical late talking and clinical language delay with practical home play strategies.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="blog-details.html" class="w-full btn-outline-pill text-xs font-semibold py-2 justify-center">
+              Read Full Article &rarr;
+            </a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="resource-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="autism">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80" alt="AAC device implementation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534]">
+                AAC &amp; Tech
+              </span>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] text-[#A8A199]">Feb 19, 2026 &bull; 6 Min Read</span>
+              <h3 class="text-base font-bold font-serif text-[#1E1C1A] dark:text-white hover:text-[#C07534] transition">
+                <a href="blog-details.html">How to Model AAC Tablet Devices at Home Without Pressure</a>
+              </h3>
+              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed">
+                Step-by-step guidance for parents to naturally introduce TouchChat and LAMP during mealtime and bedtime reading.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="blog-details.html" class="w-full btn-outline-pill text-xs font-semibold py-2 justify-center">
+              Read Full Article &rarr;
+            </a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="resource-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="neuro">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Stroke and aphasia recovery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-white/90 dark:bg-[#0D222E]/90 px-3 py-1 rounded-full text-[10px] font-bold text-[#C07534]">
+                Neuro Rehab
+              </span>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] text-[#A8A199]">Feb 10, 2026 &bull; 7 Min Read</span>
+              <h3 class="text-base font-bold font-serif text-[#1E1C1A] dark:text-white hover:text-[#C07534] transition">
+                <a href="blog-details.html">Neuroplasticity and Aphasia: Restoring Conversational Confidence Post-Stroke</a>
+              </h3>
+              <p class="text-xs text-[#6B6560] dark:text-slate-400 leading-relaxed">
+                Evidence-based protocols explaining how Constraint-Induced Language Therapy stimulates speech pathway rebuilding.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="blog-details.html" class="w-full btn-outline-pill text-xs font-semibold py-2 justify-center">
+              Read Full Article &rarr;
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-16 bg-white dark:bg-[#081D26] border-t border-[#EFECE4] dark:border-slate-800 text-center">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <div class="w-12 h-12 rounded-full bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] flex items-center justify-center mx-auto border border-[#E3DFD5]">
+        <i class="fa-regular fa-envelope text-lg"></i>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-serif text-[#1E1C1A] dark:text-white">Subscribe to Our Monthly Newsletter</h2>
+      <p class="text-xs sm:text-sm text-[#6B6560] dark:text-slate-300">
+        Get research-backed speech tips, developmental checklists, and clinical webinar invites directly in your inbox.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto pt-2">
+        <input type="email" required placeholder="Enter your email address" class="px-4 py-3 rounded-full border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#081D26] text-xs flex-1 outline-none focus:border-[#C07534]">
+        <button type="submit" class="btn-ochre text-xs py-3 px-6 whitespace-nowrap">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1E1C1A] text-[#EFECE4] pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800">
+        <div class="col-span-2 md:col-span-1 space-y-3">
+          <span class="text-xl font-serif font-bold text-white tracking-tight">SpeakBloom</span>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Evidence-based, compassionate speech, language, and sensory therapy center.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-300 block">Quick Links</span>
+          <ul class="space-y-1.5 text-xs text-slate-400">
+            <li><a href="index.html" class="hover:text-[#C07534]">Home 1</a></li>
+            <li><a href="index-pediatric.html" class="hover:text-[#C07534]">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-[#C07534]">About Us</a></li>
+            <li><a href="services.html" class="hover:text-[#C07534]">Services</a></li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-300 block">Resources</span>
+          <ul class="space-y-1.5 text-xs text-slate-400">
+            <li><a href="blog.html" class="hover:text-[#C07534]">Blog Listing</a></li>
+            <li><a href="blog-details.html" class="hover:text-[#C07534]">Featured Post</a></li>
+            <li><a href="pricing.html" class="hover:text-[#C07534]">Pricing Plans</a></li>
+            
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-300 block">Contact</span>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            42 Richmond Road, Bangalore, KA<br>
+            +91 98765 43210<br>
+            hello@speakbloomtherapy.com
+          </p>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 SpeakBloom Multipurpose Service Template. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="about.html" class="hover:text-slate-300">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="about.html" class="hover:text-slate-300">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Assessment Wizard Modal -->
+  <div id="assessment-wizard-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-[#0D222E] w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#E3DFD5] dark:border-slate-700 relative max-h-[90vh] overflow-y-auto">
+      <button data-close-modal class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#FAF7F2] dark:bg-slate-800 flex items-center justify-center text-xs text-slate-500 hover:text-black dark:hover:text-white">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="space-y-2 mb-6">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534]">Quick Appointment</span>
+        <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white">Schedule an Intake Call</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Speak directly with our clinical intake team.</p>
+      </div>
+
+      <form class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-200 mb-1">Full Name</label>
+          <input type="text" required placeholder="Your Name" class="w-full px-4 py-2.5 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#081D26] outline-none focus:border-[#C07534]">
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-200 mb-1">Email / Phone</label>
+          <input type="text" required placeholder="Email or +91 Phone" class="w-full px-4 py-2.5 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#081D26] outline-none focus:border-[#C07534]">
+        </div>
+        <button type="submit" class="w-full btn-ochre text-xs py-3 justify-center shadow-sm">
+          Submit Request &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

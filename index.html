@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakBloom | A gentler way to begin speech & language care</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            linen: {
+              50: '#FAF7F2',
+              100: '#F7F4EE',
+              200: '#EFECE4',
+              300: '#E3DFD5',
+            },
+            amberOchre: {
+              500: '#C07534',
+              600: '#AD6325',
+              700: '#94511A'
+            },
+            deepCharcoal: {
+              800: '#1E1C1A',
+              900: '#141312'
+            },
+            softSlate: '#6B6560'
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #F7F4EE;
+      color: #1E1C1A;
+    }
+    .font-serif {
+      font-family: 'Fraunces', Georgia, serif;
+      letter-spacing: -0.03em;
+    }
+    .btn-ochre {
+      background-color: #C07534;
+      color: #FFFFFF !important;
+      border-radius: 9999px;
+      font-weight: 600;
+      padding: 0.65rem 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+    }
+    .btn-ochre:hover {
+      background-color: #AD6325;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(192, 117, 52, 0.25);
+    }
+    .btn-outline-pill {
+      background-color: #FFFFFF;
+      border: 1px solid #E3DFD5;
+      color: #1E1C1A;
+      border-radius: 9999px;
+      font-weight: 600;
+      padding: 0.65rem 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+    }
+    .btn-outline-pill:hover {
+      background-color: #FAF7F2;
+      border-color: #C07534;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="bg-[#F7F4EE] text-[#1E1C1A] antialiased selection:bg-[#C07534] selection:text-white">
+  <!-- =========================================================================
+       STANDARDIZED MULTIPURPOSE TOP NAVIGATION BAR
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 dark:border-slate-600 flex items-center justify-center text-[#1E1C1A] dark:text-white group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4c-1.5 4-4 6-8 6 4 1.5 6 4 6 8 0-4 2-6.5 6-8-4 0-6.5-2-4-6Z"/>
+              <path d="M12 4c1.5 4 4 6 8 6-4 1.5-6 4-6 8 0-4-2-6.5-6-8 4 0 6.5-2 4-6Z" opacity="0.4"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
+        </a>
+
+        <!-- Center Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-[#6B6560] dark:text-slate-300">
+          <!-- Home dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 hover:text-[#C07534] transition text-[#C07534] font-bold">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs text-[#C07534] font-bold">Home 1 (General Services)</a>
+                <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 2 (Niche Specialty)</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="hover:text-[#C07534] transition ">About Us</a>
+          
+          <!-- Services Dropdown -->
+          <div class="relative group py-2">
+            <a href="services.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">All Services (Grid)</a>
+                <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Service Details (Single)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Dropdown -->
+          <div class="relative group py-2">
+            <a href="blog.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Blog</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1">
+                <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Grid / List</a>
+                <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Single Article</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="pricing.html" class="hover:text-[#C07534] transition ">Pricing</a>
+          <a href="contact.html" class="hover:text-[#C07534] transition ">Contact Us</a>
+        </nav>
+
+        <!-- Right Utilities & Action Button -->
+        <div class="flex items-center space-x-2.5 shrink-0">
+          
+          <!-- Theme Dark/Light Toggle -->
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
+            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+
+          <!-- Get Started Pill -->
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
+            Get Started
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+            <i class="fa-solid fa-bars-staggered text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full border border-[#C07534] flex items-center justify-center text-[#C07534]">
+            <i class="fa-solid fa-seedling text-xs"></i>
+          </div>
+          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1">Main Pages</div>
+        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] text-[#C07534] font-bold bg-[#EFECE4] dark:bg-[#0D222E]">Home 1 (General Services)</a>
+        <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 2 (Niche Specialty)</a>
+        <a href="about.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Us</a>
+        <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Services (Grid)</a>
+        <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Service Details (Single)</a>
+        <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Listing</a>
+        <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Details</a>
+        <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pricing Plans</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Contact Us</a>
+
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1 pt-2">Utilities</div>
+        <a href="404.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">404 Error Page</a>
+        <a href="coming-soon.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Coming Soon Page</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-ochre text-xs py-3 justify-center">
+        Get Started
+      </button>
+      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
+        <a href="login.html" class="hover:text-[#C07534]">Login</a>
+        <span>&bull;</span>
+        <a href="register.html" class="hover:text-[#C07534]">Register</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <section class="pt-16 sm:pt-20 pb-12 bg-[#F7F4EE] text-center overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      
+      <!-- Exact Headline from Screenshot (Editorial Fraunces Serif) -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#1E1C1A] leading-[1.12] tracking-tight font-normal">
+        A gentler way to begin<br>speech &amp; language care
+      </h1>
+
+      <!-- Clean Subtitle -->
+      <p class="text-xs sm:text-sm text-[#6B6560] max-w-lg mx-auto font-normal leading-relaxed">
+        Speech and communication therapy designed to feel safe, welcoming, and easy to begin.
+      </p>
+
+      <!-- Centered Dual Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <button data-open-modal="assessment-wizard-modal" class="btn-ochre text-xs font-semibold py-3 px-6 shadow-sm">
+          Start Your First Session
+        </button>
+        <a href="#how-it-works" class="btn-outline-pill text-xs font-semibold py-3 px-6 shadow-sm">
+          Learn How It Works
+        </a>
+      </div>
+
+    </div>
+
+    <!-- =========================================================================
+         3. CURVED 5-IMAGE HORIZONTAL RIBBON (Fresh Speech Therapy Photos)
+         ========================================================================= -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 items-end">
+        
+        <!-- Image Card 1: Serene, gentle reading connection -->
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden aspect-[3/4] shadow-sm hover:shadow-md transition-all group relative">
+          <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80" alt="Child exploring stories and sounds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Image Card 2: Joyful, laughing expressive smile -->
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden aspect-[3/4] shadow-sm hover:shadow-md transition-all group relative">
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80" alt="Joyful child speaking and laughing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Image Card 3: Play-based sensory shapes & discovery -->
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden aspect-[3/4] shadow-sm hover:shadow-md transition-all group relative">
+          <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80" alt="Sensory regulation and play therapy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Image Card 4: Mother & child responsive communication -->
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden aspect-[3/4] shadow-sm hover:shadow-md transition-all group relative">
+          <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=800&q=80" alt="Early language and parent connection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Image Card 5: Confident speaker in warm sunlight -->
+        <div class="col-span-2 sm:col-span-1 rounded-2xl sm:rounded-3xl overflow-hidden aspect-[3/4] shadow-sm hover:shadow-md transition-all group relative">
+          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Confident communication and voice empowerment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. HOW IT WORKS SECTION (Simple, Peaceful, 3 Steps)
+       ========================================================================= -->
+  
+  <!-- =========================================================================
+       COMMUNICATION MILESTONES: EVERY AGE. EVERY STAGE (Exact Match to User Image)
+       ========================================================================= -->
+  <section class="py-20 bg-white border-t border-[#EFECE4]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Intro -->
+        <div class="lg:col-span-4 space-y-4">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#FFF0EB] text-[#FF7A59]">
+            COMMUNICATION MILESTONES
+          </span>
+          
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#1E1C1A] tracking-tight leading-tight">
+            Every Age.<br>Every Stage.
+          </h2>
+
+          <p class="text-xs sm:text-sm text-[#6B6560] leading-relaxed max-w-sm">
+            We support your child's communication journey from early sounds to confident conversations.
+          </p>
+
+          <div class="pt-2">
+            <a href="resources.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#1E1C1A] text-xs font-bold text-[#1E1C1A] hover:bg-[#1E1C1A] hover:text-white transition">
+              <span>Explore Milestones</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 4 Pastel Milestone Cards (Horizontal Row) -->
+        <div class="lg:col-span-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+            
+            <!-- Card 1: 0 - 2 Years (Peach) -->
+            <a href="milestone-early-communication.html" class="block bg-[#FFF0EB] rounded-3xl p-6 relative group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between min-h-[290px] border border-[#FFE3DA]">
+              <div class="space-y-3">
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#FF7A59] shadow-sm">
+                  <i class="fa-solid fa-baby text-base"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold font-heading text-[#1E1C1A]">0 – 2 Years</h3>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-[#FF7A59] mt-0.5">EARLY COMMUNICATION</p>
+                </div>
+                <ul class="space-y-1.5 text-xs text-slate-700 pt-2 font-medium">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF7A59]"></span> Babbling</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF7A59]"></span> First words</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF7A59]"></span> Gestures</li>
+                </ul>
+              </div>
+              <div class="pt-4 flex justify-end">
+                <div class="w-9 h-9 rounded-full bg-[#FF7A59] text-white flex items-center justify-center text-xs group-hover:scale-110 transition-transform shadow-md">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 2: 2 - 5 Years (Mint Teal) -->
+            <a href="milestone-language-development.html" class="block bg-[#EBF4F6] rounded-3xl p-6 relative group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between min-h-[290px] border border-[#CCE5EB]">
+              <div class="space-y-3">
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#088395] shadow-sm">
+                  <i class="fa-solid fa-child text-base"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold font-heading text-[#1E1C1A]">2 – 5 Years</h3>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-[#088395] mt-0.5">LANGUAGE DEVELOPMENT</p>
+                </div>
+                <ul class="space-y-1.5 text-xs text-slate-700 pt-2 font-medium">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#088395]"></span> Vocabulary</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#088395]"></span> Sentence formation</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#088395]"></span> Social skills</li>
+                </ul>
+              </div>
+              <div class="pt-4 flex justify-end">
+                <div class="w-9 h-9 rounded-full bg-[#088395] text-white flex items-center justify-center text-xs group-hover:scale-110 transition-transform shadow-md">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 3: 6 - 12 Years (Sky Blue) -->
+            <a href="milestone-school-age-support.html" class="block bg-[#EBF3FB] rounded-3xl p-6 relative group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between min-h-[290px] border border-[#D5E7F8]">
+              <div class="space-y-3">
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#2563EB] shadow-sm">
+                  <i class="fa-solid fa-book-open text-base"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold font-heading text-[#1E1C1A]">6 – 12 Years</h3>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-[#2563EB] mt-0.5">SCHOOL-AGE SUPPORT</p>
+                </div>
+                <ul class="space-y-1.5 text-xs text-slate-700 pt-2 font-medium">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span> Reading & writing</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span> Comprehension</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span> Social communication</li>
+                </ul>
+              </div>
+              <div class="pt-4 flex justify-end">
+                <div class="w-9 h-9 rounded-full bg-[#2563EB] text-white flex items-center justify-center text-xs group-hover:scale-110 transition-transform shadow-md">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 4: Teens & Adults (Lavender Purple) -->
+            <a href="milestone-teens-and-adults.html" class="block bg-[#F4EDFB] rounded-3xl p-6 relative group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between min-h-[290px] border border-[#E3D1F7]">
+              <div class="space-y-3">
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#7C3AED] shadow-sm">
+                  <i class="fa-solid fa-user-group text-base"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold font-heading text-[#1E1C1A]">Teens &amp; Adults</h3>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-[#7C3AED] mt-0.5">ADVANCED COMMUNICATION</p>
+                </div>
+                <ul class="space-y-1.5 text-xs text-slate-700 pt-2 font-medium">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#7C3AED]"></span> Fluency</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#7C3AED]"></span> Cognitive skills</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#7C3AED]"></span> Language rehab</li>
+                </ul>
+              </div>
+              <div class="pt-4 flex justify-end">
+                <div class="w-9 h-9 rounded-full bg-[#7C3AED] text-white flex items-center justify-center text-xs group-hover:scale-110 transition-transform shadow-md">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="how-it-works" class="py-20 bg-[#FAF7F2] border-t border-[#EFECE4]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-[#C07534]">How It Works</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-[#1E1C1A]">Three gentle steps to clear communication</h2>
+        <p class="text-xs sm:text-sm text-[#6B6560]">We remove the friction, anxiety, and clinical coldness from therapy.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="bg-[#F7F4EE] p-8 rounded-3xl border border-[#E3DFD5] space-y-4 text-center sm:text-left">
+          <div class="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#D9D4C7] text-[#C07534] flex items-center justify-center font-serif font-bold text-base">
+            1
+          </div>
+          <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Free 15-Minute Intake Consult</h3>
+          <p class="text-xs text-[#6B6560] leading-relaxed">
+            Speak directly with our intake clinical director. We listen to your family's concerns, developmental history, and answer all questions without pressure.
+          </p>
+          <a href="contact.html" class="inline-block text-xs font-bold text-[#C07534] hover:underline">Schedule intake call &rarr;</a>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-[#F7F4EE] p-8 rounded-3xl border border-[#E3DFD5] space-y-4 text-center sm:text-left">
+          <div class="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#D9D4C7] text-[#C07534] flex items-center justify-center font-serif font-bold text-base">
+            2
+          </div>
+          <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Play-Based Assessment</h3>
+          <p class="text-xs text-[#6B6560] leading-relaxed">
+            A relaxed 45-minute evaluation in our sensory-friendly playroom or via telepractice. We identify oral motor, expressive, and receptive strengths.
+          </p>
+          <a href="service-toddler-delay.html" class="inline-block text-xs font-bold text-[#C07534] hover:underline">View assessment roadmap &rarr;</a>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-[#F7F4EE] p-8 rounded-3xl border border-[#E3DFD5] space-y-4 text-center sm:text-left">
+          <div class="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#D9D4C7] text-[#C07534] flex items-center justify-center font-serif font-bold text-base">
+            3
+          </div>
+          <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Tailored Weekly Growth</h3>
+          <p class="text-xs text-[#6B6560] leading-relaxed">
+            Weekly 1-on-1 sessions paired with 5-minute home micro-games and parent debriefs, helping your child build confidence that lasts a lifetime.
+          </p>
+          <a href="pricing.html" class="inline-block text-xs font-bold text-[#C07534] hover:underline">Explore care plans &rarr;</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. CLINICAL SERVICES SECTION (Warm Editorial Cards)
+       ========================================================================= -->
+  <section class="py-20 bg-[#F7F4EE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#C07534]">Specialized Programs</span>
+          <h2 class="text-3xl sm:text-4xl font-serif text-[#1E1C1A] mt-1">Care tailored to every stage of life</h2>
+        </div>
+        <a href="services.html" class="btn-outline-pill text-xs font-semibold py-2.5 px-5 self-start md:self-auto">
+          View All 12 Services &rarr;
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Service 1 -->
+        <div class="bg-white p-7 rounded-3xl border border-[#E3DFD5] shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#EFECE4]">Ages 12–36 Months</span>
+            <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Late Talker Toddler Play</h3>
+            <p class="text-xs text-[#6B6560] leading-relaxed">
+              Gentle, parent-coached play therapy for toddlers who have fewer than 50 words, struggle with gestures, or experience speech frustration.
+            </p>
+          </div>
+          <a href="service-toddler-delay.html" class="text-xs font-bold text-[#C07534] hover:underline pt-2 inline-flex items-center gap-1">
+            Learn more about toddler therapy &rarr;
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white p-7 rounded-3xl border border-[#E3DFD5] shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#EFECE4]">Ages 3–12 Years</span>
+            <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Speech Sound &amp; Articulation</h3>
+            <p class="text-xs text-[#6B6560] leading-relaxed">
+              Motor speech precision correcting stubborn sound substitutions (/r/, /s/, /l/, /th/), lisping, and phonological clarity.
+            </p>
+          </div>
+          <a href="service-articulation.html" class="text-xs font-bold text-[#C07534] hover:underline pt-2 inline-flex items-center gap-1">
+            Learn more about articulation &rarr;
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white p-7 rounded-3xl border border-[#E3DFD5] shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#EFECE4]">All Ages</span>
+            <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Stuttering &amp; Fluency Coaching</h3>
+            <p class="text-xs text-[#6B6560] leading-relaxed">
+              Acoustic biofeedback and cognitive ease techniques to reduce vocal cord blocks and develop effortless, confident conversational flow.
+            </p>
+          </div>
+          <a href="service-stuttering-fluency.html" class="text-xs font-bold text-[#C07534] hover:underline pt-2 inline-flex items-center gap-1">
+            Learn more about fluency &rarr;
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white p-7 rounded-3xl border border-[#E3DFD5] shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#EFECE4]">Neurodiversity-Affirming</span>
+            <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Autism &amp; Gestalt Language (GLP)</h3>
+            <p class="text-xs text-[#6B6560] leading-relaxed">
+              Supporting gestalt language processors who communicate through intonation and scripts, honoring each child's authentic communicative style.
+            </p>
+          </div>
+          <a href="service-aac-autism.html" class="text-xs font-bold text-[#C07534] hover:underline pt-2 inline-flex items-center gap-1">
+            Learn more about GLP &amp; AAC &rarr;
+          </a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="bg-white p-7 rounded-3xl border border-[#E3DFD5] shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#EFECE4]">Adults &amp; Seniors</span>
+            <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Stroke, Aphasia &amp; Voice Rehab</h3>
+            <p class="text-xs text-[#6B6560] leading-relaxed">
+              Targeted neuroplasticity cognitive-communication recovery, word retrieval, and safe swallowing therapy after neurological events.
+            </p>
+          </div>
+          <a href="service-aphasia-stroke-rehab.html" class="text-xs font-bold text-[#C07534] hover:underline pt-2 inline-flex items-center gap-1">
+            Learn more about neuro rehab &rarr;
+          </a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="bg-[#FAF7F2] p-7 rounded-3xl border border-[#E3DFD5] flex flex-col items-center justify-center text-center space-y-4">
+          <div class="w-12 h-12 rounded-full bg-white border border-[#D9D4C7] flex items-center justify-center text-[#C07534]">
+            <i class="fa-regular fa-comments text-lg"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-[#1E1C1A]">Unsure Which Is Right?</h3>
+          <p class="text-xs text-[#6B6560]">Our intake team will guide you through a gentle milestone screener.</p>
+          <button data-open-modal="assessment-wizard-modal" class="btn-ochre text-xs py-2.5 px-5">
+            Book Free Screening
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. CLINICAL DIRECTOR SPOTLIGHT (Editorial Centered Layout)
+       ========================================================================= -->
+  <section class="py-20 bg-[#FAF7F2] border-t border-[#EFECE4]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-12 gap-10 items-center">
+        
+        <div class="md:col-span-5 flex justify-center">
+          <div class="w-56 h-56 sm:w-64 sm:h-64 rounded-full p-2 border-2 border-[#D9D4C7] bg-white shadow-lg">
+            <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80" alt="Dr. Ananya Krishnan" class="w-full h-full rounded-full object-cover">
+          </div>
+        </div>
+
+        <div class="md:col-span-7 space-y-4 text-center md:text-left">
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#C07534]">Our Clinical Philosophy</span>
+          <h2 class="text-3xl sm:text-4xl font-serif text-[#1E1C1A]">"Connection must always come before correction."</h2>
+          <p class="text-xs sm:text-sm text-[#6B6560] leading-relaxed">
+            Dr. Ananya Krishnan, Ph.D., CCC-SLP, leads our clinical practice. With 14+ years of clinical research at Stanford and thousands of joyful patient breakthroughs, she ensures that every therapy session is grounded in empathy, neuroscience, and natural play.
+          </p>
+          <div class="pt-2">
+            <a href="therapist-single.html?id=ananya" class="btn-outline-pill text-xs font-semibold py-2.5 px-6">
+              Read Dr. Ananya's Full Story &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. TESTIMONIALS (Minimalist Editorial Quotes)
+       ========================================================================= -->
+  <section class="py-20 bg-[#F7F4EE]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      
+      <div class="space-y-2">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-[#C07534]">Family Stories</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-[#1E1C1A]">Trusted by over 1,200 families</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-8 text-left">
+        
+        <div class="bg-white p-8 rounded-3xl border border-[#E3DFD5] space-y-4">
+          <div class="text-amber-500 text-xs tracking-widest">★★★★★</div>
+          <p class="text-xs sm:text-sm font-serif italic text-[#1E1C1A] leading-relaxed">
+            "Before SpeakBloom, speech sessions at other clinics left my 3-year-old in tears. Here, he runs into the sensory room with a huge smile. Within 8 weeks, he went from 5 words to full spontaneous sentences."
+          </p>
+          <div class="pt-2 border-t border-[#EFECE4] flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Priya S." class="w-9 h-9 rounded-full object-cover">
+            <div>
+              <p class="text-xs font-bold text-[#1E1C1A]">Priya S.</p>
+              <p class="text-[10px] text-[#6B6560]">Mother of Aarav (Age 3.5)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-[#E3DFD5] space-y-4">
+          <div class="text-amber-500 text-xs tracking-widest">★★★★★</div>
+          <p class="text-xs sm:text-sm font-serif italic text-[#1E1C1A] leading-relaxed">
+            "As an adult who struggled with stuttering for 20 years, Marcus Vance gave me tools that transformed how I view speaking. I gave my first presentation at work last month without a single panic block."
+          </p>
+          <div class="pt-2 border-t border-[#EFECE4] flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Arun M." class="w-9 h-9 rounded-full object-cover">
+            <div>
+              <p class="text-xs font-bold text-[#1E1C1A]">Arun M.</p>
+              <p class="text-[10px] text-[#6B6560]">Software Architect (Fluency Patient)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. GENTLE CALL TO ACTION BANNER
+       ========================================================================= -->
+  <section class="py-20 bg-[#FAF7F2] border-t border-[#EFECE4] text-center">
+    <div class="max-w-3xl mx-auto px-4 space-y-6">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#1E1C1A]">
+        Begin your family's communication journey today
+      </h2>
+      <p class="text-xs sm:text-sm text-[#6B6560] max-w-lg mx-auto">
+        No doctor referrals required. Book an initial evaluation or schedule a free 15-minute consultation with our clinical intake team.
+      </p>
+      <div class="pt-2">
+        <button data-open-modal="assessment-wizard-modal" class="btn-ochre text-xs font-semibold py-3.5 px-8 shadow-sm">
+          Schedule Your Initial Assessment
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. MINIMALIST EDITORIAL FOOTER
+       ========================================================================= -->
+  <footer class="bg-[#1E1C1A] text-[#E3DFD5] pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#36322E]">
+        
+        <div class="md:col-span-2 space-y-3">
+          <span class="text-2xl font-serif font-bold text-white">SpeakBloom</span>
+          <p class="text-xs text-[#A8A199] max-w-sm leading-relaxed">
+            A sanctuary for transformative, compassionate speech and language therapy. Licensed clinicians providing evidence-based care for toddlers, children, and adults.
+          </p>
+        </div>
+
+        <div class="space-y-2 text-xs">
+          <p class="font-bold text-white uppercase tracking-wider text-[11px]">Clinical Services</p>
+          <ul class="space-y-1.5 text-[#A8A199]">
+            <li><a href="milestone-early-communication.html" class="hover:text-white transition">Late Talker Toddler Care</a></li>
+            <li><a href="milestone-language-development.html" class="hover:text-white transition">Articulation &amp; Sound Clarity</a></li>
+            <li><a href="milestone-school-age-support.html" class="hover:text-white transition">Stuttering &amp; Fluency</a></li>
+            <li><a href="service-aac-autism.html" class="hover:text-white transition">Autism &amp; AAC Therapy</a></li>
+            <li><a href="milestone-teens-and-adults.html" class="hover:text-white transition">Adult Stroke Recovery</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2 text-xs">
+          <p class="font-bold text-white uppercase tracking-wider text-[11px]">Clinic Location</p>
+          <div class="space-y-1.5 text-[#A8A199]">
+            <p>14 Peaceful Garden Avenue, Suite 300</p>
+            <p>Medical District, Chennai / Bengaluru</p>
+            <p class="text-white font-semibold pt-1">+91 98765 43210</p>
+            <p>care@speakbloom.com</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#7A746E] gap-4">
+        <p>&copy; 2026 SpeakBloom Speech &amp; Language Center. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="404.html" class="hover:text-white transition">Privacy Policy</a>
+          <a href="404.html" class="hover:text-white transition">Terms of Care</a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Assessment Wizard Modal -->
+  <div id="assessment-wizard-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-[#E3DFD5] relative max-h-[90vh] overflow-y-auto">
+      <button data-close-modal class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:text-slate-800 flex items-center justify-center">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#EFECE4]">Clinical Intake</span>
+        <h3 class="text-2xl font-serif text-[#1E1C1A] mt-2">Schedule Your Initial Assessment</h3>
+      </div>
+
+      <form id="assessment-wizard-form" class="space-y-4 text-xs" onsubmit="alert('Assessment requested! Our intake director will call you within 2 hours.'); document.getElementById('assessment-wizard-modal').classList.add('hidden'); return false;">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-[#1E1C1A] mb-1">Parent / Patient Name *</label>
+            <input type="text" required placeholder="e.g. Priya Sharma" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] bg-[#F7F4EE] outline-none focus:ring-2 focus:ring-[#C07534]">
+          </div>
+          <div>
+            <label class="block font-bold text-[#1E1C1A] mb-1">Phone Number *</label>
+            <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] bg-[#F7F4EE] outline-none focus:ring-2 focus:ring-[#C07534]">
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-[#1E1C1A] mb-1">Child / Patient Age</label>
+            <input type="text" placeholder="e.g. 3.5 Years" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] bg-[#F7F4EE] outline-none focus:ring-2 focus:ring-[#C07534]">
+          </div>
+          <div>
+            <label class="block font-bold text-[#1E1C1A] mb-1">Primary Area of Need</label>
+            <select class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] bg-[#F7F4EE] outline-none focus:ring-2 focus:ring-[#C07534]">
+              <option>Late Talker / Toddler Delay</option>
+              <option>Speech Sound Articulation</option>
+              <option>Stuttering & Fluency</option>
+              <option>Autism & Gestalt Language</option>
+              <option>Adult Stroke / Voice Care</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-[#1E1C1A] mb-1">Brief Description of Needs</label>
+          <textarea rows="3" placeholder="Share what speech behaviors or sounds you have noticed..." class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] bg-[#F7F4EE] outline-none focus:ring-2 focus:ring-[#C07534]"></textarea>
+        </div>
+
+        <button type="submit" class="w-full btn-ochre text-xs font-semibold py-3.5 justify-center shadow-md">
+          Confirm Assessment Request &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
