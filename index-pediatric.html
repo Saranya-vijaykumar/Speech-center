@@ -74,12 +74,103 @@
     }
   </style>
 </head>
-<body class="bg-[#F8FAFB] text-[#2D3748] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#FF7A59] selection:text-white">
+<body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
+
   <!-- =========================================================================
-       STANDARDIZED MULTIPURPOSE TOP NAVIGATION BAR
+       TOP NAVIGATION BAR (Standardized Home 1 Theme)
        ========================================================================= -->
   <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group shrink-0">
+          <div class="w-8 h-8 rounded-full bg-[#111D18] dark:bg-white text-white dark:text-[#111D18] flex items-center justify-center text-xs">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <span class="text-xl sm:text-2xl font-serif font-semibold text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold text-[#5A5550] dark:text-slate-300">
+          <a href="index.html" class="hover:text-[#111D18] dark:hover:text-white transition">Home</a>
+          <a href="about.html" class="hover:text-[#111D18] dark:hover:text-white transition">About Us</a>
+          <a href="services.html" class="hover:text-[#111D18] dark:hover:text-white transition">Services (All 12)</a>
+          <a href="therapists.html" class="hover:text-[#111D18] dark:hover:text-white transition">Therapists</a>
+          <a href="pricing.html" class="hover:text-[#111D18] dark:hover:text-white transition">Pricing &amp; Rates</a>
+          <a href="blog.html" class="hover:text-[#111D18] dark:hover:text-white transition">Articles</a>
+          <a href="contact.html" class="hover:text-[#111D18] dark:hover:text-white transition">Contact</a>
+        </nav>
+
+        <!-- Right Utilities & Action Pill -->
+        <div class="flex items-center space-x-3 shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
+            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+
+          <!-- Book A Call Button -->
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2.5 px-6 font-semibold shadow-sm">
+            Book Free Intake
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+            <i class="fa-solid fa-bars-staggered text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-[#111D18] text-white flex items-center justify-center text-xs">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
+        <a href="index.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Home</a>
+        <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">About Us</a>
+        <a href="services.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">All 12 Services</a>
+        <a href="therapists.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Our Therapists</a>
+        <a href="pricing.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pricing &amp; Rates</a>
+        <a href="blog.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Articles</a>
+        <a href="contact.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Contact Us</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center">
+        Book Free Intake
+      </button>
+      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
+        <a href="login.html" class="hover:text-[#111D18]">Login</a>
+        <span>&bull;</span>
+        <a href="register.html" class="hover:text-[#111D18]">Register</a>
+      </div>
+    </div>
+  </div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Logo -->
@@ -158,7 +249,7 @@
           </button>
 
           <!-- Get Started Pill -->
-          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2 px-5 font-semibold shadow-sm">
             Get Started
           </button>
 
@@ -207,7 +298,7 @@
     </div>
 
     <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
-      <button data-open-modal="assessment-wizard-modal" class="w-full btn-ochre text-xs py-3 justify-center">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center">
         Get Started
       </button>
       <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
@@ -1119,58 +1210,53 @@
   <!-- ==========================================
        SECTION 11: FOOTER (SPEAKBLOOM EXACT FOOTER)
        ========================================== -->
-  <footer class="bg-[#F0F5F8] dark:bg-[#0A1610] text-slate-600 dark:text-slate-400 pt-16 pb-10 border-t border-[#DBE5EB] dark:border-slate-800 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+    <!-- =========================================================================
+       FOOTER (Standardized Home 1 Theme)
+       ========================================================================= -->
+  <footer class="bg-[#111D18] text-white py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
       
       <div class="space-y-4">
-        <a href="index.html" class="flex items-center space-x-2.5">
-          <div class="w-8 h-8 rounded-xl bg-[#FF7A59] flex items-center justify-center text-white text-sm font-bold">
-            <i class="fa-solid fa-spa"></i>
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-white text-[#111D18] flex items-center justify-center text-xs">
+            <i class="fa-solid fa-seedling"></i>
           </div>
-          <span class="text-xl font-bold text-slate-900 dark:text-white font-heading">Speak<span class="text-[#FF7A59]">Bloom</span></span>
-        </a>
-        <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">
-          Compassionate, family-centered speech and language therapy dedicated to helping every child and adult discover the joy of confident expression.
+          <span class="text-xl font-serif font-bold tracking-tight">SpeakBloom</span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed font-normal">
+          Specialized speech and language therapy center helping children and families build lasting communication confidence.
         </p>
       </div>
 
-      <div>
-        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-3.5 font-heading">Quick Links</h4>
-        <ul class="space-y-2">
-          <li><a href="index.html" class="hover:text-[#FF7A59] transition">Home (SpeakBloom Main)</a></li>
-          <li><a href="index-pediatric.html" class="hover:text-[#FF7A59] text-[#FF7A59] font-semibold transition">Home (Pediatric Play Care)</a></li>
-          <li><a href="services.html" class="hover:text-[#FF7A59] transition">Our Services</a></li>
-          <li><a href="therapists.html" class="hover:text-[#FF7A59] transition">Therapists</a></li>
-          <li><a href="resources.html" class="hover:text-[#FF7A59] transition">Parent Resources</a></li>
-          <li><a href="about.html" class="hover:text-[#FF7A59] transition">About Us</a></li>
-          <li><a href="contact.html" class="hover:text-[#FF7A59] transition">Contact</a></li>
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Quick Navigation</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-normal">
+          <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-white transition">About Our Clinic</a></li>
+          <li><a href="services.html" class="hover:text-white transition">All 12 Services</a></li>
+          <li><a href="therapists.html" class="hover:text-white transition">Our Certified Providers</a></li>
+          <li><a href="pricing.html" class="hover:text-white transition">Pricing &amp; Insurance</a></li>
         </ul>
       </div>
 
-      <div>
-        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-3.5 font-heading">Contact Us</h4>
-        <ul class="space-y-2 text-slate-500 dark:text-slate-400">
-          <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF7A59]"></i> +91 98765 43210</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[#FF7A59]"></i> hello@speakbloom.com</li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-[#FF7A59] mt-0.5"></i> 123 Wellness Lane, Coimbatore, Tamil Nadu 641001</li>
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Clinical Programs</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-normal">
+          <li><a href="service-toddler-delay.html" class="hover:text-white transition">Toddler Speech Delay</a></li>
+          <li><a href="service-articulation.html" class="hover:text-white transition">Phonetic Articulation</a></li>
+          <li><a href="service-stuttering-fluency.html" class="hover:text-white transition">Stuttering &amp; Fluency</a></li>
+          <li><a href="service-aac-autism.html" class="hover:text-white transition">Autism &amp; AAC Devices</a></li>
+          <li><a href="service-telepractice-online.html" class="hover:text-white transition">Online Telehealth</a></li>
         </ul>
       </div>
 
-      <div>
-        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-3.5 font-heading">Follow Us</h4>
-        <div class="flex items-center space-x-3 text-slate-600 dark:text-slate-400">
-          <a href="contact.html" class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-[#DBE5EB] dark:border-slate-700 flex items-center justify-center hover:text-[#FF7A59] transition"><i class="fa-brands fa-instagram"></i></a>
-          <a href="contact.html" class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-[#DBE5EB] dark:border-slate-700 flex items-center justify-center hover:text-[#FF7A59] transition"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="contact.html" class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-[#DBE5EB] dark:border-slate-700 flex items-center justify-center hover:text-[#FF7A59] transition"><i class="fa-brands fa-youtube"></i></a>
-          <a href="contact.html" class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-[#DBE5EB] dark:border-slate-700 flex items-center justify-center hover:text-[#FF7A59] transition"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Get in Touch</h4>
+        <p class="text-xs text-slate-400 font-normal">742 Evergreen Terrace, Suite 400<br>Boston, MA 02115</p>
+        <p class="text-xs text-slate-400 font-normal"><a href="tel:+18005557732" class="hover:text-white">(800) 555-SPEAK</a></p>
+        <p class="text-xs text-slate-400 font-normal"><a href="mailto:care@speakbloom.org" class="hover:text-white">care@speakbloom.org</a></p>
       </div>
 
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-[#DBE5EB] dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-400">
-      <div>&copy; 2026 SpeakBloom Speech & Language Therapy Center. All rights reserved.</div>
-      <div class="tracking-wide">Communication &bull; Confidence &bull; A Brighter Future</div>
     </div>
   </footer>
 

@@ -33,19 +33,109 @@
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F7F4EE; color: #1E1C1A; }
     .font-serif { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.03em; }
-    .btn-ochre { background-color: #C07534; color: #FFFFFF !important; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
-    .btn-ochre:hover { background-color: #AD6325; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(192, 117, 52, 0.25); }
+    .btn-dark-pill { background-color: #C07534; color: #FFFFFF !important; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
+    .btn-dark-pill:hover { background-color: #AD6325; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(192, 117, 52, 0.25); }
     .btn-outline-pill { background-color: #FFFFFF; border: 1px solid #E3DFD5; color: #1E1C1A; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
     .btn-outline-pill:hover { background-color: #FAF7F2; border-color: #C07534; transform: translateY(-1px); }
   </style>
 </head>
-<body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#C07534] selection:text-white">
+<body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
 
-<!-- =========================================================================
-       STANDARDIZED MULTIPURPOSE TOP NAVIGATION BAR
+  <!-- =========================================================================
+       TOP NAVIGATION BAR (Standardized Home 1 Theme)
        ========================================================================= -->
   <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group shrink-0">
+          <div class="w-8 h-8 rounded-full bg-[#111D18] dark:bg-white text-white dark:text-[#111D18] flex items-center justify-center text-xs">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <span class="text-xl sm:text-2xl font-serif font-semibold text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold text-[#5A5550] dark:text-slate-300">
+          <a href="index.html" class="hover:text-[#111D18] dark:hover:text-white transition">Home</a>
+          <a href="about.html" class="hover:text-[#111D18] dark:hover:text-white transition">About Us</a>
+          <a href="services.html" class="hover:text-[#111D18] dark:hover:text-white transition">Services (All 12)</a>
+          <a href="therapists.html" class="hover:text-[#111D18] dark:hover:text-white transition">Therapists</a>
+          <a href="pricing.html" class="hover:text-[#111D18] dark:hover:text-white transition">Pricing &amp; Rates</a>
+          <a href="blog.html" class="hover:text-[#111D18] dark:hover:text-white transition">Articles</a>
+          <a href="contact.html" class="hover:text-[#111D18] dark:hover:text-white transition">Contact</a>
+        </nav>
+
+        <!-- Right Utilities & Action Pill -->
+        <div class="flex items-center space-x-3 shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
+            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+
+          <!-- Book A Call Button -->
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2.5 px-6 font-semibold shadow-sm">
+            Book Free Intake
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+            <i class="fa-solid fa-bars-staggered text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-[#111D18] text-white flex items-center justify-center text-xs">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
+        <a href="index.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Home</a>
+        <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">About Us</a>
+        <a href="services.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">All 12 Services</a>
+        <a href="therapists.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Our Therapists</a>
+        <a href="pricing.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pricing &amp; Rates</a>
+        <a href="blog.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Articles</a>
+        <a href="contact.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Contact Us</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center">
+        Book Free Intake
+      </button>
+      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
+        <a href="login.html" class="hover:text-[#111D18]">Login</a>
+        <span>&bull;</span>
+        <a href="register.html" class="hover:text-[#111D18]">Register</a>
+      </div>
+    </div>
+  </div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Logo -->
@@ -124,7 +214,7 @@
           </button>
 
           <!-- Get Started Pill -->
-          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2 px-5 font-semibold shadow-sm">
             Get Started
           </button>
 
@@ -173,7 +263,7 @@
     </div>
 
     <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
-      <button data-open-modal="assessment-wizard-modal" class="w-full btn-ochre text-xs py-3 justify-center">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center">
         Get Started
       </button>
       <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
@@ -206,7 +296,7 @@
             The preschool window is where children transition from short phrases into complete grammatical storytelling, sound clarity (/r/, /s/, /l/), and peer conversational play.
           </p>
           <div class="flex flex-wrap gap-3 pt-2">
-            <button data-open-modal="assessment-wizard-modal" class="btn-ochre text-xs font-semibold py-3 px-6 shadow-sm">
+            <button data-open-modal="assessment-wizard-modal" class="btn-dark-pill text-xs font-semibold py-3 px-6 shadow-sm">
               Book Articulation Assessment
             </button>
             <a href="milestone-language-development.html" class="btn-outline-pill text-xs font-semibold py-3 px-6">
@@ -245,40 +335,53 @@
     </div>
   </section>
   <!-- Footer -->
-  <footer class="bg-[#1E1C1A] text-[#E3DFD5] pt-16 pb-12 mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#36322E]">
-        <div class="md:col-span-2 space-y-3">
-          <span class="text-2xl font-serif font-bold text-white">SpeakBloom</span>
-          <p class="text-xs text-[#A8A199] max-w-sm leading-relaxed">
-            Evidence-based, compassionate speech and language therapy center for every age and every developmental stage.
-          </p>
-        </div>
-        <div class="space-y-2 text-xs">
-          <p class="font-bold text-white uppercase tracking-wider text-[11px]">Milestone Stages</p>
-          <ul class="space-y-1.5 text-[#A8A199]">
-            <li><a href="milestone-early-communication.html" class="hover:text-white transition">0 – 2 Years: Early Communication</a></li>
-            <li><a href="milestone-language-development.html" class="hover:text-white transition">2 – 5 Years: Language Development</a></li>
-            <li><a href="milestone-school-age-support.html" class="hover:text-white transition">6 – 12 Years: School-Age Support</a></li>
-            <li><a href="milestone-teens-and-adults.html" class="hover:text-white transition">Teens &amp; Adults: Advanced Care</a></li>
-          </ul>
-        </div>
-        <div class="space-y-2 text-xs">
-          <p class="font-bold text-white uppercase tracking-wider text-[11px]">Direct Support</p>
-          <div class="space-y-1.5 text-[#A8A199]">
-            <p>14 Peaceful Garden Avenue, Suite 300</p>
-            <p class="text-white font-semibold pt-1">+91 98765 43210</p>
-            <p>care@speakbloom.com</p>
+    <!-- =========================================================================
+       FOOTER (Standardized Home 1 Theme)
+       ========================================================================= -->
+  <footer class="bg-[#111D18] text-white py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-white text-[#111D18] flex items-center justify-center text-xs">
+            <i class="fa-solid fa-seedling"></i>
           </div>
+          <span class="text-xl font-serif font-bold tracking-tight">SpeakBloom</span>
         </div>
+        <p class="text-xs text-slate-400 leading-relaxed font-normal">
+          Specialized speech and language therapy center helping children and families build lasting communication confidence.
+        </p>
       </div>
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#7A746E]">
-        <p>&copy; 2026 SpeakBloom Speech &amp; Language Center. All rights reserved.</p>
-        <div class="flex space-x-6">
-          <a href="index.html" class="hover:text-white">Return to Home</a>
-          <a href="services.html" class="hover:text-white">All Services</a>
-        </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Quick Navigation</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-normal">
+          <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-white transition">About Our Clinic</a></li>
+          <li><a href="services.html" class="hover:text-white transition">All 12 Services</a></li>
+          <li><a href="therapists.html" class="hover:text-white transition">Our Certified Providers</a></li>
+          <li><a href="pricing.html" class="hover:text-white transition">Pricing &amp; Insurance</a></li>
+        </ul>
       </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Clinical Programs</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-normal">
+          <li><a href="service-toddler-delay.html" class="hover:text-white transition">Toddler Speech Delay</a></li>
+          <li><a href="service-articulation.html" class="hover:text-white transition">Phonetic Articulation</a></li>
+          <li><a href="service-stuttering-fluency.html" class="hover:text-white transition">Stuttering &amp; Fluency</a></li>
+          <li><a href="service-aac-autism.html" class="hover:text-white transition">Autism &amp; AAC Devices</a></li>
+          <li><a href="service-telepractice-online.html" class="hover:text-white transition">Online Telehealth</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Get in Touch</h4>
+        <p class="text-xs text-slate-400 font-normal">742 Evergreen Terrace, Suite 400<br>Boston, MA 02115</p>
+        <p class="text-xs text-slate-400 font-normal"><a href="tel:+18005557732" class="hover:text-white">(800) 555-SPEAK</a></p>
+        <p class="text-xs text-slate-400 font-normal"><a href="mailto:care@speakbloom.org" class="hover:text-white">care@speakbloom.org</a></p>
+      </div>
+
     </div>
   </footer>
 
@@ -292,7 +395,7 @@
       <form class="space-y-4 text-xs" onsubmit="alert('Assessment requested! We will call you within 2 hours.'); document.getElementById('assessment-wizard-modal').classList.add('hidden'); return false;">
         <input type="text" required placeholder="Parent / Patient Name" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] bg-[#F7F4EE]">
         <input type="tel" required placeholder="Phone Number" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] bg-[#F7F4EE]">
-        <button type="submit" class="w-full btn-ochre text-xs font-semibold py-3.5 justify-center">Submit Assessment Request &rarr;</button>
+        <button type="submit" class="w-full btn-dark-pill text-xs font-semibold py-3.5 justify-center">Submit Assessment Request &rarr;</button>
       </form>
     </div>
   </div>
