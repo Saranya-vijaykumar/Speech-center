@@ -108,13 +108,17 @@ function initMobileMenu() {
   menuBtn.addEventListener('click', () => toggleDrawer(true));
   if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
   if (backdrop) backdrop.addEventListener('click', () => toggleDrawer(false));
+
+  // Escape key closes mobile drawer
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') toggleDrawer(false);
+  });
 }
 
 /* ==========================================================================
    4. Scroll Reveal Animations (IntersectionObserver)
    ========================================================================== */
 function initScrollReveal() {
-  // Automatically tag cards and sections if not already tagged
   document.querySelectorAll('section > div, .interactive-card, .service-card, .therapist-card, .faq-item').forEach((el, index) => {
     if (!el.classList.contains('reveal-item')) {
       el.classList.add('reveal-item');
@@ -134,8 +138,8 @@ function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px'
   });
 
   reveals.forEach(el => observer.observe(el));
@@ -268,7 +272,7 @@ function initMilestoneChecker() {
 }
 
 /* ==========================================================================
-   6. Accordion FAQs with Smooth Height Transition
+   6. Accordion FAQs
    ========================================================================== */
 function initAccordions() {
   const accordions = document.querySelectorAll('.accordion-header, .faq-trigger');
@@ -344,8 +348,13 @@ function initAssessmentWizard() {
   }
 
   if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      if (currentStep < totalSteps) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentStep === totalSteps - 1) {
+        // Complete form
+        currentStep = totalSteps;
+        updateWizard();
+      } else if (currentStep < totalSteps) {
         currentStep++;
         updateWizard();
       }
@@ -353,7 +362,8 @@ function initAssessmentWizard() {
   }
 
   if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       if (currentStep > 1) {
         currentStep--;
         updateWizard();
@@ -365,18 +375,18 @@ function initAssessmentWizard() {
 }
 
 /* ==========================================================================
-   8. Filter System (Services, Therapists, FAQs)
+   8. Filter System (Services, Therapists, FAQs, Resources)
    ========================================================================== */
 function initFilterSystem() {
   const filterBtns = document.querySelectorAll('.filter-btn, .filter-pill');
-  const filterItems = document.querySelectorAll('.service-card, .therapist-card, .resource-card');
+  const filterItems = document.querySelectorAll('.service-card, .therapist-card, .resource-card, .blog-card');
   const searchInput = document.getElementById('search-filter-input');
 
   if (filterBtns.length && filterItems.length) {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
-          b.classList.remove('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm');
+          b.classList.remove('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm', 'bg-[#C07534]');
           b.classList.add('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
         });
         btn.classList.add('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm');
@@ -527,15 +537,54 @@ function initBackToTop() {
    13. Form Submission Handlers
    ========================================================================== */
 function initFormHandlers() {
-  const contactForm = document.getElementById('main-contact-form');
+  // Contact Form
+  const contactForm = document.getElementById('main-contact-form') || document.querySelector('form[action="contact.html"]');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       if (submitBtn) {
-        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Intake Received! Our clinical team will call you within 2 hours.';
-        submitBtn.className = 'bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-full';
+        submitBtn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Inquiry Received! We will call within 2 hours.';
+        submitBtn.className = 'bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-full w-full justify-center flex items-center shadow-lg';
         submitBtn.disabled = true;
+      }
+    });
+  }
+
+  // Login Form
+  const loginForm = document.querySelector('form[action="login.html"]') || document.getElementById('login-form');
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = loginForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Logging In...';
+        setTimeout(() => {
+          submitBtn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Welcome Back! Redirecting...';
+          submitBtn.className = 'bg-emerald-600 text-white font-bold text-xs py-3.5 rounded-full w-full justify-center flex items-center';
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1200);
+        }, 1000);
+      }
+    });
+  }
+
+  // Register Form
+  const registerForm = document.querySelector('form[action="register.html"]') || document.getElementById('register-form');
+  if (registerForm) {
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = registerForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Creating Account...';
+        setTimeout(() => {
+          submitBtn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Account Created! Redirecting to Portal...';
+          submitBtn.className = 'bg-emerald-600 text-white font-bold text-xs py-3.5 rounded-full w-full justify-center flex items-center';
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1200);
+        }, 1000);
       }
     });
   }

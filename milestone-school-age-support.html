@@ -39,13 +39,18 @@
     .btn-outline-pill:hover { background-color: #FAF7F2; border-color: #C07534; transform: translateY(-1px); }
   </style>
 </head>
-<body class="bg-[#F7F4EE] text-[#1E1C1A] antialiased selection:bg-[#C07534] selection:text-white">
-  <!-- Top Nav -->
+<body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#C07534] selection:text-white">
+
+<!-- =========================================================================
+       STANDARDIZED MULTIPURPOSE TOP NAVIGATION BAR
+       ========================================================================= -->
   <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
         <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
-          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 flex items-center justify-center text-[#1E1C1A] group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
+          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 dark:border-slate-600 flex items-center justify-center text-[#1E1C1A] dark:text-white group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 4c-1.5 4-4 6-8 6 4 1.5 6 4 6 8 0-4 2-6.5 6-8-4 0-6.5-2-4-6Z"/>
               <path d="M12 4c1.5 4 4 6 8 6-4 1.5-6 4-6 8 0-4-2-6.5-6-8 4 0 6.5-2 4-6Z" opacity="0.4"/>
@@ -54,26 +59,133 @@
           <span class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
         </a>
 
+        <!-- Center Desktop Navigation Links -->
         <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-[#6B6560] dark:text-slate-300">
-          <a href="index.html" class="hover:text-[#C07534] transition">Home</a>
-          <a href="services.html" class="hover:text-[#C07534] transition">Services</a>
-          <a href="therapist-single.html?id=ananya" class="hover:text-[#C07534] transition">Our Clinical Director</a>
-          <a href="therapists.html" class="hover:text-[#C07534] transition">Our Providers</a>
-          <a href="resources.html" class="hover:text-[#C07534] transition">Resources</a>
-          <a href="pricing.html" class="hover:text-[#C07534] transition">Pricing</a>
-          <a href="about.html" class="hover:text-[#C07534] transition">About Us</a>
-          <a href="contact.html" class="hover:text-[#C07534] transition">Contact</a>
+          <!-- Home dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
+                <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 1 (General Services)</a>
+                <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 2 (Niche Specialty)</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="hover:text-[#C07534] transition ">About Us</a>
+          
+          <!-- Services Dropdown -->
+          <div class="relative group py-2">
+            <a href="services.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition text-[#C07534] font-bold">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
+                <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs text-[#C07534] font-bold">All Services (Grid)</a>
+                <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Service Details (Single)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Dropdown -->
+          <div class="relative group py-2">
+            <a href="blog.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
+              <span>Blog</span>
+              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
+                <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Grid / List</a>
+                <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Single Article</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="pricing.html" class="hover:text-[#C07534] transition ">Pricing</a>
+          <a href="contact.html" class="hover:text-[#C07534] transition ">Contact Us</a>
         </nav>
 
-        <div class="flex items-center space-x-3">
-          <button data-open-modal="assessment-wizard-modal" class="btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
+        <!-- Right Utilities & Action Button -->
+        <div class="flex items-center space-x-2.5 shrink-0">
+          
+          <!-- Theme Dark/Light Toggle -->
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
+            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+
+          <!-- Get Started Pill -->
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-ochre text-xs py-2 px-5 font-semibold shadow-sm">
             Get Started
           </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+            <i class="fa-solid fa-bars-staggered text-xs"></i>
+          </button>
         </div>
+
       </div>
     </div>
   </header>
-  <section class="py-16 bg-[#EBF3FB] border-b border-[#D5E7F8]">
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full border border-[#C07534] flex items-center justify-center text-[#C07534]">
+            <i class="fa-solid fa-seedling text-xs"></i>
+          </div>
+          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
+        </div>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1">Main Pages</div>
+        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 1 (General Services)</a>
+        <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 2 (Niche Specialty)</a>
+        <a href="about.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Us</a>
+        <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] text-[#C07534] font-bold bg-[#EFECE4] dark:bg-[#0D222E]">Services (Grid)</a>
+        <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Service Details (Single)</a>
+        <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Listing</a>
+        <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Details</a>
+        <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pricing Plans</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Contact Us</a>
+
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1 pt-2">Utilities</div>
+        <a href="404.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">404 Error Page</a>
+        <a href="coming-soon.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Coming Soon Page</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-ochre text-xs py-3 justify-center">
+        Get Started
+      </button>
+      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
+        <a href="login.html" class="hover:text-[#C07534]">Login</a>
+        <span>&bull;</span>
+        <a href="register.html" class="hover:text-[#C07534]">Register</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<section class="py-16 bg-[#EBF3FB] border-b border-[#D5E7F8]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center gap-2 text-xs font-bold text-[#2563EB] mb-4">
         <a href="index.html" class="hover:underline">Home</a>
