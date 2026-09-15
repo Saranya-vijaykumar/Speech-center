@@ -1,12 +1,13 @@
 /**
  * SpeakBloom - Speech & Language Therapy Center
- * Master Interactive JavaScript Suite
+ * Master Interactive JavaScript & Animation Suite
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initRTL();
   initMobileMenu();
+  initScrollReveal();
   initMilestoneChecker();
   initAccordions();
   initAssessmentWizard();
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatsCounter();
   initGlobalModal();
   initPricingToggle();
-  initDashboardTracker();
+  initBackToTop();
   initFormHandlers();
 });
 
@@ -110,7 +111,38 @@ function initMobileMenu() {
 }
 
 /* ==========================================================================
-   4. Milestone Screener Interactive Data
+   4. Scroll Reveal Animations (IntersectionObserver)
+   ========================================================================== */
+function initScrollReveal() {
+  // Automatically tag cards and sections if not already tagged
+  document.querySelectorAll('section > div, .interactive-card, .service-card, .therapist-card, .faq-item').forEach((el, index) => {
+    if (!el.classList.contains('reveal-item')) {
+      el.classList.add('reveal-item');
+      const delay = (index % 4) * 100;
+      if (delay > 0) el.classList.add(`delay-${delay}`);
+    }
+  });
+
+  const reveals = document.querySelectorAll('.reveal-item');
+  if (!reveals.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  reveals.forEach(el => observer.observe(el));
+}
+
+/* ==========================================================================
+   5. Milestone Screener Interactive Data
    ========================================================================== */
 const milestoneData = {
   '6m': {
@@ -123,7 +155,7 @@ const milestoneData = {
       { text: 'Red Flag: Absence of babbling, lack of joint eye attention, or unresponsive to environmental sounds', redFlag: true }
     ],
     recommendedService: 'Infant Early Communication Coaching',
-    serviceLink: 'service-details.html'
+    serviceLink: 'service-toddler-delay.html'
   },
   '18m': {
     title: '12 to 18 Months: First Words & Pointing',
@@ -135,7 +167,7 @@ const milestoneData = {
       { text: 'Red Flag: Fewer than 6 words, loss of previously acquired words, or no response to simple 1-step requests', redFlag: true }
     ],
     recommendedService: 'Late Talker Toddler Play Program',
-    serviceLink: 'service-details.html'
+    serviceLink: 'service-toddler-delay.html'
   },
   '24m': {
     title: '2 Years (24 Months): Word Combinations & Vocabulary Explosion',
@@ -147,7 +179,7 @@ const milestoneData = {
       { text: 'Red Flag: No 2-word spontaneous phrases, repetitive echolalia only, or extreme frustration communicating', redFlag: true }
     ],
     recommendedService: 'Child Speech & Language Delay Program',
-    serviceLink: 'service-details.html'
+    serviceLink: 'service-toddler-delay.html'
   },
   '3y': {
     title: '3 Years Old: Sentences & Conversational Curiosity',
@@ -159,7 +191,7 @@ const milestoneData = {
       { text: 'Red Flag: Persistent sound repetition (stuttering blocks), unclear speech to strangers, or difficulty following simple directions', redFlag: true }
     ],
     recommendedService: 'Preschool Articulation & Fluency Program',
-    serviceLink: 'service-details.html'
+    serviceLink: 'service-articulation.html'
   },
   '5y': {
     title: '4 to 5+ Years: Storytelling & School Articulation Readiness',
@@ -171,7 +203,7 @@ const milestoneData = {
       { text: 'Red Flag: Noticeable lisp, sound substitutions (/w/ for /r/), inability to tell a coherent story, or social withdrawal in groups', redFlag: true }
     ],
     recommendedService: 'School Readiness & Speech Articulation Therapy',
-    serviceLink: 'service-details.html'
+    serviceLink: 'service-school-readiness.html'
   }
 };
 
@@ -183,13 +215,13 @@ function initMilestoneChecker() {
   function renderMilestone(ageKey) {
     const data = milestoneData[ageKey] || milestoneData['24m'];
     
-    container.innerHTML = '<div class="space-y-6">' +
-      '<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#EFE7DE] dark:border-slate-800 pb-4">' +
+    container.innerHTML = '<div class="space-y-6 animate-fadeIn">' +
+      '<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E2EBF0] dark:border-slate-800 pb-4">' +
         '<div>' +
-          '<span class="text-xs font-bold text-[#C85A32] uppercase tracking-wider">Clinical Developmental Milestone</span>' +
+          '<span class="text-xs font-bold text-[#FF7A59] uppercase tracking-wider">Clinical Developmental Milestone</span>' +
           '<h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white font-heading mt-0.5">' + data.title + '</h3>' +
         '</div>' +
-        '<a href="' + data.serviceLink + '" class="inline-flex items-center space-x-1 text-xs font-bold text-[#C85A32] hover:underline">' +
+        '<a href="' + data.serviceLink + '" class="inline-flex items-center space-x-1 text-xs font-bold text-[#FF7A59] hover:underline">' +
           '<span>Recommended Program &rarr;</span>' +
         '</a>' +
       '</div>' +
@@ -198,21 +230,21 @@ function initMilestoneChecker() {
         '<h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Key Developmental Benchmarks:</h4>' +
         '<div class="grid sm:grid-cols-2 gap-3">' +
           data.benchmarks.map(item => {
-            const cls = item.redFlag ? 'bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 text-rose-900 dark:text-rose-200' : 'bg-white dark:bg-[#182C23] border border-[#EFE7DE] dark:border-slate-800 text-slate-700 dark:text-slate-300';
+            const cls = item.redFlag ? 'bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 text-rose-900 dark:text-rose-200' : 'bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-slate-700 dark:text-slate-300';
             const iconCls = item.redFlag ? 'fa-triangle-exclamation text-rose-500' : 'fa-circle-check text-emerald-500';
-            return '<div class="p-3.5 rounded-2xl ' + cls + ' flex items-start space-x-2.5">' +
+            return '<div class="p-3.5 rounded-2xl ' + cls + ' flex items-start space-x-2.5 shadow-sm">' +
               '<i class="fa-solid ' + iconCls + ' mt-0.5 shrink-0 text-sm"></i>' +
               '<span class="text-xs leading-relaxed font-semibold">' + item.text + '</span>' +
             '</div>';
           }).join('') +
         '</div>' +
       '</div>' +
-      '<div class="p-5 rounded-2xl bg-[#1E3D2F] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">' +
+      '<div class="p-5 rounded-2xl bg-[#0A4D68] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">' +
         '<div>' +
-          '<p class="text-xs font-bold uppercase tracking-wider text-[#A7D7BC]">Concerned about your child\'s milestones?</p>' +
+          '<p class="text-xs font-bold uppercase tracking-wider text-[#EBF4F6]">Concerned about your child\'s speech progress?</p>' +
           '<p class="text-sm font-bold font-heading">Book a 60-Minute Comprehensive Play Assessment with Our Clinicians</p>' +
         '</div>' +
-        '<a href="contact.html" class="px-5 py-2.5 rounded-full bg-[#C85A32] hover:bg-[#B04B26] text-white text-xs font-bold shadow transition whitespace-nowrap">' +
+        '<a href="contact.html" class="btn-peach text-xs font-bold shadow-lg transition whitespace-nowrap">' +
           'Schedule Intake &rarr;' +
         '</a>' +
       '</div>' +
@@ -222,11 +254,11 @@ function initMilestoneChecker() {
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => {
-        b.classList.remove('bg-[#C85A32]', 'text-white', 'shadow-md');
-        b.classList.add('bg-white', 'dark:bg-[#182C23]', 'text-slate-700', 'dark:text-slate-300', 'border-[#EFE7DE]');
+        b.classList.remove('bg-[#FF7A59]', 'text-white', 'shadow-md');
+        b.classList.add('bg-white', 'dark:bg-[#0D222E]', 'text-slate-700', 'dark:text-slate-300', 'border-[#E2EBF0]');
       });
-      btn.classList.add('bg-[#C85A32]', 'text-white', 'shadow-md');
-      btn.classList.remove('bg-white', 'dark:bg-[#182C23]', 'text-slate-700', 'dark:text-slate-300', 'border-[#EFE7DE]');
+      btn.classList.add('bg-[#FF7A59]', 'text-white', 'shadow-md');
+      btn.classList.remove('bg-white', 'dark:bg-[#0D222E]', 'text-slate-700', 'dark:text-slate-300', 'border-[#E2EBF0]');
       
       renderMilestone(btn.dataset.age);
     });
@@ -236,7 +268,7 @@ function initMilestoneChecker() {
 }
 
 /* ==========================================================================
-   5. Accordion FAQs
+   6. Accordion FAQs with Smooth Height Transition
    ========================================================================== */
 function initAccordions() {
   const accordions = document.querySelectorAll('.accordion-header, .faq-trigger');
@@ -246,7 +278,6 @@ function initAccordions() {
       const icon = header.querySelector('.accordion-icon, .fa-chevron-down');
       const isHidden = content.classList.contains('hidden');
 
-      // Close other accordions in the same container if needed
       const parent = header.closest('#faq-accordion, .accordion-group');
       if (parent) {
         parent.querySelectorAll('.faq-content, .accordion-content').forEach(c => c.classList.add('hidden'));
@@ -265,7 +296,7 @@ function initAccordions() {
 }
 
 /* ==========================================================================
-   6. Multi-Step Assessment Booking Wizard (Forms on contact / modals)
+   7. Multi-Step Assessment Booking Wizard
    ========================================================================== */
 function initAssessmentWizard() {
   const form = document.getElementById('assessment-wizard-form');
@@ -289,7 +320,7 @@ function initAssessmentWizard() {
       const circle = ind.querySelector('.step-circle');
       if (circle) {
         if (stepNum === currentStep) {
-          circle.className = 'step-circle w-8 h-8 rounded-full bg-[#C85A32] text-white font-bold text-xs flex items-center justify-center ring-4 ring-[#FDF0E6]';
+          circle.className = 'step-circle w-8 h-8 rounded-full bg-[#FF7A59] text-white font-bold text-xs flex items-center justify-center ring-4 ring-[#FFE3DA]';
         } else if (stepNum < currentStep) {
           circle.className = 'step-circle w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-xs flex items-center justify-center';
         } else {
@@ -306,7 +337,7 @@ function initAssessmentWizard() {
         nextBtn.textContent = 'Submit Intake Form';
         nextBtn.classList.remove('hidden');
       } else {
-        nextBtn.textContent = 'Continue &rarr;';
+        nextBtn.textContent = 'Continue →';
         nextBtn.classList.remove('hidden');
       }
     }
@@ -334,7 +365,7 @@ function initAssessmentWizard() {
 }
 
 /* ==========================================================================
-   7. Filter System (Services, Therapists, FAQs)
+   8. Filter System (Services, Therapists, FAQs)
    ========================================================================== */
 function initFilterSystem() {
   const filterBtns = document.querySelectorAll('.filter-btn, .filter-pill');
@@ -345,10 +376,10 @@ function initFilterSystem() {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
-          b.classList.remove('active', 'bg-[#C07534]', 'text-white', 'shadow-sm');
+          b.classList.remove('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm');
           b.classList.add('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
         });
-        btn.classList.add('active', 'bg-[#C07534]', 'text-white', 'shadow-sm');
+        btn.classList.add('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm');
         btn.classList.remove('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
 
         const filterVal = btn.dataset.filter;
@@ -375,7 +406,7 @@ function initFilterSystem() {
 }
 
 /* ==========================================================================
-   8. Stats Counter Animation
+   9. Stats Counter Animation
    ========================================================================== */
 function initStatsCounter() {
   const counters = document.querySelectorAll('.counter-value');
@@ -386,7 +417,7 @@ function initStatsCounter() {
       if (entry.isIntersecting) {
         const target = parseInt(entry.target.dataset.target || '0');
         let current = 0;
-        const step = Math.ceil(target / 40);
+        const step = Math.ceil(target / 45);
         const timer = setInterval(() => {
           current += step;
           if (current >= target) {
@@ -395,7 +426,7 @@ function initStatsCounter() {
           } else {
             entry.target.textContent = current.toLocaleString() + (entry.target.dataset.suffix || '');
           }
-        }, 30);
+        }, 25);
         obs.unobserve(entry.target);
       }
     });
@@ -405,10 +436,9 @@ function initStatsCounter() {
 }
 
 /* ==========================================================================
-   9. Global Assessment Booking Modal Controller
+   10. Global Assessment Booking Modal Controller
    ========================================================================== */
 function initGlobalModal() {
-  // Modal Open Trigger
   document.querySelectorAll('[data-open-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -423,7 +453,6 @@ function initGlobalModal() {
     });
   });
 
-  // Modal Close Trigger
   document.querySelectorAll('[data-close-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -435,7 +464,6 @@ function initGlobalModal() {
     });
   });
 
-  // Close when clicking modal backdrop
   document.querySelectorAll('#assessment-wizard-modal, #booking-modal').forEach(modal => {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
@@ -447,7 +475,7 @@ function initGlobalModal() {
 }
 
 /* ==========================================================================
-   10. Pricing Plan Switcher (Monthly vs Annual with 20% savings)
+   11. Pricing Plan Switcher
    ========================================================================== */
 function initPricingToggle() {
   const billingToggle = document.getElementById('pricing-billing-toggle');
@@ -470,26 +498,33 @@ function initPricingToggle() {
 }
 
 /* ==========================================================================
-   11. Parent Dashboard Practice Tracker (dashboard.html)
+   12. Floating Back to Top Button
    ========================================================================== */
-function initDashboardTracker() {
-  const logBtn = document.getElementById('log-practice-btn');
-  const streakCount = document.getElementById('practice-streak-count');
-
-  if (logBtn && streakCount) {
-    logBtn.addEventListener('click', () => {
-      let current = parseInt(streakCount.textContent || '7');
-      current += 1;
-      streakCount.textContent = current + ' Days';
-      logBtn.textContent = '✓ Today Logged!';
-      logBtn.disabled = true;
-      logBtn.className = 'bg-emerald-600 text-white text-xs font-bold px-4 py-2 rounded-full cursor-default';
-    });
+function initBackToTop() {
+  let btn = document.getElementById('back-to-top-btn');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'back-to-top-btn';
+    btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    btn.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(btn);
   }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.classList.add('show-btn');
+    } else {
+      btn.classList.remove('show-btn');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 /* ==========================================================================
-   12. Form Submission Handlers with Confirmation Alerts
+   13. Form Submission Handlers
    ========================================================================== */
 function initFormHandlers() {
   const contactForm = document.getElementById('main-contact-form');
@@ -498,7 +533,7 @@ function initFormHandlers() {
       e.preventDefault();
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       if (submitBtn) {
-        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Inquiry Received! We will call in 2h';
+        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Intake Received! Our clinical team will call you within 2 hours.';
         submitBtn.className = 'bg-emerald-600 text-white font-bold text-xs px-6 py-3.5 rounded-full';
         submitBtn.disabled = true;
       }
