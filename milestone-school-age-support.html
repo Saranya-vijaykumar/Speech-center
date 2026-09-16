@@ -44,32 +44,117 @@
   <!-- =========================================================================
        TOP NAVIGATION BAR (Standardized Home 1 Theme)
        ========================================================================= -->
+  <!-- =========================================================================
+       MASTER SINGLE TOP NAVIGATION BAR (All Pages Linked Cleanly)
+       ========================================================================= -->
+  <!-- =========================================================================
+       MASTER SINGLE TOP NAVIGATION BAR (All Pages Linked Cleanly)
+       ========================================================================= -->
   <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-2 group shrink-0">
-          <div class="w-8 h-8 rounded-full bg-[#111D18] dark:bg-white text-white dark:text-[#111D18] flex items-center justify-center text-xs">
+          <div class="w-8 h-8 rounded-full bg-[#111D18] dark:bg-white text-white dark:text-[#111D18] flex items-center justify-center text-xs shadow-sm">
             <i class="fa-solid fa-seedling"></i>
           </div>
           <span class="text-xl sm:text-2xl font-serif font-semibold text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold text-[#5A5550] dark:text-slate-300">
-          <a href="index.html" class="hover:text-[#111D18] dark:hover:text-white transition">Home</a>
-          <a href="about.html" class="hover:text-[#111D18] dark:hover:text-white transition">About Us</a>
-          <a href="services.html" class="hover:text-[#111D18] dark:hover:text-white transition">Services</a>
-          <a href="therapists.html" class="hover:text-[#111D18] dark:hover:text-white transition">Therapists</a>
-          <a href="pricing.html" class="hover:text-[#111D18] dark:hover:text-white transition">Pricing &amp; Rates</a>
-          <a href="blog.html" class="hover:text-[#111D18] dark:hover:text-white transition">Articles</a>
-          <a href="contact.html" class="hover:text-[#111D18] dark:hover:text-white transition">Contact</a>
+        <!-- Desktop Navigation Links with Dropdowns -->
+        <nav class="hidden xl:flex items-center space-x-6 text-xs font-semibold text-[#5A5550] dark:text-slate-300">
+          
+          <!-- Home Dropdown -->
+          <div class="relative group">
+            <a href="index.html" class="flex items-center gap-1.5 py-2 hover:text-[#111D18] dark:hover:text-white transition">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
+            </a>
+            <div class="absolute top-full left-0 w-52 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
+              <a href="index.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] hover:text-[#111D18] dark:hover:text-white transition">Main Clinic Home</a>
+              <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] hover:text-[#111D18] dark:hover:text-white transition">Pediatric Clinic</a>
+            </div>
+          </div>
+
+          <!-- About Us -->
+          <a href="about.html" class="hover:text-[#111D18] dark:hover:text-white transition py-2">About Us</a>
+
+          <!-- Services Dropdown (6 Core Programs) -->
+          <div class="relative group">
+            <a href="services.html" class="flex items-center gap-1.5 py-2 hover:text-[#111D18] dark:hover:text-white transition">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
+            </a>
+            <div class="absolute top-full left-0 w-72 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
+              <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#A8A199] border-b border-[#EFECE4] dark:border-slate-800 mb-1">Our 6 Core Clinical Programs</div>
+              <a href="service-toddler-delay.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">1. Toddler Speech Delay (0-3 Yrs)</a>
+              <a href="service-articulation.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">2. Articulation &amp; Phonetics</a>
+              <a href="service-stuttering-fluency.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">3. Stuttering &amp; Fluency</a>
+              <a href="service-aac-autism.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">4. Autism &amp; AAC Devices</a>
+              <a href="service-apraxia-speech.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">5. Childhood Apraxia (CAS)</a>
+              <a href="service-aphasia-stroke-rehab.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">6. Adult Aphasia Rehab</a>
+              <div class="pt-1 mt-1 border-t border-[#EFECE4] dark:border-slate-800">
+                <a href="services.html" class="block px-3 py-2 rounded-xl text-xs font-bold text-[#111D18] dark:text-white hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">All Services Directory &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Therapists Dropdown -->
+          <div class="relative group">
+            <a href="therapists.html" class="flex items-center gap-1.5 py-2 hover:text-[#111D18] dark:hover:text-white transition">
+              <span>Therapists</span>
+              <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
+            </a>
+            <div class="absolute top-full left-0 w-52 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
+              <a href="therapists.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Our Clinical Team</a>
+              <a href="therapist-single.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Clinician Profile</a>
+            </div>
+          </div>
+
+          <!-- Milestones Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1.5 py-2 hover:text-[#111D18] dark:hover:text-white transition">
+              <span>Milestones</span>
+              <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
+            </button>
+            <div class="absolute top-full left-0 w-64 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
+              <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#A8A199] border-b border-[#EFECE4] dark:border-slate-800 mb-1">Developmental Guides</div>
+              <a href="milestone-early-communication.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">0–12 Months Early Comm</a>
+              <a href="milestone-language-development.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">1–3 Years Toddler Words</a>
+              <a href="milestone-school-age-support.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">4–11 Years School Age</a>
+              <a href="milestone-teens-and-adults.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">12+ Years Teens &amp; Adults</a>
+            </div>
+          </div>
+
+          <!-- Resources & Pricing Dropdown -->
+          <div class="relative group">
+            <a href="resources.html" class="flex items-center gap-1.5 py-2 hover:text-[#111D18] dark:hover:text-white transition">
+              <span>Resources</span>
+              <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
+            </a>
+            <div class="absolute top-full left-0 w-56 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
+              <a href="blog.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Clinical Articles &amp; Blog</a>
+              <a href="blog-details.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Article Feature View</a>
+              <a href="resources.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Parent Free Downloads</a>
+              <a href="pricing.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Pricing &amp; Insurance Rates</a>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <a href="contact.html" class="hover:text-[#111D18] dark:hover:text-white transition py-2">Contact</a>
+
         </nav>
 
         <!-- Right Utilities & Action Pill -->
         <div class="flex items-center space-x-3 shrink-0">
           
+          <!-- Login Link -->
+          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-[#5A5550] dark:text-slate-300 hover:text-[#111D18] dark:hover:text-white transition px-2 py-1">
+            <i class="fa-regular fa-user text-xs"></i>
+            <span>Login</span>
+          </a>
+
           <!-- Theme Toggle -->
           <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
             <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
@@ -81,13 +166,13 @@
             <span class="rtl-text-indicator">RTL</span>
           </button>
 
-          <!-- Book A Call Button -->
+          <!-- Book Free Intake Pill Button (Opens Wizard Modal) -->
           <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2.5 px-6 font-semibold shadow-sm">
             Book Free Intake
           </button>
 
-          <!-- Mobile Hamburger -->
-          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobile-menu-btn" class="xl:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
             <i class="fa-solid fa-bars-staggered text-xs"></i>
           </button>
         </div>
@@ -96,9 +181,11 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
+  <!-- =========================================================================
+       MASTER MOBILE NAVIGATION DRAWER (Every Single Page Linked)
+       ========================================================================= -->
   <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
-  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[88vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
     <div>
       <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
         <div class="flex items-center gap-2">
@@ -112,19 +199,63 @@
         </button>
       </div>
 
-      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
-        <a href="index.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Home</a>
-        <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">About Us</a>
-        <a href="services.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Our 6 Services</a>
-        <a href="therapists.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Our Therapists</a>
-        <a href="pricing.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pricing &amp; Rates</a>
-        <a href="blog.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Articles</a>
+      <nav class="mt-6 space-y-2 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
+        
+        <!-- Home Section -->
+        <div>
+          <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Home Variations</span>
+          <div class="pl-2 space-y-1">
+            <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Main Clinic Home</a>
+            <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pediatric Center</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">About Our Clinic</a>
+
+        <!-- 6 Core Services -->
+        <div>
+          <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Our 6 Clinical Programs</span>
+          <div class="pl-2 space-y-1">
+            <a href="service-toddler-delay.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">1. Toddler Speech Delay</a>
+            <a href="service-articulation.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">2. Articulation &amp; Phonetics</a>
+            <a href="service-stuttering-fluency.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">3. Stuttering &amp; Fluency</a>
+            <a href="service-aac-autism.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">4. Autism &amp; AAC Devices</a>
+            <a href="service-apraxia-speech.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">5. Childhood Apraxia (CAS)</a>
+            <a href="service-aphasia-stroke-rehab.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">6. Adult Aphasia Rehab</a>
+            <a href="services.html" class="block px-3 py-2 rounded-xl font-bold text-[#111D18] dark:text-white bg-[#EFECE4] dark:bg-[#0D222E]">All Services Overview</a>
+          </div>
+        </div>
+
+        <!-- Therapists -->
+        <a href="therapists.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Our Certified Therapists</a>
+
+        <!-- Milestones -->
+        <div>
+          <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Milestone Screeners</span>
+          <div class="pl-2 space-y-1">
+            <a href="milestone-early-communication.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">0–12 Months Early Comm</a>
+            <a href="milestone-language-development.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">1–3 Years Language Dev</a>
+            <a href="milestone-school-age-support.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">4–11 Years School Age</a>
+            <a href="milestone-teens-and-adults.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">12+ Years Teens &amp; Adults</a>
+          </div>
+        </div>
+
+        <!-- Resources & Articles -->
+        <div>
+          <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Resources &amp; Pricing</span>
+          <div class="pl-2 space-y-1">
+            <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Clinical Articles &amp; Blog</a>
+            <a href="resources.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Parent Free Downloads</a>
+            <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pricing &amp; Insurance Rates</a>
+          </div>
+        </div>
+
         <a href="contact.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Contact Us</a>
       </nav>
     </div>
 
     <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
-      <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center">
+      <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center text-center block">
         Book Free Intake
       </button>
       <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
@@ -135,147 +266,7 @@
     </div>
   </div>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
-          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 dark:border-slate-600 flex items-center justify-center text-[#1E1C1A] dark:text-white group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 4c-1.5 4-4 6-8 6 4 1.5 6 4 6 8 0-4 2-6.5 6-8-4 0-6.5-2-4-6Z"/>
-              <path d="M12 4c1.5 4 4 6 8 6-4 1.5-6 4-6 8 0-4-2-6.5-6-8 4 0 6.5-2 4-6Z" opacity="0.4"/>
-            </svg>
-          </div>
-          <span class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
-        </a>
-
-        <!-- Center Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-[#6B6560] dark:text-slate-300">
-          <!-- Home dropdown -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
-              <span>Home</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </button>
-            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 1 (General Services)</a>
-                <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 2 (Niche Specialty)</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="about.html" class="hover:text-[#C07534] transition ">About Us</a>
-          
-          <!-- Services Dropdown -->
-          <div class="relative group py-2">
-            <a href="services.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition text-[#C07534] font-bold">
-              <span>Services</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </a>
-            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs text-[#C07534] font-bold">All Services (Grid)</a>
-                <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Service Details (Single)</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog Dropdown -->
-          <div class="relative group py-2">
-            <a href="blog.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
-              <span>Blog</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </a>
-            <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Grid / List</a>
-                <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Single Article</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="pricing.html" class="hover:text-[#C07534] transition ">Pricing</a>
-          <a href="contact.html" class="hover:text-[#C07534] transition ">Contact Us</a>
-        </nav>
-
-        <!-- Right Utilities & Action Button -->
-        <div class="flex items-center space-x-2.5 shrink-0">
-          
-          <!-- Theme Dark/Light Toggle -->
-          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
-            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
-            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
-          </button>
-
-          <!-- RTL Toggle -->
-          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
-            <span class="rtl-text-indicator">RTL</span>
-          </button>
-
-          <!-- Get Started Pill -->
-          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2 px-5 font-semibold shadow-sm">
-            Get Started
-          </button>
-
-          <!-- Mobile Hamburger -->
-          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
-            <i class="fa-solid fa-bars-staggered text-xs"></i>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Navigation Drawer -->
-  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
-  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
-    <div>
-      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
-        <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-full border border-[#C07534] flex items-center justify-center text-[#C07534]">
-            <i class="fa-solid fa-seedling text-xs"></i>
-          </div>
-          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
-        </div>
-        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
-        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1">Main Pages</div>
-        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 1 (General Services)</a>
-        <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 2 (Niche Specialty)</a>
-        <a href="about.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Us</a>
-        <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] text-[#C07534] font-bold bg-[#EFECE4] dark:bg-[#0D222E]">Services (Grid)</a>
-        <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Service Details (Single)</a>
-        <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Listing</a>
-        <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Details</a>
-        <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pricing Plans</a>
-        <a href="contact.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Contact Us</a>
-
-        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1 pt-2">Utilities</div>
-        <a href="404.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">404 Error Page</a>
-        <a href="coming-soon.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Coming Soon Page</a>
-      </nav>
-    </div>
-
-    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
-      <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center">
-        Get Started
-      </button>
-      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
-        <a href="login.html" class="hover:text-[#C07534]">Login</a>
-        <span>&bull;</span>
-        <a href="register.html" class="hover:text-[#C07534]">Register</a>
-      </div>
-    </div>
-  </div>
-  </div>
-
-<section class="py-16 bg-[#EBF3FB] border-b border-[#D5E7F8]">
+  <section class="py-16 bg-[#EBF3FB] border-b border-[#D5E7F8]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center gap-2 text-xs font-bold text-[#2563EB] mb-4">
         <a href="index.html" class="hover:underline">Home</a>
