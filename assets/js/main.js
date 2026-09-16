@@ -538,7 +538,7 @@ function initBackToTop() {
    ========================================================================== */
 function initFormHandlers() {
   // Contact Form
-  const contactForm = document.getElementById('main-contact-form') || document.querySelector('form[action="contact.html"]');
+  const contactForm = document.getElementById('contact-page-form') || document.getElementById('main-contact-form') || document.querySelector('form[action="contact.html"]');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
