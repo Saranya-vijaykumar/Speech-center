@@ -557,7 +557,7 @@
         <!-- Image with Arch & Badge -->
         <div class="lg:col-span-6 relative">
           <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#0A4D68] aspect-[4/3] bg-slate-100 interactive-card">
-            <img id="zone-img" src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=800&q=80" alt="Sensory Speech Playroom" class="w-full h-full object-cover">
+            <img id="zone-img" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80" alt="Sensory Speech Playroom" class="w-full h-full object-cover">
           </div>
           <div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-2 rounded-2xl text-xs font-bold text-slate-800 dark:text-white shadow-lg flex items-center gap-2">
             <i class="fa-solid fa-shield-heart text-[#088395]"></i>
@@ -1519,13 +1519,13 @@
       }
     }
 
-    /* 3. Sensory Playroom Zone Switcher */
+        /* 3. Sensory Playroom Zone Switcher */
     const zoneData = [
       {
         tag: 'Zone 1 • Phonology & Music Therapy',
         title: 'The Acoustic Echo Pod',
         desc: 'Equipped with sound-absorbing felt clouds, gentle echo amplifiers, and rhythmic percussion toys. Children learn to differentiate consonant pitch, imitate phonemes, and build speech rhythm through musical turn-taking.',
-        img: 'https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80',
         age: 'Ages: 18 Months – 6 Years',
         equipment: [
           { icon: 'fa-microphone-lines', text: 'Echo Microphones & Rhyme Cards' },
@@ -1538,7 +1538,7 @@
         tag: 'Zone 2 • Oral Motor & Tactile Strength',
         title: 'The Oral-Motor Play Gym',
         desc: 'Designed for gentle jaw stability, tongue-tip elevation, and lip closure exercises. Features sensory chew tools, therapeutic straw cups, textured whistles, and bubble-blowing obstacle tracks that make muscle strengthening joyous.',
-        img: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=800&q=80',
         age: 'Ages: 12 Months – 7 Years',
         equipment: [
           { icon: 'fa-soap', text: 'Targeted Bubble Breathing Rigs' },
@@ -1564,11 +1564,42 @@
         tag: 'Zone 4 • Neurodiversity & Multi-Modal Communication',
         title: 'Sensory AAC & GLP Zone',
         desc: 'A low-arousal, sensory-friendly cocoon with weighted blankets, fiber-optic sensory lights, high-tech speech tablets (TouchChat/LAMP), and tactile Gestalt script storyboards designed specifically for autistic children and Natural Language Acquisition.',
-        img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800 interactive-card">' +
-          '<i class="fa-solid ' + item.icon + ' text-[#FF7A59]"></i>' +
-          '<span>' + item.text + '</span>' +
-        '</div>';
-      }).join('');
+        img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80',
+        age: 'Ages: All Ages (NLA / AAC)',
+        equipment: [
+          { icon: 'fa-tablet-screen-button', text: 'TouchChat & Proloquo iPad Pods' },
+          { icon: 'fa-cubes', text: 'Gestalt Script Phrasing Blocks' },
+          { icon: 'fa-eye', text: 'Low-Glare Sensory Fiber Optics' },
+          { icon: 'fa-child-reaching', text: 'Weighted Calming Compression Vest' }
+        ]
+      }
+    ];
+
+    function switchPlayroomZone(idx) {
+      const data = zoneData[idx];
+      if (!data) return;
+
+      [0, 1, 2, 3].forEach(i => {
+        const tab = document.getElementById('zone-tab-' + i);
+        if (tab) {
+          if (i === idx) {
+            tab.className = 'playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border-2 border-[#FF7A59] shadow-lg text-center transition hover:scale-[1.02] interactive-card';
+          } else {
+            tab.className = 'playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02] interactive-card';
+          }
+        }
+      });
+
+      document.getElementById('zone-img').src = data.img;
+      document.getElementById('zone-tag').textContent = data.tag;
+      document.getElementById('zone-title').textContent = data.title;
+      document.getElementById('zone-desc').textContent = data.desc;
+      document.getElementById('zone-age-badge').textContent = data.age;
+
+      const equipContainer = document.getElementById('zone-equipment');
+      if (equipContainer && data.equipment) {
+        equipContainer.innerHTML = data.equipment.map(item => `<div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800 interactive-card"><i class="fa-solid ${item.icon} text-[#FF7A59]"></i><span>${item.text}</span></div>`).join('');
+      }
     }
 
     /* 4. Speech Sound Explorer */
