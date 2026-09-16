@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Specialist Profile | SpeakBloom Speech Center | SpeakBloom Speech & Language Center</title>
+  <title>Specialist Profile | SpeakBloom Speech Center</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -12,31 +12,33 @@
       theme: {
         extend: {
           colors: {
-            terracotta: { 50: '#FDF0E6', 100: '#FBE8D8', 500: '#C85A32', 600: '#B04B26' },
-            forest: { 800: '#1E3D2F', 900: '#152C22' },
-            sage: { 50: '#F4F9F5', 100: '#EBF4EE', 200: '#D8EADF', 500: '#2D5A43' },
-            cream: { 50: '#FAF7F2', 100: '#FAF4ED', 200: '#EFE7DE' }
+            ochre: { 50: '#FDF7F0', 100: '#FAEFE0', 500: '#C07534', 600: '#AD6325' },
+            charcoal: { 800: '#2C2825', 900: '#1E1C1A' }
           },
           fontFamily: {
-            heading: ['Fraunces', 'Georgia', 'serif'],
-            body: ['Plus Jakarta Sans', 'sans-serif'],
-            handwriting: ['Caveat', 'cursive']
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
           }
         }
       }
     }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F7F4EE; color: #1E1C1A; }
+    h1, h2, h3, h4, .font-serif { font-family: 'Fraunces', Georgia, serif; }
+    .btn-dark-pill { background-color: #C07534; color: #FFFFFF; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
+    .btn-dark-pill:hover { background-color: #AD6325; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(192, 117, 52, 0.25); }
+    .btn-outline-pill { background-color: #FFFFFF; border: 1px solid #E3DFD5; color: #1E1C1A; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
+    .btn-outline-pill:hover { background-color: #FAF7F2; border-color: #C07534; transform: translateY(-1px); }
+  </style>
 </head>
 <body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
 
-  <!-- =========================================================================
-       TOP NAVIGATION BAR (Standardized Home 1 Theme)
-       ========================================================================= -->
-  <!-- =========================================================================
-       MASTER SINGLE TOP NAVIGATION BAR (All Pages Linked Cleanly)
-       ========================================================================= -->
   <!-- =========================================================================
        MASTER SINGLE TOP NAVIGATION BAR (All Pages Linked Cleanly)
        ========================================================================= -->
@@ -113,7 +115,7 @@
               <a href="milestone-early-communication.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">0–12 Months Early Comm</a>
               <a href="milestone-language-development.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">1–3 Years Toddler Words</a>
               <a href="milestone-school-age-support.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">4–11 Years School Age</a>
-              <a href="milestone-teens-and-adults.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">12+ Years Teens &amp; Adults</a>
+              <a href="milestone-teens-and-adults.html" class="block px-3 py-2 rounded-xl hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">12+ Years Teens &amp; Adults</a>
             </div>
           </div>
 
@@ -126,8 +128,8 @@
             <div class="absolute top-full left-0 w-56 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
               <a href="blog.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Clinical Articles &amp; Blog</a>
               <a href="blog-details.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Article Feature View</a>
-              <a href="resources.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Parent Free Downloads</a>
-              <a href="pricing.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Pricing &amp; Insurance Rates</a>
+              <a href="resources.html" class="block px-3 py-2 rounded-xl hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Parent Free Downloads</a>
+              <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Pricing &amp; Insurance Rates</a>
             </div>
           </div>
 
@@ -171,9 +173,7 @@
     </div>
   </header>
 
-  <!-- =========================================================================
-       MASTER MOBILE NAVIGATION DRAWER (Every Single Page Linked)
-       ========================================================================= -->
+  <!-- Mobile Drawer -->
   <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
   <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[88vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
     <div>
@@ -190,8 +190,6 @@
       </div>
 
       <nav class="mt-6 space-y-2 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
-        
-        <!-- Home Section -->
         <div>
           <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Home Variations</span>
           <div class="pl-2 space-y-1">
@@ -199,10 +197,7 @@
             <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pediatric Center</a>
           </div>
         </div>
-
         <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">About Our Clinic</a>
-
-        <!-- 6 Core Services -->
         <div>
           <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Our 6 Clinical Programs</span>
           <div class="pl-2 space-y-1">
@@ -215,11 +210,7 @@
             <a href="services.html" class="block px-3 py-2 rounded-xl font-bold text-[#111D18] dark:text-white bg-[#EFECE4] dark:bg-[#0D222E]">All Services Overview</a>
           </div>
         </div>
-
-        <!-- Therapists -->
         <a href="therapists.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Our Certified Therapists</a>
-
-        <!-- Milestones -->
         <div>
           <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Milestone Screeners</span>
           <div class="pl-2 space-y-1">
@@ -229,8 +220,6 @@
             <a href="milestone-teens-and-adults.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">12+ Years Teens &amp; Adults</a>
           </div>
         </div>
-
-        <!-- Resources & Articles -->
         <div>
           <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Resources &amp; Pricing</span>
           <div class="pl-2 space-y-1">
@@ -239,7 +228,6 @@
             <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pricing &amp; Insurance Rates</a>
           </div>
         </div>
-
         <a href="contact.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Contact Us</a>
       </nav>
     </div>
@@ -248,66 +236,64 @@
       <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center text-center block">
         Book Free Intake
       </button>
-      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
-        <a href="login.html" class="hover:text-[#111D18]">Login</a>
-        <span>&bull;</span>
-        <a href="register.html" class="hover:text-[#111D18]">Register</a>
-      </div>
     </div>
   </div>
 
-  <section class="py-16 lg:py-20 bg-[#F0F5F8] dark:bg-[#081D26] border-b border-[#E2EBF0] dark:border-slate-800">
+  <!-- Hero Profile Header (Centered, Non-Overlapping Alignment) -->
+  <section class="py-16 lg:py-20 bg-[#FAF7F2] dark:bg-[#081D26] border-b border-[#E3DFD5] dark:border-slate-800">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col items-center text-center space-y-6">
         
         <!-- Breadcrumbs -->
-        <div class="flex items-center gap-2 text-xs font-bold text-[#FF7A59]">
+        <div class="flex items-center gap-2 text-xs font-semibold text-[#C07534]">
           <a href="index.html" class="hover:underline">Home</a>
           <span>/</span>
           <a href="therapists.html" class="hover:underline">Therapists</a>
           <span>/</span>
-          <span id="breadcrumb-name" class="text-slate-500">Dr. Ananya Krishnan</span>
+          <span id="breadcrumb-name" class="text-slate-500">Dr. Elena Vance, CCC-SLP</span>
         </div>
 
         <!-- Prominent Centered Portrait -->
-        <div class="relative">
-          <div class="w-44 h-44 sm:w-52 sm:h-52 rounded-full p-1.5 bg-gradient-to-tr from-[#088395] via-[#FF7A59] to-[#0A4D68] shadow-2xl">
-            <img id="therapist-portrait" src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=80" alt="Clinician Portrait" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
+        <div class="relative mx-auto">
+          <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-full p-2 bg-gradient-to-tr from-[#C07534] via-[#E89C5D] to-[#111D18] shadow-2xl overflow-hidden">
+            <img id="therapist-portrait" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Dr. Elena Vance CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
           </div>
-          <span class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-[#088395] text-white text-xs font-bold px-4 py-1 rounded-full shadow-md whitespace-nowrap">
-            <i class="fa-solid fa-circle-check text-emerald-300"></i> Accepting Patients
+          <span id="therapist-badge" class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-[#C07534] text-white text-xs font-bold px-4 py-1 rounded-full shadow-md whitespace-nowrap">
+            Stanford Clinical Fellow
           </span>
         </div>
 
         <!-- Header Info -->
-        <div class="space-y-2 max-w-2xl">
-          <h1 id="therapist-name" class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#0A4D68] dark:text-white">
-            Dr. Ananya Krishnan
+        <div class="space-y-3 max-w-2xl">
+          <h1 id="therapist-name" class="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">
+            Dr. Elena Vance, CCC-SLP
           </h1>
-          <p id="therapist-title" class="text-base font-bold text-[#FF7A59]">
-            Ph.D., CCC-SLP &bull; Lead Pediatric Clinical Director
+          <p id="therapist-title" class="text-sm font-bold text-[#C07534]">
+            Ph.D., CCC-SLP • Lead Clinical Director &amp; Founder • 16+ Yrs Clinical Experience
           </p>
-          <p id="therapist-bio" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed pt-2">
-            Dr. Ananya is a dedicated pediatric speech-language pathologist with over 14 years of specialized clinical experience in neurodiversity-affirming communication therapy, Gestalt Language Processing (GLP), and childhood apraxia of speech.
+          <div class="flex items-center justify-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400">
+            <span id="therapist-rating">5.0 ★ (180+ Families Evaluated)</span>
+          </div>
+          <p id="therapist-bio" class="text-xs sm:text-sm text-[#5A5550] dark:text-slate-300 leading-relaxed pt-2 font-normal">
+            Dr. Elena Vance is a board-certified Speech-Language Pathologist and Founding Clinical Director at SpeakBloom. With over 16 years of pediatric and neurological clinical experience, Dr. Vance specializes in toddler speech delay, Gestalt Language Processing (GLP), childhood apraxia of speech (PROMPT trained), and parent-empowerment coaching.
           </p>
         </div>
 
         <!-- Specialty Tags -->
         <div id="therapist-tags" class="flex flex-wrap justify-center gap-2 pt-1">
-          <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-[#EBF4F6] text-[#088395] dark:bg-[#0A4D68] dark:text-[#70C5D8]">Toddler Language Delay</span>
-          <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-[#EBF4F6] text-[#088395] dark:bg-[#0A4D68] dark:text-[#70C5D8]">Gestalt Language (GLP)</span>
-          <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-[#EBF4F6] text-[#088395] dark:bg-[#0A4D68] dark:text-[#70C5D8]">Childhood Apraxia (PROMPT)</span>
-          <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-[#EBF4F6] text-[#088395] dark:bg-[#0A4D68] dark:text-[#70C5D8]">Sensory Play</span>
+          <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-[#C07534] border border-[#E3DFD5] dark:border-slate-700 shadow-sm">Toddler Delay</span>
+          <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-[#C07534] border border-[#E3DFD5] dark:border-slate-700 shadow-sm">GLP Natural Language</span>
+          <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-[#C07534] border border-[#E3DFD5] dark:border-slate-700 shadow-sm">Apraxia (PROMPT)</span>
         </div>
 
-        <!-- Centered CTAs -->
-        <div class="flex flex-wrap justify-center gap-4 pt-2">
-          <button data-open-modal="assessment-wizard-modal" class="btn-dark-pill text-xs font-bold py-3.5 px-8 shadow-lg">
-            <i class="fa-regular fa-calendar-check"></i> Book Consultation with Specialist
+        <!-- Action CTA -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-4">
+          <button data-open-modal="assessment-wizard-modal" class="btn-dark-pill text-xs py-3.5 px-8 shadow-md">
+            <i class="fa-regular fa-calendar-check mr-2"></i> Book Consultation with Clinician
           </button>
-          <a href="contact.html" class="btn-outline-warm text-xs font-bold py-3.5 px-6">
-            <i class="fa-regular fa-envelope"></i> Send Clinical Inquiry
+          <a href="therapists.html" class="btn-outline-pill text-xs py-3.5 px-6">
+            &larr; View All 6 Specialists
           </a>
         </div>
 
@@ -316,134 +302,114 @@
     </div>
   </section>
 
-  <!-- Detailed Clinical Case Study & Schedule Section -->
-  <section class="py-16 bg-[#F8FAFB] dark:bg-[#06151D]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-10">
-        
-        <!-- Case Study & Philosophy -->
-        <div class="lg:col-span-7 space-y-8">
-          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E2EBF0] dark:border-slate-700 shadow-sm space-y-4 interactive-card">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-[#FF7A59] bg-[#FFF0EB] px-2.5 py-1 rounded-full">Clinical Case Study</span>
-            <h3 class="text-xl font-bold font-heading text-[#0A4D68] dark:text-white">12-Week Milestone Breakthrough</h3>
-            <p id="therapist-case" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Aarav arrived at age 2.8 with severe expressive frustration and high anxiety around speech attempts. Using sensory play therapy, acoustic sound games, and Hanen 'More Than Words' parent coaching, Aarav expanded his vocabulary from 3 words to over 110 expressive phrases in under 3 months.
+  <!-- Detailed Bio & Qualifications -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-[#06151D]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-10">
+      
+      <!-- Left Column: Education & Credentials -->
+      <div class="md:col-span-5 space-y-6">
+        <div class="bg-[#FAF7F2] dark:bg-[#0D222E] p-6 sm:p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-700 space-y-4 shadow-sm">
+          <h3 class="text-base font-bold font-serif text-[#1E1C1A] dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-[#C07534]"></i> Clinical Credentials
+          </h3>
+          <ul id="therapist-education" class="space-y-3 text-xs text-[#5A5550] dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-[#C07534] mt-0.5"></i>
+              <span>Ph.D. in Speech-Language Pathology &amp; Child Development – Stanford University</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-[#C07534] mt-0.5"></i>
+              <span>M.S. in Communication Sciences &amp; Disorders – Columbia University</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-[#C07534] mt-0.5"></i>
+              <span>ASHA Certificate of Clinical Competence (CCC-SLP)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-[#C07534] mt-0.5"></i>
+              <span>Certified PROMPT Level 3 Instructor &amp; Natural Language Acquisition (NLA) Clinician</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#FAF7F2] dark:bg-[#0D222E] p-6 sm:p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-700 space-y-3 shadow-sm">
+          <h3 class="text-base font-bold font-serif text-[#1E1C1A] dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-clock text-[#C07534]"></i> Session Availability
+          </h3>
+          <p class="text-xs text-[#5A5550] dark:text-slate-300">
+            Monday &ndash; Friday: 8:30 AM &ndash; 5:30 PM<br>
+            Saturday: 9:00 AM &ndash; 2:00 PM (By Appointment)
+          </p>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+              <i class="fa-solid fa-circle text-[8px]"></i> Accepting New Patients
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Clinical Focus & Therapy Approach -->
+      <div class="md:col-span-7 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold font-serif text-[#1E1C1A] dark:text-white mb-4">
+            Clinical Philosophy &amp; Approach
+          </h2>
+          <div class="space-y-4 text-xs sm:text-sm text-[#5A5550] dark:text-slate-300 leading-relaxed">
+            <p>
+              Communication is a fundamental human right. At SpeakBloom, we believe therapy should be child-centered, trauma-informed, and joyfully integrated into daily play and routines.
             </p>
-            <div class="rounded-2xl overflow-hidden aspect-video border border-[#E2EBF0] dark:border-slate-700 shadow-sm interactive-card">
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Play therapy room" class="w-full h-full object-cover">
-            </div>
+            <p>
+              We collaborate intimately with parents and caregivers, turning home mealtime, playground trips, and bedtime stories into natural communication rich environments.
+            </p>
           </div>
         </div>
 
-        <!-- Weekly Schedule & Location Widget -->
-        <div class="lg:col-span-5 space-y-6">
-          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E2EBF0] dark:border-slate-700 shadow-xl space-y-5 interactive-card">
-            <h3 class="text-lg font-bold font-heading text-[#0A4D68] dark:text-white text-center">Consultation Hours</h3>
-            
-            <div class="space-y-2.5 text-xs">
-              <div class="flex justify-between p-3 rounded-xl bg-[#F8FAFB] dark:bg-[#081D26]">
-                <span class="font-bold">Mon &amp; Wed:</span>
-                <span>9:00 AM – 3:30 PM (In-Clinic)</span>
-              </div>
-              <div class="flex justify-between p-3 rounded-xl bg-[#F8FAFB] dark:bg-[#081D26]">
-                <span class="font-bold">Tue &amp; Thu:</span>
-                <span>10:00 AM – 6:00 PM (In-Clinic)</span>
-              </div>
-              <div class="flex justify-between p-3 rounded-xl bg-[#F8FAFB] dark:bg-[#081D26]">
-                <span class="font-bold">Friday:</span>
-                <span>Telepractice Online Only</span>
-              </div>
-            </div>
-
-            <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs font-bold py-3.5 justify-center shadow-md">
-              <i class="fa-regular fa-calendar-check"></i> Book With This Clinician
-            </button>
-          </div>
+        <div>
+          <h3 class="text-lg font-bold font-serif text-[#1E1C1A] dark:text-white mb-4">
+            Specialized Areas of Focus
+          </h3>
+          <ul id="therapist-specialties" class="grid sm:grid-cols-2 gap-3 text-xs text-[#5A5550] dark:text-slate-300">
+            <li class="bg-[#FAF7F2] dark:bg-[#0D222E] p-3.5 rounded-2xl border border-[#E3DFD5] dark:border-slate-700 flex items-start gap-2">
+              <i class="fa-solid fa-star text-[#C07534] text-xs mt-0.5"></i>
+              <span>Early Childhood Language Delay (0–3 Years)</span>
+            </li>
+            <li class="bg-[#FAF7F2] dark:bg-[#0D222E] p-3.5 rounded-2xl border border-[#E3DFD5] dark:border-slate-700 flex items-start gap-2">
+              <i class="fa-solid fa-star text-[#C07534] text-xs mt-0.5"></i>
+              <span>Gestalt Language Processing &amp; Sensory Play</span>
+            </li>
+            <li class="bg-[#FAF7F2] dark:bg-[#0D222E] p-3.5 rounded-2xl border border-[#E3DFD5] dark:border-slate-700 flex items-start gap-2">
+              <i class="fa-solid fa-star text-[#C07534] text-xs mt-0.5"></i>
+              <span>Childhood Apraxia of Speech (CAS &amp; PROMPT)</span>
+            </li>
+            <li class="bg-[#FAF7F2] dark:bg-[#0D222E] p-3.5 rounded-2xl border border-[#E3DFD5] dark:border-slate-700 flex items-start gap-2">
+              <i class="fa-solid fa-star text-[#C07534] text-xs mt-0.5"></i>
+              <span>Parent-Implemented Play Coaching</span>
+            </li>
+          </ul>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- Dynamic Clinician Resolver Script -->
-  <script>
-    const THERAPISTS_DATA = {
-      'ananya': {
-        name: 'Dr. Ananya Krishnan',
-        title: 'Ph.D., CCC-SLP • Lead Pediatric Clinical Director',
-        img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80',
-        bio: 'Dr. Ananya is a dedicated pediatric speech-language pathologist with over 14 years of clinical experience in neurodiversity-affirming communication therapy, Gestalt Language Processing (GLP), and childhood apraxia of speech. She received her doctorate from Stanford University.',
-        case: 'Aarav (Age 3.5) transitioned from 3 single words to spontaneous 4-word conversational phrases in 12 weeks through child-led sensory play.'
-      },
-      'marcus': {
-        name: 'Marcus Vance',
-        title: 'M.S., CCC-SLP • Fluency & Stuttering Clinical Director',
-        img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80',
-        bio: 'Marcus has 11 years of clinical mastery in stuttering therapy. He integrates real-time acoustic spectrogram feedback with cognitive-behavioral fluency coaching, helping teenagers and executives communicate without anxiety.',
-        case: 'Rohan (Age 19) reduced speech block severity by 78% and delivered his university symposium keynote with complete confidence.'
-      },
-      'elena': {
-        name: 'Dr. Elena Rostova',
-        title: 'MD, CCC-SLP • Adult Neuro-Rehabilitation Director',
-        img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
-        bio: 'Dr. Elena combines medical neuroscience with practical speech rehabilitation. With 16+ years at leading neurological hospitals, she helps stroke survivors regain language and cognitive communication autonomy.',
-        case: 'Vikram (Age 58) recovered expressive vocabulary following an ischemic stroke, returning to active management at his firm within 6 months.'
-      },
-      'priya': {
-        name: 'Priya Sundaram',
-        title: 'M.Sc., CCC-SLP • AAC & Assistive Tech Specialist',
-        img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
-        bio: 'Priya is an internationally recognized AAC specialist helping non-speaking children and adults gain autonomous communication through customized tablet devices and neurodiversity-affirming modeling.',
-        case: 'Diya (Age 6, Autistic non-speaking) mastered multi-page TouchChat navigation, now expressing jokes, emotions, and academic answers daily.'
-      },
-      'david': {
-        name: 'David Chen',
-        title: 'M.A., CCC-SLP • Pediatric Feeding & Articulation Specialist',
-        img: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80',
-        bio: 'David specializes in pediatric oral motor development, correcting tongue thrust swallow patterns and resolving complex texture food aversions in infants and toddlers.',
-        case: 'Karan (Age 4) overcame severe texture gagging, expanding his diet from 3 pureed foods to 28 solid table foods in 10 weeks.'
-      },
-      'maya': {
-        name: 'Maya Al-Mansoor',
-        title: 'M.S., CCC-SLP • Early Childhood & Hanen Certified',
-        img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
-        bio: 'Maya is a certified provider for Hanen "It Takes Two to Talk", empowering parents with micro-strategies embedded into daily home routines.',
-        case: 'Ishaan (Age 2.2) increased communicative gestures and imitation sounds by 300% after 6 weeks of family coaching.'
-      }
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const id = params.get('id') || 'ananya';
-      const data = THERAPISTS_DATA[id] || THERAPISTS_DATA['ananya'];
-
-      document.getElementById('therapist-name').textContent = data.name;
-      document.getElementById('breadcrumb-name').textContent = data.name;
-      document.getElementById('therapist-title').textContent = data.title;
-      document.getElementById('therapist-portrait').src = data.img;
-      document.getElementById('therapist-bio').textContent = data.bio;
-      document.getElementById('therapist-case').textContent = data.case;
-      document.title = data.name + ' | SpeakBloom Specialist';
-    });
-  </script>
-  
-  <!-- Footer -->
-    <!-- =========================================================================
-       FOOTER (Standardized Home 1 Theme)
+  <!-- =========================================================================
+       FOOTER (Standard Single Layout)
        ========================================================================= -->
-  <footer class="bg-[#111D18] text-white py-16 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+  <footer class="bg-[#111D18] text-white py-16 border-t border-[#1E2E27]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
       
       <div class="space-y-4">
         <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-full bg-white text-[#111D18] flex items-center justify-center text-xs">
+          <div class="w-8 h-8 rounded-full bg-white text-[#111D18] flex items-center justify-center text-xs shadow-sm">
             <i class="fa-solid fa-seedling"></i>
           </div>
           <span class="text-xl font-serif font-bold tracking-tight">SpeakBloom</span>
         </div>
         <p class="text-xs text-slate-400 leading-relaxed font-normal">
-          Specialized speech and language therapy center helping children and families build lasting communication confidence.
+          Dedicated speech-language pathology clinic empowering children, toddlers, and adults to communicate with clarity, joy, and independence.
         </p>
+        <p class="text-[11px] text-slate-500">&copy; 2026 SpeakBloom Speech Center. All rights reserved.</p>
       </div>
 
       <div class="space-y-3">
@@ -479,7 +445,7 @@
     </div>
   </footer>
 
-  <!-- Global Multi-Step Assessment Wizard Modal -->
+  <!-- Intake Wizard Modal -->
   <div id="assessment-wizard-modal" class="fixed inset-0 bg-slate-900/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
     <div class="bg-white dark:bg-[#182C23] rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-[#EFE7DE] dark:border-slate-700 relative animate-scaleUp max-h-[90vh] overflow-y-auto interactive-card">
       <button data-close-modal class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center">
@@ -487,91 +453,212 @@
       </button>
 
       <div class="mb-6">
-        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C85A32] bg-[#FDF0E6] px-2.5 py-1 rounded-full">4-Step Clinical Intake</span>
-        <h3 class="text-2xl font-bold font-heading text-[#1E3D2F] dark:text-white mt-2">Schedule Your Initial Assessment</h3>
-      </div>
-
-      <!-- Step Indicator -->
-      <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EFE7DE] dark:border-slate-700 text-xs font-bold">
-        <div class="flex items-center gap-1.5 text-[#C85A32]" id="step-badge-1"><span class="w-5 h-5 rounded-full bg-[#C85A32] text-white flex items-center justify-center text-[10px]">1</span> Patient Info</div>
-        <div class="h-0.5 w-6 bg-slate-200 dark:bg-slate-700"></div>
-        <div class="flex items-center gap-1.5 text-slate-400" id="step-badge-2"><span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center text-[10px]">2</span> Needs</div>
-        <div class="h-0.5 w-6 bg-slate-200 dark:bg-slate-700"></div>
-        <div class="flex items-center gap-1.5 text-slate-400" id="step-badge-3"><span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center text-[10px]">3</span> Date & Clinician</div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534] bg-[#FDF7F0] px-2.5 py-1 rounded-full">4-Step Clinical Intake</span>
+        <h3 class="text-2xl font-bold font-serif text-[#1E1C1A] dark:text-white mt-2">Schedule Your Initial Assessment</h3>
       </div>
 
       <form id="assessment-multi-step-form" class="space-y-4 text-xs">
-        <!-- Step 1 -->
         <div class="wizard-step space-y-4" data-step="1">
           <div>
             <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Parent / Guardian Name *</label>
-            <input type="text" required placeholder="e.g. Priya Sharma" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+            <input type="text" required placeholder="e.g. Priya Sharma" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C07534]">
           </div>
           <div class="grid grid-cols-2 gap-3">
             <div>
               <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Phone Number *</label>
-              <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+              <input type="tel" required placeholder="+1 (800) 555-0199" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C07534]">
             </div>
             <div>
               <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Child Age / Grade</label>
-              <input type="text" placeholder="e.g. 3.5 Years / Preschool" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+              <input type="text" placeholder="e.g. 3.5 Years / Preschool" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C07534]">
             </div>
           </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="wizard-step space-y-4 hidden" data-step="2">
-          <div>
-            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Primary Area of Concern</label>
-            <select class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
-              <option>Late Talker / Language Delay</option>
-              <option>Articulation / Unclear Pronunciation</option>
-              <option>Stuttering & Fluency Tension</option>
-              <option>Autism / Gestalt Language Play</option>
-              <option>Feeding & Texture Aversions</option>
-              <option>Voice Resonance & Cord Therapy</option>
-            </select>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Brief Observations</label>
-            <textarea rows="3" placeholder="Describe the speech sounds, frustration levels, or challenges..." class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]"></textarea>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="wizard-step space-y-4 hidden" data-step="3">
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Preferred Date</label>
-              <input type="date" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
-            </div>
-            <div>
-              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Preferred Time</label>
-              <select class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
-                <option>Morning (9:00 AM – 12:00 PM)</option>
-                <option>Afternoon (1:00 PM – 4:00 PM)</option>
-                <option>Evening (4:00 PM – 7:00 PM)</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Format</label>
-            <div class="flex gap-4 pt-1">
-              <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="visit_format" checked class="text-[#C85A32]"> In-Clinic Assessment</label>
-              <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="visit_format" class="text-[#C85A32]"> Online Telepractice</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="pt-4 flex items-center justify-between border-t border-[#EFE7DE] dark:border-slate-700">
-          <button type="button" id="wizard-prev-btn" class="btn-outline-warm text-xs py-2.5 px-4 hidden">Previous</button>
-          <button type="button" id="wizard-next-btn" class="btn-dark-pill text-xs py-2.5 px-6 ml-auto">Next Step &rarr;</button>
-          <button type="submit" id="wizard-submit-btn" class="btn-dark-pill text-xs py-2.5 px-6 ml-auto hidden">Confirm Assessment &rarr;</button>
+        <div class="pt-4 flex items-center justify-between border-t border-[#E3DFD5] dark:border-slate-700">
+          <button type="submit" class="btn-dark-pill text-xs py-2.5 px-6 ml-auto">Confirm Free Intake &rarr;</button>
         </div>
       </form>
     </div>
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // Dynamic Clinician Loader
+    const cliniciansData = {
+      elena: {
+        name: "Dr. Elena Vance, CCC-SLP",
+        title: "Ph.D., CCC-SLP • Lead Clinical Director & Founder • 16+ Yrs Clinical Experience",
+        badge: "Stanford Clinical Fellow",
+        rating: "5.0 ★ (180+ Families Evaluated)",
+        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
+        bio: "Dr. Elena Vance is a board-certified Speech-Language Pathologist and Founding Clinical Director at SpeakBloom. With over 16 years of pediatric and neurological clinical experience, Dr. Vance specializes in toddler speech delay, Gestalt Language Processing (GLP), childhood apraxia of speech (PROMPT trained), and parent-empowerment coaching.",
+        tags: ["Toddler Delay", "GLP Natural Language", "Apraxia (PROMPT)"],
+        education: [
+          "Ph.D. in Speech-Language Pathology & Child Development – Stanford University",
+          "M.S. in Communication Sciences & Disorders – Columbia University",
+          "ASHA Certificate of Clinical Competence (CCC-SLP)",
+          "Certified PROMPT Level 3 Instructor & Natural Language Acquisition (NLA) Clinician"
+        ],
+        specialties: [
+          "Early Childhood Language Delay (0–3 Years)",
+          "Gestalt Language Processing & Sensory Play",
+          "Childhood Apraxia of Speech (CAS & PROMPT)",
+          "Parent-Implemented Play Coaching"
+        ]
+      },
+      marcus: {
+        name: "Marcus Vance, M.S., CCC-SLP",
+        title: "M.S., CCC-SLP • Fluency & Stuttering Specialist • 12+ Yrs Clinical Experience",
+        badge: "Fluency Board Certified",
+        rating: "4.9 ★ (140+ Patients Evaluated)",
+        image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80",
+        bio: "Marcus Vance specializes in holistic stuttering therapy, fluency modification, and communication confidence for children, teens, and adults. His evidence-based approach combines gentle onset techniques with cognitive-behavioral fluency coaching.",
+        tags: ["Stuttering Therapy", "Fluency Shaping", "Confidence Building"],
+        education: [
+          "M.S. in Speech-Language Pathology – Boston University",
+          "Specialist Board Certification in Fluency Disorders (BCS-F)",
+          "ASHA Certificate of Clinical Competence (CCC-SLP)",
+          "Lidcombe & Camperdown Program Certified Clinician"
+        ],
+        specialties: [
+          "Pediatric & Adolescent Stuttering Modification",
+          "Adult Conversational Ease & Presentation Fluency",
+          "Cluttering & Speech Rate Regulation",
+          "Speech Anxiety & Communication Empowerment"
+        ]
+      },
+      maya: {
+        name: "Maya Al-Mansoor, M.S., CCC-SLP",
+        title: "M.S., CCC-SLP • Early Intervention & Toddler Specialist • 9+ Yrs Clinical Experience",
+        badge: "Hanen Certified",
+        rating: "4.9 ★ (110+ Families Evaluated)",
+        image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
+        bio: "Maya Al-Mansoor is dedicated to play-based early intervention for late-talking toddlers and preschoolers. She empowers families through structured floor-time play, parent coaching, and natural language modeling.",
+        tags: ["Early Intervention", "First Words", "Parent Coaching"],
+        education: [
+          "M.S. in Communication Disorders – Northwestern University",
+          "Certified Hanen: It Takes Two to Talk & More Than Words",
+          "ASHA Certificate of Clinical Competence (CCC-SLP)",
+          "Early Steps Certified Early Intervention Specialist"
+        ],
+        specialties: [
+          "Late Talkers & First Word Expansion (12–36 Months)",
+          "Parent-Led Naturalistic Language Modeling",
+          "Play-Based Social Engagement & Joint Attention",
+          "Expressive & Receptive Language Delay"
+        ]
+      },
+      sarah: {
+        name: "Sarah Lin, M.S., CCC-SLP",
+        title: "M.S., CCC-SLP • Articulation & Pediatric Feeding Specialist • 10+ Yrs Clinical Experience",
+        badge: "Oral-Motor Certified",
+        rating: "4.9 ★ (125+ Families Evaluated)",
+        image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
+        bio: "Sarah Lin brings over a decade of expertise in treating speech sound disorders, severe phonological delays, lisp correction, and pediatric sensory feeding challenges. She makes speech sound drills fun and engaging through multisensory games.",
+        tags: ["Speech Clarity", "Phonetics", "Oral Motor Feeding"],
+        education: [
+          "M.S. in Speech Pathology – NYU Steinhardt",
+          "Certified Beckman Oral Motor Protocol Provider",
+          "ASHA Certificate of Clinical Competence (CCC-SLP)",
+          "SOS Approach to Feeding Certified Clinician"
+        ],
+        specialties: [
+          "Articulation Sound Errors (R, S, L, TH)",
+          "Phonological Processing Disorders & Contrast Therapy",
+          "Pediatric Sensory Feeding & Food Texture Aversions",
+          "Orofacial Myofunctional Therapy (OMT)"
+        ]
+      },
+      david: {
+        name: "David Chen, M.S., CCC-SLP",
+        title: "M.S., CCC-SLP • AAC & Neurodiversity Specialist • 8+ Yrs Clinical Experience",
+        badge: "TouchChat / LAMP Expert",
+        rating: "5.0 ★ (95+ Families Evaluated)",
+        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80",
+        bio: "David Chen is a passionate advocate for neurodiversity-affirming communication. He specializes in high-tech AAC device customization, non-speaking autism support, and teaching multi-modal language access in schools and home environments.",
+        tags: ["High-Tech AAC", "Autism Play", "Non-Speaking Comm"],
+        education: [
+          "M.S. in Communication Sciences – University of Washington",
+          "LAMP Words for Life & TouchChat Certified Specialist",
+          "ASHA Certificate of Clinical Competence (CCC-SLP)",
+          "Neurodiversity-Affirming SLP Network Member"
+        ],
+        specialties: [
+          "High-Tech AAC System Evaluation & Customization",
+          "Autism Spectrum Communication & Gestalt Modeling",
+          "Multi-Modal Communication (Symbols, Signs, Tech)",
+          "School-Based AAC Integration & Classroom Coaching"
+        ]
+      },
+      arthur: {
+        name: "Dr. Arthur Sterling, Ph.D., CCC-SLP",
+        title: "Ph.D., CCC-SLP • Neurogenic Speech & Swallowing Director • 18+ Yrs Clinical Experience",
+        badge: "Neuroplasticity Fellow",
+        rating: "5.0 ★ (160+ Adults Evaluated)",
+        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
+        bio: "Dr. Arthur Sterling has led neurogenic language and swallowing rehabilitation programs for nearly two decades. He specializes in post-stroke aphasia recovery, traumatic brain injury (TBI) cognitive communication, and adult dysphagia treatment.",
+        tags: ["Stroke Recovery", "Aphasia Rehab", "Dysphagia Care"],
+        education: [
+          "Ph.D. in Neurobiology & Speech Pathology – Johns Hopkins University",
+          "M.S. in Medical Speech Pathology – Massachusetts General Hospital IHP",
+          "ASHA Certificate of Clinical Competence (CCC-SLP)",
+          "Board Certified Specialist in Swallowing & Swallowing Disorders (BCS-S)"
+        ],
+        specialties: [
+          "Post-Stroke Aphasia & Intensive Language Action Therapy",
+          "Dysarthria & Voice Projection Rehabilitation",
+          "Dysphagia Assessment & Swallowing Muscle Re-education",
+          "Cognitive-Communication Rebuild after TBI / Concussion"
+        ]
+      }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const clinicianId = urlParams.get('id') || 'elena';
+    const c = cliniciansData[clinicianId] || cliniciansData['elena'];
+
+    if (c) {
+      document.title = c.name + " | SpeakBloom Speech Center";
+      const breadcrumb = document.getElementById('breadcrumb-name');
+      if (breadcrumb) breadcrumb.textContent = c.name;
+      
+      const portrait = document.getElementById('therapist-portrait');
+      if (portrait) {
+        portrait.src = c.image;
+        portrait.alt = c.name;
+      }
+      
+      const badge = document.getElementById('therapist-badge');
+      if (badge) badge.textContent = c.badge;
+      
+      const nameEl = document.getElementById('therapist-name');
+      if (nameEl) nameEl.textContent = c.name;
+      
+      const titleEl = document.getElementById('therapist-title');
+      if (titleEl) titleEl.textContent = c.title;
+      
+      const ratingEl = document.getElementById('therapist-rating');
+      if (ratingEl) ratingEl.textContent = c.rating;
+      
+      const bioEl = document.getElementById('therapist-bio');
+      if (bioEl) bioEl.textContent = c.bio;
+      
+      const tagsContainer = document.getElementById('therapist-tags');
+      if (tagsContainer && c.tags) {
+        tagsContainer.innerHTML = c.tags.map(t => `<span class="px-3.5 py-1 rounded-full text-xs font-bold bg-white dark:bg-[#0D222E] text-[#C07534] border border-[#E3DFD5] dark:border-slate-700 shadow-sm">${t}</span>`).join('');
+      }
+
+      const eduContainer = document.getElementById('therapist-education');
+      if (eduContainer && c.education) {
+        eduContainer.innerHTML = c.education.map(e => `<li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#C07534] mt-0.5"></i><span>${e}</span></li>`).join('');
+      }
+
+      const specContainer = document.getElementById('therapist-specialties');
+      if (specContainer && c.specialties) {
+        specContainer.innerHTML = c.specialties.map(s => `<li class="bg-[#FAF7F2] dark:bg-[#0D222E] p-3.5 rounded-2xl border border-[#E3DFD5] dark:border-slate-700 flex items-start gap-2"><i class="fa-solid fa-star text-[#C07534] text-xs mt-0.5"></i><span>${s}</span></li>`).join('');
+      }
+    }
+  </script>
 </body>
 </html>
