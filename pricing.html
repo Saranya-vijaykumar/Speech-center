@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clinical Fees & Plans | Transparent Pricing | SpeakBloom Speech & Language Center</title>
+  <title>Transparent Rates & Clinical Fees | SpeakBloom Speech & Language Center</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -12,33 +12,57 @@
       theme: {
         extend: {
           colors: {
-            terracotta: { 50: '#FDF0E6', 100: '#FBE8D8', 500: '#C85A32', 600: '#B04B26' },
-            forest: { 800: '#1E3D2F', 900: '#152C22' },
-            sage: { 50: '#F4F9F5', 100: '#EBF4EE', 200: '#D8EADF', 500: '#2D5A43' },
-            cream: { 50: '#FAF7F2', 100: '#FAF4ED', 200: '#EFE7DE' }
+            linen: { 50: '#FCFAF7', 100: '#F7F4EE', 200: '#EFEBE1' },
+            sage: { 400: '#9DB3A6', 500: '#8FA89B', 600: '#7E988A' },
+            periwinkle: { 300: '#D5DFEC', 400: '#CAD5E2', 500: '#B8C7D8' },
+            forest: { 800: '#1A2923', 900: '#111D18' },
+            terracotta: { 500: '#C07534', 600: '#AD6325' }
           },
           fontFamily: {
-            heading: ['Fraunces', 'Georgia', 'serif'],
-            body: ['Plus Jakarta Sans', 'sans-serif'],
-            handwriting: ['Caveat', 'cursive']
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
           }
         }
       }
     }
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F7F4EE; color: #1E1C1A; }
+    h1, h2, h3, h4, .font-serif { font-family: 'Fraunces', Georgia, serif; }
+    
+    .btn-dark-pill {
+      background-color: #111D18;
+      color: #FFFFFF !important;
+      border-radius: 9999px;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(17, 29, 24, 0.2);
+    }
+    .btn-dark-pill:hover {
+      background-color: #1E332B;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(17, 29, 24, 0.3);
+    }
+  </style>
 </head>
 <body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
 
-  <!-- =========================================================================
-       TOP NAVIGATION BAR (Standardized Home 1 Theme)
-       ========================================================================= -->
+  <!-- TOP NAVIGATION BAR -->
   <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Logo -->
         <a href="index.html" class="flex items-center gap-2 group shrink-0">
           <div class="w-8 h-8 rounded-full bg-[#111D18] dark:bg-white text-white dark:text-[#111D18] flex items-center justify-center text-xs">
             <i class="fa-solid fa-seedling"></i>
@@ -46,37 +70,30 @@
           <span class="text-xl sm:text-2xl font-serif font-semibold text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
         </a>
 
-        <!-- Desktop Navigation Links -->
         <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold text-[#5A5550] dark:text-slate-300">
           <a href="index.html" class="hover:text-[#111D18] dark:hover:text-white transition">Home</a>
           <a href="about.html" class="hover:text-[#111D18] dark:hover:text-white transition">About Us</a>
           <a href="services.html" class="hover:text-[#111D18] dark:hover:text-white transition">Services (All 12)</a>
           <a href="therapists.html" class="hover:text-[#111D18] dark:hover:text-white transition">Therapists</a>
-          <a href="pricing.html" class="hover:text-[#111D18] dark:hover:text-white transition">Pricing &amp; Rates</a>
+          <a href="pricing.html" class="text-[#111D18] dark:text-white font-bold border-b border-[#111D18] pb-0.5">Pricing &amp; Rates</a>
           <a href="blog.html" class="hover:text-[#111D18] dark:hover:text-white transition">Articles</a>
           <a href="contact.html" class="hover:text-[#111D18] dark:hover:text-white transition">Contact</a>
         </nav>
 
-        <!-- Right Utilities & Action Pill -->
         <div class="flex items-center space-x-3 shrink-0">
-          
-          <!-- Theme Toggle -->
           <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
             <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
             <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
           </button>
 
-          <!-- RTL Toggle -->
           <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
             <span class="rtl-text-indicator">RTL</span>
           </button>
 
-          <!-- Book A Call Button -->
           <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2.5 px-6 font-semibold shadow-sm">
             Book Free Intake
           </button>
 
-          <!-- Mobile Hamburger -->
           <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
             <i class="fa-solid fa-bars-staggered text-xs"></i>
           </button>
@@ -86,7 +103,7 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
+  <!-- Mobile Drawer -->
   <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
   <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
     <div>
@@ -105,9 +122,9 @@
       <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
         <a href="index.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Home</a>
         <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">About Us</a>
-        <a href="services.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">All 12 Services</a>
+        <a href="services.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Services (All 12)</a>
         <a href="therapists.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Our Therapists</a>
-        <a href="pricing.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pricing &amp; Rates</a>
+        <a href="pricing.html" class="block px-3 py-2.5 rounded-xl bg-[#EFECE4] dark:bg-[#0D222E] font-bold">Pricing &amp; Rates</a>
         <a href="blog.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Articles</a>
         <a href="contact.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Contact Us</a>
       </nav>
@@ -117,255 +134,807 @@
       <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center">
         Book Free Intake
       </button>
-      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
-        <a href="login.html" class="hover:text-[#111D18]">Login</a>
-        <span>&bull;</span>
-        <a href="register.html" class="hover:text-[#111D18]">Register</a>
-      </div>
     </div>
   </div>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
-          <div class="w-8 h-8 rounded-full border border-[#1E1C1A]/20 dark:border-slate-600 flex items-center justify-center text-[#1E1C1A] dark:text-white group-hover:border-[#C07534] group-hover:text-[#C07534] transition">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 4c-1.5 4-4 6-8 6 4 1.5 6 4 6 8 0-4 2-6.5 6-8-4 0-6.5-2-4-6Z"/>
-              <path d="M12 4c1.5 4 4 6 8 6-4 1.5-6 4-6 8 0-4-2-6.5-6-8 4 0 6.5-2 4-6Z" opacity="0.4"/>
-            </svg>
-          </div>
-          <span class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
-        </a>
-
-        <!-- Center Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-[#6B6560] dark:text-slate-300">
-          <!-- Home dropdown -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
-              <span>Home</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </button>
-            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 1 (General Services)</a>
-                <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Home 2 (Niche Specialty)</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="about.html" class="hover:text-[#C07534] transition ">About Us</a>
-          
-          <!-- Services Dropdown -->
-          <div class="relative group py-2">
-            <a href="services.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
-              <span>Services</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </a>
-            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">All Services (Grid)</a>
-                <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Service Details (Single)</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog Dropdown -->
-          <div class="relative group py-2">
-            <a href="blog.html" class="flex items-center gap-1.5 hover:text-[#C07534] transition ">
-              <span>Blog</span>
-              <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
-            </a>
-            <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-700 p-2 space-y-1 interactive-card">
-                <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Grid / List</a>
-                <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#FAF7F2] dark:hover:bg-[#081D26] text-xs ">Blog Single Article</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="pricing.html" class="hover:text-[#C07534] transition text-[#C07534] font-bold">Pricing</a>
-          <a href="contact.html" class="hover:text-[#C07534] transition ">Contact Us</a>
-        </nav>
-
-        <!-- Right Utilities & Action Button -->
-        <div class="flex items-center space-x-2.5 shrink-0">
-          
-          <!-- Theme Dark/Light Toggle -->
-          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
-            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
-            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
-          </button>
-
-          <!-- RTL Toggle -->
-          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
-            <span class="rtl-text-indicator">RTL</span>
-          </button>
-
-          <!-- Get Started Pill -->
-          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2 px-5 font-semibold shadow-sm">
-            Get Started
-          </button>
-
-          <!-- Mobile Hamburger -->
-          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
-            <i class="fa-solid fa-bars-staggered text-xs"></i>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Navigation Drawer -->
-  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
-  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
-    <div>
-      <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
-        <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-full border border-[#C07534] flex items-center justify-center text-[#C07534]">
-            <i class="fa-solid fa-seedling text-xs"></i>
-          </div>
-          <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
-        </div>
-        <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <nav class="mt-6 space-y-1.5 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
-        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1">Main Pages</div>
-        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 1 (General Services)</a>
-        <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Home 2 (Niche Specialty)</a>
-        <a href="about.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Us</a>
-        <a href="services.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Services (Grid)</a>
-        <a href="service-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Service Details (Single)</a>
-        <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Listing</a>
-        <a href="blog-details.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Blog Details</a>
-        <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] text-[#C07534] font-bold bg-[#EFECE4] dark:bg-[#0D222E]">Pricing Plans</a>
-        <a href="contact.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Contact Us</a>
-
-        <div class="text-[10px] font-bold uppercase tracking-wider text-[#A8A199] px-2 py-1 pt-2">Utilities</div>
-        <a href="404.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">404 Error Page</a>
-        <a href="coming-soon.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Coming Soon Page</a>
-      </nav>
-    </div>
-
-    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800 space-y-2">
-      <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center">
-        Get Started
-      </button>
-      <div class="flex justify-center gap-3 text-[11px] text-[#A8A199]">
-        <a href="login.html" class="hover:text-[#C07534]">Login</a>
-        <span>&bull;</span>
-        <a href="register.html" class="hover:text-[#C07534]">Register</a>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
-
-  <section class="py-16 lg:py-20 bg-[#F0F5F8] dark:bg-[#081D26] border-b border-[#E2EBF0] dark:border-slate-800 text-center">
+  <!-- Hero Header -->
+  <section class="py-16 sm:py-20 bg-[#F7F4EE] dark:bg-[#06151D] border-b border-[#EFECE4] dark:border-slate-800 text-center">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#EBF4F6] text-[#088395] dark:bg-[#0A4D68] dark:text-[#70C5D8]">
-        <i class="fa-solid fa-tags"></i> TRANSPARENT CLINICAL FEES
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-[#EFECE4] dark:bg-slate-800 text-[#111D18] dark:text-[#E8D5B7] uppercase tracking-wider">
+        <i class="fa-solid fa-receipt text-[#C07534]"></i> 100% Transparent Clinical Fees
       </span>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#0A4D68] dark:text-white">
-        Evidence-Based Speech Therapy Packages
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#111D18] dark:text-white leading-tight font-normal">
+        Clear, Predictable Pricing<br>for Every Service
       </h1>
-      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-xl mx-auto">
-        No hidden administrative fees. Includes full parent debriefs, home activity printables, and direct billing documentation.
+      <p class="text-xs sm:text-sm text-[#5A5550] dark:text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+        No hidden fees or unexpected charges. View our individual session rates, discounted 10-session package bundles, and health insurance reimbursement support below.
       </p>
-
-      <!-- Monthly / Annual Toggle Switcher -->
-      <div class="inline-flex items-center gap-3 p-1.5 rounded-full bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-700 shadow-sm mt-4">
-        <button id="btn-monthly" class="px-5 py-2 rounded-full text-xs font-bold bg-[#FF7A59] text-white shadow-sm transition">Per Session</button>
-        <button id="btn-annual" class="px-5 py-2 rounded-full text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-[#FF7A59] transition">12-Week Package (Save 20%)</button>
-      </div>
     </div>
   </section>
 
-  <section class="py-16 bg-[#F8FAFB] dark:bg-[#06151D]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <!-- 3 Tier Cards -->
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E2EBF0] dark:border-slate-700 shadow-sm space-y-6 flex flex-col justify-between interactive-card">
-          <div class="space-y-4">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-[#088395] bg-[#EBF4F6] px-2.5 py-1 rounded-full">Intake Evaluation</span>
-            <h3 class="text-xl font-bold font-heading text-[#0A4D68] dark:text-white">Initial Clinical Assessment</h3>
-            <p class="text-xs text-slate-500">Comprehensive diagnostic evaluation, standardized testing, and tailored treatment roadmap.</p>
-            <div class="text-3xl font-bold font-heading text-[#FF7A59]">₹2,400 <span class="text-xs font-normal text-slate-400">/ One-time</span></div>
-            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 pt-2 border-t border-[#E2EBF0] dark:border-slate-700">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#088395]"></i> 60-Minute Comprehensive Testing</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#088395]"></i> Formal Written Diagnostic Report</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#088395]"></i> 20-Minute Parent Strategy Debrief</li>
-            </ul>
-          </div>
-          <button data-open-modal="assessment-wizard-modal" class="w-full btn-outline-warm text-xs font-bold py-3 justify-center">Book Assessment</button>
-        </div>
-
-        <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border-2 border-[#FF7A59] shadow-xl space-y-6 flex flex-col justify-between relative interactive-card">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF7A59] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">Most Popular</span>
-          <div class="space-y-4">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-[#FF7A59] bg-[#FFF0EB] px-2.5 py-1 rounded-full">Weekly Direct Therapy</span>
-            <h3 class="text-xl font-bold font-heading text-[#0A4D68] dark:text-white">Sensory Speech Play Care</h3>
-            <p class="text-xs text-slate-500">1-on-1 personalized weekly sessions targeting phonemes, vocabulary, or fluency.</p>
-            <div class="text-3xl font-bold font-heading text-[#FF7A59]">₹1,800 <span class="text-xs font-normal text-slate-400">/ Session</span></div>
-            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 pt-2 border-t border-[#E2EBF0] dark:border-slate-700">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#FF7A59]"></i> 45-Min Direct 1-on-1 Therapy</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#FF7A59]"></i> 10-Min Parent Demonstration</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#FF7A59]"></i> Digital Practice Portal Access</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#FF7A59]"></i> Weekly Progress Tracking</li>
-            </ul>
-          </div>
-          <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs font-bold py-3 justify-center shadow-md">Schedule Sessions</button>
-        </div>
-
-        <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E2EBF0] dark:border-slate-700 shadow-sm space-y-6 flex flex-col justify-between interactive-card">
-          <div class="space-y-4">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-[#088395] bg-[#EBF4F6] px-2.5 py-1 rounded-full">Intensive Program</span>
-            <h3 class="text-xl font-bold font-heading text-[#0A4D68] dark:text-white">12-Week Catch-Up Journey</h3>
-            <p class="text-xs text-slate-500">Full clinical package for rapid progress with bi-weekly sessions and telepractice support.</p>
-            <div class="text-3xl font-bold font-heading text-[#FF7A59]">₹17,280 <span class="text-xs font-normal text-slate-400">/ 12 Weeks (Save 20%)</span></div>
-            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 pt-2 border-t border-[#E2EBF0] dark:border-slate-700">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#088395]"></i> 24 Total Clinical Sessions</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#088395]"></i> Mid-Term Milestone Re-Assessment</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#088395]"></i> School / Teacher Coordination</li>
-            </ul>
-          </div>
-          <button data-open-modal="assessment-wizard-modal" class="w-full btn-outline-warm text-xs font-bold py-3 justify-center">Get 12-Week Package</button>
-        </div>
-
-      </div>
-
-      <!-- Clinical Guarantee Card with Image -->
-      <div class="bg-[#F0F5F8] dark:bg-[#081D26] p-8 sm:p-10 rounded-3xl border border-[#E2EBF0] dark:border-slate-700 flex flex-col md:flex-row items-center gap-8">
-        <div class="w-full md:w-1/3 rounded-2xl overflow-hidden aspect-video shadow-md">
-          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80" alt="Clinical Care Consultation" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="w-full md:w-2/3 space-y-2">
-          <span class="text-[10px] font-bold uppercase tracking-wider text-[#FF7A59] bg-[#FFF0EB] px-2.5 py-1 rounded-full">Our Commitment</span>
-          <h3 class="text-2xl font-bold font-heading text-[#0A4D68] dark:text-white">Flexible Scheduling &amp; Transparent Insurance Support</h3>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-            We provide itemized superbills with CPT and ICD-10 diagnostic codes after every appointment for seamless reimbursement from health insurance policies.
+  <!-- Diagnostic Intake Evaluations Banner -->
+  <section class="py-12 bg-[#FAF7F2] dark:bg-[#081822] border-b border-[#E3DFD5] dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#111D18] text-white p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 max-w-xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#D5DFEC]">Initial Assessment</span>
+          <h3 class="text-2xl sm:text-3xl font-serif">60-Minute Diagnostic Play Assessment</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Includes a comprehensive clinical battery evaluation of receptive/expressive language, phonetic clarity, a standardized written diagnostic report, and an individualized roadmap.
           </p>
         </div>
+        <div class="text-center md:text-right shrink-0 space-y-2">
+          <div class="text-3xl sm:text-4xl font-serif font-bold text-[#D8B88B]">₹4,500</div>
+          <div class="text-[11px] text-slate-400">One-Time Diagnostic Fee</div>
+          <button data-open-modal="assessment-wizard-modal" class="btn-dark-pill bg-white text-[#111D18] hover:bg-[#F7F4EE] text-xs py-3 px-6 font-semibold shadow">
+            Schedule Assessment &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete 12 Clinical Services Pricing Breakdown Grid -->
+  <section class="py-20 bg-[#F7F4EE] dark:bg-[#06151D]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#C07534]">Individual Therapy Programs</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111D18] dark:text-white">
+          All 12 Services &amp; Session Rates
+        </h2>
+        <p class="text-xs sm:text-sm text-[#5A5550] dark:text-slate-400 max-w-xl mx-auto">
+          Every program is conducted 1-on-1 by licensed Speech-Language Pathologists (CCC-SLP) with parent coaching included in every session.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">0 – 3 Years</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 45 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-toddler-delay.html" class="hover:text-[#C07534] transition">Late Talker Toddler Speech Therapy</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Rachel Evans (CCC-SLP)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,200</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>1-on-1 Play Intervention</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Parent Coaching Video Recaps</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Milestone Growth Checklist</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Home Strategy Worksheets</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-toddler-delay.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹18,700 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">3 – 12 Years</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 45 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-articulation.html" class="hover:text-[#C07534] transition">Speech Sound Clarity & Articulation Therapy</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Priya Patel (CCC-SLP)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,400</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Phonetic Placement Feedback</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Acoustic Sound Games</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>School Teacher Progress Note</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Target Sound Home Practice Cards</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-articulation.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹20,400 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">Children & Adults</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 50 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-stuttering-fluency.html" class="hover:text-[#C07534] transition">Stuttering & Fluency Modification</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Clara Vance (CCC-SLP)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,500</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Pacing & Breathing Techniques</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Cognitive Desensitization</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Classroom & Workplace Speaking Coaching</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Weekly Fluency Audio Diary</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-stuttering-fluency.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹21,250 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">All Ages</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 60 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-aac-autism.html" class="hover:text-[#C07534] transition">Autism & AAC Assistive Communication</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Sophia Chen (AAC Specialist)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,800</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>iPad / Tablet App Customization (TouchChat, Proloquo2Go)</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Gestalt Language Modeling</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Sensory Regulation Cues</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Caregiver Implementation Training</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-aac-autism.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹23,800 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">2.5 – 10 Years</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 50 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-apraxia-speech.html" class="hover:text-[#C07534] transition">Childhood Apraxia of Speech (CAS) Therapy</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Olivia Martinez (CAS Certified)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,600</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Dynamic Temporal & Tactile Cueing (DTTC)</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Motor Syllable Sequencing</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>High-Repetition Micro Drills</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Home Video Feedback</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-apraxia-speech.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹22,100 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">4 – 14 Years</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 60 Minutes (Small Group of 3)</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-social-pragmatics.html" class="hover:text-[#C07534] transition">Social Pragmatics & Peer Group Therapy</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. James Anderson (CCC-SLP)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹1,800</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Turn-Taking & Conversational Timing</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Reading Non-Verbal Cues</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Friendship Problem Solving</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Parent Social Strategy Summary</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-social-pragmatics.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹15,300 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">Adults & Seniors</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 60 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-aphasia-stroke-rehab.html" class="hover:text-[#C07534] transition">Adult Aphasia & Stroke Rehabilitation</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. David Miller (Neuro-SLP)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,900</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Semantic Feature Analysis</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Functional Reading & Writing Recovery</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Auditory Memory Exercises</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Family Communication Blueprint</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-aphasia-stroke-rehab.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹24,650 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">Teens & Adults</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 50 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-voice-therapy.html" class="hover:text-[#C07534] transition">Voice Therapy & Vocal Rehabilitation</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Hannah Abbott (Voice Specialist)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,600</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Acoustic Spectrogram Analysis</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Resonant Voice Therapy (RVT)</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Vocal Hygiene Coaching</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Vocal Fold Recovery Monitoring</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-voice-therapy.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹22,100 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">6 Months – 8 Years</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 50 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-pediatric-feeding.html" class="hover:text-[#C07534] transition">Pediatric Feeding & Swallowing Therapy</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Sarah Jenkins (Feeding Specialist)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,700</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>SOS Sensory Food Exploration</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Oral Motor Jaw & Tongue Exercises</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Choking Prevention Techniques</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Picky Eater Mealtime Plan</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-pediatric-feeding.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹22,950 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">4 – 12 Years</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 45 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-auditory-processing.html" class="hover:text-[#C07534] transition">Auditory Processing & Phonological Therapy</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Marcus Reed (CCC-SLP)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,300</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Auditory Discrimination Drills</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Background Noise Listening Training</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Phonological Awareness Games</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>IEP School Accommodation Guidance</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-auditory-processing.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹19,550 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">All Ages (Virtual)</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 45 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-telepractice-online.html" class="hover:text-[#C07534] transition">Online Telepractice Speech Therapy</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Alex Rivera (Telehealth Lead)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,000</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Interactive Digital Whiteboard</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Gamified Speech Phonics Software</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>HD Screen Sharing & Live Recording</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Direct Digital Exercise Portal</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-telepractice-online.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹17,000 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between interactive-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-[#F0EBE1] dark:border-slate-800">
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-[#F4F1EA] dark:bg-[#182C23] text-[#111D18] dark:text-[#A7D7BC] uppercase">4 – 7 Years</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium"><i class="fa-regular fa-clock mr-1 text-[#C07534]"></i> 45 Minutes</span>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-serif font-bold text-[#111D18] dark:text-white leading-snug">
+                  <a href="service-school-readiness.html" class="hover:text-[#C07534] transition">School Readiness & Literacy Support</a>
+                </h3>
+                <div class="text-xs text-[#5A5550] dark:text-slate-400 mt-1">Provider: <span class="font-semibold text-slate-700 dark:text-slate-200">Dr. Elena Vance (Clinical Director)</span></div>
+              </div>
+
+              <div class="py-3 bg-[#FAF8F4] dark:bg-[#081822] px-4 rounded-2xl border border-[#EBE7DC] dark:border-slate-800/80 flex items-baseline justify-between">
+                <div>
+                  <span class="text-2xl sm:text-3xl font-serif font-bold text-[#111D18] dark:text-white">₹2,100</span>
+                  <span class="text-[11px] text-slate-500"> / session</span>
+                </div>
+                <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">15% Off Pack</div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">What's Included:</div>
+                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Phonemic Rhyming & Blending</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Pre-Reading Letter-Sound Mapping</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Narrative Story Sequencing</span>
+                    </li>
+                  
+                    <li class="flex items-start gap-2">
+                      <i class="fa-solid fa-check text-emerald-500 text-xs mt-0.5 shrink-0"></i>
+                      <span>Kindergarten Transition Report</span>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 space-y-2">
+              <a href="service-school-readiness.html" class="w-full btn-dark-pill text-xs py-2.5 justify-center">
+                Book This Service &rarr;
+              </a>
+              <div class="text-[10px] text-center text-slate-400">10-Session Bundle: <span class="font-semibold text-slate-700 dark:text-slate-200">₹17,850 (10 Sessions)</span></div>
+            </div>
+          </div>
+        
       </div>
 
     </div>
   </section>
-  
-  <!-- Footer -->
-    <!-- =========================================================================
-       FOOTER (Standardized Home 1 Theme)
-       ========================================================================= -->
+
+  <!-- Health Insurance & Superbills Info Section -->
+  <section class="py-16 bg-[#FAF7F2] dark:bg-[#081822] border-t border-[#E3DFD5] dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#C07534]">Insurance &amp; Reimbursement</span>
+          <h2 class="text-3xl sm:text-4xl font-serif text-[#111D18] dark:text-white leading-tight">
+            How Superbills &amp; Insurance Reimbursement Work
+          </h2>
+          <p class="text-xs sm:text-sm text-[#5A5550] dark:text-slate-300 leading-relaxed">
+            SpeakBloom is an out-of-network private clinic, allowing our therapists to provide unconstrained, personalized care without restrictive insurance caps.
+          </p>
+          <p class="text-xs sm:text-sm text-[#5A5550] dark:text-slate-300 leading-relaxed">
+            Following each therapy session, we provide an itemized medical <strong>Superbill</strong> featuring exact ICD-10 diagnostic codes and CPT procedure codes (e.g. 92507, 92523) for direct submission to your health insurer for 50% to 80% out-of-network reimbursement.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-[#0D222E] p-8 rounded-3xl border border-[#E3DFD5] dark:border-slate-800 space-y-4 shadow-sm">
+          <h3 class="font-serif font-bold text-lg text-[#111D18] dark:text-white">3 Simple Steps for Insurance:</h3>
+          <div class="space-y-3 text-xs text-slate-600 dark:text-slate-300">
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-[#111D18] text-white font-bold text-[10px] flex items-center justify-center shrink-0">1</span>
+              <p>Attend your scheduled 1-on-1 speech therapy session.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-[#111D18] text-white font-bold text-[10px] flex items-center justify-center shrink-0">2</span>
+              <p>Receive your monthly itemized Superbill with diagnostic CPT codes automatically.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-[#111D18] text-white font-bold text-[10px] flex items-center justify-center shrink-0">3</span>
+              <p>Submit to your insurer online or through HSA/FSA for direct reimbursement.</p>
+            </div>
+          </div>
+          <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs py-3 justify-center mt-2">
+            Ask About Insurance Coverage
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="bg-[#111D18] text-white py-16 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-      
       <div class="space-y-4">
         <div class="flex items-center gap-2">
           <div class="w-7 h-7 rounded-full bg-white text-[#111D18] flex items-center justify-center text-xs">
@@ -396,7 +965,6 @@
           <li><a href="service-articulation.html" class="hover:text-white transition">Phonetic Articulation</a></li>
           <li><a href="service-stuttering-fluency.html" class="hover:text-white transition">Stuttering &amp; Fluency</a></li>
           <li><a href="service-aac-autism.html" class="hover:text-white transition">Autism &amp; AAC Devices</a></li>
-          <li><a href="service-telepractice-online.html" class="hover:text-white transition">Online Telehealth</a></li>
         </ul>
       </div>
 
@@ -406,98 +974,75 @@
         <p class="text-xs text-slate-400 font-normal"><a href="tel:+18005557732" class="hover:text-white">(800) 555-SPEAK</a></p>
         <p class="text-xs text-slate-400 font-normal"><a href="mailto:care@speakbloom.org" class="hover:text-white">care@speakbloom.org</a></p>
       </div>
-
     </div>
   </footer>
 
-  <!-- Global Multi-Step Assessment Wizard Modal -->
-  <div id="assessment-wizard-modal" class="fixed inset-0 bg-slate-900/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
-    <div class="bg-white dark:bg-[#182C23] rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-[#EFE7DE] dark:border-slate-700 relative animate-scaleUp max-h-[90vh] overflow-y-auto interactive-card">
-      <button data-close-modal class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center">
+  <!-- Modal -->
+  <div id="assessment-wizard-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-white dark:bg-[#0D222E] rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-[#E3DFD5] dark:border-slate-700 relative animate-scaleUp">
+      <button data-close-modal class="absolute top-5 right-5 w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-500 hover:text-black dark:hover:text-white">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <div class="mb-6">
-        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C85A32] bg-[#FDF0E6] px-2.5 py-1 rounded-full">4-Step Clinical Intake</span>
-        <h3 class="text-2xl font-bold font-heading text-[#1E3D2F] dark:text-white mt-2">Schedule Your Initial Assessment</h3>
+      <div class="text-center space-y-2 pb-6 border-b border-[#F0EBE1] dark:border-slate-800">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534]">Quick Intake Assessment</span>
+        <h3 class="text-xl sm:text-2xl font-serif font-bold text-[#111D18] dark:text-white">Book Your Consultation</h3>
       </div>
 
-      <!-- Step Indicator -->
-      <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EFE7DE] dark:border-slate-700 text-xs font-bold">
-        <div class="flex items-center gap-1.5 text-[#C85A32]" id="step-badge-1"><span class="w-5 h-5 rounded-full bg-[#C85A32] text-white flex items-center justify-center text-[10px]">1</span> Patient Info</div>
-        <div class="h-0.5 w-6 bg-slate-200 dark:bg-slate-700"></div>
-        <div class="flex items-center gap-1.5 text-slate-400" id="step-badge-2"><span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center text-[10px]">2</span> Needs</div>
-        <div class="h-0.5 w-6 bg-slate-200 dark:bg-slate-700"></div>
-        <div class="flex items-center gap-1.5 text-slate-400" id="step-badge-3"><span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center text-[10px]">3</span> Date & Clinician</div>
-      </div>
-
-      <form id="assessment-multi-step-form" class="space-y-4 text-xs">
-        <!-- Step 1 -->
-        <div class="wizard-step space-y-4" data-step="1">
-          <div>
-            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Parent / Guardian Name *</label>
-            <input type="text" required placeholder="e.g. Priya Sharma" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
+      <form id="assessment-wizard-form" class="mt-6 space-y-4">
+        <div class="flex justify-center gap-4 pb-4">
+          <div class="wizard-step-indicator" data-step="1">
+            <span class="step-circle w-8 h-8 rounded-full bg-[#111D18] text-white font-bold text-xs flex items-center justify-center">1</span>
           </div>
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Phone Number *</label>
-              <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
-            </div>
-            <div>
-              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Child Age / Grade</label>
-              <input type="text" placeholder="e.g. 3.5 Years / Preschool" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
-            </div>
+          <div class="wizard-step-indicator" data-step="2">
+            <span class="step-circle w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xs flex items-center justify-center">2</span>
+          </div>
+          <div class="wizard-step-indicator" data-step="3">
+            <span class="step-circle w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xs flex items-center justify-center">3</span>
           </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="wizard-step space-y-4 hidden" data-step="2">
-          <div>
-            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Primary Area of Concern</label>
-            <select class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
-              <option>Late Talker / Language Delay</option>
-              <option>Articulation / Unclear Pronunciation</option>
-              <option>Stuttering & Fluency Tension</option>
-              <option>Autism / Gestalt Language Play</option>
-              <option>Feeding & Texture Aversions</option>
-              <option>Voice Resonance & Cord Therapy</option>
-            </select>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Brief Observations</label>
-            <textarea rows="3" placeholder="Describe the speech sounds, frustration levels, or challenges..." class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]"></textarea>
-          </div>
+        <div class="wizard-step-pane space-y-3" data-step="1">
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Who is seeking therapy?</label>
+          <select class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
+            <option>Toddler (18 Months – 3 Years)</option>
+            <option>Preschooler (3 – 5 Years)</option>
+            <option>School-Age Child (6 – 12 Years)</option>
+            <option>Teen or Adult (13+ Years)</option>
+          </select>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 pt-2">Primary Area of Concern</label>
+          <select class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
+            <option>Late Talking / Vocabulary Delay</option>
+            <option>Unclear Pronunciation / Articulation</option>
+            <option>Stuttering / Speech Blocks</option>
+            <option>Autism &amp; Non-Verbal AAC Support</option>
+          </select>
         </div>
 
-        <!-- Step 3 -->
-        <div class="wizard-step space-y-4 hidden" data-step="3">
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Preferred Date</label>
-              <input type="date" class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
-            </div>
-            <div>
-              <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Preferred Time</label>
-              <select class="w-full px-4 py-3 rounded-xl border border-[#EFE7DE] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C85A32]">
-                <option>Morning (9:00 AM – 12:00 PM)</option>
-                <option>Afternoon (1:00 PM – 4:00 PM)</option>
-                <option>Evening (4:00 PM – 7:00 PM)</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Format</label>
-            <div class="flex gap-4 pt-1">
-              <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="visit_format" checked class="text-[#C85A32]"> In-Clinic Assessment</label>
-              <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="visit_format" class="text-[#C85A32]"> Online Telepractice</label>
-            </div>
-          </div>
+        <div class="wizard-step-pane hidden space-y-3" data-step="2">
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Parent / Guardian Name</label>
+          <input type="text" placeholder="Sarah Jenkins" class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 pt-2">Phone Number</label>
+          <input type="tel" placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
         </div>
 
-        <div class="pt-4 flex items-center justify-between border-t border-[#EFE7DE] dark:border-slate-700">
-          <button type="button" id="wizard-prev-btn" class="btn-outline-warm text-xs py-2.5 px-4 hidden">Previous</button>
-          <button type="button" id="wizard-next-btn" class="btn-dark-pill text-xs py-2.5 px-6 ml-auto">Next Step &rarr;</button>
-          <button type="submit" id="wizard-submit-btn" class="btn-dark-pill text-xs py-2.5 px-6 ml-auto hidden">Confirm Assessment &rarr;</button>
+        <div class="wizard-step-pane hidden space-y-4 text-center py-4" data-step="3">
+          <div class="w-14 h-14 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center mx-auto text-2xl">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-[#111D18] dark:text-white">Thank You! Intake Received.</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Our clinical team will call you within 2 hours to confirm your consultation.
+          </p>
+        </div>
+
+        <div class="flex justify-between items-center pt-4 border-t border-[#F0EBE1] dark:border-slate-800">
+          <button type="button" id="wizard-prev-btn" class="hidden text-xs font-bold text-slate-500 hover:text-black dark:hover:text-white">
+            &larr; Back
+          </button>
+          <button type="button" id="wizard-next-btn" class="ml-auto btn-dark-pill text-xs py-2.5 px-6 font-semibold">
+            Continue &rarr;
+          </button>
         </div>
       </form>
     </div>
