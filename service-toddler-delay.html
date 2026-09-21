@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" dir="ltr">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Late Talker Toddler Speech Therapy | SpeakBloom Speech & Language Center</title>
@@ -36,6 +39,14 @@
     .btn-outline-pill { background-color: #FFFFFF; border: 1px solid #E3DFD5; color: #1E1C1A; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
     .btn-outline-pill:hover { background-color: #FAF7F2; border-color: #C07534; transform: translateY(-1px); }
   </style>
+  <!-- Instant Dark Mode Initialization -->
+  <script>
+    if (localStorage.getItem('speakbloom_theme') === 'dark' || (!localStorage.getItem('speakbloom_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
 <body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
 
@@ -530,7 +541,7 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block font-semibold text-slate-700 dark:text-slate-200 mb-1">Phone Number</label>
-            <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#081D26] outline-none focus:border-[#C07534]">
+            <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#081D26] outline-none focus:border-[#C07534]" inputmode="numeric" oninput="this.value = this.value.replace(/[^\d\s\+\-\(\)]/g, '')" pattern="[\d\s\+\-\(\)]{7,20}">
           </div>
           <div>
             <label class="block font-semibold text-slate-700 dark:text-slate-200 mb-1">Age of Client</label>

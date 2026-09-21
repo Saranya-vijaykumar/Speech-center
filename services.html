@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" dir="ltr">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Clinical Services | SpeakBloom Speech & Language Therapy</title>
@@ -70,6 +73,14 @@
       transform: translateY(-2px);
     }
   </style>
+  <!-- Instant Dark Mode Initialization -->
+  <script>
+    if (localStorage.getItem('speakbloom_theme') === 'dark' || (!localStorage.getItem('speakbloom_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
 <body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
 
@@ -735,7 +746,7 @@
           <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Parent / Guardian Name</label>
           <input type="text" placeholder="Sarah Jenkins" class="w-full px-4 py-3 rounded-xl border border-[#D8D2C2] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
           <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 pt-2">Phone Number</label>
-          <input type="tel" placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-[#D8D2C2] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs">
+          <input type="tel" placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-[#D8D2C2] dark:border-slate-700 bg-white dark:bg-[#06151D] text-xs" inputmode="numeric" oninput="this.value = this.value.replace(/[^\d\s\+\-\(\)]/g, '')" pattern="[\d\s\+\-\(\)]{7,20}">
         </div>
 
         <div class="wizard-step-pane hidden space-y-4 text-center py-4" data-step="3">

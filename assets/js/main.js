@@ -316,11 +316,16 @@ function initAssessmentWizard() {
 
   function updateWizard() {
     stepPanes.forEach(pane => {
-      pane.classList.toggle('hidden', parseInt(pane.dataset.step) !== currentStep);
+      const paneStep = parseInt(pane.dataset.step || '1');
+      if (paneStep === currentStep) {
+        pane.classList.remove('hidden');
+      } else {
+        pane.classList.add('hidden');
+      }
     });
 
     stepIndicators.forEach(ind => {
-      const stepNum = parseInt(ind.dataset.step);
+      const stepNum = parseInt(ind.dataset.step || '1');
       const circle = ind.querySelector('.step-circle');
       if (circle) {
         if (stepNum === currentStep) {
@@ -333,15 +338,22 @@ function initAssessmentWizard() {
       }
     });
 
-    if (prevBtn) prevBtn.classList.toggle('hidden', currentStep === 1 || currentStep === totalSteps);
+    if (prevBtn) {
+      if (currentStep === 1 || currentStep === totalSteps) {
+        prevBtn.classList.add('hidden');
+      } else {
+        prevBtn.classList.remove('hidden');
+      }
+    }
+
     if (nextBtn) {
       if (currentStep === totalSteps) {
         nextBtn.classList.add('hidden');
       } else if (currentStep === totalSteps - 1) {
-        nextBtn.textContent = 'Submit Intake Form';
+        nextBtn.innerHTML = 'Submit Intake Form &rarr;';
         nextBtn.classList.remove('hidden');
       } else {
-        nextBtn.textContent = 'Continue →';
+        nextBtn.innerHTML = 'Continue &rarr;';
         nextBtn.classList.remove('hidden');
       }
     }
@@ -350,11 +362,7 @@ function initAssessmentWizard() {
   if (nextBtn) {
     nextBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      if (currentStep === totalSteps - 1) {
-        // Complete form
-        currentStep = totalSteps;
-        updateWizard();
-      } else if (currentStep < totalSteps) {
+      if (currentStep < totalSteps) {
         currentStep++;
         updateWizard();
       }
@@ -370,6 +378,17 @@ function initAssessmentWizard() {
       }
     });
   }
+
+  // Allow clicking on previous step indicators
+  stepIndicators.forEach(ind => {
+    ind.addEventListener('click', () => {
+      const targetStep = parseInt(ind.dataset.step || '1');
+      if (targetStep < currentStep) {
+        currentStep = targetStep;
+        updateWizard();
+      }
+    });
+  });
 
   updateWizard();
 }
@@ -570,22 +589,10 @@ function initFormHandlers() {
     });
   }
 
-  // Register Form
-  const registerForm = document.querySelector('form[action="register.html"]') || document.getElementById('register-form');
-  if (registerForm) {
-    registerForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const submitBtn = registerForm.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Creating Account...';
-        setTimeout(() => {
-          submitBtn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Account Created! Redirecting to Portal...';
-          submitBtn.className = 'bg-emerald-600 text-white font-bold text-xs py-3.5 rounded-full w-full justify-center flex items-center';
-          setTimeout(() => {
-            window.location.href = 'index.html';
-          }, 1200);
-        }, 1000);
-      }
-    });
-  }
+  // Global Phone Number Sanitizer (Strict Numbers, Space, +, -, ( ) only)
+  document.addEventListener('input', (e) => {
+    if (e.target && (e.target.type === 'tel' || (e.target.name && e.target.name.toLowerCase().includes('phone')) || (e.target.id && e.target.id.toLowerCase().includes('phone')) || (e.target.placeholder && e.target.placeholder.toLowerCase().includes('phone')))) {
+      e.target.value = e.target.value.replace(/[^\d\s\+\-\(\)]/g, '');
+    }
+  });
 }

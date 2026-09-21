@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" dir="ltr">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Clinical Specialists & Speech Pathologists | SpeakBloom Center</title>
@@ -36,6 +39,14 @@
     .btn-outline-pill { background-color: #FFFFFF; border: 1px solid #E3DFD5; color: #1E1C1A; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
     .btn-outline-pill:hover { background-color: #FAF7F2; border-color: #C07534; transform: translateY(-1px); }
   </style>
+  <!-- Instant Dark Mode Initialization -->
+  <script>
+    if (localStorage.getItem('speakbloom_theme') === 'dark' || (!localStorage.getItem('speakbloom_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
 <body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
 
@@ -244,12 +255,11 @@
   <section class="py-16 bg-[#FAF7F2] dark:bg-[#06151D]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-
         <!-- Therapist Card: Dr. Elena Vance, CCC-SLP -->
-        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card" data-category="pediatric">
+        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card h-full" data-category="pediatric">
           
           <!-- Top Section: Centered Image & Badges -->
-          <div class="w-full flex flex-col items-center space-y-4">
+          <div class="w-full flex flex-col items-center space-y-4 flex-1">
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
@@ -262,7 +272,7 @@
             </div>
 
             <!-- Name & Title -->
-            <div class="pt-2 space-y-1">
+            <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
               <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
                 <a href="therapist-single.html?id=elena">Dr. Elena Vance, CCC-SLP</a>
               </h3>
@@ -276,12 +286,14 @@
             </div>
 
             <!-- Bio -->
-            <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
-              Founding clinical director specializing in toddler delay, Gestalt Language Processing (GLP), childhood apraxia, and parent coaching.
-            </p>
+            <div class="min-h-[64px] flex items-center">
+              <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
+                Founding clinical director specializing in toddler delay, Gestalt Language Processing (GLP), childhood apraxia, and parent coaching.
+              </p>
+            </div>
 
             <!-- Specialty Badges -->
-            <div class="flex flex-wrap justify-center gap-1.5 pt-1">
+            <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
               <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Toddler Delay</span>
               <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">GLP Natural Language</span>
               <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Apraxia (PROMPT)</span>
@@ -289,8 +301,8 @@
 
           </div>
 
-          <!-- Action Buttons (Centered) -->
-          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-6">
+          <!-- Action Buttons (Centered & Bottom Aligned) -->
+          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-auto">
             <a href="therapist-single.html?id=elena" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
               <i class="fa-regular fa-user mr-1.5"></i> View Specialist Profile
             </a>
@@ -300,11 +312,12 @@
           </div>
 
         </div>
+
         <!-- Therapist Card: Marcus Vance, M.S., CCC-SLP -->
-        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card" data-category="fluency">
+        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card h-full" data-category="fluency">
           
           <!-- Top Section: Centered Image & Badges -->
-          <div class="w-full flex flex-col items-center space-y-4">
+          <div class="w-full flex flex-col items-center space-y-4 flex-1">
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
@@ -317,7 +330,7 @@
             </div>
 
             <!-- Name & Title -->
-            <div class="pt-2 space-y-1">
+            <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
               <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
                 <a href="therapist-single.html?id=marcus">Marcus Vance, M.S., CCC-SLP</a>
               </h3>
@@ -331,12 +344,14 @@
             </div>
 
             <!-- Bio -->
-            <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
-              Specializing in stuttering modification, smooth phrasing, school-age fluency confidence, and adult conversational ease.
-            </p>
+            <div class="min-h-[64px] flex items-center">
+              <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
+                Specializing in stuttering modification, smooth phrasing, school-age fluency confidence, and adult conversational ease.
+              </p>
+            </div>
 
             <!-- Specialty Badges -->
-            <div class="flex flex-wrap justify-center gap-1.5 pt-1">
+            <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
               <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Stuttering Therapy</span>
               <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Fluency Shaping</span>
               <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Confidence Building</span>
@@ -344,8 +359,8 @@
 
           </div>
 
-          <!-- Action Buttons (Centered) -->
-          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-6">
+          <!-- Action Buttons (Centered & Bottom Aligned) -->
+          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-auto">
             <a href="therapist-single.html?id=marcus" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
               <i class="fa-regular fa-user mr-1.5"></i> View Specialist Profile
             </a>
@@ -355,11 +370,12 @@
           </div>
 
         </div>
+
         <!-- Therapist Card: Maya Al-Mansoor, M.S., CCC-SLP -->
-        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card" data-category="pediatric">
+        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card h-full" data-category="pediatric">
           
           <!-- Top Section: Centered Image & Badges -->
-          <div class="w-full flex flex-col items-center space-y-4">
+          <div class="w-full flex flex-col items-center space-y-4 flex-1">
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
@@ -372,7 +388,7 @@
             </div>
 
             <!-- Name & Title -->
-            <div class="pt-2 space-y-1">
+            <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
               <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
                 <a href="therapist-single.html?id=maya">Maya Al-Mansoor, M.S., CCC-SLP</a>
               </h3>
@@ -382,25 +398,27 @@
 
             <!-- Rating -->
             <div class="text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-[#FAF7F2] dark:bg-[#081D26] px-3 py-1 rounded-full border border-[#E3DFD5] dark:border-slate-700">
-              4.9 ★ (110+ Families)
+              5.0 ★ (120+ Toddlers)
             </div>
 
             <!-- Bio -->
-            <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
-              Passionate about play-based early intervention, parent coaching, first-word discovery, and toddler social communication.
-            </p>
+            <div class="min-h-[64px] flex items-center">
+              <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
+                Expert in play-based late talker intervention, parent-led routines, early gestures, and pre-linguistic babbling milestones.
+              </p>
+            </div>
 
             <!-- Specialty Badges -->
-            <div class="flex flex-wrap justify-center gap-1.5 pt-1">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Early Intervention</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">First Words</span>
+            <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Late Talkers</span>
               <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Parent Coaching</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Early Milestones</span>
             </div>
 
           </div>
 
-          <!-- Action Buttons (Centered) -->
-          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-6">
+          <!-- Action Buttons (Centered & Bottom Aligned) -->
+          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-auto">
             <a href="therapist-single.html?id=maya" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
               <i class="fa-regular fa-user mr-1.5"></i> View Specialist Profile
             </a>
@@ -410,53 +428,56 @@
           </div>
 
         </div>
-        <!-- Therapist Card: Sarah Lin, M.S., CCC-SLP -->
-        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card" data-category="speech">
+
+        <!-- Therapist Card: Dr. Sophia Chen, CCC-SLP, ATP -->
+        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card h-full" data-category="pediatric">
           
           <!-- Top Section: Centered Image & Badges -->
-          <div class="w-full flex flex-col items-center space-y-4">
+          <div class="w-full flex flex-col items-center space-y-4 flex-1">
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
               <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80" alt="Sarah Lin, M.S., CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1594824813581-9c609c1ee91a?auto=format&fit=crop&w=800&q=80" alt="Dr. Sophia Chen, CCC-SLP, ATP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
               <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#081D26] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
-                Oral-Motor Certified
+                AAC Assistive Tech Lead
               </span>
             </div>
 
             <!-- Name & Title -->
-            <div class="pt-2 space-y-1">
+            <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
               <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
-                <a href="therapist-single.html?id=sarah">Sarah Lin, M.S., CCC-SLP</a>
+                <a href="therapist-single.html?id=sophia">Dr. Sophia Chen, CCC-SLP, ATP</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">Articulation & Feeding Specialist</p>
-              <p class="text-[11px] text-slate-400 font-medium">M.S., CCC-SLP • 10+ Yrs Clinical Experience</p>
+              <p class="text-xs font-bold text-[#C07534]">AAC & Assistive Tech Director</p>
+              <p class="text-[11px] text-slate-400 font-medium">Sc.D., CCC-SLP • 11+ Yrs Clinical Experience</p>
             </div>
 
             <!-- Rating -->
             <div class="text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-[#FAF7F2] dark:bg-[#081D26] px-3 py-1 rounded-full border border-[#E3DFD5] dark:border-slate-700">
-              4.9 ★ (125+ Families)
+              4.9 ★ (160+ Non-Verbal Kids)
             </div>
 
             <!-- Bio -->
-            <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
-              Expert in speech sound disorders, lisp correction, childhood clarity development, and oral-motor feeding therapy.
-            </p>
+            <div class="min-h-[64px] flex items-center">
+              <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
+                Dedicated to augmentative and alternative communication (AAC), iPad voice apps, high-tech eye gaze, and sensory communication.
+              </p>
+            </div>
 
             <!-- Specialty Badges -->
-            <div class="flex flex-wrap justify-center gap-1.5 pt-1">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Speech Clarity</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Phonetics</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Oral Motor Feeding</span>
+            <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">AAC Systems</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Autism Support</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Gestalt Modeling</span>
             </div>
 
           </div>
 
-          <!-- Action Buttons (Centered) -->
-          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-6">
-            <a href="therapist-single.html?id=sarah" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
+          <!-- Action Buttons (Centered & Bottom Aligned) -->
+          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-auto">
+            <a href="therapist-single.html?id=sophia" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
               <i class="fa-regular fa-user mr-1.5"></i> View Specialist Profile
             </a>
             <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs font-semibold py-2.5 justify-center shadow-sm">
@@ -465,52 +486,55 @@
           </div>
 
         </div>
-        <!-- Therapist Card: David Chen, M.S., CCC-SLP -->
-        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card" data-category="pediatric">
+
+        <!-- Therapist Card: Dr. David Miller, CCC-SLP, BC-ANCDS -->
+        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card h-full" data-category="neuro">
           
           <!-- Top Section: Centered Image & Badges -->
-          <div class="w-full flex flex-col items-center space-y-4">
+          <div class="w-full flex flex-col items-center space-y-4 flex-1">
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
               <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="David Chen, M.S., CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. David Miller, CCC-SLP, BC-ANCDS" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
               <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#081D26] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
-                TouchChat / LAMP Expert
+                Neuro Rehab Board Certified
               </span>
             </div>
 
             <!-- Name & Title -->
-            <div class="pt-2 space-y-1">
+            <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
               <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
-                <a href="therapist-single.html?id=david">David Chen, M.S., CCC-SLP</a>
+                <a href="therapist-single.html?id=david">Dr. David Miller, CCC-SLP, BC-ANCDS</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">Autism & High-Tech AAC Specialist</p>
-              <p class="text-[11px] text-slate-400 font-medium">M.S., CCC-SLP • 8+ Yrs Clinical Experience</p>
+              <p class="text-xs font-bold text-[#C07534]">Lead Neuro-Speech Pathologist</p>
+              <p class="text-[11px] text-slate-400 font-medium">Ph.D., CCC-SLP • 18+ Yrs Clinical Experience</p>
             </div>
 
             <!-- Rating -->
             <div class="text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-[#FAF7F2] dark:bg-[#081D26] px-3 py-1 rounded-full border border-[#E3DFD5] dark:border-slate-700">
-              5.0 ★ (95+ Families)
+              5.0 ★ (210+ Adult Patients)
             </div>
 
             <!-- Bio -->
-            <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
-              Dedicated to empowering non-speaking autistic individuals with high-tech AAC tablet communication devices and sensory-rich play.
-            </p>
+            <div class="min-h-[64px] flex items-center">
+              <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
+                Clinical expert in adult stroke rehabilitation, expressive aphasia recovery, primary progressive aphasia, and dysarthria.
+              </p>
+            </div>
 
             <!-- Specialty Badges -->
-            <div class="flex flex-wrap justify-center gap-1.5 pt-1">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">High-Tech AAC</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Autism Play</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Non-Speaking Comm</span>
+            <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Aphasia Therapy</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Stroke Recovery</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Cognitive Rehab</span>
             </div>
 
           </div>
 
-          <!-- Action Buttons (Centered) -->
-          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-6">
+          <!-- Action Buttons (Centered & Bottom Aligned) -->
+          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-auto">
             <a href="therapist-single.html?id=david" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
               <i class="fa-regular fa-user mr-1.5"></i> View Specialist Profile
             </a>
@@ -520,53 +544,56 @@
           </div>
 
         </div>
-        <!-- Therapist Card: Dr. Arthur Sterling, Ph.D., CCC-SLP -->
-        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card" data-category="neuro">
+
+        <!-- Therapist Card: Dr. Priya Patel, CCC-SLP -->
+        <div class="therapist-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E3DFD5] dark:border-slate-700 p-8 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center justify-between interactive-card h-full" data-category="speech">
           
           <!-- Top Section: Centered Image & Badges -->
-          <div class="w-full flex flex-col items-center space-y-4">
+          <div class="w-full flex flex-col items-center space-y-4 flex-1">
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
               <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" alt="Dr. Arthur Sterling, Ph.D., CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Dr. Priya Patel, CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
               <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#081D26] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
-                Neuroplasticity Fellow
+                Phonology Specialist
               </span>
             </div>
 
             <!-- Name & Title -->
-            <div class="pt-2 space-y-1">
+            <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
               <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
-                <a href="therapist-single.html?id=arthur">Dr. Arthur Sterling, Ph.D., CCC-SLP</a>
+                <a href="therapist-single.html?id=priya">Dr. Priya Patel, CCC-SLP</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">Adult Neuro & Stroke Rehabilitation Director</p>
-              <p class="text-[11px] text-slate-400 font-medium">Ph.D., CCC-SLP • 18+ Yrs Clinical Experience</p>
+              <p class="text-xs font-bold text-[#C07534]">Phonetic Articulation Lead</p>
+              <p class="text-[11px] text-slate-400 font-medium">Ph.D., CCC-SLP • 10+ Yrs Clinical Experience</p>
             </div>
 
             <!-- Rating -->
             <div class="text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-[#FAF7F2] dark:bg-[#081D26] px-3 py-1 rounded-full border border-[#E3DFD5] dark:border-slate-700">
-              5.0 ★ (160+ Adults)
+              4.9 ★ (155+ Children)
             </div>
 
             <!-- Bio -->
-            <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
-              Expert in post-stroke language recovery, aphasia neuroplasticity, cognitive-communication rebuild, and dysphagia rehabilitation.
-            </p>
+            <div class="min-h-[64px] flex items-center">
+              <p class="text-xs text-[#6B6560] dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-normal">
+                Specializing in speech sound disorders, phonetic placement, childhood lisps, and stubborn /r/, /s/, and /l/ distortions.
+              </p>
+            </div>
 
             <!-- Specialty Badges -->
-            <div class="flex flex-wrap justify-center gap-1.5 pt-1">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Stroke Recovery</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Aphasia Rehab</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Dysphagia Care</span>
+            <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Articulation</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Lisp Correction</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FAF7F2] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">/r/ Sound Mastery</span>
             </div>
 
           </div>
 
-          <!-- Action Buttons (Centered) -->
-          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-6">
-            <a href="therapist-single.html?id=arthur" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
+          <!-- Action Buttons (Centered & Bottom Aligned) -->
+          <div class="w-full pt-6 space-y-2 border-t border-[#E3DFD5] dark:border-slate-800 mt-auto">
+            <a href="therapist-single.html?id=priya" class="w-full btn-outline-pill text-xs font-semibold py-2.5 justify-center">
               <i class="fa-regular fa-user mr-1.5"></i> View Specialist Profile
             </a>
             <button data-open-modal="assessment-wizard-modal" class="w-full btn-dark-pill text-xs font-semibold py-2.5 justify-center shadow-sm">
@@ -652,7 +679,7 @@
           <div class="grid grid-cols-2 gap-3">
             <div>
               <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Phone Number *</label>
-              <input type="tel" required placeholder="+1 (800) 555-0199" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C07534]">
+              <input type="tel" required placeholder="+1 (800) 555-0199" class="w-full px-4 py-3 rounded-xl border border-[#E3DFD5] dark:border-slate-700 bg-[#FAF7F2] dark:bg-[#12221A] outline-none focus:ring-2 focus:ring-[#C07534]" inputmode="numeric" oninput="this.value = this.value.replace(/[^\d\s\+\-\(\)]/g, '')" pattern="[\d\s\+\-\(\)]{7,20}">
             </div>
             <div>
               <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Child Age / Grade</label>

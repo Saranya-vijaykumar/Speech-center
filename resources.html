@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" dir="ltr">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parent Resources & Speech Printables | SpeakBloom Speech & Language Center</title>
@@ -28,6 +31,14 @@
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Instant Dark Mode Initialization -->
+  <script>
+    if (localStorage.getItem('speakbloom_theme') === 'dark' || (!localStorage.getItem('speakbloom_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
 <body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
 
@@ -221,9 +232,14 @@
       </p>
 
       <!-- Live Search Bar -->
-      <div class="max-w-xl mx-auto relative pt-4">
-        <input type="text" id="resource-search" placeholder="Search guides, printables, sound cues (e.g. toddler, stuttering, /r/ sound)..." class="w-full px-5 py-4 pl-12 rounded-full border border-[#E2EBF0] dark:border-slate-700 bg-white dark:bg-[#0D222E] shadow-md outline-none focus:ring-2 focus:ring-[#FF7A59] text-xs sm:text-sm">
-        <i class="fa-solid fa-magnifying-glass absolute left-4.5 top-8 -translate-y-1/2 text-slate-400"></i>
+      <div class="max-w-xl mx-auto relative pt-4 flex items-center gap-2">
+        <div class="relative flex-1">
+          <input type="text" id="resource-search" placeholder="Search guides, printables, sound cues (e.g. toddler, stuttering, /r/ sound)..." class="w-full px-5 py-4 pl-12 rounded-full border border-[#E2EBF0] dark:border-slate-700 bg-white dark:bg-[#0D222E] shadow-md outline-none focus:ring-2 focus:ring-[#FF7A59] text-xs sm:text-sm text-slate-800 dark:text-white">
+          <i class="fa-solid fa-magnifying-glass absolute left-4.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+        </div>
+        <button id="resource-search-btn" class="btn-peach text-xs font-bold py-3.5 px-6 shadow-md shrink-0">
+          Search
+        </button>
       </div>
     </div>
   </section>
@@ -236,9 +252,9 @@
       <div>
         <h2 class="text-2xl font-bold font-heading text-[#0A4D68] dark:text-white mb-6">Free Downloadable Parent Guides &amp; Toolkits</h2>
         
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="resources-grid-container">
           
-          <div class="bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between interactive-card">
+          <div class="resource-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between interactive-card" data-title="Daily Speech Sound Cues: /s/, /r/, and /l/ Articulation" data-keywords="articulation speech sounds s r l phonetics cards">
             <div>
               <div class="h-44 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Articulation Flashcard Guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy">
@@ -250,13 +266,13 @@
               </div>
             </div>
             <div class="p-5 pt-0">
-              <a href="blog-details.html?guide=SpeakBloom-Sound-Cues" class="w-full btn-outline-warm text-xs justify-center font-bold py-2.5">
-                <i class="fa-solid fa-file-arrow-down"></i> Download Free PDF
-              </a>
+              <button onclick="downloadResourcePDF('Daily-Speech-Sound-Cues-Articulation.pdf')" class="w-full btn-outline-warm text-xs justify-center font-bold py-2.5 cursor-pointer">
+                <i class="fa-solid fa-file-arrow-down mr-1"></i> Download Free PDF
+              </button>
             </div>
           </div>
 
-          <div class="bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between interactive-card">
+          <div class="resource-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between interactive-card" data-title="Comprehensive 0–36 Month Milestone Screener" data-keywords="milestone toddler infant babbling 0-3 years checklist screening">
             <div>
               <div class="h-44 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Toddler Milestone Checklist" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy">
@@ -268,13 +284,13 @@
               </div>
             </div>
             <div class="p-5 pt-0">
-              <a href="blog-details.html?guide=SpeakBloom-Milestone-Screener" class="w-full btn-outline-warm text-xs justify-center font-bold py-2.5">
-                <i class="fa-solid fa-file-arrow-down"></i> Download Free PDF
-              </a>
+              <button onclick="downloadResourcePDF('SpeakBloom-0-36-Month-Milestone-Screener.pdf')" class="w-full btn-outline-warm text-xs justify-center font-bold py-2.5 cursor-pointer">
+                <i class="fa-solid fa-file-arrow-down mr-1"></i> Download Free PDF
+              </button>
             </div>
           </div>
 
-          <div class="bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between interactive-card">
+          <div class="resource-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between interactive-card" data-title="AAC At Home: A Parent's Beginner Guide to Modeling" data-keywords="aac autism non-verbal tablet proloquo touchchat modeling">
             <div>
               <div class="h-44 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="AAC Home Starter Guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy">
@@ -286,13 +302,13 @@
               </div>
             </div>
             <div class="p-5 pt-0">
-              <a href="blog-details.html?guide=SpeakBloom-AAC-Modeling" class="w-full btn-outline-warm text-xs justify-center font-bold py-2.5">
-                <i class="fa-solid fa-file-arrow-down"></i> Download Free PDF
-              </a>
+              <button onclick="downloadResourcePDF('SpeakBloom-AAC-Modeling-Parent-Guide.pdf')" class="w-full btn-outline-warm text-xs justify-center font-bold py-2.5 cursor-pointer">
+                <i class="fa-solid fa-file-arrow-down mr-1"></i> Download Free PDF
+              </button>
             </div>
           </div>
 
-          <div class="bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between interactive-card">
+          <div class="resource-card bg-white dark:bg-[#0D222E] rounded-3xl border border-[#E2EBF0] dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between interactive-card" data-title="15 Sensory Bin Games for Language Expansion" data-keywords="sensory play games activities vocabulary late talker">
             <div>
               <div class="h-44 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=800&q=80" alt="Sensory Play and Language" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy">
@@ -304,9 +320,9 @@
               </div>
             </div>
             <div class="p-5 pt-0">
-              <a href="blog-details.html?guide=SpeakBloom-Sensory-Bin-Games" class="w-full btn-outline-warm text-xs justify-center font-bold py-2.5">
-                <i class="fa-solid fa-file-arrow-down"></i> Download Free PDF
-              </a>
+              <button onclick="downloadResourcePDF('SpeakBloom-15-Sensory-Bin-Games.pdf')" class="w-full btn-outline-warm text-xs justify-center font-bold py-2.5 cursor-pointer">
+                <i class="fa-solid fa-file-arrow-down mr-1"></i> Download Free PDF
+              </button>
             </div>
           </div>
 
@@ -383,6 +399,66 @@
       osc.start();
       osc.stop(audioCtx.currentTime + 0.4);
     }
+
+    function downloadResourcePDF(filename) {
+      // Create sample downloadable file blob
+      const guideTitle = filename.replace('.pdf', '').replace(/-/g, ' ');
+      const content = `%PDF-1.4\n1 0 obj\n<< /Title (${guideTitle}) /Author (SpeakBloom Center) >>\nendobj\n%%EOF\n\nSpeakBloom Speech & Language Center\nOfficial Clinical Resource: ${guideTitle}\nLicensed for Parent and Caregiver Use.`;
+      const blob = new Blob([content], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      // Show toast notification
+      showToast('📥 Download Started: ' + guideTitle);
+    }
+
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.className = 'fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#0A4D68] text-white text-xs sm:text-sm font-bold px-6 py-3.5 rounded-full shadow-2xl z-50 flex items-center gap-2 animate-fadeIn';
+      toast.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400"></i> ' + message;
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.remove();
+      }, 3000);
+    }
+
+    // Resource Live Search
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('resource-search');
+      const searchBtn = document.getElementById('resource-search-btn');
+      const cards = document.querySelectorAll('.resource-card');
+
+      function filterResources() {
+        if (!searchInput) return;
+        const q = searchInput.value.toLowerCase().trim();
+        cards.forEach(card => {
+          const title = (card.getAttribute('data-title') || '').toLowerCase();
+          const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+          const text = card.textContent.toLowerCase();
+          if (!q || title.includes(q) || keywords.includes(q) || text.includes(q)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterResources);
+        searchInput.addEventListener('keyup', (e) => {
+          if (e.key === 'Enter') filterResources();
+        });
+      }
+      if (searchBtn) {
+        searchBtn.addEventListener('click', filterResources);
+      }
+    });
   </script>
   
   <!-- Footer -->
@@ -468,7 +544,7 @@
           <div class="grid grid-cols-2 gap-3">
             <div>
               <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Phone Number *</label>
-              <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] outline-none focus:ring-2 focus:ring-[#FF7A59]">
+              <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-[#E2EBF0] dark:border-slate-700 bg-[#F8FAFB] dark:bg-[#081D26] outline-none focus:ring-2 focus:ring-[#FF7A59]" inputmode="numeric" oninput="this.value = this.value.replace(/[^\d\s\+\-\(\)]/g, '')" pattern="[\d\s\+\-\(\)]{7,20}">
             </div>
             <div>
               <label class="block font-bold text-slate-700 dark:text-slate-200 mb-1">Child Age / Grade</label>
