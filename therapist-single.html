@@ -462,8 +462,8 @@
   </div>
 
   <script src="assets/js/main.js"></script>
-  <script>
-    // Dynamic Clinician Loader
+    <script>
+    // Dynamic Clinician Loader with All 6 Full Profiles
     const cliniciansData = {
       elena: {
         name: "Dr. Elena Vance, CCC-SLP",
@@ -488,11 +488,11 @@
       },
       marcus: {
         name: "Marcus Vance, M.S., CCC-SLP",
-        title: "M.S., CCC-SLP • Fluency & Stuttering Specialist • 12+ Yrs Clinical Experience",
+        title: "M.S., CCC-SLP • Fluency Coach & Stuttering Specialist • 12+ Yrs Clinical Experience",
         badge: "Fluency Board Certified",
         rating: "4.9 ★ (140+ Patients Evaluated)",
         image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80",
-        bio: "Marcus Vance specializes in holistic stuttering therapy, fluency modification, and communication confidence for children, teens, and adults. His evidence-based approach combines gentle onset techniques with cognitive-behavioral fluency coaching.",
+        bio: "Marcus Vance specializes in holistic stuttering therapy, fluency modification, and communication confidence for children, teens, and adults. His evidence-based approach integrates breathing regulation, speech pacing, desensitization, and conversational assertiveness coaching.",
         tags: ["Stuttering Therapy", "Fluency Shaping", "Confidence Building"],
         education: [
           "M.S. in Speech-Language Pathology – Boston University",
@@ -509,12 +509,12 @@
       },
       maya: {
         name: "Maya Al-Mansoor, M.S., CCC-SLP",
-        title: "M.S., CCC-SLP • Early Intervention & Toddler Specialist • 9+ Yrs Clinical Experience",
+        title: "M.S., CCC-SLP • Early Toddler Language Specialist • 9+ Yrs Clinical Experience",
         badge: "Hanen Certified",
-        rating: "4.9 ★ (110+ Families Evaluated)",
+        rating: "5.0 ★ (120+ Toddlers Evaluated)",
         image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
         bio: "Maya Al-Mansoor is dedicated to play-based early intervention for late-talking toddlers and preschoolers. She empowers families through structured floor-time play, parent coaching, and natural language modeling.",
-        tags: ["Early Intervention", "First Words", "Parent Coaching"],
+        tags: ["Late Talkers", "Parent Coaching", "Early Milestones"],
         education: [
           "M.S. in Communication Disorders – Northwestern University",
           "Certified Hanen: It Takes Two to Talk & More Than Words",
@@ -528,73 +528,77 @@
           "Expressive & Receptive Language Delay"
         ]
       },
-      sarah: {
-        name: "Sarah Lin, M.S., CCC-SLP",
-        title: "M.S., CCC-SLP • Articulation & Pediatric Feeding Specialist • 10+ Yrs Clinical Experience",
-        badge: "Oral-Motor Certified",
-        rating: "4.9 ★ (125+ Families Evaluated)",
-        image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
-        bio: "Sarah Lin brings over a decade of expertise in treating speech sound disorders, severe phonological delays, lisp correction, and pediatric sensory feeding challenges. She makes speech sound drills fun and engaging through multisensory games.",
-        tags: ["Speech Clarity", "Phonetics", "Oral Motor Feeding"],
+      sophia: {
+        name: "Dr. Sophia Chen, CCC-SLP, ATP",
+        title: "Sc.D., CCC-SLP • AAC & Assistive Tech Director • 11+ Yrs Clinical Experience",
+        badge: "AAC Assistive Tech Lead",
+        rating: "4.9 ★ (160+ Non-Verbal Kids Evaluated)",
+        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80",
+        bio: "Dr. Sophia Chen is a specialist in Augmentative and Alternative Communication (AAC), assistive technology, and multi-modal language access for non-speaking children and autistic individuals. She designs custom speech tablet systems and school integration plans.",
+        tags: ["AAC Systems", "Autism Support", "Gestalt Modeling"],
         education: [
-          "M.S. in Speech Pathology – NYU Steinhardt",
-          "Certified Beckman Oral Motor Protocol Provider",
+          "Sc.D. in Assistive Technology & Speech Sciences – University of Washington",
+          "Assistive Technology Professional (ATP) Certification",
           "ASHA Certificate of Clinical Competence (CCC-SLP)",
-          "SOS Approach to Feeding Certified Clinician"
+          "TouchChat, LAMP Words for Life & Proloquo2Go Certified Evaluator"
         ],
         specialties: [
-          "Articulation Sound Errors (R, S, L, TH)",
-          "Phonological Processing Disorders & Contrast Therapy",
-          "Pediatric Sensory Feeding & Food Texture Aversions",
-          "Orofacial Myofunctional Therapy (OMT)"
+          "High-Tech AAC Device Trials & Tablet Customization",
+          "Autism Spectrum Communication & Gestalt Language Support",
+          "Eye-Gaze & Switch Access Evaluation",
+          "Classroom Communication Board Integration"
         ]
       },
       david: {
-        name: "David Chen, M.S., CCC-SLP",
-        title: "M.S., CCC-SLP • AAC & Neurodiversity Specialist • 8+ Yrs Clinical Experience",
-        badge: "TouchChat / LAMP Expert",
-        rating: "5.0 ★ (95+ Families Evaluated)",
-        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80",
-        bio: "David Chen is a passionate advocate for neurodiversity-affirming communication. He specializes in high-tech AAC device customization, non-speaking autism support, and teaching multi-modal language access in schools and home environments.",
-        tags: ["High-Tech AAC", "Autism Play", "Non-Speaking Comm"],
+        name: "Dr. David Miller, CCC-SLP, BC-ANCDS",
+        title: "Ph.D., CCC-SLP • Lead Neuro-Speech Pathologist • 18+ Yrs Clinical Experience",
+        badge: "Neuro Rehab Board Certified",
+        rating: "5.0 ★ (210+ Adult Patients Evaluated)",
+        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
+        bio: "Dr. David Miller is a board-certified clinical specialist in neurogenic communication disorders. He has over 18 years of clinical experience in hospital, outpatient, and clinical rehabilitation settings, specializing in post-stroke aphasia recovery, traumatic brain injury (TBI) cognitive communication, and dysarthria.",
+        tags: ["Aphasia Therapy", "Stroke Recovery", "Cognitive Rehab"],
         education: [
-          "M.S. in Communication Sciences – University of Washington",
-          "LAMP Words for Life & TouchChat Certified Specialist",
+          "Ph.D. in Neurogenic Speech Pathology – Johns Hopkins University",
+          "Board Certified Specialist – Academy of Neurologic Communication Disorders and Sciences (BC-ANCDS)",
           "ASHA Certificate of Clinical Competence (CCC-SLP)",
-          "Neurodiversity-Affirming SLP Network Member"
+          "Lee Silverman Voice Treatment (LSVT LOUD) Certified"
         ],
         specialties: [
-          "High-Tech AAC System Evaluation & Customization",
-          "Autism Spectrum Communication & Gestalt Modeling",
-          "Multi-Modal Communication (Symbols, Signs, Tech)",
-          "School-Based AAC Integration & Classroom Coaching"
+          "Post-Stroke Expressive & Receptive Aphasia Therapy",
+          "Cognitive-Linguistic Rehabilitation (Memory, Executive Function)",
+          "Dysarthria & Motor Speech Voice Clarity",
+          "Primary Progressive Aphasia (PPA) Communication Preservation"
         ]
       },
-      arthur: {
-        name: "Dr. Arthur Sterling, Ph.D., CCC-SLP",
-        title: "Ph.D., CCC-SLP • Neurogenic Speech & Swallowing Director • 18+ Yrs Clinical Experience",
-        badge: "Neuroplasticity Fellow",
-        rating: "5.0 ★ (160+ Adults Evaluated)",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
-        bio: "Dr. Arthur Sterling has led neurogenic language and swallowing rehabilitation programs for nearly two decades. He specializes in post-stroke aphasia recovery, traumatic brain injury (TBI) cognitive communication, and adult dysphagia treatment.",
-        tags: ["Stroke Recovery", "Aphasia Rehab", "Dysphagia Care"],
+      priya: {
+        name: "Dr. Priya Patel, CCC-SLP",
+        title: "Ph.D., CCC-SLP • Phonetic Articulation Lead • 10+ Yrs Clinical Experience",
+        badge: "Phonology Specialist",
+        rating: "4.9 ★ (155+ Children Evaluated)",
+        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+        bio: "Dr. Priya Patel is a dedicated speech sound specialist focusing on pediatric articulation delays, childhood phonological disorders, lisp correction, and stubborn /r/, /s/, and /l/ distortions. She incorporates tactile biofeedback and gamified phonetic drills to make articulation progress rapid and fun.",
+        tags: ["Articulation", "Lisp Correction", "/r/ Sound Mastery"],
         education: [
-          "Ph.D. in Neurobiology & Speech Pathology – Johns Hopkins University",
-          "M.S. in Medical Speech Pathology – Massachusetts General Hospital IHP",
+          "Ph.D. in Phonetics & Speech Science – NYU Steinhardt",
+          "M.S. in Speech-Language Pathology – Columbia University",
           "ASHA Certificate of Clinical Competence (CCC-SLP)",
-          "Board Certified Specialist in Swallowing & Swallowing Disorders (BCS-S)"
+          "Speech-EZ Apraxia & Phonetic Placement Certified"
         ],
         specialties: [
-          "Post-Stroke Aphasia & Intensive Language Action Therapy",
-          "Dysarthria & Voice Projection Rehabilitation",
-          "Dysphagia Assessment & Swallowing Muscle Re-education",
-          "Cognitive-Communication Rebuild after TBI / Concussion"
+          "Comprehensive Speech Sound Articulation Assessment",
+          "Frontal & Lateral Lisp Correction",
+          "Vocalic & Consonantal /r/ Sound Remediation",
+          "Childhood Phonological Contrastive Therapy"
         ]
       }
     };
 
+    // Support aliases
+    cliniciansData.sarah = cliniciansData.sophia;
+    cliniciansData.arthur = cliniciansData.david;
+
     const urlParams = new URLSearchParams(window.location.search);
-    const clinicianId = urlParams.get('id') || 'elena';
+    const clinicianId = (urlParams.get('id') || 'elena').toLowerCase();
     const c = cliniciansData[clinicianId] || cliniciansData['elena'];
 
     if (c) {
