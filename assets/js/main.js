@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initActiveNavLinks();
   initRTL();
   initMobileMenu();
   initScrollReveal();
@@ -593,6 +594,30 @@ function initFormHandlers() {
   document.addEventListener('input', (e) => {
     if (e.target && (e.target.type === 'tel' || (e.target.name && e.target.name.toLowerCase().includes('phone')) || (e.target.id && e.target.id.toLowerCase().includes('phone')) || (e.target.placeholder && e.target.placeholder.toLowerCase().includes('phone')))) {
       e.target.value = e.target.value.replace(/[^\d\s\+\-\(\)]/g, '');
+    }
+  });
+}
+
+
+/* ==========================================================================
+   Active Navigation Link Detection
+   ========================================================================== */
+function initActiveNavLinks() {
+  const currentPath = window.location.pathname;
+  let currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+  if (!currentPage || currentPage === '' || currentPage === '/') {
+    currentPage = 'index.html';
+  }
+  currentPage = currentPage.split('?')[0].split('#')[0];
+
+  const navLinks = document.querySelectorAll('header nav a, #mobile-drawer nav a');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const pageHref = href.split('?')[0].split('#')[0];
+    if (pageHref === currentPage || (currentPage === 'index.html' && (pageHref === './' || pageHref === '/'))) {
+      link.classList.add('nav-link-active');
+      link.classList.remove('text-[#5A5550]', 'text-slate-600', 'dark:text-slate-300');
     }
   });
 }
