@@ -441,7 +441,7 @@ img {
 [alt*="Dr. David Miller"],
 [alt*="Dr. Priya Patel"] {
   object-fit: cover !important;
-  object-position: center 20% !important;
+  object-position: center center !important;
 }
 
 .aspect-\[4\/3\] img,
