@@ -359,6 +359,46 @@ h1, h2, h3, h4, h5, .font-heading {
 [dir="rtl"] .ml-3 { margin-right: 0.75rem !important; }
 [dir="rtl"] .ml-4 { margin-right: 1rem !important; }
 
+/* RTL Header & Navigation Alignment Fixes */
+[dir="rtl"] header nav {
+  display: flex;
+  flex-direction: row;
+}
+
+[dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]),
+[dir="rtl"] .space-x-1\.5 > :not([hidden]) ~ :not([hidden]),
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]),
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]),
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]),
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]),
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]) { margin-right: 0.25rem !important; }
+[dir="rtl"] .space-x-1\.5 > :not([hidden]) ~ :not([hidden]) { margin-right: 0.375rem !important; }
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-right: 0.5rem !important; }
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-right: 0.75rem !important; }
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) { margin-right: 1rem !important; }
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-right: 1.5rem !important; }
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) { margin-right: 2rem !important; }
+
+/* Header Dropdowns in RTL */
+[dir="rtl"] header .absolute.left-0 {
+  left: auto !important;
+  right: 0 !important;
+  text-align: right !important;
+}
+
+/* Header Utilities Container Alignment in RTL */
+[dir="rtl"] header .flex.items-center.justify-between {
+  flex-direction: row !important;
+}
+
+[dir="rtl"] header .space-x-3 {
+  margin-left: 0 !important;
+}
+
 /* RTL Floating Controls */
 [dir="rtl"] #back-to-top-btn {
   right: auto;
@@ -367,8 +407,18 @@ h1, h2, h3, h4, h5, .font-heading {
 
 /* RTL Mobile Navigation Drawer */
 [dir="rtl"] #mobile-drawer {
-  right: auto;
-  left: 0;
+  right: auto !important;
+  left: 0 !important;
+  border-left-width: 0 !important;
+  border-right-width: 1px !important;
+}
+
+[dir="rtl"] #mobile-drawer.translate-x-full {
+  transform: translateX(-100%) !important;
+}
+
+[dir="rtl"] #mobile-drawer:not(.translate-x-full) {
+  transform: translateX(0) !important;
 }
 
 /* Responsive Image Containers & Alignment Stability */
