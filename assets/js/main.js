@@ -5,7 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
-  initActiveNavLinks();
   initRTL();
   initMobileMenu();
   initScrollReveal();
@@ -19,33 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initFormHandlers();
 });
-
-/* ==========================================================================
-   Active Navigation Link Detection
-   ========================================================================== */
-function initActiveNavLinks() {
-  const currentPath = window.location.pathname;
-  let currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-  if (!currentPage || currentPage === '' || currentPage === '/') {
-    currentPage = 'index.html';
-  }
-
-  // Handle query strings / hash
-  currentPage = currentPage.split('?')[0].split('#')[0];
-
-  const navLinks = document.querySelectorAll('header nav a, #mobile-drawer a');
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href) return;
-    const pageHref = href.split('?')[0].split('#')[0];
-    
-    // Direct match or home match
-    if (pageHref === currentPage || (currentPage === 'index.html' && (pageHref === './' || pageHref === '/'))) {
-      link.classList.add('nav-link-active');
-      link.classList.remove('text-slate-600', 'dark:text-slate-300', 'text-[#5A5550]');
-    }
-  });
-}
 
 /* ==========================================================================
    1. Theme Toggle (Dark / Light Mode)
@@ -613,25 +585,6 @@ function initFormHandlers() {
             window.location.href = 'index.html';
           }, 1200);
         }, 1000);
-      }
-    });
-  }
-
-  // Footer Newsletter Form
-  const footerNewsForm = document.getElementById('footer-newsletter-form');
-  if (footerNewsForm) {
-    footerNewsForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emailInput = document.getElementById('footer-newsletter-email');
-      const submitBtn = footerNewsForm.querySelector('button[type="submit"]');
-      if (emailInput && emailInput.value) {
-        if (submitBtn) {
-          submitBtn.innerHTML = '<i class="fa-solid fa-check mr-1.5"></i> Subscribed!';
-          submitBtn.className = 'bg-emerald-600 text-white text-xs font-bold px-6 py-3.5 rounded-full whitespace-nowrap shadow-lg flex items-center justify-center';
-          submitBtn.disabled = true;
-        }
-        emailInput.value = '';
-        emailInput.placeholder = '✓ Subscribed successfully! Check inbox soon.';
       }
     });
   }

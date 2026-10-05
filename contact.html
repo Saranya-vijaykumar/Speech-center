@@ -1,18 +1,168 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
 <head>
-    <!-- MASTER MOBILE NAVIGATION DRAWER -->
-    <!-- MASTER MOBILE NAVIGATION DRAWER -->
-  <div id="mobile-backdrop" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230A4D68'/><path d='M30 65 C30 45 45 35 60 30 C55 45 45 55 30 65 Z' fill='%23FF7A59'/><path d='M45 65 C55 50 65 45 75 40 C72 52 65 60 45 65 Z' fill='%2368D391'/></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Schedule Clinical Intake Assessment | SpeakBloom Speech & Language Center</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            terracotta: { 50: '#FDF0E6', 100: '#FBE8D8', 500: '#C85A32', 600: '#B04B26' },
+            forest: { 800: '#1E3D2F', 900: '#152C22' },
+            sage: { 50: '#F4F9F5', 100: '#EBF4EE', 200: '#D8EADF', 500: '#2D5A43' },
+            cream: { 50: '#FAF7F2', 100: '#FAF4ED', 200: '#EFE7DE' }
+          },
+          fontFamily: {
+            heading: ['Fraunces', 'Georgia', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            handwriting: ['Caveat', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Instant Dark Mode Initialization -->
+  <script>
+    if (localStorage.getItem('speakbloom_theme') === 'dark' || (!localStorage.getItem('speakbloom_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
+<body class="bg-[#F7F4EE] text-[#1E1C1A] dark:bg-[#06151D] dark:text-slate-200 antialiased selection:bg-[#111D18] selection:text-white">
+
+  <!-- =========================================================================
+       TOP NAVIGATION BAR (Standardized Home 1 Theme)
+       ========================================================================= -->
+  <!-- =========================================================================
+       MASTER SINGLE TOP NAVIGATION BAR (All Pages Linked Cleanly)
+       ========================================================================= -->
+  <!-- =========================================================================
+       MASTER SINGLE TOP NAVIGATION BAR (All Pages Linked Cleanly)
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-[#F7F4EE]/95 dark:bg-[#06151D]/95 backdrop-blur-md border-b border-[#EFECE4] dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group shrink-0">
+          <div class="w-8 h-8 rounded-full bg-[#111D18] dark:bg-white text-white dark:text-[#111D18] flex items-center justify-center text-xs shadow-sm">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <span class="text-xl sm:text-2xl font-serif font-semibold text-[#1E1C1A] dark:text-white tracking-tight">SpeakBloom</span>
+        </a>
+
+        <!-- Desktop Navigation Links with Dropdowns -->
+        <nav class="hidden xl:flex items-center space-x-6 text-xs font-semibold text-[#5A5550] dark:text-slate-300">
+          
+          <!-- Home Dropdown -->
+          <div class="relative group">
+            <a href="index.html" class="flex items-center gap-1.5 py-2 hover:text-[#111D18] dark:hover:text-white transition">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
+            </a>
+            <div class="absolute top-full left-0 w-52 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
+              <a href="index.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] hover:text-[#111D18] dark:hover:text-white transition">Main Clinic Home</a>
+              <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] hover:text-[#111D18] dark:hover:text-white transition">Pediatric Clinic</a>
+            </div>
+          </div>
+
+          <!-- About Us -->
+          <a href="about.html" class="hover:text-[#111D18] dark:hover:text-white transition py-2">About Us</a>
+
+          <!-- Services Direct Link -->
+          <a href="services.html" class="hover:text-[#111D18] dark:hover:text-white transition py-2">Services</a>
+
+          <!-- Therapists Direct Link -->
+          <a href="therapists.html" class="hover:text-[#111D18] dark:hover:text-white transition py-2">Therapists</a>
+
+          <!-- Milestones Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1.5 py-2 hover:text-[#111D18] dark:hover:text-white transition">
+              <span>Milestones</span>
+              <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
+            </button>
+            <div class="absolute top-full left-0 w-64 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
+              <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#A8A199] border-b border-[#EFECE4] dark:border-slate-800 mb-1">Developmental Guides</div>
+              <a href="milestone-early-communication.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">0–12 Months Early Comm</a>
+              <a href="milestone-language-development.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">1–3 Years Toddler Words</a>
+              <a href="milestone-school-age-support.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">4–11 Years School Age</a>
+              <a href="milestone-teens-and-adults.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">12+ Years Teens &amp; Adults</a>
+            </div>
+          </div>
+
+          <!-- Resources & Pricing Dropdown -->
+          <div class="relative group">
+            <a href="resources.html" class="flex items-center gap-1.5 py-2 hover:text-[#111D18] dark:hover:text-white transition">
+              <span>Resources</span>
+              <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
+            </a>
+            <div class="absolute top-full left-0 w-56 bg-white dark:bg-[#0D222E] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
+              <a href="blog.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Clinical Articles &amp; Blog</a>
+              <a href="blog-details.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Article Feature View</a>
+              <a href="resources.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Parent Free Downloads</a>
+              <a href="pricing.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F7F4EE] dark:hover:bg-[#182C23] transition">Pricing &amp; Insurance Rates</a>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <a href="contact.html" class="hover:text-[#111D18] dark:hover:text-white transition py-2">Contact</a>
+
+        </nav>
+
+        <!-- Right Utilities & Action Pill -->
+        <div class="flex items-center space-x-3 shrink-0">
+
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle Theme">
+            <i class="fa-regular fa-moon theme-icon-light text-xs"></i>
+            <i class="fa-regular fa-sun theme-icon-dark text-xs" style="display:none;"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn px-2.5 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-700 dark:text-slate-200 hover:bg-[#FAF7F2] dark:hover:bg-[#0D222E] transition" title="Toggle RTL/LTR">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+
+          <!-- Book Free Intake Pill Button (Opens Wizard Modal) -->
+          <button data-open-modal="assessment-wizard-modal" class="hidden sm:inline-flex btn-dark-pill text-xs py-2.5 px-6 font-semibold shadow-sm">
+            Book Free Intake
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobile-menu-btn" class="xl:hidden w-9 h-9 rounded-full border border-[#D9D4C7] dark:border-slate-700 flex items-center justify-center text-[#1E1C1A] dark:text-white">
+            <i class="fa-solid fa-bars-staggered text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MASTER MOBILE NAVIGATION DRAWER (Every Single Page Linked)
+       ========================================================================= -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden backdrop-blur-sm transition-opacity"></div>
   <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[88vw] h-full bg-[#F7F4EE] dark:bg-[#06151D] z-50 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 border-l border-[#E3DFD5] dark:border-slate-800 overflow-y-auto">
     <div>
       <div class="flex items-center justify-between pb-4 border-b border-[#E3DFD5] dark:border-slate-800">
-        <a href="index.html" class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-full bg-[#111D18] dark:bg-white text-white dark:text-[#111D18] flex items-center justify-center text-xs">
-            <i class="fa-solid fa-seedling text-emerald-400"></i>
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-[#111D18] text-white flex items-center justify-center text-xs">
+            <i class="fa-solid fa-seedling"></i>
           </div>
           <span class="text-lg font-serif font-bold text-[#1E1C1A] dark:text-white">SpeakBloom</span>
-        </a>
+        </div>
         <button id="close-drawer-btn" class="w-8 h-8 rounded-full border border-[#E3DFD5] dark:border-slate-700 flex items-center justify-center text-xs text-slate-600 dark:text-slate-300">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -20,44 +170,14 @@
 
       <nav class="mt-6 space-y-2 text-xs font-semibold text-[#1E1C1A] dark:text-slate-200">
         
-        <!-- Home Variations -->
-        <div class="space-y-1">
+        <!-- Home Section -->
+        <div>
           <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Home Variations</span>
-          <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Main Clinic Home</a>
-          <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pediatric Center</a>
+          <div class="pl-2 space-y-1">
+            <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Main Clinic Home</a>
+            <a href="index-pediatric.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">Pediatric Center</a>
+          </div>
         </div>
-
-        <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">About Our Clinic</a>
-        <a href="services.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Our 6 Services</a>
-        <a href="therapists.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Our Certified Providers</a>
-
-        <!-- Milestones -->
-        <div class="space-y-1">
-          <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Milestone Screeners</span>
-          <a href="milestone-early-communication.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">0–12 Months Early Comm</a>
-          <a href="milestone-language-development.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">1–3 Years Language Dev</a>
-          <a href="milestone-school-age-support.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">4–11 Years School Age</a>
-          <a href="milestone-teens-and-adults.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">12+ Years Teens &amp; Adults</a>
-        </div>
-
-        <!-- Resources & Pricing -->
-        <div class="space-y-1">
-          <span class="block px-3 pt-2 text-[10px] font-bold uppercase tracking-wider text-[#A8A199]">Resources &amp; Pricing</span>
-          <a href="blog.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Clinical Articles &amp; Blog</a>
-          <a href="resources.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Parent Free Downloads</a>
-          <a href="pricing.html" class="block px-3 py-2 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] ">Pricing &amp; Insurance Rates</a>
-        </div>
-
-        <a href="contact.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E] bg-[#FFF0EB] dark:bg-[#182C23] text-[#FF7A59] font-bold">Contact Us</a>
-      </nav>
-    </div>
-
-    <div class="pt-4 border-t border-[#E3DFD5] dark:border-slate-800">
-      <button data-open-modal="assessment-wizard-modal" class="w-full btn-peach text-xs py-3 justify-center text-center block font-bold">
-        Book Free Intake
-      </button>
-    </div>
-  </div>
 
         <a href="about.html" class="block px-3 py-2.5 rounded-xl hover:bg-[#EFECE4] dark:hover:bg-[#0D222E]">About Our Clinic</a>
 
@@ -225,213 +345,49 @@
     <!-- =========================================================================
        FOOTER (Standardized Home 1 Theme)
        ========================================================================= -->
-    <!-- =========================================================================
-       MASTER CLINICAL FOOTER
-       ========================================================================= -->
-  
-  <!-- Dedicated Clinic Map & Directions Section -->
-  <section class="py-16 bg-[#F0F5F8] dark:bg-[#081D26] border-t border-b border-[#E2EBF0] dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+  <footer class="bg-[#111D18] text-white py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
       
-      <div class="text-center space-y-3 max-w-2xl mx-auto">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#EBF4F6] text-[#088395] dark:bg-[#0A4D68] dark:text-[#70C5D8]">
-          <i class="fa-solid fa-map-location-dot"></i> FIND US ON THE MAP
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-[#0A4D68] dark:text-white">
-          Visit Our Medical District Center
-        </h2>
-        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-          Centrally located with convenient ground-floor accessibility, dedicated parent parking, and direct transit connectivity.
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-white text-[#111D18] flex items-center justify-center text-xs">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <span class="text-xl font-serif font-bold tracking-tight">SpeakBloom</span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed font-normal">
+          Specialized speech and language therapy center helping children and families build lasting communication confidence.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-8 items-stretch">
-        
-        <!-- Interactive Map Frame -->
-        <div class="lg:col-span-8 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-700 min-h-[380px] bg-slate-200 dark:bg-slate-800 relative">
-          <iframe 
-            src="https://maps.google.com/maps?q=14+Peaceful+Garden+Avenue+Medical+District&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-            class="w-full h-full min-h-[380px] border-0" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            title="SpeakBloom Speech &amp; Language Clinic Location Map">
-          </iframe>
-        </div>
-
-        <!-- Route & Accessibility Details Cards -->
-        <div class="lg:col-span-4 flex flex-col justify-between gap-4">
-          
-          <div class="bg-white dark:bg-[#0D222E] p-6 rounded-3xl border border-[#E2EBF0] dark:border-slate-700 shadow-sm space-y-3 interactive-card">
-            <div class="w-10 h-10 rounded-2xl bg-[#FFF0EB] text-[#FF7A59] flex items-center justify-center text-base">
-              <i class="fa-solid fa-car-side"></i>
-            </div>
-            <h4 class="font-bold font-heading text-sm text-[#0A4D68] dark:text-white">Dedicated Reserved Parking</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Complimentary reserved parking bays directly in front of Suite 300 with stroller and wheelchair-accessible ramps.
-            </p>
-          </div>
-
-          <div class="bg-white dark:bg-[#0D222E] p-6 rounded-3xl border border-[#E2EBF0] dark:border-slate-700 shadow-sm space-y-3 interactive-card">
-            <div class="w-10 h-10 rounded-2xl bg-[#EBF4F6] text-[#088395] flex items-center justify-center text-base">
-              <i class="fa-solid fa-train-subway"></i>
-            </div>
-            <h4 class="font-bold font-heading text-sm text-[#0A4D68] dark:text-white">Public Transit &amp; Metro</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Located just a 4-minute walk from Medical District Central Station (Exit 2). Bus routes 14A, 22B, and 88 stop right at our gate.
-            </p>
-          </div>
-
-          <div class="bg-white dark:bg-[#0D222E] p-6 rounded-3xl border border-[#E2EBF0] dark:border-slate-700 shadow-sm space-y-3 interactive-card">
-            <div class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-base">
-              <i class="fa-solid fa-wheelchair"></i>
-            </div>
-            <h4 class="font-bold font-heading text-sm text-[#0A4D68] dark:text-white">Sensory-Friendly Intake Lobby</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Quiet reception area with low-stimulus lighting, children's book nook, and private nursing room.
-            </p>
-          </div>
-
-        </div>
-
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Quick Navigation</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-normal">
+          <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-white transition">About Our Clinic</a></li>
+          <li><a href="services.html" class="hover:text-white transition">Our 6 Services</a></li>
+          <li><a href="therapists.html" class="hover:text-white transition">Our Certified Providers</a></li>
+          <li><a href="pricing.html" class="hover:text-white transition">Pricing &amp; Insurance</a></li>
+        </ul>
       </div>
 
-    </div>
-  </section>
-  
-  <footer class="bg-[#111D18] text-white pt-16 pb-12 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <!-- Top Row: Newsletter & Consultation Strip -->
-      <div class="bg-gradient-to-r from-[#182C23] to-[#0A4D68] rounded-3xl p-8 sm:p-10 border border-slate-700/60 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
-        <div class="space-y-2 max-w-xl text-center lg:text-left">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#FF7A59]">Join 10,000+ Caregivers</span>
-          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white">Get Free Monthly Speech Milestones &amp; Home Practice Guides</h3>
-          <p class="text-xs sm:text-sm text-slate-300">
-            Evidence-based pediatric activities, phoneme flashcards, and clinical tips delivered directly to your inbox. No spam.
-          </p>
-        </div>
-        <form id="footer-newsletter-form" class="w-full lg:max-w-md flex flex-col sm:flex-row gap-2">
-          <input type="email" id="footer-newsletter-email" required placeholder="Enter your email address" class="w-full px-5 py-3.5 rounded-full bg-white/10 dark:bg-black/30 text-white placeholder-slate-400 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#FF7A59] text-xs">
-          <button type="submit" class="btn-peach text-xs font-bold px-6 py-3.5 whitespace-nowrap shadow-lg justify-center flex items-center gap-1.5">
-            <span>Subscribe Free</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
-          </button>
-        </form>
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Clinical Programs</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-normal">
+          <li><a href="service-toddler-delay.html" class="hover:text-white transition">Toddler Speech Delay</a></li>
+          <li><a href="service-articulation.html" class="hover:text-white transition">Phonetic Articulation</a></li>
+          <li><a href="service-stuttering-fluency.html" class="hover:text-white transition">Stuttering &amp; Fluency</a></li>
+          <li><a href="service-aac-autism.html" class="hover:text-white transition">Autism &amp; AAC Devices</a></li>
+          <li><a href="service-apraxia-speech.html" class="hover:text-white transition">Apraxia of Speech</a></li>
+          <li><a href="service-aphasia-stroke-rehab.html" class="hover:text-white transition">Adult Aphasia Rehab</a></li>
+        </ul>
       </div>
 
-      <!-- Main Footer Columns -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-        
-        <!-- Col 1: Brand & Credentials (Spans 2 cols on lg) -->
-        <div class="lg:col-span-2 space-y-5">
-          <a href="index.html" class="flex items-center gap-2 group shrink-0">
-            <div class="w-8 h-8 rounded-full bg-white text-[#111D18] flex items-center justify-center text-xs shadow-sm group-hover:scale-105 transition-transform">
-              <i class="fa-solid fa-seedling"></i>
-            </div>
-            <span class="text-2xl font-serif font-bold tracking-tight text-white">SpeakBloom</span>
-          </a>
-          <p class="text-xs text-slate-400 leading-relaxed font-normal max-w-sm">
-            SpeakBloom is an accredited speech-language pathology clinic dedicated to empowering toddlers, school-age children, teens, and adults through individualized diagnostic evaluations and evidence-based therapy.
-          </p>
-          <div class="flex items-center gap-3 pt-1">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FF7A59] text-white flex items-center justify-center text-xs transition-colors" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FF7A59] text-white flex items-center justify-center text-xs transition-colors" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FF7A59] text-white flex items-center justify-center text-xs transition-colors" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FF7A59] text-white flex items-center justify-center text-xs transition-colors" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-          </div>
-          <div class="pt-2 text-[11px] text-slate-400 flex items-center gap-2">
-            <i class="fa-solid fa-shield-halved text-emerald-400"></i>
-            <span>HIPAA-Compliant Platform &bull; ASHA Certified Clinicians</span>
-          </div>
-        </div>
-
-        <!-- Col 2: Quick Navigation -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Quick Links</h4>
-          <ul class="space-y-2 text-xs text-slate-300 font-normal">
-            <li><a href="index.html" class="hover:text-white hover:underline transition">Main Clinic Home</a></li>
-            <li><a href="index-pediatric.html" class="hover:text-white hover:underline transition">Pediatric Center</a></li>
-            <li><a href="about.html" class="hover:text-white hover:underline transition">About Our Clinic</a></li>
-            <li><a href="services.html" class="hover:text-white hover:underline transition">All 6 Core Programs</a></li>
-            <li><a href="therapists.html" class="hover:text-white hover:underline transition">Our Certified Providers</a></li>
-            <li><a href="pricing.html" class="hover:text-white hover:underline transition">Transparent Pricing</a></li>
-            <li><a href="resources.html" class="hover:text-white hover:underline transition">Parent Free Downloads</a></li>
-            <li><a href="blog.html" class="hover:text-white hover:underline transition">Clinical Articles &amp; Blog</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Clinical Programs -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Clinical Programs</h4>
-          <ul class="space-y-2 text-xs text-slate-300 font-normal">
-            <li><a href="service-toddler-delay.html" class="hover:text-white hover:underline transition">Toddler Speech Delay</a></li>
-            <li><a href="service-articulation.html" class="hover:text-white hover:underline transition">Phonetic Articulation</a></li>
-            <li><a href="service-stuttering-fluency.html" class="hover:text-white hover:underline transition">Stuttering &amp; Fluency</a></li>
-            <li><a href="service-aac-autism.html" class="hover:text-white hover:underline transition">Autism &amp; AAC Modeling</a></li>
-            <li><a href="service-apraxia-speech.html" class="hover:text-white hover:underline transition">Childhood Apraxia (CAS)</a></li>
-            <li><a href="service-aphasia-stroke-rehab.html" class="hover:text-white hover:underline transition">Adult Stroke Rehab</a></li>
-            <li><a href="service-pediatric-feeding.html" class="hover:text-white hover:underline transition">Pediatric Feeding</a></li>
-            <li><a href="service-telepractice-online.html" class="hover:text-white hover:underline transition">Online Telepractice</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Contact & Hours -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Clinic &amp; Hours</h4>
-          <div class="space-y-2.5 text-xs text-slate-300 font-normal">
-            <div class="flex items-start gap-2">
-              <i class="fa-solid fa-location-dot text-[#FF7A59] mt-0.5 shrink-0"></i>
-              <a href="https://maps.google.com/?q=742+Evergreen+Terrace+Boston+MA" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
-                742 Evergreen Terrace, Suite 400<br>Boston, MA 02115
-              </a>
-            </div>
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-[#FF7A59] shrink-0"></i>
-              <a href="tel:+18005557732" class="hover:text-white transition font-semibold">(800) 555-SPEAK</a>
-            </div>
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-envelope text-[#FF7A59] shrink-0"></i>
-              <a href="mailto:care@speakbloom.org" class="hover:text-white transition">care@speakbloom.org</a>
-            </div>
-            <div class="pt-1 text-[11px] text-slate-400 space-y-1 border-t border-slate-800">
-              <div class="font-bold text-slate-300">Clinical Hours:</div>
-              <div>Mon &ndash; Fri: 8:00 AM &ndash; 6:30 PM</div>
-              <div>Saturday: 9:00 AM &ndash; 2:00 PM</div>
-              <div>Sunday: Closed for Telehealth Only</div>
-            </div>
-            <div class="pt-2">
-              <button data-open-modal="assessment-wizard-modal" class="w-full btn-peach text-xs py-2.5 justify-center shadow">
-                Book Initial Intake &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-        <div>
-          &copy; 2026 SpeakBloom Speech &amp; Language Center. All rights reserved.
-        </div>
-        <div class="flex flex-wrap items-center gap-6 text-[11px]">
-          <a href="about.html" class="hover:text-white transition">Privacy Policy</a>
-          <a href="pricing.html" class="hover:text-white transition">Fee Schedule &amp; Terms</a>
-          <a href="contact.html" class="hover:text-white transition">Directions &amp; Parking</a>
-          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-white transition flex items-center gap-1 font-semibold text-[#FF7A59]">
-            <span>Back to Top</span>
-            <i class="fa-solid fa-chevron-up text-[10px]"></i>
-          </button>
-        </div>
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-[#CAD5E2]">Get in Touch</h4>
+        <p class="text-xs text-slate-400 font-normal">742 Evergreen Terrace, Suite 400<br>Boston, MA 02115</p>
+        <p class="text-xs text-slate-400 font-normal"><a href="tel:+18005557732" class="hover:text-white">(800) 555-SPEAK</a></p>
+        <p class="text-xs text-slate-400 font-normal"><a href="mailto:care@speakbloom.org" class="hover:text-white">care@speakbloom.org</a></p>
       </div>
 
     </div>

@@ -68,26 +68,15 @@ h1, h2, h3, h4, h5, .font-heading {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 16px rgba(255, 122, 89, 0.32);
+  box-shadow: 0 4px 16px rgba(255, 122, 89, 0.28);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
-  text-decoration: none !important;
 }
 .btn-terracotta:hover, .btn-peach:hover {
   background-color: var(--color-peach-hover);
-  color: #ffffff !important;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(255, 122, 89, 0.46);
-}
-.dark .btn-terracotta, .dark .btn-peach {
-  background-color: #FF7A59;
-  color: #ffffff !important;
-  box-shadow: 0 4px 18px rgba(255, 122, 89, 0.4);
-}
-.dark .btn-terracotta:hover, .dark .btn-peach:hover {
-  background-color: #FF8F73;
-  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(255, 122, 89, 0.42);
 }
 
 .btn-teal {
@@ -110,29 +99,6 @@ h1, h2, h3, h4, h5, .font-heading {
   box-shadow: 0 8px 22px rgba(10, 77, 104, 0.38);
 }
 
-.btn-dark-pill {
-  background-color: #111D18;
-  color: #ffffff !important;
-  border-radius: 9999px;
-  font-weight: 700;
-  padding: 0.65rem 1.6rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.btn-dark-pill:hover {
-  background-color: #051923;
-  transform: translateY(-2px);
-}
-.dark .btn-dark-pill {
-  background-color: #FF7A59;
-  color: #ffffff !important;
-}
-.dark .btn-dark-pill:hover {
-  background-color: #E66847;
-}
-
 .btn-outline-warm, .btn-outline-teal {
   border: 1.5px solid #0A4D68;
   color: #0A4D68;
@@ -146,32 +112,15 @@ h1, h2, h3, h4, h5, .font-heading {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .dark .btn-outline-warm, .dark .btn-outline-teal {
-  border-color: #FF7A59;
-  color: #FF7A59;
+  border-color: #4EA8DE;
+  color: #EBF4F6;
 }
 .btn-outline-warm:hover, .btn-outline-teal:hover {
   background-color: rgba(10, 77, 104, 0.08);
   transform: translateY(-2px);
 }
 .dark .btn-outline-warm:hover, .dark .btn-outline-teal:hover {
-  background-color: rgba(255, 122, 89, 0.15);
-  color: #ffffff;
-}
-
-.nav-link-active {
-  color: #FF7A59 !important;
-  font-weight: 700 !important;
-  position: relative;
-}
-.nav-link-active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #FF7A59;
-  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Nordic Arch Mask */
