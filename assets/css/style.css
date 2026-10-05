@@ -378,6 +378,22 @@ img {
   vertical-align: middle;
 }
 
+/* Clinician & Specialist Portrait Framing (Centered Facial Crop) */
+.therapist-portrait-img,
+#therapist-portrait,
+.therapist-card img,
+.clinician-portrait,
+[alt*="CCC-SLP"],
+[alt*="Dr. Elena"],
+[alt*="Marcus Vance"],
+[alt*="Maya Al-Mansoor"],
+[alt*="Dr. Sophia Chen"],
+[alt*="Dr. David Miller"],
+[alt*="Dr. Priya Patel"] {
+  object-fit: cover !important;
+  object-position: center 20% !important;
+}
+
 .aspect-\[4\/3\] img,
 .aspect-\[3\/4\] img,
 .aspect-\[16\/9\] img,
