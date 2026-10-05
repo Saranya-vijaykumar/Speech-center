@@ -476,13 +476,13 @@
   <!-- ==========================================
        SECTION 3: VIRTUAL SENSORY PLAYROOM TOUR (4 ZONES)
        ========================================== -->
-  <section id="sensory-rooms" class="py-16 sm:py-24 bg-[#F8FAFB] dark:bg-[#06151D]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="sensory-rooms" class="py-16 sm:py-24 bg-[#F8FAFB] dark:bg-[#06151D] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
         <span class="font-handwriting text-2xl text-[#088395] dark:text-[#70C5D8] block">Where clinical science meets playful joy &hearts;</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-heading">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white font-heading">
           Explore Our <span class="text-[#088395] dark:text-[#70C5D8]">Sensory Playroom Zones</span>
         </h2>
         <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
@@ -490,59 +490,59 @@
         </p>
       </div>
 
-      <!-- Zone Selector Tabs -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <button onclick="switchPlayroomZone(0)" id="zone-tab-0" class="playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border-2 border-[#FF7A59] shadow-lg text-center transition hover:scale-[1.02] interactive-card">
-          <div class="w-9 h-9 rounded-xl bg-[#FFF0EB] dark:bg-[#0A4D68] flex items-center justify-center text-[#FF7A59] mb-2">
-            <i class="fa-solid fa-music"></i>
+      <!-- Zone Selector Tabs in Straight Line Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <button onclick="switchPlayroomZone(0)" id="zone-tab-0" class="playroom-zone-btn p-5 rounded-2xl bg-white dark:bg-[#0D222E] border-2 border-[#FF7A59] shadow-md text-center transition hover:scale-[1.02] interactive-card">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-[#FFF0EB] dark:bg-[#0A4D68] flex items-center justify-center text-[#FF7A59] mb-3">
+            <i class="fa-solid fa-music text-base"></i>
           </div>
           <p class="text-xs font-bold text-slate-900 dark:text-white">Acoustic Echo Pod</p>
-          <p class="text-[10px] text-slate-400">Rhythm & Phonology</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Rhythm &amp; Phonology</p>
         </button>
 
-        <button onclick="switchPlayroomZone(1)" id="zone-tab-1" class="playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02] interactive-card">
-          <div class="w-9 h-9 rounded-xl bg-[#EBF4F6] dark:bg-[#0A4D68] flex items-center justify-center text-[#088395] mb-2">
-            <i class="fa-solid fa-dumbbell"></i>
+        <button onclick="switchPlayroomZone(1)" id="zone-tab-1" class="playroom-zone-btn p-5 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02] interactive-card">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-[#EBF4F6] dark:bg-[#0A4D68] flex items-center justify-center text-[#088395] mb-3">
+            <i class="fa-solid fa-dumbbell text-base"></i>
           </div>
           <p class="text-xs font-bold text-slate-900 dark:text-white">Oral-Motor Play Gym</p>
-          <p class="text-[10px] text-slate-400">Chew & Muscle Strength</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Chew &amp; Muscle Strength</p>
         </button>
 
-        <button onclick="switchPlayroomZone(2)" id="zone-tab-2" class="playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02] interactive-card">
-          <div class="w-9 h-9 rounded-xl bg-[#FFF0EB] dark:bg-[#0A4D68] flex items-center justify-center text-[#FF7A59] mb-2">
-            <i class="fa-solid fa-icons"></i>
+        <button onclick="switchPlayroomZone(2)" id="zone-tab-2" class="playroom-zone-btn p-5 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02] interactive-card">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-[#FFF0EB] dark:bg-[#0A4D68] flex items-center justify-center text-[#FF7A59] mb-3">
+            <i class="fa-solid fa-icons text-base"></i>
           </div>
           <p class="text-xs font-bold text-slate-900 dark:text-white">Mirror Biofeedback</p>
-          <p class="text-[10px] text-slate-400">Visual Articulation</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Visual Articulation</p>
         </button>
 
-        <button onclick="switchPlayroomZone(3)" id="zone-tab-3" class="playroom-zone-btn p-4 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02] interactive-card">
-          <div class="w-9 h-9 rounded-xl bg-[#EBF4F6] dark:bg-[#0A4D68] flex items-center justify-center text-[#088395] mb-2">
-            <i class="fa-solid fa-tablet-screen-button"></i>
+        <button onclick="switchPlayroomZone(3)" id="zone-tab-3" class="playroom-zone-btn p-5 rounded-2xl bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-center transition hover:scale-[1.02] interactive-card">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-[#EBF4F6] dark:bg-[#0A4D68] flex items-center justify-center text-[#088395] mb-3">
+            <i class="fa-solid fa-tablet-screen-button text-base"></i>
           </div>
-          <p class="text-xs font-bold text-slate-900 dark:text-white">Sensory AAC & GLP Zone</p>
-          <p class="text-[10px] text-slate-400">Gestalt & Tablet Play</p>
+          <p class="text-xs font-bold text-slate-900 dark:text-white">Sensory AAC &amp; GLP Zone</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Gestalt &amp; Tablet Play</p>
         </button>
       </div>
 
       <!-- Active Zone Spotlight Card -->
-      <div id="playroom-spotlight" class="bg-[#F0F5F8] dark:bg-[#081D26] rounded-3xl p-6 sm:p-10 border border-[#DBE5EB] dark:border-slate-800 shadow-xl grid lg:grid-cols-12 gap-8 items-center transition-all duration-300 interactive-card">
+      <div id="playroom-spotlight" class="bg-white dark:bg-[#0D222E] rounded-3xl p-8 sm:p-12 border border-[#E2EBF0] dark:border-slate-800 shadow-xl grid lg:grid-cols-12 gap-10 items-center transition-all duration-300 interactive-card">
         
         <!-- Image with Arch & Badge -->
         <div class="lg:col-span-6 relative">
-          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#0A4D68] aspect-[4/3] bg-slate-100 interactive-card">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-[#F8FAFB] dark:border-slate-700 aspect-[4/3] bg-slate-100">
             <img id="zone-img" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Sensory Speech Playroom" class="w-full h-full object-cover">
           </div>
-          <div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-2 rounded-2xl text-xs font-bold text-slate-800 dark:text-white shadow-lg flex items-center gap-2">
+          <div class="absolute bottom-4 left-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 py-2 rounded-2xl text-xs font-bold text-slate-800 dark:text-white shadow-lg flex items-center gap-2 border border-slate-200 dark:border-slate-700">
             <i class="fa-solid fa-shield-heart text-[#088395]"></i>
             <span id="zone-age-badge">Ages: 18 Months &ndash; 6 Years</span>
           </div>
         </div>
 
         <!-- Zone Description & Equipment Highlights -->
-        <div class="lg:col-span-6 space-y-5">
-          <div class="space-y-1">
-            <span id="zone-tag" class="text-xs font-bold text-[#FF7A59] uppercase tracking-wider">Zone 1 &bull; Phonology & Music Therapy</span>
+        <div class="lg:col-span-6 space-y-6">
+          <div class="space-y-1.5">
+            <span id="zone-tag" class="text-xs font-bold text-[#FF7A59] uppercase tracking-wider">Zone 1 &bull; Phonology &amp; Music Therapy</span>
             <h3 id="zone-title" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-heading">
               The Acoustic Echo Pod
             </h3>
@@ -552,31 +552,31 @@
             Equipped with sound-absorbing felt clouds, gentle echo amplifiers, and rhythmic percussion toys. Children learn to differentiate consonant pitch, imitate phonemes, and build speech rhythm through musical turn-taking.
           </p>
 
-          <div class="space-y-2.5">
+          <div class="space-y-3">
             <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Equipped With:</h4>
-            <div id="zone-equipment" class="grid sm:grid-cols-2 gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-              <div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800 interactive-card">
+            <div id="zone-equipment" class="grid sm:grid-cols-2 gap-3 text-xs text-slate-700 dark:text-slate-300">
+              <div class="flex items-center gap-2.5 bg-[#F8FAFB] dark:bg-[#081D26] p-3 rounded-xl border border-[#E2EBF0] dark:border-slate-800">
                 <i class="fa-solid fa-microphone-lines text-[#FF7A59]"></i>
-                <span>Echo Microphones & Rhyme Cards</span>
+                <span>Echo Microphones &amp; Rhyme Cards</span>
               </div>
-              <div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800 interactive-card">
+              <div class="flex items-center gap-2.5 bg-[#F8FAFB] dark:bg-[#081D26] p-3 rounded-xl border border-[#E2EBF0] dark:border-slate-800">
                 <i class="fa-solid fa-drum text-[#088395]"></i>
-                <span>Sensory Beat Drums & Shakers</span>
+                <span>Sensory Beat Drums &amp; Shakers</span>
               </div>
-              <div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800 interactive-card">
+              <div class="flex items-center gap-2.5 bg-[#F8FAFB] dark:bg-[#081D26] p-3 rounded-xl border border-[#E2EBF0] dark:border-slate-800">
                 <i class="fa-solid fa-cloud text-[#FF7A59]"></i>
                 <span>Sound-Dampened Acoustic Cocoon</span>
               </div>
-              <div class="flex items-center gap-2 bg-white dark:bg-[#0D222E] p-2.5 rounded-xl border border-[#E2EBF0] dark:border-slate-800 interactive-card">
+              <div class="flex items-center gap-2.5 bg-[#F8FAFB] dark:bg-[#081D26] p-3 rounded-xl border border-[#E2EBF0] dark:border-slate-800">
                 <i class="fa-solid fa-lightbulb text-[#088395]"></i>
                 <span>Voice-Activated Color Light Pods</span>
               </div>
             </div>
           </div>
 
-          <div class="pt-2 flex items-center gap-4">
-            <button onclick="openBookingModal()" class="bg-[#088395] hover:bg-[#0A4D68] text-white text-xs font-bold px-6 py-3 rounded-full shadow transition flex items-center gap-2">
-              <i class="fa-regular fa-calendar-check"></i>
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <button onclick="openBookingModal()" class="btn-peach text-xs font-bold py-3 px-6 shadow-md">
+              <i class="fa-regular fa-calendar-check mr-1.5"></i>
               <span>Book Session in This Room</span>
             </button>
             <a href="service-toddler-delay.html" class="text-xs font-bold text-[#FF7A59] hover:underline">
