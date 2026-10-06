@@ -1,6 +1,6 @@
 ﻿# SpeakBloom - Speech & Language Therapy HTML5 Template
 
-SpeakBloom is a multipurpose, modern, responsive HTML5 & TailwindCSS/Bootstrap web template designed specifically for speech-language pathology clinics, pediatric therapy centers, adult communication rehab facilities, and healthcare practitioners.
+SpeakBloom is a multipurpose, modern, responsive HTML5 & TailwindCSS/Bootstrap web template designed specifically for speech-language pathology clinics, pediatric therapy centers, adult communication rehab centers, and healthcare practitioners.
 
 ## ✨ Features
 - **Responsive & Mobile-First Design**: Optimized for smartphones, tablets, and desktops.
