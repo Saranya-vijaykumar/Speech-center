@@ -95,12 +95,11 @@ function initMobileMenu() {
 
   function toggleDrawer(open) {
     if (open) {
-      mobileDrawer.classList.remove('translate-x-full', '-translate-x-full');
+      mobileDrawer.classList.remove('translate-x-full');
       if (backdrop) backdrop.classList.remove('hidden');
       document.body.classList.add('overflow-hidden');
     } else {
-      const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
-      mobileDrawer.classList.add(isRtl ? '-translate-x-full' : 'translate-x-full');
+      mobileDrawer.classList.add('translate-x-full');
       if (backdrop) backdrop.classList.add('hidden');
       document.body.classList.remove('overflow-hidden');
     }

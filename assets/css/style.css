@@ -285,3 +285,64 @@ header.sticky {
   color: #FBBF24 !important;
   border: 1px solid rgba(245, 158, 11, 0.3) !important;
 }
+
+/* ==========================================================================
+   RTL (Right-To-Left) Comprehensive Mobile & Desktop Alignment
+   ========================================================================== */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Ensure mobile drawer always hides cleanly offscreen in both LTR & RTL */
+#mobile-drawer.translate-x-full {
+  transform: translateX(100%) !important;
+}
+
+/* In RTL, flip directional chevrons & arrows */
+html[dir="rtl"] .fa-chevron-right {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .fa-arrow-right {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .fa-arrow-left {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .fa-chevron-left {
+  transform: scaleX(-1);
+}
+
+/* Ensure Back to top button floats on left in RTL */
+html[dir="rtl"] #back-to-top-btn {
+  left: 2rem !important;
+  right: auto !important;
+}
+
+/* RTL Mobile drawer text & icon alignments */
+html[dir="rtl"] #mobile-drawer {
+  text-align: right;
+}
+
+html[dir="rtl"] #mobile-drawer nav a {
+  text-align: right;
+}
+
+/* Active Nav links underline in RTL */
+html[dir="rtl"] .nav-link-active::after {
+  left: auto;
+  right: 0;
+}
+
+/* RTL Form inputs alignment */
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+  text-align: right;
+}
+
