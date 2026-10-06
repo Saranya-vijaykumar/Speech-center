@@ -600,7 +600,7 @@ function initFormHandlers() {
 
 
 /* ==========================================================================
-   Active Navigation Link Detection
+   Active Navigation Link Detection (Supports clean URLs & parent dropdowns)
    ========================================================================== */
 function initActiveNavLinks() {
   const currentPath = window.location.pathname;
@@ -609,15 +609,41 @@ function initActiveNavLinks() {
     currentPage = 'index.html';
   }
   currentPage = currentPage.split('?')[0].split('#')[0];
+  const cleanCurrent = currentPage.replace(/\.html$/, '');
 
   const navLinks = document.querySelectorAll('header nav a, #mobile-drawer nav a');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
     const pageHref = href.split('?')[0].split('#')[0];
-    if (pageHref === currentPage || (currentPage === 'index.html' && (pageHref === './' || pageHref === '/'))) {
+    const cleanHref = pageHref.replace(/\.html$/, '');
+
+    const isMatch = (pageHref === currentPage) || 
+                    (cleanHref === cleanCurrent) ||
+                    (cleanCurrent === 'index' && (pageHref === './' || pageHref === '/')) ||
+                    (cleanCurrent.startsWith('service-') && cleanHref === 'services') ||
+                    (cleanCurrent.startsWith('milestone-') && cleanHref.startsWith('milestone')) ||
+                    ((cleanCurrent.startsWith('blog') || cleanCurrent === 'pricing' || cleanCurrent === 'resources') && cleanHref === 'resources');
+
+    if (isMatch) {
       link.classList.add('nav-link-active');
       link.classList.remove('text-[#5A5550]', 'text-slate-600', 'dark:text-slate-300');
+      
+      // Also highlight parent dropdown container if present
+      const parentDropdown = link.closest('.group');
+      if (parentDropdown) {
+        const trigger = parentDropdown.querySelector('a, button');
+        if (trigger) {
+          trigger.classList.add('nav-link-active');
+        }
+      }
     }
   });
+
+  // Highlight dropdown buttons directly based on path
+  if (cleanCurrent.startsWith('milestone')) {
+    document.querySelectorAll('header nav .group button').forEach(btn => {
+      if (btn.textContent.includes('Milestones')) btn.classList.add('nav-link-active');
+    });
+  }
 }

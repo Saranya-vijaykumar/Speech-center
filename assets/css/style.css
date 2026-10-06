@@ -302,12 +302,13 @@ h1, h2, h3, h4, h5, .font-heading {
 .nav-link-active::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background-color: #FF7A59;
   border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(255, 122, 89, 0.4);
 }
 .dark .nav-link-active {
   color: #FF7A59 !important;
