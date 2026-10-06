@@ -11,9 +11,9 @@
   --font-handwriting: 'Caveat', cursive;
 
   /* Nordic Ocean Teal & Warm Peach/Terracotta Palette */
-  --color-primary: #0A4D68;
+  --color-primary: #111D18;
   --color-primary-dark: #051923;
-  --color-primary-light: #088395;
+  --color-primary-light: #596956;
   --color-teal-tint: #EBF4F6;
   
   --color-peach: #FF7A59;
@@ -100,8 +100,8 @@ h1, h2, h3, h4, h5, .font-heading {
 }
 
 .btn-outline-warm, .btn-outline-teal {
-  border: 1.5px solid #0A4D68;
-  color: #0A4D68;
+  border: 1.5px solid #111D18;
+  color: #111D18;
   border-radius: 9999px;
   font-weight: 700;
   padding: 0.65rem 1.6rem;
