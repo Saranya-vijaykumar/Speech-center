@@ -244,7 +244,7 @@ function initMilestoneChecker() {
           }).join('') +
         '</div>' +
       '</div>' +
-      '<div class="p-5 rounded-2xl bg-[#0A4D68] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">' +
+      '<div class="p-5 rounded-2xl bg-[#111D18] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">' +
         '<div>' +
           '<p class="text-xs font-bold uppercase tracking-wider text-[#EBF4F6]">Concerned about your child\'s speech progress?</p>' +
           '<p class="text-sm font-bold font-heading">Book a 60-Minute Comprehensive Play Assessment with Our Clinicians</p>' +
