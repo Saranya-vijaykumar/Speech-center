@@ -346,3 +346,48 @@ html[dir="rtl"] select {
   text-align: right;
 }
 
+
+
+/* ==========================================================================
+   Universal Responsive Safeguards & Flawless Mobile Alignment
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent accidental horizontal overflow on all screen sizes */
+body, html {
+  max-width: 100vw;
+  overflow-x: clip !important;
+}
+
+/* Fluid responsive typography on small screens */
+@media (max-width: 640px) {
+  h1, .text-4xl, .text-5xl, .text-6xl {
+    font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2, .text-3xl {
+    font-size: clamp(1.5rem, 5.5vw, 2rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Full touch targets for mobile buttons */
+  .btn-terracotta, .btn-peach, .btn-amber, .btn-dark-pill, .btn-outline-warm {
+    min-height: 44px;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Mobile container padding safeguard */
+  .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
