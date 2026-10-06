@@ -40,7 +40,7 @@ body {
   background-color: var(--color-canvas);
   color: #243E48;
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -492,4 +492,42 @@ img {
 }
 .interactive-card:hover img {
   transform: scale(1.03);
+}
+
+
+/* Sticky Header Edge & Cross-Browser Fix */
+header.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  width: 100% !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Ensure hamburger button is properly centered and visible on mobile/tablet */
+#mobile-menu-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media (min-width: 1280px) {
+  #mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+/* Milestone Hero High-Contrast Text in Dark Mode */
+.dark .milestone-hero-title {
+  color: #FFFFFF !important;
+}
+.dark .milestone-hero-text {
+  color: #E2E8F0 !important;
+}
+.dark .milestone-badge {
+  background-color: #0D222E !important;
+  color: #FF7A59 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
