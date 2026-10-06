@@ -471,6 +471,13 @@ function initGlobalModal() {
   document.querySelectorAll('[data-open-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      
+      // Close mobile drawer if open
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const backdrop = document.getElementById('mobile-backdrop');
+      if (mobileDrawer) mobileDrawer.classList.add('translate-x-full');
+      if (backdrop) backdrop.classList.add('hidden');
+
       const modalId = btn.getAttribute('data-open-modal');
       const targetModal = document.getElementById(modalId) || document.getElementById('assessment-wizard-modal') || document.getElementById('booking-modal');
       if (targetModal) {
