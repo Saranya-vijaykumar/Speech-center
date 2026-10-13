@@ -405,10 +405,10 @@ function initFilterSystem() {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
-          b.classList.remove('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm', 'bg-[#C07534]');
+          b.classList.remove('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm', 'bg-[#C07534]', 'bg-[#1E1B4B]', 'dark:bg-[#F59E0B]', 'dark:text-[#0B0F17]');
           b.classList.add('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
         });
-        btn.classList.add('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm');
+        btn.classList.add('active', 'bg-[#1E1B4B]', 'dark:bg-[#F59E0B]', 'text-white', 'dark:text-[#0B0F17]', 'shadow-sm');
         btn.classList.remove('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
 
         const filterVal = btn.dataset.filter;

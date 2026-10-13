@@ -31,14 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F7F4EE; color: #1E1C1A; }
-    h1, h2, h3, h4, .font-serif { font-family: 'Fraunces', Georgia, serif; }
-    .btn-dark-pill { background-color: #C07534; color: #FFFFFF; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
-    .btn-dark-pill:hover { background-color: #AD6325; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(192, 117, 52, 0.25); }
-    .btn-outline-pill { background-color: #FFFFFF; border: 1px solid #E3DFD5; color: #1E1C1A; border-radius: 9999px; font-weight: 600; padding: 0.65rem 1.6rem; display: inline-flex; align-items: center; justify-content: center; transition: all 0.25s ease; }
-    .btn-outline-pill:hover { background-color: #FAF7F2; border-color: #C07534; transform: translateY(-1px); }
-  </style>
+  
   <!-- Instant Dark Mode Initialization -->
   <script>
     if (localStorage.getItem('speakbloom_theme') === 'dark' || (!localStorage.getItem('speakbloom_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -102,7 +95,7 @@
               <i class="fa-solid fa-chevron-down text-[9px] opacity-70 group-hover:rotate-180 transition-transform"></i>
             </button>
             <div class="absolute top-full left-0 w-64 bg-white dark:bg-[#131B2A] rounded-2xl shadow-xl border border-[#E3DFD5] dark:border-slate-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-2 group-hover:translate-y-0">
-              <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#C07534] border-b border-[#EFECE4] dark:border-slate-800 mb-1">Developmental Guides</div>
+              <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#D97706] dark:text-[#F59E0B] border-b border-[#EFECE4] dark:border-slate-800 mb-1">Developmental Guides</div>
               <a href="milestone-early-communication.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F1F5F9] dark:hover:bg-[#1E293B] transition">0–12 Months Early Comm</a>
               <a href="milestone-language-development.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F1F5F9] dark:hover:bg-[#1E293B] transition">1–3 Years Toddler Words</a>
               <a href="milestone-school-age-support.html" class="block px-3 py-2 rounded-xl text-xs hover:bg-[#F1F5F9] dark:hover:bg-[#1E293B] transition">4–11 Years School Age</a>
@@ -259,7 +252,7 @@
 
   <section class="py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#0B0F17] border-b border-[#EFECE4] dark:border-slate-800 text-center">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#EFECE4] text-[#C07534] dark:bg-slate-800 dark:text-[#E89C5D]">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#EFECE4] text-[#D97706] dark:text-[#F59E0B] dark:bg-slate-800 dark:text-[#E89C5D]">
         <i class="fa-solid fa-user-doctor"></i> LICENSED &amp; ASHA CERTIFIED CLINICAL TEAM
       </span>
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#1E1C1A] dark:text-white tracking-tight leading-[1.12]">
@@ -271,11 +264,11 @@
 
       <!-- Category Filter Pills -->
       <div class="flex flex-wrap justify-center gap-2 pt-4" id="therapist-filters">
-        <button class="filter-btn active px-4 py-2 rounded-full text-xs font-bold bg-[#C07534] text-white shadow-sm transition" data-filter="all">All Specialists</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#131B2A] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534] hover:border-[#C07534] transition" data-filter="pediatric">Pediatric Care</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#131B2A] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534] hover:border-[#C07534] transition" data-filter="speech">Speech &amp; Sounds</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#131B2A] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534] hover:border-[#C07534] transition" data-filter="fluency">Fluency &amp; Stuttering</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#131B2A] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#C07534] hover:border-[#C07534] transition" data-filter="neuro">Neuro Rehab</button>
+        <button class="filter-btn active px-4 py-2 rounded-full text-xs font-bold bg-[#1E1B4B] dark:bg-[#F59E0B] text-white dark:text-[#0B0F17] shadow-sm transition" data-filter="all">All Specialists</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#131B2A] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#1E1B4B] hover:border-[#1E1B4B] dark:hover:text-[#F59E0B] dark:hover:border-[#F59E0B] transition" data-filter="pediatric">Pediatric Care</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#131B2A] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#1E1B4B] hover:border-[#1E1B4B] dark:hover:text-[#F59E0B] dark:hover:border-[#F59E0B] transition" data-filter="speech">Speech &amp; Sounds</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#131B2A] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#1E1B4B] hover:border-[#1E1B4B] dark:hover:text-[#F59E0B] dark:hover:border-[#F59E0B] transition" data-filter="fluency">Fluency &amp; Stuttering</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-[#131B2A] border border-[#E3DFD5] dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-[#1E1B4B] hover:border-[#1E1B4B] dark:hover:text-[#F59E0B] dark:hover:border-[#F59E0B] transition" data-filter="neuro">Neuro Rehab</button>
       </div>
     </div>
   </section>
@@ -293,20 +286,20 @@
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
-              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#F59E0B] to-[#D97706] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Dr. Elena Vance, CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
-              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
+              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#D97706] dark:text-[#F59E0B] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
                 Stanford Clinical Fellow
               </span>
             </div>
 
             <!-- Name & Title -->
             <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
-              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
+              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#D97706] dark:text-[#F59E0B] transition-colors">
                 <a href="therapist-single.html?id=elena">Dr. Elena Vance, CCC-SLP</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">Founding Clinical Director</p>
+              <p class="text-xs font-bold text-[#D97706] dark:text-[#F59E0B]">Founding Clinical Director</p>
               <p class="text-[11px] text-slate-400 font-medium">Ph.D., CCC-SLP • 16+ Yrs Clinical Experience</p>
             </div>
 
@@ -324,9 +317,9 @@
 
             <!-- Specialty Badges -->
             <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Toddler Delay</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">GLP Natural Language</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Apraxia (PROMPT)</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Toddler Delay</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">GLP Natural Language</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Apraxia (PROMPT)</span>
             </div>
 
           </div>
@@ -351,20 +344,20 @@
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
-              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#F59E0B] to-[#D97706] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80" alt="Marcus Vance, M.S., CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
-              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
+              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#D97706] dark:text-[#F59E0B] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
                 Fluency Board Certified
               </span>
             </div>
 
             <!-- Name & Title -->
             <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
-              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
+              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#D97706] dark:text-[#F59E0B] transition-colors">
                 <a href="therapist-single.html?id=marcus">Marcus Vance, M.S., CCC-SLP</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">Fluency Coach & Stuttering Specialist</p>
+              <p class="text-xs font-bold text-[#D97706] dark:text-[#F59E0B]">Fluency Coach & Stuttering Specialist</p>
               <p class="text-[11px] text-slate-400 font-medium">M.S., CCC-SLP • 12+ Yrs Clinical Experience</p>
             </div>
 
@@ -382,9 +375,9 @@
 
             <!-- Specialty Badges -->
             <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Stuttering Therapy</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Fluency Shaping</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Confidence Building</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Stuttering Therapy</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Fluency Shaping</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Confidence Building</span>
             </div>
 
           </div>
@@ -409,20 +402,20 @@
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
-              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#F59E0B] to-[#D97706] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Maya Al-Mansoor, M.S., CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
-              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
+              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#D97706] dark:text-[#F59E0B] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
                 Hanen Certified
               </span>
             </div>
 
             <!-- Name & Title -->
             <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
-              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
+              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#D97706] dark:text-[#F59E0B] transition-colors">
                 <a href="therapist-single.html?id=maya">Maya Al-Mansoor, M.S., CCC-SLP</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">Early Toddler Language Specialist</p>
+              <p class="text-xs font-bold text-[#D97706] dark:text-[#F59E0B]">Early Toddler Language Specialist</p>
               <p class="text-[11px] text-slate-400 font-medium">M.S., CCC-SLP • 9+ Yrs Clinical Experience</p>
             </div>
 
@@ -440,9 +433,9 @@
 
             <!-- Specialty Badges -->
             <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Late Talkers</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Parent Coaching</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Early Milestones</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Late Talkers</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Parent Coaching</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Early Milestones</span>
             </div>
 
           </div>
@@ -467,20 +460,20 @@
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
-              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#F59E0B] to-[#D97706] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Dr. Sophia Chen, CCC-SLP, ATP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
-              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
+              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#D97706] dark:text-[#F59E0B] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
                 AAC Assistive Tech Lead
               </span>
             </div>
 
             <!-- Name & Title -->
             <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
-              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
+              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#D97706] dark:text-[#F59E0B] transition-colors">
                 <a href="therapist-single.html?id=sophia">Dr. Sophia Chen, CCC-SLP, ATP</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">AAC & Assistive Tech Director</p>
+              <p class="text-xs font-bold text-[#D97706] dark:text-[#F59E0B]">AAC & Assistive Tech Director</p>
               <p class="text-[11px] text-slate-400 font-medium">Sc.D., CCC-SLP • 11+ Yrs Clinical Experience</p>
             </div>
 
@@ -498,9 +491,9 @@
 
             <!-- Specialty Badges -->
             <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">AAC Systems</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Autism Support</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Gestalt Modeling</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">AAC Systems</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Autism Support</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Gestalt Modeling</span>
             </div>
 
           </div>
@@ -525,20 +518,20 @@
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
-              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#F59E0B] to-[#D97706] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" alt="Dr. David Miller, CCC-SLP, BC-ANCDS" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
-              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
+              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#D97706] dark:text-[#F59E0B] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
                 Neuro Rehab Board Certified
               </span>
             </div>
 
             <!-- Name & Title -->
             <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
-              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
+              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#D97706] dark:text-[#F59E0B] transition-colors">
                 <a href="therapist-single.html?id=david">Dr. David Miller, CCC-SLP, BC-ANCDS</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">Lead Neuro-Speech Pathologist</p>
+              <p class="text-xs font-bold text-[#D97706] dark:text-[#F59E0B]">Lead Neuro-Speech Pathologist</p>
               <p class="text-[11px] text-slate-400 font-medium">Ph.D., CCC-SLP • 18+ Yrs Clinical Experience</p>
             </div>
 
@@ -556,9 +549,9 @@
 
             <!-- Specialty Badges -->
             <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Aphasia Therapy</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Stroke Recovery</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Cognitive Rehab</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Aphasia Therapy</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Stroke Recovery</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Cognitive Rehab</span>
             </div>
 
           </div>
@@ -583,20 +576,20 @@
             
             <!-- Centered Circular Portrait with Ochre Gradient Ring -->
             <div class="relative mx-auto">
-              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#C07534] to-[#E89C5D] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <div class="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#F59E0B] to-[#D97706] shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Dr. Priya Patel, CCC-SLP" class="w-full h-full rounded-full object-cover bg-white" loading="lazy">
               </div>
-              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#C07534] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
+              <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0E1524] text-[#D97706] dark:text-[#F59E0B] text-[10px] font-bold px-3 py-0.5 rounded-full border border-[#E3DFD5] dark:border-slate-700 shadow-sm whitespace-nowrap">
                 Phonology Specialist
               </span>
             </div>
 
             <!-- Name & Title -->
             <div class="pt-2 space-y-1 min-h-[72px] flex flex-col justify-center">
-              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#C07534] transition-colors">
+              <h3 class="text-xl font-bold font-serif text-[#1E1C1A] dark:text-white group-hover:text-[#D97706] dark:text-[#F59E0B] transition-colors">
                 <a href="therapist-single.html?id=priya">Dr. Priya Patel, CCC-SLP</a>
               </h3>
-              <p class="text-xs font-bold text-[#C07534]">Phonetic Articulation Lead</p>
+              <p class="text-xs font-bold text-[#D97706] dark:text-[#F59E0B]">Phonetic Articulation Lead</p>
               <p class="text-[11px] text-slate-400 font-medium">Ph.D., CCC-SLP • 10+ Yrs Clinical Experience</p>
             </div>
 
@@ -614,9 +607,9 @@
 
             <!-- Specialty Badges -->
             <div class="flex flex-wrap justify-center gap-1.5 pt-1 min-h-[44px] items-center">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Articulation</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">Lisp Correction</span>
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#C07534] border border-[#E3DFD5] dark:border-slate-700">/r/ Sound Mastery</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Articulation</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">Lisp Correction</span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#F8FAFC] dark:bg-slate-800 text-[#D97706] dark:text-[#F59E0B] border border-[#E3DFD5] dark:border-slate-700">/r/ Sound Mastery</span>
             </div>
 
           </div>
@@ -735,7 +728,7 @@
       </button>
 
       <div class="mb-6">
-        <span class="text-[10px] font-bold uppercase tracking-wider text-[#C07534] bg-[#FDF7F0] px-2.5 py-1 rounded-full">4-Step Clinical Intake</span>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-[#D97706] dark:text-[#F59E0B] bg-[#FDF7F0] px-2.5 py-1 rounded-full">4-Step Clinical Intake</span>
         <h3 class="text-2xl font-bold font-serif text-[#1E1C1A] dark:text-white mt-2">Schedule Your Initial Assessment</h3>
       </div>
 
