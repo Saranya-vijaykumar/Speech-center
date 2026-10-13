@@ -21,16 +21,8 @@
               500: '#FF7A59',
               600: '#E66847',
             },
-            forest: {
-              800: '#1E3D2F',
-              900: '#051923',
-            },
-            sage: {
-              50: '#F2F8F9',
-              100: '#EBF4F6',
-              200: '#CCE5EB',
-              500: '#088395',
-            },
+            
+            
             cream: {
               50: '#F8FAFB',
               100: '#F0F5F8',
@@ -359,7 +351,7 @@
           <div class="relative w-full max-w-md sm:max-w-lg">
             
             <!-- Arch Photo Frame -->
-            <div class="relative z-10 arch-hero-mask overflow-hidden shadow-2xl border-4 border-white dark:border-[#111D18] aspect-[4/4.8] bg-[#F8FAFC]">
+            <div class="relative z-10 arch-hero-mask overflow-hidden shadow-2xl border-4 border-white dark:border-[#1E1B4B] aspect-[4/4.8] bg-[#F8FAFC]">
               <img src="https://images.unsplash.com/photo-1584697964358-3e14ca57658b?auto=format&fit=crop&w=800&q=80" alt="Smiling toddler engaged in speech play therapy" class="w-full h-full object-cover">
             </div>
 
@@ -479,7 +471,7 @@
               <span id="screener-progress-percent" class="text-[#D97706] dark:text-[#F59E0B] font-bold">100% On Track</span>
             </div>
             <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
-              <div id="screener-progress-bar" class="bg-emerald-500 h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+              <div id="screener-progress-bar" class="bg-amber-500 h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
             </div>
             <p id="screener-summary-text" class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pt-1">
               Your toddler shows wonderful early communication signs! Continue enriching daily mealtime and playtime conversations.
@@ -761,7 +753,7 @@
             </p>
           </div>
           <div class="flex items-center gap-3 pt-2">
-            <button onclick="playSampleSoundAudio()" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#596956] text-white text-xs font-bold hover:bg-[#1E1B4B] transition">
+            <button onclick="playSampleSoundAudio()" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1E1B4B] text-white text-xs font-bold hover:bg-[#1E1B4B] transition">
               <i class="fa-solid fa-volume-high"></i>
               <span id="sound-audio-btn-text">Listen Sound Cue (Voice)</span>
             </button>
@@ -837,7 +829,7 @@
             </p>
           </div>
           <div class="pt-5 border-t border-slate-200 dark:border-slate-800 mt-5">
-            <a href="therapist-single.html?id=maya" class="w-full block text-center bg-white dark:bg-slate-800 hover:bg-[#596956] hover:text-white text-[#1E1B4B] dark:text-[#F59E0B] dark:text-[#D97706] dark:text-[#F59E0B] border border-[#596956] text-xs font-bold py-2.5 rounded-full transition">
+            <a href="therapist-single.html?id=maya" class="w-full block text-center bg-white dark:bg-slate-800 hover:bg-[#1E1B4B] hover:text-white text-[#1E1B4B] dark:text-[#F59E0B] dark:text-[#D97706] dark:text-[#F59E0B] border border-[#1E1B4B] text-xs font-bold py-2.5 rounded-full transition">
               View Profile &amp; Book
             </a>
           </div>
@@ -920,7 +912,7 @@
         <div class="bg-white dark:bg-[#131B2A] p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm relative space-y-6 interactive-card">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-3.5">
-              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Suresh Kumar" class="w-12 h-12 rounded-full object-cover border-2 border-[#596956]">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Suresh Kumar" class="w-12 h-12 rounded-full object-cover border-2 border-[#1E1B4B]">
               <div>
                 <h4 class="text-sm font-bold text-slate-900 dark:text-white font-serif">Suresh Kumar</h4>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Father of Diya (Age 4)</p>
@@ -1224,7 +1216,7 @@
           <button onclick="goToModalStep(2)" class="text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white">
             &larr; Back
           </button>
-          <button onclick="goToModalStep(4)" class="bg-[#596956] text-white text-xs font-bold px-7 py-2.5 rounded-full shadow hover:bg-[#1E1B4B]">
+          <button onclick="goToModalStep(4)" class="bg-[#1E1B4B] text-white text-xs font-bold px-7 py-2.5 rounded-full shadow hover:bg-[#1E1B4B]">
             Confirm & Schedule &hearts;
           </button>
         </div>
@@ -1232,7 +1224,7 @@
 
       <!-- Step 4: Success Screen -->
       <div id="modal-step-4" class="modal-pane hidden space-y-5 text-center py-6">
-        <div class="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center mx-auto text-2xl animate-bounce">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-[#D97706] dark:text-[#F59E0B] flex items-center justify-center mx-auto text-2xl animate-bounce">
           <i class="fa-solid fa-check"></i>
         </div>
         <div class="space-y-2">
@@ -1273,7 +1265,7 @@
         if (idx === step - 1) {
           dot.className = 'modal-step-dot w-8 h-8 rounded-full bg-[#FF7A59] text-white text-xs font-bold flex items-center justify-center relative z-10 ring-4 ring-[#FFF0EB]';
         } else if (idx < step - 1) {
-          dot.className = 'modal-step-dot w-8 h-8 rounded-full bg-emerald-500 text-white text-xs font-bold flex items-center justify-center relative z-10';
+          dot.className = 'modal-step-dot w-8 h-8 rounded-full bg-amber-500 text-white text-xs font-bold flex items-center justify-center relative z-10';
         } else {
           dot.className = 'modal-step-dot w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center justify-center relative z-10';
         }
@@ -1379,7 +1371,7 @@
       barEl.style.width = pct + '%';
 
       if (pct >= 80) {
-        barEl.className = 'bg-emerald-500 h-full rounded-full transition-all duration-500';
+        barEl.className = 'bg-amber-500 h-full rounded-full transition-all duration-500';
         titleEl.textContent = stage.onTrackTitle;
         textEl.textContent = stage.onTrackSummary;
       } else {
