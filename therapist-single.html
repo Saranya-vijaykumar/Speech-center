@@ -306,7 +306,7 @@
             <i class="fa-regular fa-calendar-check mr-2"></i> Book Consultation with Clinician
           </button>
           <a href="therapists.html" class="btn-outline-pill text-xs py-3.5 px-6">
-            &larr; View All 6 Specialists
+            &larr; View All Specialists
           </a>
         </div>
 
@@ -624,12 +624,35 @@
           "Vocalic & Consonantal /r/ Sound Remediation",
           "Childhood Phonological Contrastive Therapy"
         ]
+      },
+      ananya: {
+        name: "Dr. Ananya Krishnan, Ph.D., CCC-SLP",
+        title: "Ph.D., CCC-SLP • Toddler Early Intervention & Telepractice Specialist • 12+ Yrs Clinical Experience",
+        badge: "Early Intervention Fellow",
+        rating: "5.0 ★ (175+ Toddlers Evaluated)",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+        bio: "Dr. Ananya Krishnan is a board-certified Speech-Language Pathologist and Senior Clinical Specialist at SpeakBloom. With over 12 years of specialized clinical experience, Dr. Krishnan specializes in infant-toddler communication milestones (0–2 years), early babbling emergence, parent-coached play routines, and virtual telepractice.",
+        tags: ["Toddler Milestones", "Early Intervention", "Parent Coaching", "Telepractice"],
+        education: [
+          "Ph.D. in Early Child Language Sciences – Boston University",
+          "M.S. in Speech-Language Pathology – Columbia University",
+          "ASHA Certificate of Clinical Competence (CCC-SLP)",
+          "Hanen Certified: It Takes Two to Talk & Target Word"
+        ],
+        specialties: [
+          "Infant Babbling, Cooing & First Word Emergence (0–24 Months)",
+          "Parent-Led Floor-Time & Natural Language Modeling",
+          "Gestural Communication, Pointing & Joint Attention",
+          "Virtual Telepractice Early Intervention & Home Coaching"
+        ]
       }
     };
 
     // Support aliases
     cliniciansData.sarah = cliniciansData.sophia;
     cliniciansData.arthur = cliniciansData.david;
+    cliniciansData.ananya_krishnan = cliniciansData.ananya;
+    cliniciansData.sundaram = cliniciansData.ananya;
 
     const urlParams = new URLSearchParams(window.location.search);
     const clinicianId = (urlParams.get('id') || 'elena').toLowerCase();

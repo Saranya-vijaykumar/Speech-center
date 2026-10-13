@@ -37,14 +37,17 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: #F8FAFC !important;
-  color: #1E293B !important;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
-.dark body {
+html:not(.dark) body {
+  background-color: #F8FAFC !important;
+  color: #1E293B !important;
+}
+
+html.dark body {
   background-color: #0B0F17 !important;
   color: #E2E8F0 !important;
 }
@@ -392,144 +395,235 @@ body, html {
   }
 }
 
-
 /* ==========================================================================
-   Ultra-Enhanced Visibility Suite (WCAG AAA Light & Dark Contrast Harmony)
+   Ultra-Enhanced Visibility Suite (Rock-Solid Light & Dark Contrast Harmony)
    ========================================================================== */
 
-/* --- 1. LIGHT THEME ENHANCED VISIBILITY --- */
-body:not(.dark) {
+/* --- 1. LIGHT THEME CONTRAST & VISIBILITY (html:not(.dark)) --- */
+html:not(.dark) body {
+  background-color: #F8FAFC !important;
   color: #1E293B !important;
   -webkit-font-smoothing: antialiased;
 }
 
-body:not(.dark) h1,
-body:not(.dark) h2,
-body:not(.dark) h3,
-body:not(.dark) h4,
-body:not(.dark) .font-serif {
-  color: #0F172A !important;
+/* Light mode headings in standard light containers */
+html:not(.dark) h1:not(.text-white),
+html:not(.dark) h2:not(.text-white),
+html:not(.dark) h3:not(.text-white),
+html:not(.dark) h4:not(.text-white),
+html:not(.dark) h5:not(.text-white),
+html:not(.dark) h6:not(.text-white),
+html:not(.dark) .font-serif:not(.text-white) {
+  color: #1E1B4B !important;
   font-weight: 700;
   text-rendering: optimizeLegibility;
 }
 
-body:not(.dark) p,
-body:not(.dark) li {
-  color: #334155;
+/* Light mode body text in standard light containers */
+html:not(.dark) p:not(.text-white):not(.text-slate-200):not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]),
+html:not(.dark) li:not(.text-white):not(.text-slate-200):not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]) {
+  color: #334155 !important;
   font-weight: 450;
+  line-height: 1.65;
 }
 
-body:not(.dark) .text-slate-500,
-body:not(.dark) .text-slate-400 {
+/* Light mode muted text */
+html:not(.dark) .text-slate-600 {
   color: #475569 !important;
 }
+html:not(.dark) .text-slate-500,
+html:not(.dark) .text-slate-400 {
+  color: #64748B !important;
+}
 
-body:not(.dark) .interactive-card,
-body:not(.dark) .service-card,
-body:not(.dark) .therapist-card,
-body:not(.dark) .bg-white {
+/* Protect dark sections in Light Mode (e.g. Royal Indigo section, CTA banner, Footer) */
+html:not(.dark) [class*="bg-[#1E1B4B]"] h1,
+html:not(.dark) [class*="bg-[#1E1B4B]"] h2,
+html:not(.dark) [class*="bg-[#1E1B4B]"] h3,
+html:not(.dark) [class*="bg-[#1E1B4B]"] h4,
+html:not(.dark) [class*="bg-[#0F172A]"] h1,
+html:not(.dark) [class*="bg-[#0F172A]"] h2,
+html:not(.dark) [class*="bg-[#0F172A]"] h3,
+html:not(.dark) [class*="bg-[#0F172A]"] h4,
+html:not(.dark) footer h1,
+html:not(.dark) footer h2,
+html:not(.dark) footer h3,
+html:not(.dark) footer h4 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) [class*="bg-[#1E1B4B]"] p,
+html:not(.dark) [class*="bg-[#1E1B4B]"] li,
+html:not(.dark) [class*="bg-[#0F172A]"] p,
+html:not(.dark) [class*="bg-[#0F172A]"] li,
+html:not(.dark) footer p,
+html:not(.dark) footer li {
+  color: #E2E8F0 !important;
+}
+
+html:not(.dark) .interactive-card,
+html:not(.dark) .service-card,
+html:not(.dark) .therapist-card,
+html:not(.dark) .bg-white {
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
 }
 
-/* --- 2. DARK THEME ENHANCED VISIBILITY --- */
-.dark body {
+/* --- 2. DARK THEME CONTRAST & VISIBILITY (html.dark) --- */
+html.dark,
+html.dark body {
   background-color: #0B0F17 !important;
   color: #F1F5F9 !important;
   -webkit-font-smoothing: antialiased;
 }
 
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark .font-serif {
+/* ALL Headings in Dark Mode MUST BE Pure Radiant White (#FFFFFF) */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark .font-serif,
+html.dark .font-heading,
+html.dark [class*="text-[#1E1B4B]"] {
   color: #FFFFFF !important;
   font-weight: 700;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   text-rendering: optimizeLegibility;
 }
 
-.dark p,
-.dark li {
+/* ALL Paragraphs & Lists in Dark Mode MUST BE Bright High-Contrast Light Slate (#E2E8F0) */
+html.dark p:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="text-emerald"]):not([class*="text-rose"]),
+html.dark li:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]) {
   color: #E2E8F0 !important;
-  font-weight: 400;
   line-height: 1.65;
 }
 
-.dark .text-slate-400,
-.dark .text-slate-500 {
-  color: #CBD5E1 !important;
-}
-
-.dark .text-slate-600,
-.dark .text-slate-300 {
+/* Dark mode slate text utilities */
+html.dark .text-slate-600,
+html.dark .text-slate-500,
+html.dark .text-slate-400,
+html.dark .text-slate-300,
+html.dark .text-slate-200,
+html.dark .text-[#5A5550],
+html.dark .text-[#1E293B] {
   color: #E2E8F0 !important;
 }
 
-.dark .interactive-card,
-.dark .service-card,
-.dark .therapist-card,
-.dark [class*="bg-[#131B2A]"],
-.dark .bg-slate-900,
-.dark .bg-slate-800 {
+/* Brand Amber Accents in Dark Mode */
+html.dark [class*="text-[#D97706]"],
+html.dark [class*="text-[#F59E0B]"],
+html.dark .text-amber-600,
+html.dark .text-amber-500,
+html.dark .text-amber-400 {
+  color: #FBBF24 !important;
+}
+
+/* White text explicitly remains pure white in Dark Mode */
+html.dark .text-white {
+  color: #FFFFFF !important;
+}
+
+/* Cards & Containers in Dark Mode */
+html.dark .interactive-card,
+html.dark .service-card,
+html.dark .therapist-card,
+html.dark .bg-white,
+html.dark [class*="bg-[#131B2A]"],
+html.dark [class*="bg-[#F8FAFC]"],
+html.dark .bg-slate-900,
+html.dark .bg-slate-800 {
   background-color: #131B2A !important;
-  border-color: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.75), 0 0 1px rgba(255, 255, 255, 0.25) !important;
 }
 
-.dark .interactive-card:hover,
-.dark .service-card:hover,
-.dark .therapist-card:hover {
+/* Links inside cards in Dark Mode */
+html.dark .interactive-card a:not(.btn-peach):not(.btn-terracotta):not(.btn-dark-pill),
+html.dark .service-card a:not(.btn-peach):not(.btn-terracotta):not(.btn-dark-pill),
+html.dark .therapist-card a:not(.btn-peach):not(.btn-terracotta):not(.btn-dark-pill) {
+  color: #FFFFFF !important;
+}
+html.dark .interactive-card a:hover,
+html.dark .service-card a:hover,
+html.dark .therapist-card a:hover {
+  color: #FBBF24 !important;
+}
+
+html.dark .interactive-card:hover,
+html.dark .service-card:hover,
+html.dark .therapist-card:hover {
   border-color: rgba(245, 158, 11, 0.5) !important;
   box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.9), 0 0 15px rgba(245, 158, 11, 0.25) !important;
 }
 
-.dark a[class*="text-[#D97706]"],
-.dark span[class*="text-[#D97706]"],
-.dark i[class*="text-[#D97706]"] {
-  color: #FBBF24 !important;
-}
-
-.dark .milestone-badge,
-.dark [class*="bg-amber-50"],
-.dark [class*="bg-amber-950"] {
+/* Badges in Dark Mode */
+html.dark .milestone-badge,
+html.dark [class*="bg-amber-50"],
+html.dark [class*="bg-amber-950"] {
   background-color: rgba(245, 158, 11, 0.16) !important;
   color: #FCD34D !important;
   border-color: rgba(245, 158, 11, 0.35) !important;
 }
 
-.dark input,
-.dark textarea,
-.dark select {
+/* Forms & Inputs in Dark Mode */
+html.dark input,
+html.dark textarea,
+html.dark select {
   background-color: #131B2A !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
   color: #FFFFFF !important;
 }
-.dark input::placeholder,
-.dark textarea::placeholder {
+html.dark input::placeholder,
+html.dark textarea::placeholder {
   color: #94A3B8 !important;
 }
-.dark input:focus,
-.dark textarea:focus,
-.dark select:focus {
+html.dark input:focus,
+html.dark textarea:focus,
+html.dark select:focus {
   border-color: #F59E0B !important;
   box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25) !important;
 }
 
-.dark header {
-  background-color: rgba(11, 15, 23, 0.94) !important;
+/* Header & Mobile Drawer in Dark Mode */
+html.dark header {
+  background-color: rgba(11, 15, 23, 0.96) !important;
   border-bottom-color: rgba(255, 255, 255, 0.12) !important;
 }
-
-.dark #mobile-drawer {
-  background-color: #0B0F17 !important;
-  border-left-color: rgba(255, 255, 255, 0.12) !important;
+html.dark header nav a {
+  color: #CBD5E1 !important;
+}
+html.dark header nav a:hover,
+html.dark header nav a.nav-link-active {
+  color: #FBBF24 !important;
 }
 
-.dark #mobile-drawer nav a {
+html.dark #mobile-drawer {
+  background-color: #0B0F17 !important;
+  border-left-color: rgba(255, 255, 255, 0.15) !important;
+}
+html.dark #mobile-drawer nav a {
   color: #F1F5F9 !important;
 }
-.dark #mobile-drawer nav a:hover {
+html.dark #mobile-drawer nav a:hover {
   background-color: #131B2A !important;
   color: #FBBF24 !important;
 }
+
+/* Modals in Dark Mode */
+html.dark #assessment-wizard-modal > div,
+html.dark #booking-modal > div {
+  background-color: #131B2A !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+}
+html.dark #assessment-wizard-modal h2,
+html.dark #assessment-wizard-modal h3,
+html.dark #assessment-wizard-modal h4 {
+  color: #FFFFFF !important;
+}
+html.dark #assessment-wizard-modal p,
+html.dark #assessment-wizard-modal span,
+html.dark #assessment-wizard-modal label {
+  color: #E2E8F0 !important;
+}
+
