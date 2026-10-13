@@ -391,3 +391,145 @@ body, html {
     padding-right: 1rem !important;
   }
 }
+
+
+/* ==========================================================================
+   Ultra-Enhanced Visibility Suite (WCAG AAA Light & Dark Contrast Harmony)
+   ========================================================================== */
+
+/* --- 1. LIGHT THEME ENHANCED VISIBILITY --- */
+body:not(.dark) {
+  color: #1E293B !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+body:not(.dark) h1,
+body:not(.dark) h2,
+body:not(.dark) h3,
+body:not(.dark) h4,
+body:not(.dark) .font-serif {
+  color: #0F172A !important;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+body:not(.dark) p,
+body:not(.dark) li {
+  color: #334155;
+  font-weight: 450;
+}
+
+body:not(.dark) .text-slate-500,
+body:not(.dark) .text-slate-400 {
+  color: #475569 !important;
+}
+
+body:not(.dark) .interactive-card,
+body:not(.dark) .service-card,
+body:not(.dark) .therapist-card,
+body:not(.dark) .bg-white {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+}
+
+/* --- 2. DARK THEME ENHANCED VISIBILITY --- */
+.dark body {
+  background-color: #0B0F17 !important;
+  color: #F1F5F9 !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark .font-serif {
+  color: #FFFFFF !important;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  text-rendering: optimizeLegibility;
+}
+
+.dark p,
+.dark li {
+  color: #E2E8F0 !important;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.dark .text-slate-400,
+.dark .text-slate-500 {
+  color: #CBD5E1 !important;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-300 {
+  color: #E2E8F0 !important;
+}
+
+.dark .interactive-card,
+.dark .service-card,
+.dark .therapist-card,
+.dark [class*="bg-[#131B2A]"],
+.dark .bg-slate-900,
+.dark .bg-slate-800 {
+  background-color: #131B2A !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.75), 0 0 1px rgba(255, 255, 255, 0.25) !important;
+}
+
+.dark .interactive-card:hover,
+.dark .service-card:hover,
+.dark .therapist-card:hover {
+  border-color: rgba(245, 158, 11, 0.5) !important;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.9), 0 0 15px rgba(245, 158, 11, 0.25) !important;
+}
+
+.dark a[class*="text-[#D97706]"],
+.dark span[class*="text-[#D97706]"],
+.dark i[class*="text-[#D97706]"] {
+  color: #FBBF24 !important;
+}
+
+.dark .milestone-badge,
+.dark [class*="bg-amber-50"],
+.dark [class*="bg-amber-950"] {
+  background-color: rgba(245, 158, 11, 0.16) !important;
+  color: #FCD34D !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #131B2A !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94A3B8 !important;
+}
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #F59E0B !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25) !important;
+}
+
+.dark header {
+  background-color: rgba(11, 15, 23, 0.94) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.dark #mobile-drawer {
+  background-color: #0B0F17 !important;
+  border-left-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.dark #mobile-drawer nav a {
+  color: #F1F5F9 !important;
+}
+.dark #mobile-drawer nav a:hover {
+  background-color: #131B2A !important;
+  color: #FBBF24 !important;
+}
