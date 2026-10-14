@@ -399,6 +399,24 @@ body, html {
    Ultra-Enhanced Visibility Suite (Rock-Solid Light & Dark Contrast Harmony)
    ========================================================================== */
 
+/* Universal Selection Highlight */
+::selection {
+  background-color: #1E1B4B !important;
+  color: #FFFFFF !important;
+}
+::-moz-selection {
+  background-color: #1E1B4B !important;
+  color: #FFFFFF !important;
+}
+html.dark ::selection {
+  background-color: #F59E0B !important;
+  color: #0F172A !important;
+}
+html.dark ::-moz-selection {
+  background-color: #F59E0B !important;
+  color: #0F172A !important;
+}
+
 /* --- 1. LIGHT THEME CONTRAST & ULTRA-HIGH VISIBILITY (html:not(.dark)) --- */
 html:not(.dark),
 html:not(.dark) body {
@@ -440,22 +458,34 @@ html:not(.dark) .text-slate-400,
 html:not(.dark) .text-gray-600,
 html:not(.dark) .text-gray-500,
 html:not(.dark) .text-gray-400,
-html:not(.dark) [class*="text-[#5A5550]"],
-html:not(.dark) [class*="text-[#A8A199]"] {
+html:not(.dark) .text-\[\#5A5550\],
+html:not(.dark) [class~="text-[#5A5550]"],
+html:not(.dark) .text-\[\#A8A199\],
+html:not(.dark) [class~="text-[#A8A199]"] {
   color: #334155 !important;
   font-weight: 450;
 }
 
 /* Amber text in Light Mode: Deep high-contrast amber (#B45309) for AAA readability */
-html:not(.dark) [class*="text-[#D97706]"],
-html:not(.dark) [class*="text-[#B45309]"] {
+html:not(.dark) .text-\[\#D97706\],
+html:not(.dark) .text-\[\#B45309\],
+html:not(.dark) [class~="text-[#D97706]"],
+html:not(.dark) [class~="text-[#B45309]"] {
   color: #B45309 !important;
   font-weight: 600;
 }
 
-/* Desktop Navbar in Light Mode: Ultra-sharp links */
+/* Royal Indigo text utility in Light Mode */
+html:not(.dark) .text-\[\#1E1B4B\],
+html:not(.dark) [class~="text-[#1E1B4B]"] {
+  color: #1E1B4B !important;
+}
+
+/* Desktop Navbar in Light Mode: Ultra-sharp links, logo & spans */
 html:not(.dark) header nav a,
-html:not(.dark) header nav button {
+html:not(.dark) header nav button,
+html:not(.dark) header nav span,
+html:not(.dark) header .font-serif {
   color: #1E1B4B !important;
   font-weight: 600 !important;
 }
@@ -496,6 +526,12 @@ html:not(.dark) .resource-card p {
   color: #334155 !important;
   font-weight: 450;
 }
+html:not(.dark) .interactive-card,
+html:not(.dark) .service-card,
+html:not(.dark) .therapist-card,
+html:not(.dark) .bg-white {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+}
 
 /* Form Inputs in Light Mode */
 html:not(.dark) input,
@@ -511,60 +547,70 @@ html:not(.dark) textarea::placeholder {
   color: #64748B !important;
 }
 
-/* --- CASCADING OVERRIDES: PROTECT DARK SECTIONS & FOOTER --- */
-html:not(.dark) [class*="bg-[#1E1B4B]"] h1,
-html:not(.dark) [class*="bg-[#1E1B4B]"] h2,
-html:not(.dark) [class*="bg-[#1E1B4B]"] h3,
-html:not(.dark) [class*="bg-[#1E1B4B]"] h4,
-html:not(.dark) [class*="bg-[#0F172A]"] h1,
-html:not(.dark) [class*="bg-[#0F172A]"] h2,
-html:not(.dark) [class*="bg-[#0F172A]"] h3,
-html:not(.dark) [class*="bg-[#0F172A]"] h4,
+/* --- CASCADING OVERRIDES: PROTECT DARK SECTIONS & FOOTER IN LIGHT MODE --- */
 html:not(.dark) footer h1,
 html:not(.dark) footer h2,
 html:not(.dark) footer h3,
 html:not(.dark) footer h4,
 html:not(.dark) footer .font-serif,
-html:not(.dark) [class*="bg-[#1E1B4B]"] .text-white,
-html:not(.dark) [class*="bg-[#0F172A]"] .text-white {
+html:not(.dark) section.bg-\[\#1E1B4B\] h1,
+html:not(.dark) section.bg-\[\#1E1B4B\] h2,
+html:not(.dark) section.bg-\[\#1E1B4B\] h3,
+html:not(.dark) section.bg-\[\#1E1B4B\] h4,
+html:not(.dark) section.bg-\[\#1E1B4B\] .font-serif,
+html:not(.dark) section.bg-\[\#0F172A\] h1,
+html:not(.dark) section.bg-\[\#0F172A\] h2,
+html:not(.dark) section.bg-\[\#0F172A\] h3,
+html:not(.dark) section.bg-\[\#0F172A\] h4,
+html:not(.dark) section.bg-\[\#0F172A\] .font-serif,
+html:not(.dark) div.bg-\[\#1E1B4B\] h1,
+html:not(.dark) div.bg-\[\#1E1B4B\] h2,
+html:not(.dark) div.bg-\[\#1E1B4B\] h3,
+html:not(.dark) div.bg-\[\#1E1B4B\] h4,
+html:not(.dark) div.bg-\[\#1E1B4B\] .font-serif,
+html:not(.dark) div.bg-\[\#0F172A\] h1,
+html:not(.dark) div.bg-\[\#0F172A\] h2,
+html:not(.dark) div.bg-\[\#0F172A\] h3,
+html:not(.dark) div.bg-\[\#0F172A\] h4,
+html:not(.dark) div.bg-\[\#0F172A\] .font-serif,
+html:not(.dark) [class~="bg-[#1E1B4B]"]:not(body) h1,
+html:not(.dark) [class~="bg-[#1E1B4B]"]:not(body) h2,
+html:not(.dark) [class~="bg-[#1E1B4B]"]:not(body) h3,
+html:not(.dark) [class~="bg-[#1E1B4B]"]:not(body) h4,
+html:not(.dark) [class~="bg-[#1E1B4B]"]:not(body) .font-serif,
+html:not(.dark) [class~="bg-[#0F172A]"]:not(body) h1,
+html:not(.dark) [class~="bg-[#0F172A]"]:not(body) h2,
+html:not(.dark) [class~="bg-[#0F172A]"]:not(body) h3,
+html:not(.dark) [class~="bg-[#0F172A]"]:not(body) h4,
+html:not(.dark) [class~="bg-[#0F172A]"]:not(body) .font-serif {
   color: #FFFFFF !important;
 }
 
-html:not(.dark) [class*="bg-[#1E1B4B]"] p,
-html:not(.dark) [class*="bg-[#1E1B4B]"] li,
-html:not(.dark) [class*="bg-[#1E1B4B]"] span:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="btn-"]):not([class*="font-handwriting"]),
-html:not(.dark) [class*="bg-[#1E1B4B]"] .text-slate-400,
-html:not(.dark) [class*="bg-[#1E1B4B]"] .text-slate-300,
-html:not(.dark) [class*="bg-[#1E1B4B]"] .text-slate-200,
-html:not(.dark) [class*="bg-[#0F172A]"] p,
-html:not(.dark) [class*="bg-[#0F172A]"] li,
-html:not(.dark) [class*="bg-[#0F172A]"] span:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="btn-"]),
-html:not(.dark) [class*="bg-[#0F172A]"] .text-slate-400,
-html:not(.dark) [class*="bg-[#0F172A]"] .text-slate-300,
-html:not(.dark) [class*="bg-[#0F172A]"] .text-slate-200 {
-  color: #E2E8F0 !important;
-}
-
-html:not(.dark) footer,
 html:not(.dark) footer p,
 html:not(.dark) footer li,
-html:not(.dark) footer div:not([class*="text-[#F59E0B]"]),
-html:not(.dark) footer span:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="text-emerald"]):not([class*="btn-"]),
-html:not(.dark) footer a:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="btn-"]),
 html:not(.dark) footer .text-slate-400,
 html:not(.dark) footer .text-slate-500,
-html:not(.dark) footer .text-slate-300 {
+html:not(.dark) footer .text-slate-300,
+html:not(.dark) section.bg-\[\#1E1B4B\] p,
+html:not(.dark) section.bg-\[\#1E1B4B\] li,
+html:not(.dark) section.bg-\[\#0F172A\] p,
+html:not(.dark) section.bg-\[\#0F172A\] li,
+html:not(.dark) div.bg-\[\#1E1B4B\] p,
+html:not(.dark) div.bg-\[\#1E1B4B\] li,
+html:not(.dark) div.bg-\[\#0F172A\] p,
+html:not(.dark) div.bg-\[\#0F172A\] li,
+html:not(.dark) [class~="bg-[#1E1B4B]"]:not(body) p,
+html:not(.dark) [class~="bg-[#1E1B4B]"]:not(body) li,
+html:not(.dark) [class~="bg-[#0F172A]"]:not(body) p,
+html:not(.dark) [class~="bg-[#0F172A]"]:not(body) li {
+  color: #CBD5E1 !important;
+}
+
+html:not(.dark) footer a:not(.btn-peach):not(.btn-terracotta):not(.btn-amber) {
   color: #CBD5E1 !important;
 }
 html:not(.dark) footer a:hover {
   color: #F59E0B !important;
-}
-
-html:not(.dark) .interactive-card,
-html:not(.dark) .service-card,
-html:not(.dark) .therapist-card,
-html:not(.dark) .bg-white {
-  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
 }
 
 /* --- 2. DARK THEME CONTRAST & VISIBILITY (html.dark) --- */
@@ -584,15 +630,16 @@ html.dark h5,
 html.dark h6,
 html.dark .font-serif,
 html.dark .font-heading,
-html.dark [class*="text-[#1E1B4B]"] {
+html.dark .text-\[\#1E1B4B\],
+html.dark [class~="text-[#1E1B4B]"] {
   color: #FFFFFF !important;
   font-weight: 700;
   text-rendering: optimizeLegibility;
 }
 
 /* ALL Paragraphs & Lists in Dark Mode MUST BE Bright High-Contrast Light Slate (#E2E8F0) */
-html.dark p:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="text-emerald"]):not([class*="text-rose"]),
-html.dark li:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]) {
+html.dark p:not(.text-amber):not(.text-\[\#F59E0B\]):not(.text-\[\#D97706\]):not([class~="text-[#F59E0B]"]):not([class~="text-[#D97706]"]),
+html.dark li:not(.text-amber):not([class~="text-[#F59E0B]"]) {
   color: #E2E8F0 !important;
   line-height: 1.65;
 }
@@ -603,14 +650,18 @@ html.dark .text-slate-500,
 html.dark .text-slate-400,
 html.dark .text-slate-300,
 html.dark .text-slate-200,
-html.dark .text-[#5A5550],
-html.dark .text-[#1E293B] {
+html.dark .text-\[\#5A5550\],
+html.dark [class~="text-[#5A5550]"],
+html.dark .text-\[\#1E293B\],
+html.dark [class~="text-[#1E293B]"] {
   color: #E2E8F0 !important;
 }
 
 /* Brand Amber Accents in Dark Mode */
-html.dark [class*="text-[#D97706]"],
-html.dark [class*="text-[#F59E0B]"],
+html.dark .text-\[\#D97706\],
+html.dark .text-\[\#F59E0B\],
+html.dark [class~="text-[#D97706]"],
+html.dark [class~="text-[#F59E0B]"],
 html.dark .text-amber-600,
 html.dark .text-amber-500,
 html.dark .text-amber-400 {
@@ -627,8 +678,10 @@ html.dark .interactive-card,
 html.dark .service-card,
 html.dark .therapist-card,
 html.dark .bg-white,
-html.dark [class*="bg-[#131B2A]"],
-html.dark [class*="bg-[#F8FAFC]"],
+html.dark .bg-\[\#131B2A\],
+html.dark [class~="bg-[#131B2A]"],
+html.dark .bg-\[\#F8FAFC\],
+html.dark [class~="bg-[#F8FAFC]"],
 html.dark .bg-slate-900,
 html.dark .bg-slate-800 {
   background-color: #131B2A !important;
@@ -657,8 +710,10 @@ html.dark .therapist-card:hover {
 
 /* Badges in Dark Mode */
 html.dark .milestone-badge,
-html.dark [class*="bg-amber-50"],
-html.dark [class*="bg-amber-950"] {
+html.dark .bg-amber-50,
+html.dark [class~="bg-amber-50"],
+html.dark .bg-amber-950,
+html.dark [class~="bg-amber-950"] {
   background-color: rgba(245, 158, 11, 0.16) !important;
   color: #FCD34D !important;
   border-color: rgba(245, 158, 11, 0.35) !important;
@@ -688,12 +743,18 @@ html.dark header {
   background-color: rgba(11, 15, 23, 0.96) !important;
   border-bottom-color: rgba(255, 255, 255, 0.12) !important;
 }
-html.dark header nav a {
+html.dark header nav a,
+html.dark header nav button,
+html.dark header nav span {
   color: #CBD5E1 !important;
 }
 html.dark header nav a:hover,
+html.dark header nav button:hover,
 html.dark header nav a.nav-link-active {
   color: #FBBF24 !important;
+}
+html.dark header .font-serif {
+  color: #FFFFFF !important;
 }
 
 html.dark #mobile-drawer {
