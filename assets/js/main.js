@@ -222,10 +222,10 @@ function initMilestoneChecker() {
     container.innerHTML = '<div class="space-y-6 animate-fadeIn">' +
       '<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E2EBF0] dark:border-slate-800 pb-4">' +
         '<div>' +
-          '<span class="text-xs font-bold text-[#FF7A59] uppercase tracking-wider">Clinical Developmental Milestone</span>' +
+          '<span class="text-xs font-bold text-[#F59E0B] uppercase tracking-wider">Clinical Developmental Milestone</span>' +
           '<h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white font-heading mt-0.5">' + data.title + '</h3>' +
         '</div>' +
-        '<a href="' + data.serviceLink + '" class="inline-flex items-center space-x-1 text-xs font-bold text-[#FF7A59] hover:underline">' +
+        '<a href="' + data.serviceLink + '" class="inline-flex items-center space-x-1 text-xs font-bold text-[#F59E0B] hover:underline">' +
           '<span>Recommended Program &rarr;</span>' +
         '</a>' +
       '</div>' +
@@ -258,10 +258,10 @@ function initMilestoneChecker() {
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => {
-        b.classList.remove('bg-[#FF7A59]', 'text-white', 'shadow-md');
+        b.classList.remove('bg-[#1E1B4B]', 'dark:bg-[#F59E0B]', 'text-white', 'dark:text-[#0F172A]', 'shadow-md');
         b.classList.add('bg-white', 'dark:bg-[#131B2A]', 'text-slate-700', 'dark:text-slate-300', 'border-[#E2EBF0]');
       });
-      btn.classList.add('bg-[#FF7A59]', 'text-white', 'shadow-md');
+      btn.classList.add('bg-[#1E1B4B]', 'dark:bg-[#F59E0B]', 'text-white', 'dark:text-[#0F172A]', 'shadow-md');
       btn.classList.remove('bg-white', 'dark:bg-[#131B2A]', 'text-slate-700', 'dark:text-slate-300', 'border-[#E2EBF0]');
       
       renderMilestone(btn.dataset.age);
@@ -329,7 +329,7 @@ function initAssessmentWizard() {
       const circle = ind.querySelector('.step-circle');
       if (circle) {
         if (stepNum === currentStep) {
-          circle.className = 'step-circle w-8 h-8 rounded-full bg-[#FF7A59] text-white font-bold text-xs flex items-center justify-center ring-4 ring-[#FFE3DA]';
+          circle.className = 'step-circle w-8 h-8 rounded-full bg-[#F59E0B] text-[#0F172A] font-bold text-xs flex items-center justify-center ring-4 ring-amber-100 dark:ring-amber-950';
         } else if (stepNum < currentStep) {
           circle.className = 'step-circle w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-xs flex items-center justify-center';
         } else {
