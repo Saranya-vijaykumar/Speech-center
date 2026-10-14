@@ -447,7 +447,8 @@ html:not(.dark) [class*="text-[#A8A199]"] {
 }
 
 /* Amber text in Light Mode: Deep high-contrast amber (#B45309) for AAA readability */
-html:not(.dark) [class*="text-[#D97706]"] {
+html:not(.dark) [class*="text-[#D97706]"],
+html:not(.dark) [class*="text-[#B45309]"] {
   color: #B45309 !important;
   font-weight: 600;
 }
