@@ -421,12 +421,12 @@ html.dark ::-moz-selection {
 html:not(.dark),
 html:not(.dark) body {
   background-color: #F8FAFC !important;
-  color: #1E293B !important;
+  color: #0F172A !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* All Headings in Light Mode: Bold Royal Indigo (#1E1B4B) */
+/* All Headings in Light Mode: Ultra-Bold Deep Obsidian (#0F172A) for Maximum Visibility */
 html:not(.dark) h1,
 html:not(.dark) h2,
 html:not(.dark) h3,
@@ -435,23 +435,24 @@ html:not(.dark) h5,
 html:not(.dark) h6,
 html:not(.dark) .font-serif,
 html:not(.dark) .font-heading {
-  color: #1E1B4B !important;
-  font-weight: 700;
+  color: #0F172A !important;
+  font-weight: 800 !important;
   text-rendering: optimizeLegibility;
 }
 
-/* All Paragraphs, Lists & General Text in Light Mode: Crisp Dark Slate (#1E293B) */
+/* All Paragraphs, Lists & General Text in Light Mode: Solid High-Contrast Dark Slate (#0F172A) */
 html:not(.dark) p,
 html:not(.dark) li,
 html:not(.dark) label,
 html:not(.dark) dd,
 html:not(.dark) dt,
 html:not(.dark) blockquote {
-  color: #1E293B !important;
+  color: #0F172A !important;
+  font-weight: 500 !important;
   line-height: 1.65;
 }
 
-/* Light Mode Muted & Secondary Text: Dark Slate 700 (#334155), NEVER pale gray */
+/* Light Mode Muted & Secondary Text: Solid Dark Slate 800 (#1E293B), NEVER pale gray */
 html:not(.dark) .text-slate-600,
 html:not(.dark) .text-slate-500,
 html:not(.dark) .text-slate-400,
@@ -462,59 +463,63 @@ html:not(.dark) .text-\[\#5A5550\],
 html:not(.dark) [class~="text-[#5A5550]"],
 html:not(.dark) .text-\[\#A8A199\],
 html:not(.dark) [class~="text-[#A8A199]"] {
-  color: #334155 !important;
-  font-weight: 450;
+  color: #1E293B !important;
+  font-weight: 550 !important;
 }
 
-/* Amber text in Light Mode: Deep high-contrast amber (#B45309) for AAA readability */
+/* Amber text in Light Mode: Deep high-contrast amber (#92400E) for AAA readability */
 html:not(.dark) .text-\[\#D97706\],
 html:not(.dark) .text-\[\#B45309\],
 html:not(.dark) [class~="text-[#D97706]"],
 html:not(.dark) [class~="text-[#B45309]"] {
-  color: #B45309 !important;
-  font-weight: 600;
+  color: #92400E !important;
+  font-weight: 700 !important;
 }
 
-/* Royal Indigo text utility in Light Mode */
+/* Royal Indigo text utility in Light Mode: Solid Deep (#0F172A) */
 html:not(.dark) .text-\[\#1E1B4B\],
-html:not(.dark) [class~="text-[#1E1B4B]"] {
-  color: #1E1B4B !important;
+html:not(.dark) [class~="text-[#1E1B4B]"],
+html:not(.dark) .text-\[\#0F172A\],
+html:not(.dark) [class~="text-[#0F172A]"] {
+  color: #0F172A !important;
+  font-weight: 700 !important;
 }
 
 /* Desktop Navbar in Light Mode: Ultra-sharp links, logo & spans */
 html:not(.dark) header nav a,
 html:not(.dark) header nav button,
 html:not(.dark) header nav span,
-html:not(.dark) header .font-serif {
-  color: #1E1B4B !important;
-  font-weight: 600 !important;
+html:not(.dark) header .font-serif,
+html:not(.dark) #mobile-drawer .font-serif {
+  color: #0F172A !important;
+  font-weight: 700 !important;
 }
 html:not(.dark) header nav a:hover,
 html:not(.dark) header nav button:hover {
-  color: #B45309 !important;
+  color: #92400E !important;
 }
 html:not(.dark) header nav a.nav-link-active {
-  color: #1E1B4B !important;
-  font-weight: 800 !important;
+  color: #0F172A !important;
+  font-weight: 900 !important;
 }
 
 /* Dropdown Menus in Light Mode */
 html:not(.dark) header .group > div a {
-  color: #1E293B !important;
-  font-weight: 600 !important;
+  color: #0F172A !important;
+  font-weight: 650 !important;
 }
 html:not(.dark) header .group > div a:hover {
-  color: #1E1B4B !important;
+  color: #0F172A !important;
   background-color: #F1F5F9 !important;
 }
 
 /* Mobile Drawer in Light Mode */
 html:not(.dark) #mobile-drawer nav a {
-  color: #1E1B4B !important;
-  font-weight: 600 !important;
+  color: #0F172A !important;
+  font-weight: 700 !important;
 }
 html:not(.dark) #mobile-drawer nav a:hover {
-  color: #1E1B4B !important;
+  color: #0F172A !important;
   background-color: #F1F5F9 !important;
 }
 
@@ -523,8 +528,8 @@ html:not(.dark) .interactive-card p,
 html:not(.dark) .service-card p,
 html:not(.dark) .therapist-card p,
 html:not(.dark) .resource-card p {
-  color: #334155 !important;
-  font-weight: 450;
+  color: #1E293B !important;
+  font-weight: 500 !important;
 }
 html:not(.dark) .interactive-card,
 html:not(.dark) .service-card,
@@ -538,7 +543,7 @@ html:not(.dark) input,
 html:not(.dark) select,
 html:not(.dark) textarea {
   color: #0F172A !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   background-color: #FFFFFF !important;
   border-color: #CBD5E1 !important;
 }
