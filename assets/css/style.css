@@ -407,33 +407,34 @@ html:not(.dark) body {
 }
 
 /* Light mode headings in standard light containers */
-html:not(.dark) h1:not(.text-white),
-html:not(.dark) h2:not(.text-white),
-html:not(.dark) h3:not(.text-white),
-html:not(.dark) h4:not(.text-white),
-html:not(.dark) h5:not(.text-white),
-html:not(.dark) h6:not(.text-white),
-html:not(.dark) .font-serif:not(.text-white) {
+/* Light mode headings in standard light containers */
+html:not(.dark) h1:not(.text-white):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *),
+html:not(.dark) h2:not(.text-white):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *),
+html:not(.dark) h3:not(.text-white):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *),
+html:not(.dark) h4:not(.text-white):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *),
+html:not(.dark) h5:not(.text-white):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *),
+html:not(.dark) h6:not(.text-white):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *),
+html:not(.dark) .font-serif:not(.text-white):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *) {
   color: #1E1B4B !important;
   font-weight: 700;
   text-rendering: optimizeLegibility;
 }
 
 /* Light mode body text in standard light containers */
-html:not(.dark) p:not(.text-white):not(.text-slate-200):not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]),
-html:not(.dark) li:not(.text-white):not(.text-slate-200):not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]) {
-  color: #334155 !important;
+html:not(.dark) p:not(.text-white):not(.text-slate-200):not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *),
+html:not(.dark) li:not(.text-white):not(.text-slate-200):not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *) {
+  color: #1E293B !important;
   font-weight: 450;
   line-height: 1.65;
 }
 
-/* Light mode muted text */
-html:not(.dark) .text-slate-600 {
-  color: #475569 !important;
+/* Light mode muted text in light containers */
+html:not(.dark) .text-slate-600:not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *) {
+  color: #334155 !important;
 }
-html:not(.dark) .text-slate-500,
-html:not(.dark) .text-slate-400 {
-  color: #64748B !important;
+html:not(.dark) .text-slate-500:not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *),
+html:not(.dark) .text-slate-400:not([class*="bg-[#1E1B4B]"] *):not([class*="bg-[#0F172A]"] *):not(footer *) {
+  color: #475569 !important;
 }
 
 /* Protect dark sections in Light Mode (e.g. Royal Indigo section, CTA banner, Footer) */
@@ -448,17 +449,41 @@ html:not(.dark) [class*="bg-[#0F172A]"] h4,
 html:not(.dark) footer h1,
 html:not(.dark) footer h2,
 html:not(.dark) footer h3,
-html:not(.dark) footer h4 {
+html:not(.dark) footer h4,
+html:not(.dark) footer .font-serif {
   color: #FFFFFF !important;
 }
 
+/* Body, spans, and list items in dark sections */
 html:not(.dark) [class*="bg-[#1E1B4B]"] p,
 html:not(.dark) [class*="bg-[#1E1B4B]"] li,
+html:not(.dark) [class*="bg-[#1E1B4B]"] span:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="text-emerald"]):not([class*="btn-"]):not([class*="font-handwriting"]),
+html:not(.dark) [class*="bg-[#1E1B4B]"] .text-slate-400,
+html:not(.dark) [class*="bg-[#1E1B4B]"] .text-slate-300,
+html:not(.dark) [class*="bg-[#1E1B4B]"] .text-slate-200,
 html:not(.dark) [class*="bg-[#0F172A]"] p,
 html:not(.dark) [class*="bg-[#0F172A]"] li,
-html:not(.dark) footer p,
-html:not(.dark) footer li {
+html:not(.dark) [class*="bg-[#0F172A]"] span:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="btn-"]),
+html:not(.dark) [class*="bg-[#0F172A]"] .text-slate-400,
+html:not(.dark) [class*="bg-[#0F172A]"] .text-slate-300,
+html:not(.dark) [class*="bg-[#0F172A]"] .text-slate-200 {
   color: #E2E8F0 !important;
+}
+
+/* Footer High-Contrast Guarantee */
+html:not(.dark) footer,
+html:not(.dark) footer p,
+html:not(.dark) footer li,
+html:not(.dark) footer div:not([class*="text-[#F59E0B]"]),
+html:not(.dark) footer span:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="text-emerald"]):not([class*="btn-"]),
+html:not(.dark) footer a:not([class*="text-[#F59E0B]"]):not([class*="text-[#D97706]"]):not([class*="text-amber"]):not([class*="btn-"]),
+html:not(.dark) footer .text-slate-400,
+html:not(.dark) footer .text-slate-500,
+html:not(.dark) footer .text-slate-300 {
+  color: #CBD5E1 !important;
+}
+html:not(.dark) footer a:hover {
+  color: #F59E0B !important;
 }
 
 html:not(.dark) .interactive-card,

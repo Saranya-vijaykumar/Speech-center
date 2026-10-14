@@ -234,7 +234,7 @@ function initMilestoneChecker() {
         '<h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Key Developmental Benchmarks:</h4>' +
         '<div class="grid sm:grid-cols-2 gap-3">' +
           data.benchmarks.map(item => {
-            const cls = item.redFlag ? 'bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 text-rose-900 dark:text-rose-200' : 'bg-white dark:bg-[#0D222E] border border-[#E2EBF0] dark:border-slate-800 text-slate-700 dark:text-slate-300';
+            const cls = item.redFlag ? 'bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 text-rose-900 dark:text-rose-200' : 'bg-white dark:bg-[#131B2A] border border-[#E2EBF0] dark:border-slate-800 text-slate-700 dark:text-slate-300';
             const iconCls = item.redFlag ? 'fa-triangle-exclamation text-rose-500' : 'fa-circle-check text-emerald-500';
             return '<div class="p-3.5 rounded-2xl ' + cls + ' flex items-start space-x-2.5 shadow-sm">' +
               '<i class="fa-solid ' + iconCls + ' mt-0.5 shrink-0 text-sm"></i>' +
@@ -259,10 +259,10 @@ function initMilestoneChecker() {
     btn.addEventListener('click', () => {
       buttons.forEach(b => {
         b.classList.remove('bg-[#FF7A59]', 'text-white', 'shadow-md');
-        b.classList.add('bg-white', 'dark:bg-[#0D222E]', 'text-slate-700', 'dark:text-slate-300', 'border-[#E2EBF0]');
+        b.classList.add('bg-white', 'dark:bg-[#131B2A]', 'text-slate-700', 'dark:text-slate-300', 'border-[#E2EBF0]');
       });
       btn.classList.add('bg-[#FF7A59]', 'text-white', 'shadow-md');
-      btn.classList.remove('bg-white', 'dark:bg-[#0D222E]', 'text-slate-700', 'dark:text-slate-300', 'border-[#E2EBF0]');
+      btn.classList.remove('bg-white', 'dark:bg-[#131B2A]', 'text-slate-700', 'dark:text-slate-300', 'border-[#E2EBF0]');
       
       renderMilestone(btn.dataset.age);
     });
@@ -406,10 +406,10 @@ function initFilterSystem() {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
           b.classList.remove('active', 'bg-[#FF7A59]', 'text-white', 'shadow-sm', 'bg-[#C07534]', 'bg-[#1E1B4B]', 'dark:bg-[#F59E0B]', 'dark:text-[#0B0F17]');
-          b.classList.add('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
+          b.classList.add('bg-white', 'dark:bg-[#131B2A]', 'text-slate-600', 'dark:text-slate-300');
         });
         btn.classList.add('active', 'bg-[#1E1B4B]', 'dark:bg-[#F59E0B]', 'text-white', 'dark:text-[#0B0F17]', 'shadow-sm');
-        btn.classList.remove('bg-white', 'dark:bg-[#0D222E]', 'text-slate-600', 'dark:text-slate-300');
+        btn.classList.remove('bg-white', 'dark:bg-[#131B2A]', 'text-slate-600', 'dark:text-slate-300');
 
         const filterVal = btn.dataset.filter;
         filterItems.forEach(item => {
